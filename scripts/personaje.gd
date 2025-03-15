@@ -12,4 +12,4 @@ func play_animacion(animacion : String) -> void:
     $Sonido.play_sfx(animacion)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-    sprite.play("idle")
+	sprite.play("idle")
