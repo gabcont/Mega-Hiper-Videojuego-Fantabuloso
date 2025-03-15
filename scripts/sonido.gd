@@ -9,5 +9,5 @@ func play_sfx(audio : String) -> void:
 			$ataque_2.play()
 		"ataque_especial":
 			$ataque_especial.play()
-		"huida":
-			$huida.play()
+		"esquivar":
+			$esquivar.play()

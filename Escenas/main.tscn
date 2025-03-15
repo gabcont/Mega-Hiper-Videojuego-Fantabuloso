@@ -1,39 +1,39 @@
 [gd_scene load_steps=4 format=3 uid="uid://b01ayooe6k18k"]
 
 [ext_resource type="Script" uid="uid://usr8lcm7y3k6" path="res://scripts/main.gd" id="1_0kh0y"]
-[ext_resource type="PackedScene" uid="uid://cge3x123ee57" path="res://Escenas/Personaje.tscn" id="1_6lbni"]
+[ext_resource type="PackedScene" uid="uid://cge3x123ee57" path="res://Escenas/personajes/knuckles.tscn" id="1_6lbni"]
 [ext_resource type="PackedScene" uid="uid://ciju33dx3wi3h" path="res://Escenas/boton_accion.tscn" id="3_0kh0y"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0kh0y")
 
 [node name="Personaje" parent="." instance=ExtResource("1_6lbni")]
-position = Vector2(630, 182)
+position = Vector2(272, 79)
 scale = Vector2(5, 5)
 
 [node name="BotonAtaque1" parent="." instance=ExtResource("3_0kh0y")]
-offset_left = 110.0
-offset_top = 434.0
-offset_right = 276.0
-offset_bottom = 566.0
+offset_left = -212.0
+offset_top = 167.0
+offset_right = -46.0
+offset_bottom = 299.0
 
 [node name="BotonAtaque2" parent="." instance=ExtResource("3_0kh0y")]
-offset_left = 347.0
-offset_top = 434.0
-offset_right = 513.0
-offset_bottom = 566.0
+offset_left = 37.0
+offset_top = 178.0
+offset_right = 203.0
+offset_bottom = 310.0
 text = "ataque_2"
 
 [node name="BotonAtaque3" parent="." instance=ExtResource("3_0kh0y")]
-offset_left = 592.0
-offset_top = 433.0
-offset_right = 758.0
-offset_bottom = 565.0
+offset_left = -216.0
+offset_top = 338.0
+offset_right = -50.0
+offset_bottom = 470.0
 text = "ataque_especial"
 
 [node name="BotonAtaque4" parent="." instance=ExtResource("3_0kh0y")]
-offset_left = 841.0
-offset_top = 437.0
-offset_right = 1007.0
-offset_bottom = 569.0
+offset_left = 39.0
+offset_top = 353.0
+offset_right = 205.0
+offset_bottom = 485.0
 text = "huida"

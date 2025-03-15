@@ -18,5 +18,5 @@ stream = ExtResource("2_7u51v")
 [node name="ataque_especial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_kcebo")
 
-[node name="huida" type="AudioStreamPlayer" parent="."]
+[node name="esquivar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kcebo")
