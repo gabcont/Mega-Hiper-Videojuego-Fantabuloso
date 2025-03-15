@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bgdftdse42caf" path="res://Assets/Spritesheets/Knuckles/knuckle-sheet-sheet.png" id="1_qg4o5"]
 [ext_resource type="PackedScene" uid="uid://cw603thcw0mex" path="res://Escenas/sonido.tscn" id="2_0gco6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tk1jt"]
-atlas = ExtResource("1_qg4o5")
-region = Rect2(576, 0, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_0gco6"]
 atlas = ExtResource("1_qg4o5")
 region = Rect2(448, 0, 64, 64)
@@ -15,6 +11,10 @@ region = Rect2(448, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0kjke"]
 atlas = ExtResource("1_qg4o5")
 region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk1jt"]
+atlas = ExtResource("1_qg4o5")
+region = Rect2(576, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fj443"]
 atlas = ExtResource("1_qg4o5")
@@ -104,10 +104,10 @@ region = Rect2(384, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tk1jt")
+"texture": SubResource("AtlasTexture_0gco6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0gco6")
+"texture": SubResource("AtlasTexture_0kjke")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0kjke")
@@ -122,6 +122,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fj443")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7216l")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7216l")
@@ -220,7 +223,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_0kjke"]
 resource_name = "huida"
-length = 0.2
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -228,8 +231,8 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.2),
-"transitions": PackedFloat32Array(0.170755, 0.784584, 1),
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(0.133972, 0.277392, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-20, 0), Vector2(0, 0)]
 }
@@ -246,8 +249,10 @@ script = ExtResource("1_0kjke")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_u0uy1")
-animation = &"ataque_2"
+animation = &"huida"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
