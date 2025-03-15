@@ -1,0 +1,334 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Página-1" id="p43m8mcyJNZtT0WRqfeu">
+    <mxGraphModel dx="2100" dy="1258" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-1" value="&lt;h1&gt;1. Entendimiento del problema&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="94" y="40" width="640" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-2" value="&lt;h3&gt;1.1. Definición del cliente&lt;/h3&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;El cliente en esta situación es el profesor, quien pide que se haga un juego el uso de ciertas tecnologías. Sin embargo uno de sus requerimientos, y el más importante, es que seamos nosotros quienes ideemos, diseñemos y hagamos el propio juego. De modo que tenemos dos clientes, el profesor como cliente principal, y nosotros mismos como clientes en un grado inferior pero que a fines practicos se tratará de la misma manera en el contexto del desarrollo del juego base.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="472" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-3" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="620" y="140" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="310" as="sourcePoint" />
+            <mxPoint x="620" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-5" value="Profesor" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-6" value="Clientecito" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="250" width="50" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="370" as="sourcePoint" />
+            <mxPoint x="700" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-8" value="Nosotros" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-9" value="&lt;h3&gt;1.2. Visión acordada del proyecto&amp;nbsp;&lt;/h3&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Se va a hacer un videojuego de peleas original, basado en sencillez de mecanica y profundidad de diseño. Usará dos tipos de ataque, un ataque especial y una forma de eludir los ataques, sin forma de moverse por el escenario y usando solo 3 o 4 botones. Debe Tener una base de datos que guarde información del jugador, estadisticas de partidas, etc. Debe ser algo sencillo y de fácil desarrollo pero con la intención de ser llamativo.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Opcionalmente, si nuestras capacidades nos lo permite, se propuso agregar la posibilidad de crear personajes jugables usando imagenes del jugador por medio de alguna IA. Esta idea está practicamente descartada.&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Inicialmente propuesto en Godot o Pygames. Resuelto para hacerse en Godot.&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="58" y="400" width="712" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-10" value="&lt;div style=&quot;&quot;&gt;&lt;h3 style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Lista de features&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Al iniciar el juego se presenta un menú donde ajustar sistemas básicos como el sonido, dificultad (Si se implementa), iniciar partida, y la creación de jugador por IA (si se implementa).&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;La partida inicia con dos personajes jugables en un escenario, cada uno con un set de movimientos, una barra de vida y un reloj.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Los personajes deben poder tener un ataque debil, un ataque fuerte, un ataque especial, y una forma de esquivar el ataque enemigo. Considerando la idea de un amague ataquedebil-&amp;gt;esquivo.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Los tipos de ataques deben tener diferencias visuales, sonoras y de tiempo claras que deje claro cual es qué tipo de ataque.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Los ataques deben ser telegrafiados, predecibles con pistas visuales y de sonido de modo que puedan ser esquivadas por jugadores con habilidad.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Todo ataque debe ser esquivable en una ventana de tiempo especifica.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Esquivar debe tener una desventaja, cooldown entre esquivos?.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Condición de victoria: Tiempo o Agotar la vida del rival.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Barra especial que cargue el ataque especial según una cantidad de golpes consecutivos?&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Un ataque especial por cada personaje: una combinación automatica de ataques debiles y fuertes. Debe tener una animación y/o efecto visual que indique lo impresionante del ataque.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Los ataques atenuan el daño si se contrarrestan con otro ataque.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Debe tener un escenario y música que aviven artisticamente al juego.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Un sistema de sonido que permita a los personajes hacer ruido según cada acción que hagan (ataques, victoria, derrota, esquivar, etc.)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Los personajes al iniciar un movimiento quedan en un estado del que no pueden salir hasta que terminen el movimiento, esto para evitar concatenación de movimientos muy rapidamente.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Los ataques deben tener una forma de saber cuando fueron efectuados, de modo que se sepa qué ataque fue efectuado primero en un caso donde ambos se ataquen a la vez.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistema de rounds: cada partida decidirá al ganador al mejor de 3 rounds o al mejor de 5 rounds.&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;La entrada del usuario será por botones en pantalla o teclas del teclado. Soporte para controles?&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingTop=0;" vertex="1" parent="1">
+          <mxGeometry x="936" y="30" width="610" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-11" value="&lt;h3&gt;2. Diagrama de Use Case&lt;/h3&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1824" y="30" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-12" value="Sistema del juego" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=40;" vertex="1" parent="1">
+          <mxGeometry x="1834" y="90" width="450" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-13" value="Jugador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1723" y="205" width="60" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-14" value="Ajusta configuraciones del menú" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1943" y="110" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-15" value="Configura partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2043" y="165" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-16" value="Juega partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2063" y="260" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-17" value="Crea usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2009" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-18" value="Guarda información de usuario en BD" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1879" y="430" width="114" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-13" target="6Dr0wxkbe3de22DFNyd9-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1904" y="360" as="sourcePoint" />
+            <mxPoint x="1954" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1783" y="250" as="sourcePoint" />
+            <mxPoint x="1938" y="181.67000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.004;entryY=0.32;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1784" y="250" as="sourcePoint" />
+            <mxPoint x="1984" y="228" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.004;entryY=0.336;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-13" target="6Dr0wxkbe3de22DFNyd9-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1794" y="260" as="sourcePoint" />
+            <mxPoint x="1994" y="296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-13" target="6Dr0wxkbe3de22DFNyd9-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1793" y="258" as="sourcePoint" />
+            <mxPoint x="2014" y="377" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-24" value="I.A. de combate" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2333" y="220" width="60" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-24" target="6Dr0wxkbe3de22DFNyd9-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2043" y="350" as="sourcePoint" />
+            <mxPoint x="2302" y="376" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-26" value="Pausa partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2043" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-27" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1783" y="250" as="sourcePoint" />
+            <mxPoint x="2073" y="286" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-28" value="Módulos del sistema" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="765" width="700" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-29" value="Personajes" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="89" y="145" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-30" value="Interfaz (HUD)" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="479" y="145" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-31" value="Base de datos" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="387" y="50" width="121" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-32" value="Menú" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="239" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-33" value="Escenario" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="219" y="145" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-34" value="Sonido" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="349" y="145" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-35" value="Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="48" y="224" width="111" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-36" value="I.A. Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="177" y="224" width="111" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-37" value="Input" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-28">
+          <mxGeometry x="312" y="224" width="111" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-38" value="¿Cómo coño se hace?" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="2559" y="130" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-39" value="I.A. Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-38">
+          <mxGeometry x="76" y="82" width="139" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-40" value="¿Qué coño se supone que es esto?" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="2929" y="130" width="349" height="228" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-41" value="Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-40">
+          <mxGeometry x="78" y="67" width="135" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-42" value="Los actores que actúan en el sistema son el jugador, y las acciones que puede realizar este son las comprendidas acá. Y la I.A., la cual en cierta forma es parte del sistema pero interactua con la partida del mismo modo que el usuario." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1811" y="512" width="579" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-43" value="Riesgo: No solo debe tenerse un diseño claro de juego, sino&amp;nbsp; también debe entenderse cómo se va a implementar de manera que se tenga, siempre, un orden de acciones que siguen las reglas debidas de juego." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2929" y="360" width="342" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-44" value="Riesgo: Es un juego de pelea. Es necesario que los personajes sean llamativos, interesantes, satisfactorios de jugar, visualmente placentero y con un haptic feedback bien diseñado." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2711" y="815" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-45" value="Esencia del proyecto" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="2721" y="630" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-46" value="Personajes" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-45">
+          <mxGeometry x="99" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-47" value="¿Qué coño se supone que es esto?" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="3364" y="50" width="349" height="228" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-48" value="Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-47">
+          <mxGeometry x="78" y="67" width="135" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-49" value="Riesgo: No solo debe tenerse un diseño claro de juego, sino&amp;nbsp; también debe entenderse cómo se va a implementar de manera que se tenga, siempre, un orden de acciones que siguen las reglas debidas de juego." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3364" y="280" width="342" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-50" value="Prioridad de inputs:&lt;div&gt;El sistema debe poder detectar el tipo de ataque cuando dos se encuentran y decidir qué hacer: darle prioridad a uno, al otro, cancelar ambos, etc.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3747" y="96" width="342" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-51" value="&lt;div&gt;Secuencia de inputs:&lt;/div&gt;&lt;div&gt;Ya sea para el amague, ya sea para activar el ataque especial, ya sea para cualquier idea futura como los combos. El sistema debe ser capaz de reconocer cadenas de inputs.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Supongamos que para activar el ataque especial hay que pulsar A+B al mismo tiempo. El sistema debe tener una forma de identificar cuando una cierta combinación de entradas fue introducida, y definir lo que significa que dos botones se presionen al mismo tiempo, tiene que ser exactamente al mismo tiempo o hay una ventana de tiempo en que la entrada es valida?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Este sistema a su vez debe poder ser reseteado o cancelado. Supongamos que una cierta cadena de inputs den como resultado cierta acción, si el personaje es golpeado antes de terminar esa combinación, dicha cadena de inputs debería ser invalidada. Esto sin embargo quizá no sea necesario si no añadimos combos.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3747" y="190" width="342" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-52" value="&lt;div&gt;Input buffering:&lt;/div&gt;&lt;div&gt;Una vez empieza la ejecución de un ataque o acción el personaje no debería de poder hacer más nada hasta que dicha acción no se vea terminada, ya sea por su culminación o por su cancelación por un ataque enemigo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Sin embargo, debe haber un sistema que registre cada input y lo almacene por una cierta cantidad de tiempo hasta que caduque o pueda ser utilizada.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Supongamos que tras esquivar el jugador quiere usar un ataque debil, pero pulsa el boton de atacar un frame antes de que el cooldown del input se acabe. Esto resultará en que el usuario sentirá que debió haber atacado, pero el personaje no obedeció su orden.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;El buffer guardará la entrada una cantidad de tiempo estipulada y tomará como valida la última entrada si sigue almacenada en el buffer el frame en que el cooldown de input se acabe.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3382" y="483" width="342" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-53" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Propiedades de Movimientos:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Cada movimiento debe tener un tiempo de ejecución, medido en segundos o frames. Ejecución tras la cual, el movimiento debe poder definir una ventana de tiempo en que puede recibir una segunda instrucción (Esquivar -&amp;gt; amague, Segundo boton -&amp;gt; ataque especial) y cambiar la ejecución por otra.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Sin embargo tras cerrar la ventana de espera, no debe poderse ver interrumpida hasta que llegue otro cambio de estado.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Cada movimiento debe tener un cooldown definible tras el cual no se puede recibir una nueva instrucción.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3760" y="483" width="342" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-54" value="¿Cómo coño se hace?" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="4229" y="26" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-55" value="I.A. Combate" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-54">
+          <mxGeometry x="76" y="82" width="139" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-56" value="Riesgo: no sé cómo se hace una I.A. de este estilo. Es necesario descubrirlo antes de terminar el desarrollo de modo que las decisiones de diseño e implementación no choquen con la tardía adición de este componente." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="4220" y="256" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-57" value="No sé, para despues." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="4627" y="86" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-58" value="Riesgo: Es un juego de pelea. Es necesario que los personajes sean llamativos, interesantes, satisfactorios de jugar, visualmente placentero y con un haptic feedback bien diseñado." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5046" y="232" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-59" value="Esencia del proyecto" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;height=40;" vertex="1" parent="1">
+          <mxGeometry x="5056" y="47" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-60" value="Personajes" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-59">
+          <mxGeometry x="99" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-61" value="Los personajes son principalmente prueba y error, modificaciones minimas en las animaciones y tiempos de ejecución de acciones hasta que se logre un feel de juego satisfactorio. Pero es necesario tener otros sistemas anteriores para lograrlo." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5422" y="108" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-62" value="&lt;h3&gt;Identificación del mejor método&lt;/h3&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;En el caso de un videojuego creo que, al menos al principio, es más importante centrarse en tener escenarios jugables completos que permitan prontamente las pruebas de juego y luego centrarse en adiciones y caracteristicas modulares que se agregarán por encima del sistema ya funcional. De modo que sugiero optar por empezar el desarrollo con un enfoque en Use Case.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Nos centraríamos en tener una partida bien diseñada y jugable de principio a fin, y luego podré enfocarse en features individuales que dependen de poder jugar el juego para que tengan un sentido.&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5959" y="90" width="566" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-63" value="&lt;h1&gt;Método de desarrollo&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5909" y="42" width="640" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-64" value="&lt;h3&gt;&lt;span style=&quot;text-align: left; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px; font-weight: normal; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Nos enfocaremos en el Use Case de &quot;Juega partida&quot;, la cual a su vez puede parecer que cubre &quot;Configura partida&quot;, pero la intención es tener una partida jugable, sin importar que ya esté configurada y creada en el propio codigo, algo que el usuario no podría hacer.&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;Incluso dentro de &quot;juega partida&quot; deberíamos enforcarmos en pura jugabilidad y dejar de lado la interfaz y el sonido por ahora.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;El objetivo será tener dos personajes que se peguen en pantalla de la forma en que hemos diseñado en que lo hagan y suceda lo que, según nuestras reglas, debería de suceder.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;La idea es tener algo que se pueda jugar y probar, modificar valores hasta obtener un resultado que nos guste.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5989.5" y="822" width="510" height="197" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-65" value="&lt;h3&gt;2. Diagrama de Use Case&lt;/h3&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="5983" y="310" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-66" value="Sistema del juego" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=40;" vertex="1" parent="1">
+          <mxGeometry x="5993" y="370" width="450" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-67" value="Jugador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5882" y="485" width="60" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-68" value="Ajusta configuraciones del menú" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6102" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-69" value="Configura partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6202" y="445" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-70" value="Juega partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6222" y="540" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-71" value="Crea usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6168" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-72" value="Guarda información de usuario en BD" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6038" y="710" width="114" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-73" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-67" target="6Dr0wxkbe3de22DFNyd9-68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="6063" y="640" as="sourcePoint" />
+            <mxPoint x="6113" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-74" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-69">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="5942" y="530" as="sourcePoint" />
+            <mxPoint x="6097" y="461.67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-75" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.004;entryY=0.32;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-70">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="5943" y="530" as="sourcePoint" />
+            <mxPoint x="6143" y="508" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-76" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.004;entryY=0.336;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-67" target="6Dr0wxkbe3de22DFNyd9-71">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="5953" y="540" as="sourcePoint" />
+            <mxPoint x="6153" y="576" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-77" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-67" target="6Dr0wxkbe3de22DFNyd9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="5952" y="538" as="sourcePoint" />
+            <mxPoint x="6173" y="657" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-78" value="I.A. de combate" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6492" y="500" width="60" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-79" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6Dr0wxkbe3de22DFNyd9-78" target="6Dr0wxkbe3de22DFNyd9-70">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="6202" y="630" as="sourcePoint" />
+            <mxPoint x="6461" y="656" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-80" value="Pausa partida" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6202" y="600" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-81" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="6Dr0wxkbe3de22DFNyd9-80">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="5942" y="530" as="sourcePoint" />
+            <mxPoint x="6232" y="566" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-82" value="Use Case: Jugar partida" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="6655" y="231" width="773" height="843" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-83" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Main path&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;1. El sistema inicia ambos personajes en pantalla, uno a cada lado, uno de ellos volteado en su eje Y.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;2. El sistema inicia los botones en pantalla y a su vez toma entrada por teclado.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;3. El sistema espera una entrada del jugador.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;4. Un Jugador ingresa una entrada, por boton o teclado.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;5. El sistema almacena dicha entrada en el input buffer.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;6. El sistema determina si el personaje está en un estado que puede recibir ordenes.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;7. El sistema lee el input buffer.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;8. El sistema determina el tipo de acción según la entrada.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;9. Si dicha acción es realizable cambia el estado del personaje a &quot;ejecutando X acción&quot;.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;10. El sistema abre una ventana de tiempo en que puede recibir una nueva entrada para alterar la acción.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;11. Se acaba la ventana sin cambios. El sistema empieza a ejecutar la acción, imponiendo un input cooldown.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;12. Se acaba el input cooldown, puede recibir nuevas ordenes.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;13. Si el personaje sufre daño, recibe un cooldown de acciones corto. Y se resta su propiedad de salud.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;14. Sistema chequea que la salud de ambos personajes sea 0.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;15. Sistema chequea que el tiempo se haya acabado.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;16. Sistema finaliza la partida.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;17. Sistema guarda información de partida, usuarios, etc.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="38" y="160" width="342" height="605" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-84" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Alternate path&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="475" y="201" width="112" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-85" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;6.1 Si el personaje no puede recibir ordenes, mantiene el input en el buffer hasta que caduque o pueda ser ejecutado.&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="412" y="254" width="287" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-86" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Actores principales: Jugador 1, jugador 2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Pre-condiciones: hay dos jugadores listos para jugar.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Meta: Iniciar y jugar una partida principio a fin hasta que alguien gane.&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="47" y="40" width="503" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-87" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;9.1 Si la acción pedida no se puede realizar, no se hace nada, y se borra la entrada del input buffer.&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="402" y="385" width="287" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-88" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;11.1 El jugador ingresa una entrada que cambia la acción, se cambia el estado de ejecución del personaje.&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="402" y="594" width="287" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-89" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;10.1 Si durante el inicio, ventana de tiempo de cambio, o ejecución de una acción, la misma se ve interrumpida de alguna forma por acción del rival, toda acción se cancela y se cambia el estado a uno relevante al contexto.&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6Dr0wxkbe3de22DFNyd9-82">
+          <mxGeometry x="402" y="500" width="287" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-90" value="El sistema se puede partir en los siguientes modulos individuales.&lt;div&gt;Módulos como el menú, base de datos e interfaz no son esenciales para el proyecto y dependen del funcionamiento de otros modulos.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Los tres modulos cuya importancia dicta por donde se empezará el desarrollo están en la siguiente página, junto a la razón de su importancia.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1759" y="650" width="579" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-91" value="Riesgo: no sé cómo se hace una I.A. de este estilo. Es necesario descubrirlo antes de terminar el desarrollo de modo que las decisiones de diseño e implementación no choquen con la tardía adición de este componente." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2559" y="364" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Dr0wxkbe3de22DFNyd9-92" value="&lt;h3&gt;Este es el comportamiento que deberá, mas o menos, tener el sistema una vez terminado y funcionando según lo planeado. De modo que usaremos este Use Case para determinar qué debe hacerse, y qué comprenderá el desarrollo en esta primera fase temprana del proyecto.&lt;/h3&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="6783" y="86" width="535" height="138" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
