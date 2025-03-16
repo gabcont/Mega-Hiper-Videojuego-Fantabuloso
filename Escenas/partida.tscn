@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ldrwgxrqjjg5"]
+
+[ext_resource type="PackedScene" uid="uid://cge3x123ee57" path="res://Escenas/personajes/knuckles.tscn" id="1_0t4ck"]
+[ext_resource type="PackedScene" uid="uid://8jm3q8oym0o1" path="res://Escenas/botones-jugador2.tscn" id="2_dkiol"]
+[ext_resource type="PackedScene" uid="uid://6dkfhud14d5i" path="res://Escenas/botones-jugador1.tscn" id="2_mo80f"]
+[ext_resource type="PackedScene" uid="uid://ng5vqutrb3l4" path="res://Escenas/personajes/kirby.tscn" id="3_mo80f"]
+
+[node name="Partida" type="Node2D"]
+
+[node name="Botones" type="Node" parent="."]
+
+[node name="Botones-personaje1" parent="Botones" instance=ExtResource("2_mo80f")]
+position = Vector2(284, 490)
+
+[node name="Botones-personaje2" parent="Botones" instance=ExtResource("2_dkiol")]
+position = Vector2(838, 490)
+
+[node name="Personajes" type="Node" parent="."]
+
+[node name="Personaje1" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("1_0t4ck")]
+position = Vector2(480, 172)
+scale = Vector2(6, 6)
+nodo_botones = NodePath("../../Botones/Botones-personaje1")
+voltear_personaje = true
+
+[node name="Personaje2" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("3_mo80f")]
+position = Vector2(615, 172)
+scale = Vector2(6, 6)
+nodo_botones = NodePath("../../Botones/Botones-personaje2")
