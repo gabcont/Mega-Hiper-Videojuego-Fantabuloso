@@ -13,13 +13,25 @@ func _ready() -> void:
 	for boton in botones:
 		boton.connect("boton_presionado", _on_boton_presionado)
 
-func play_animacion(animacion : String) -> void:
-	match animacion:
+func play_animacion(accion : String) -> void:
+	var animacion : String
+	match accion:
+		"ataque_debil":
+			if randi_range(1, 2) == 1:
+				animacion = "ataque_1"
+			else:
+				animacion = "ataque_2"
+
+		"ataque_fuerte":
+			animacion = "ataque_especial"
+
 		"esquivar":
+			animacion = "esquivar"
 			if voltear_personaje:
 				animacion_player.play(animacion + "_volteado")
 			else:
 				animacion_player.play(animacion)
+
 	sprite.play(animacion)
 	$Sonido.play_sfx(animacion)
 
