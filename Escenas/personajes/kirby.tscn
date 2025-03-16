@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://scripts/personaje.gd" id="1_6xk1h"]
 [ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://Escenas/personajes/kirby.tres" id="2_6xk1h"]
-[ext_resource type="PackedScene" uid="uid://cw603thcw0mex" path="res://Escenas/sonido.tscn" id="3_v5wxx"]
 
 [sub_resource type="Animation" id="Animation_tk1jt"]
 length = 0.001
@@ -32,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(0.133972, 0.277392, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(20, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(50, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_fj443"]
@@ -48,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(0.133972, 0.277392, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-20, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(-50, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj443"]
@@ -58,22 +57,71 @@ _data = {
 &"esquivar_volteado": SubResource("Animation_fj443")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_6xk1h"]
+
 [node name="Personaje" type="Node2D"]
 script = ExtResource("1_6xk1h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(5, 5)
 sprite_frames = ExtResource("2_6xk1h")
-animation = &"ataque_1"
+animation = &"idle"
 autoplay = "idle"
+offset = Vector2(16, 11.2)
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AnimatedSprite2D")
 libraries = {
 &"": SubResource("AnimationLibrary_fj443")
 }
 
-[node name="Sonido" parent="." instance=ExtResource("3_v5wxx")]
+[node name="Debug" type="BoxContainer" parent="."]
+anchors_preset = -1
+offset_left = 161.0
+offset_top = -68.0
+offset_right = 476.0
+offset_bottom = 90.0
+vertical = true
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[node name="Estado" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Estado"
+label_settings = SubResource("LabelSettings_6xk1h")
+
+[node name="Atacado" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Atacado"
+label_settings = SubResource("LabelSettings_6xk1h")
+
+[node name="Interrumpido" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Interrumpido"
+label_settings = SubResource("LabelSettings_6xk1h")
+
+[node name="Input" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Interrumpido"
+label_settings = SubResource("LabelSettings_6xk1h")
+
+[node name="Salud" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Salud"
+label_settings = SubResource("LabelSettings_6xk1h")
+
+[node name="Frame" type="Label" parent="Debug"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Frame"
+label_settings = SubResource("LabelSettings_6xk1h")

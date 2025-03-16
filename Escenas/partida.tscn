@@ -1,29 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://ldrwgxrqjjg5"]
+[gd_scene load_steps=7 format=3 uid="uid://ldrwgxrqjjg5"]
 
 [ext_resource type="PackedScene" uid="uid://cge3x123ee57" path="res://Escenas/personajes/knuckles.tscn" id="1_0t4ck"]
+[ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://Escenas/partida.gd" id="1_pfv7k"]
 [ext_resource type="PackedScene" uid="uid://8jm3q8oym0o1" path="res://Escenas/botones-jugador2.tscn" id="2_dkiol"]
 [ext_resource type="PackedScene" uid="uid://6dkfhud14d5i" path="res://Escenas/botones-jugador1.tscn" id="2_mo80f"]
-[ext_resource type="PackedScene" uid="uid://ng5vqutrb3l4" path="res://Escenas/personajes/kirby.tscn" id="3_mo80f"]
+[ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://Escenas/personajes/knuckles.tres" id="4_s3u3c"]
+[ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://Escenas/personajes/kirby.tres" id="5_pfv7k"]
 
 [node name="Partida" type="Node2D"]
+script = ExtResource("1_pfv7k")
 
 [node name="Botones" type="Node" parent="."]
 
 [node name="Botones-personaje1" parent="Botones" instance=ExtResource("2_mo80f")]
-position = Vector2(284, 490)
+position = Vector2(292, 614)
 
 [node name="Botones-personaje2" parent="Botones" instance=ExtResource("2_dkiol")]
-position = Vector2(838, 490)
+position = Vector2(836, 615)
 
 [node name="Personajes" type="Node" parent="."]
 
 [node name="Personaje1" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("1_0t4ck")]
-position = Vector2(480, 172)
-scale = Vector2(6, 6)
+position = Vector2(329, 236)
+scale = Vector2(1.2, 1.2)
 nodo_botones = NodePath("../../Botones/Botones-personaje1")
-voltear_personaje = true
+spriteframe = ExtResource("4_s3u3c")
 
-[node name="Personaje2" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("3_mo80f")]
-position = Vector2(615, 172)
-scale = Vector2(6, 6)
+[node name="Personaje2" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("1_0t4ck")]
+position = Vector2(749, 249)
+scale = Vector2(1.2, 1.2)
 nodo_botones = NodePath("../../Botones/Botones-personaje2")
+voltear_personaje = true
+spriteframe = ExtResource("5_pfv7k")
+
+[connection signal="ha_atacado" from="Personajes/Personaje1" to="." method="_on_personaje_1_ha_atacado"]
+[connection signal="ha_atacado" from="Personajes/Personaje2" to="." method="_on_personaje_2_ha_atacado"]
