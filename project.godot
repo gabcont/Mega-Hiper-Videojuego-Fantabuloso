@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Db="*res://scripts/db.gd"
+Db="*res://bd/scripts/db.gd"
 
 [editor_plugins]
 
