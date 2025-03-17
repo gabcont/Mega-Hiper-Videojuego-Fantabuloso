@@ -9,8 +9,6 @@ func _ready():
 	db.path = db_path
 	var success = db.open_db()
 	
-	
-	
 func conectar_base():
 	return db
 		

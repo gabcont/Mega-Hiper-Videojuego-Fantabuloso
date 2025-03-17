@@ -12,7 +12,7 @@ func on_button_pressed():
 	var usuario = line_edit_usuario.text
 	var contrasena = line_edit_contrasena.text
 	
-	if contrasena.length() > 2:
+	if contrasena.length() > 6:
 		registrar(usuario,contrasena)
 	else:
 		errorLabel.text = "La conntraseña debe ser al menos de 6 caracteres"
