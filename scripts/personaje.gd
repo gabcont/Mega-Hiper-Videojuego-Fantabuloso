@@ -1,7 +1,6 @@
 class_name Personaje extends Node2D
 
 signal ha_atacado(tipo_ataque : StringName)
-signal ha_sido_atacado
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -48,9 +47,6 @@ func set_puede_ser_atacado(valor : bool) -> void:
 func set_puede_recibir_input(valor : bool) -> void:
 	PUEDE_RECIBIR_INPUT = valor
 
-func set_estado_puede_ser_interrumpido(valor : bool) -> void:
-	ESTADO_PUEDE_SER_INTERRUMPIDO = valor
-
 # Actualiza textos en pantalla con información del personaje
 func actualizar_debug_info() -> void:
 	$Debug/Estado.text = ESTADO_ACTUAL
@@ -78,19 +74,18 @@ func play_animacion(accion : StringName) -> void:
 			if voltear_personaje:
 				animacion += "_volteado"
 			
+		"bloquear":
+			animacion = "bloquear"
+
 		"herido":
 			animacion = "herido"
 	animation_player.play(animacion)
 
-# Necesario?
-func ataque_debil() -> void:
-	ESTADO_ACTUAL = "ATAQUE DEBIL"
-	PUEDE_RECIBIR_INPUT = false
-	PUEDE_SER_ATACADO = true
-
 # Se explica solo
 func voltear_sprite() -> void:
 	sprite.flip_h = not sprite.flip_h
+	$PosMitadSprite.position = Vector2(80, 0)
+	$PosMitadSprite/Burbuja.rotation = PI
 
 func procesar_input() -> void:
 	if PUEDE_RECIBIR_INPUT and input_buffer != "vacio":
@@ -116,8 +111,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	ESTADO_ACTUAL = "idle"
 	sprite.play("idle")
 
-func _on_animated_sprite_2d_animation_changed() -> void:
-	frame_actual_de_animacion = 1
 
 func _on_animated_sprite_2d_frame_changed() -> void:
 	frame_actual_de_animacion += 1
@@ -135,19 +128,32 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 		"esquivar":
 			if frame_actual_de_animacion > 4:
 				frame_actual_de_animacion = 1
+		"bloquear":
+			if frame_actual_de_animacion > 2:
+				frame_actual_de_animacion = 1
 		"idle":
 			if frame_actual_de_animacion > 7:
 				frame_actual_de_animacion = 1
 
-func procesar_ataque_enemigo(tipo_ataque : StringName) -> void:
-	if PUEDE_SER_ATACADO:
-		match tipo_ataque:
-			"ataque_debil":
-				salud -= 20
-			"ataque_fuerte":
-				salud -= 30
-		play_animacion("herido")
-		
+func _on_animation_player_current_animation_changed() -> void:
+	frame_actual_de_animacion = 1
 
+func procesar_ataque_enemigo(tipo_ataque : StringName) -> void:
+	match tipo_ataque:
+		"ataque_debil":
+			if ESTADO_ACTUAL == "bloquear":
+				pass
+			elif ESTADO_ACTUAL == "esquivar" and not PUEDE_SER_ATACADO:
+				pass
+			else:
+				salud -= 20
+				play_animacion("herido")
+		"ataque_fuerte":
+			if ESTADO_ACTUAL == "esquivar":
+				pass
+			else:
+				salud -= 30
+				play_animacion("herido")
+	
 func atacar() -> void:
 	ha_atacado.emit(ESTADO_ACTUAL)

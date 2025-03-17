@@ -23,7 +23,15 @@ input_key = "A_p2"
 [node name="BotonH" parent="." instance=ExtResource("1_ouovo")]
 offset_left = 67.0
 offset_top = -83.0
-offset_right = 170.0
-offset_bottom = -1.0
+offset_right = 168.0
+offset_bottom = -8.0
 text = "esquivar"
-input_key = "H_p2"
+input_key = &"X_p2"
+
+[node name="BotonH2" parent="." instance=ExtResource("1_ouovo")]
+offset_left = 176.0
+offset_top = -82.0
+offset_right = 277.0
+offset_bottom = -7.0
+text = "bloquear"
+input_key = &"Y_p2"
