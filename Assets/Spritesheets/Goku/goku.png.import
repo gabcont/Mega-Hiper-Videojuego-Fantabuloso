@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nqlku3pxp8a2"
-path="res://.godot/imported/goku.png-6b713f8f63fcd0d30ebd446b4715b0ba.ctex"
+path="res://.godot/imported/goku.png-e0236b6349010361147520935dabaf66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Goku/goku.png"
-dest_files=["res://.godot/imported/goku.png-6b713f8f63fcd0d30ebd446b4715b0ba.ctex"]
+source_file="res://assets/spritesheets/Goku/goku.png"
+dest_files=["res://.godot/imported/goku.png-e0236b6349010361147520935dabaf66.ctex"]
 
 [params]
 

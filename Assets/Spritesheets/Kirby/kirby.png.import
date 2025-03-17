@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn8njyt60qdtj"
-path="res://.godot/imported/kirby.png-b836f8bf639f708a14e9303243869ec1.ctex"
+path="res://.godot/imported/kirby.png-c41a616fa6b4f7390b6f974c20e2fba5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Kirby/kirby.png"
-dest_files=["res://.godot/imported/kirby.png-b836f8bf639f708a14e9303243869ec1.ctex"]
+source_file="res://assets/spritesheets/Kirby/kirby.png"
+dest_files=["res://.godot/imported/kirby.png-c41a616fa6b4f7390b6f974c20e2fba5.ctex"]
 
 [params]
 

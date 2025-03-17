@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bj4mbs5fr8s3a"
-path="res://.godot/imported/herido.wav-7500a686110d1c1b3320da88d07eef22.sample"
+path="res://.godot/imported/herido.wav-52374b829f04391dab0a5018709577a5.sample"
 
 [deps]
 
-source_file="res://Assets/Sonidos/herido.wav"
-dest_files=["res://.godot/imported/herido.wav-7500a686110d1c1b3320da88d07eef22.sample"]
+source_file="res://assets/sonidos/herido.wav"
+dest_files=["res://.godot/imported/herido.wav-52374b829f04391dab0a5018709577a5.sample"]
 
 [params]
 

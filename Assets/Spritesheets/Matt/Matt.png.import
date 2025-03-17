@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh5h3kw6k7jxc"
-path="res://.godot/imported/Matt.png-608658a7deb2075651b84327cf955f6d.ctex"
+path="res://.godot/imported/Matt.png-fcd224989e88c17630cfc5e10b453188.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Matt/Matt.png"
-dest_files=["res://.godot/imported/Matt.png-608658a7deb2075651b84327cf955f6d.ctex"]
+source_file="res://assets/spritesheets/Matt/Matt.png"
+dest_files=["res://.godot/imported/Matt.png-fcd224989e88c17630cfc5e10b453188.ctex"]
 
 [params]
 

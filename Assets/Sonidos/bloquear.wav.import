@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dodlrk5xfkkom"
-path="res://.godot/imported/bloquear.wav-8ba2d99fb00dc0684f8b090097ce25f8.sample"
+path="res://.godot/imported/bloquear.wav-979c4e1084ab5ebb5ee9a0e2f84506e6.sample"
 
 [deps]
 
-source_file="res://Assets/Sonidos/bloquear.wav"
-dest_files=["res://.godot/imported/bloquear.wav-8ba2d99fb00dc0684f8b090097ce25f8.sample"]
+source_file="res://assets/sonidos/bloquear.wav"
+dest_files=["res://.godot/imported/bloquear.wav-979c4e1084ab5ebb5ee9a0e2f84506e6.sample"]
 
 [params]
 

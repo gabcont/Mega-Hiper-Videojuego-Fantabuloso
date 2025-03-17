@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://brlbhx26o7cmo"]
+
+[ext_resource type="FontFile" uid="uid://ckwasjqt27hdu" path="res://PixelifySans-VariableFont_wght.ttf" id="1_upw4p"]
+
+[node name="Label" type="Label"]
+offset_left = 384.0
+offset_top = 104.0
+offset_right = 768.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("1_upw4p")
+theme_override_font_sizes/font_size = 60
+text = "texto"
+horizontal_alignment = 1
+vertical_alignment = 1

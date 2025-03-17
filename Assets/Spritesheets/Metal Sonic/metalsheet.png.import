@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3a4wxacivxr"
-path="res://.godot/imported/metalsheet.png-8b8b9a5ce0c2bcd32040e033b446f551.ctex"
+path="res://.godot/imported/metalsheet.png-8faf9068bf0aab67a832ef1a1faf68c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Metal Sonic/metalsheet.png"
-dest_files=["res://.godot/imported/metalsheet.png-8b8b9a5ce0c2bcd32040e033b446f551.ctex"]
+source_file="res://assets/spritesheets/Metal Sonic/metalsheet.png"
+dest_files=["res://.godot/imported/metalsheet.png-8faf9068bf0aab67a832ef1a1faf68c5.ctex"]
 
 [params]
 

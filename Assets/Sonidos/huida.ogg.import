@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b28ohwquhh522"
-path="res://.godot/imported/huida.ogg-cc709aadc6f3423681981f2033f6fbb5.oggvorbisstr"
+path="res://.godot/imported/huida.ogg-419b2b28eb4fb5bfdcdf45379329220d.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Sonidos/huida.ogg"
-dest_files=["res://.godot/imported/huida.ogg-cc709aadc6f3423681981f2033f6fbb5.oggvorbisstr"]
+source_file="res://assets/sonidos/huida.ogg"
+dest_files=["res://.godot/imported/huida.ogg-419b2b28eb4fb5bfdcdf45379329220d.oggvorbisstr"]
 
 [params]
 

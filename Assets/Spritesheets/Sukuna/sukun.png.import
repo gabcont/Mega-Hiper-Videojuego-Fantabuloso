@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y2vdwp213x74"
-path="res://.godot/imported/sukun.png-95aadc8a3269cdb29e6e2e635fb0a902.ctex"
+path="res://.godot/imported/sukun.png-e66a0ffcd5e4f2e0a44924adde2cd6e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Sukuna/sukun.png"
-dest_files=["res://.godot/imported/sukun.png-95aadc8a3269cdb29e6e2e635fb0a902.ctex"]
+source_file="res://assets/spritesheets/Sukuna/sukun.png"
+dest_files=["res://.godot/imported/sukun.png-e66a0ffcd5e4f2e0a44924adde2cd6e6.ctex"]
 
 [params]
 

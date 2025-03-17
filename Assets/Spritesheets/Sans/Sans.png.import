@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxr22fne015lu"
-path="res://.godot/imported/Sans.png-82d0bc04c623645d98acbda8c979775e.ctex"
+path="res://.godot/imported/Sans.png-a1e9bb4490ebdf34e63a1e1e68610d3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Sans/Sans.png"
-dest_files=["res://.godot/imported/Sans.png-82d0bc04c623645d98acbda8c979775e.ctex"]
+source_file="res://assets/spritesheets/Sans/Sans.png"
+dest_files=["res://.godot/imported/Sans.png-a1e9bb4490ebdf34e63a1e1e68610d3a.ctex"]
 
 [params]
 
