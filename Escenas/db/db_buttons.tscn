@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbhkoswnwc7qm"]
 
-[ext_resource type="Script" uid="uid://c8mub7yi6o4er" path="res://Escenas/registro.gd" id="1_tv86e"]
-[ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://Escenas/registro.tscn" id="2_w2q5i"]
+[ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://scripts/db_button.gd" id="1_7cqpg"]
+[ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://Escenas/db/registro.tscn" id="2_w2q5i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,13 +27,12 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Iniciar sesión
 "
-script = ExtResource("1_tv86e")
-escena_destino = ExtResource("2_w2q5i")
+script = ExtResource("1_7cqpg")
 
 [node name="Registro" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Registrarse
 "
-script = ExtResource("1_tv86e")
+script = ExtResource("1_7cqpg")
 escena_destino = ExtResource("2_w2q5i")

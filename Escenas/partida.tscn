@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ldrwgxrqjjg5"]
+[gd_scene load_steps=5 format=3 uid="uid://ldrwgxrqjjg5"]
 
 [ext_resource type="PackedScene" uid="uid://cge3x123ee57" path="res://Escenas/personajes/knuckles.tscn" id="1_0t4ck"]
 [ext_resource type="PackedScene" uid="uid://8jm3q8oym0o1" path="res://Escenas/botones-jugador2.tscn" id="2_dkiol"]
 [ext_resource type="PackedScene" uid="uid://6dkfhud14d5i" path="res://Escenas/botones-jugador1.tscn" id="2_mo80f"]
 [ext_resource type="PackedScene" uid="uid://ng5vqutrb3l4" path="res://Escenas/personajes/kirby.tscn" id="3_mo80f"]
-[ext_resource type="Script" uid="uid://cltm7m0f05rh2" path="res://Escenas/db_button.gd" id="3_pfv7k"]
-[ext_resource type="PackedScene" uid="uid://bbhkoswnwc7qm" path="res://Escenas/db_buttons.tscn" id="4_qpmav"]
-[ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://Escenas/registro.tscn" id="8_p51p1"]
 
 [node name="Partida" type="Node2D"]
 
@@ -21,15 +18,6 @@ position = Vector2(838, 490)
 [node name="Node2D" type="Node2D" parent="Botones"]
 position = Vector2(998, 106)
 
-[node name="Button" type="Button" parent="Botones/Node2D"]
-offset_left = -70.0
-offset_top = -50.0
-offset_right = 84.0
-offset_bottom = 52.0
-text = "Base de datos"
-script = ExtResource("3_pfv7k")
-escena_destino = ExtResource("4_qpmav")
-
 [node name="Personajes" type="Node" parent="."]
 
 [node name="Personaje1" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("1_0t4ck")]
@@ -42,15 +30,3 @@ voltear_personaje = true
 position = Vector2(615, 172)
 scale = Vector2(6, 6)
 nodo_botones = NodePath("../../Botones/Botones-personaje2")
-
-[node name="Interfaz_db" parent="." instance=ExtResource("4_qpmav")]
-offset_left = 1043.43
-offset_top = 131.207
-offset_right = 1043.43
-offset_bottom = 131.207
-
-[node name="Registro" parent="." instance=ExtResource("8_p51p1")]
-offset_left = 1936.0
-offset_top = 67.0
-offset_right = 1936.0
-offset_bottom = 67.0
