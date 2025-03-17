@@ -1,11 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://cge3x123ee57"]
+[gd_scene load_steps=22 format=3 uid="uid://cge3x123ee57"]
 
 [ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://scripts/personaje.gd" id="1_0kjke"]
-[ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://Escenas/personajes/kirby.tres" id="2_jerqr"]
+[ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://Escenas/personajes/knuckles.tres" id="2_m4qet"]
 [ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://Assets/Sonidos/ataque_1.mp3" id="3_6y3i8"]
 [ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://Assets/Sonidos/huida.ogg" id="3_hwi8i"]
 [ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://Assets/Sonidos/ataque_especial.wav" id="4_2sir4"]
 [ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://Assets/Sonidos/preparar_ataque.wav" id="4_up0a1"]
+[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://Assets/Sonidos/bloquear.wav" id="6_m4qet"]
 [ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://Assets/Sonidos/herido.wav" id="7_dh6ai"]
 [ext_resource type="Shader" uid="uid://mtpiuengeiev" path="res://shaders/burbuja.gdshader" id="8_nik1u"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://Assets/cuadrado_blanco.jpg" id="9_jerqr"]
@@ -82,6 +83,30 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../PosMitadSprite/Burbuja:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../PosMitadSprite/Burbuja:material:shader_parameter/noise_deformation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
 }
 
 [sub_resource type="Animation" id="Animation_6y3i8"]
@@ -402,7 +427,7 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_jerqr"]
 resource_name = "bloquear"
-length = 0.40001
+length = 0.5
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -414,7 +439,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"idle"]
+"values": [&"bloquear"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -423,8 +448,8 @@ tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.31864),
 "update": 1,
 "values": [0, 1]
 }
@@ -438,7 +463,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_6y3i8")
+"stream": ExtResource("6_m4qet")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -450,7 +475,7 @@ tracks/3/path = NodePath("..")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [false],
@@ -467,9 +492,12 @@ tracks/4/path = NodePath("..")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [false],
+"method": &"set_puede_ser_atacado"
+}, {
 "args": [true],
 "method": &"set_puede_ser_atacado"
 }]
@@ -481,10 +509,13 @@ tracks/5/path = NodePath("..")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [&"ataque_debil"],
+"args": [&"bloquear"],
+"method": &"set_estado"
+}, {
+"args": [&"idle"],
 "method": &"set_estado"
 }]
 }
@@ -495,12 +526,33 @@ tracks/6/path = NodePath("..")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"atacar"
-}]
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../PosMitadSprite/Burbuja:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../PosMitadSprite/Burbuja:material:shader_parameter/noise_deformation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.208698, 0.4),
+"transitions": PackedFloat32Array(0.112656, 0.03983, 1),
+"update": 0,
+"values": [5.0, 30.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_0kjke"]
@@ -838,6 +890,18 @@ tracks/8/keys = {
 "update": 0,
 "values": [Color(0.572669, 1.02278e-06, 1.92523e-07, 1), Color(1, 1, 1, 1)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../PosMitadSprite/Burbuja:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj443"]
 _data = {
@@ -876,7 +940,7 @@ script = ExtResource("1_0kjke")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(5, 5)
-sprite_frames = ExtResource("2_jerqr")
+sprite_frames = ExtResource("2_m4qet")
 animation = &"ataque_1"
 autoplay = "idle"
 
@@ -939,10 +1003,11 @@ label_settings = SubResource("LabelSettings_6y3i8")
 
 [node name="SFX" type="AudioStreamPlayer" parent="Sonido"]
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="PosMitadSprite" type="Marker2D" parent="."]
 position = Vector2(-80, 0)
 
-[node name="Burbuja" type="Sprite2D" parent="Marker2D"]
+[node name="Burbuja" type="Sprite2D" parent="PosMitadSprite"]
+visible = false
 texture_filter = 1
 material = SubResource("ShaderMaterial_tb1dm")
 position = Vector2(0, 50)
@@ -952,3 +1017,4 @@ texture = ExtResource("9_jerqr")
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
