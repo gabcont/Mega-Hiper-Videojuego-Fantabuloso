@@ -18,6 +18,9 @@ position = Vector2(292, 614)
 [node name="Botones-personaje2" parent="Botones" instance=ExtResource("2_dkiol")]
 position = Vector2(836, 615)
 
+[node name="Node2D" type="Node2D" parent="Botones"]
+position = Vector2(998, 106)
+
 [node name="Personajes" type="Node" parent="."]
 
 [node name="Personaje1" parent="Personajes" node_paths=PackedStringArray("nodo_botones") instance=ExtResource("1_0t4ck")]
