@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b42vefp3665hx"
-path="res://.godot/imported/maytro.png-de45a5164a1441663ad7f2731182398d.ctex"
+path="res://.godot/imported/maytro.png-5c3d8cc4d4b2947755cb059ff0bb7675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Metro/maytro.png"
-dest_files=["res://.godot/imported/maytro.png-de45a5164a1441663ad7f2731182398d.ctex"]
+source_file="res://assets/spritesheets/Metro/maytro.png"
+dest_files=["res://.godot/imported/maytro.png-5c3d8cc4d4b2947755cb059ff0bb7675.ctex"]
 
 [params]
 

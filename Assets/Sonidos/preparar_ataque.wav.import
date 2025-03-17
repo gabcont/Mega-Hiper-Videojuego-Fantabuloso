@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cii65574uqxfp"
-path="res://.godot/imported/preparar_ataque.wav-0e9778dc792d92cb226c3c6b036e079a.sample"
+path="res://.godot/imported/preparar_ataque.wav-53d5405b2540c67324575704ffce4420.sample"
 
 [deps]
 
-source_file="res://Assets/Sonidos/preparar_ataque.wav"
-dest_files=["res://.godot/imported/preparar_ataque.wav-0e9778dc792d92cb226c3c6b036e079a.sample"]
+source_file="res://assets/sonidos/preparar_ataque.wav"
+dest_files=["res://.godot/imported/preparar_ataque.wav-53d5405b2540c67324575704ffce4420.sample"]
 
 [params]
 

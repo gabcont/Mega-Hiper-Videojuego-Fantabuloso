@@ -1,37 +1,41 @@
 [gd_scene load_steps=2 format=3 uid="uid://6dkfhud14d5i"]
 
-[ext_resource type="PackedScene" uid="uid://ciju33dx3wi3h" path="res://Escenas/boton_accion.tscn" id="1_0lfcx"]
+[ext_resource type="PackedScene" uid="uid://ciju33dx3wi3h" path="res://escenas/boton_accion.tscn" id="1_0lfcx"]
 
 [node name="Botones-personaje" type="Node2D"]
 
 [node name="BotonA" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = -44.0
-offset_top = -95.0
-offset_right = 69.0
-offset_bottom = -5.0
+offset_left = -48.0
+offset_top = -82.0
+offset_right = 60.0
+offset_bottom = -10.0
 text = "ataque_debil"
-input_key = "B_p1"
+input_key = &"B_p1"
+metadata/_edit_use_anchors_ = true
 
 [node name="BotonB" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = -176.0
-offset_top = -94.0
-offset_right = -59.0
-offset_bottom = -7.0
+offset_left = -172.0
+offset_top = -83.0
+offset_right = -55.0
+offset_bottom = -12.0
 text = "ataque_fuerte"
-input_key = "A_p1"
+input_key = &"A_p1"
+metadata/_edit_use_anchors_ = true
 
 [node name="BotonH" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = 81.0
-offset_top = -93.0
-offset_right = 196.0
-offset_bottom = -2.0
+offset_left = 67.0
+offset_top = -83.0
+offset_right = 168.0
+offset_bottom = -8.0
 text = "esquivar"
 input_key = &"X_p1"
+metadata/_edit_use_anchors_ = true
 
 [node name="BotonH2" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = 209.0
-offset_top = -92.0
-offset_right = 324.0
-offset_bottom = -1.0
+offset_left = 176.0
+offset_top = -82.0
+offset_right = 277.0
+offset_bottom = -7.0
 text = "bloquear"
 input_key = &"Y_p1"
+metadata/_edit_use_anchors_ = true

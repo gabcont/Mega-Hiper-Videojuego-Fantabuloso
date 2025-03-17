@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bdd8ytswu53k4"
-path="res://.godot/imported/ataque_1.mp3-973a3464fa702ce1700a95e243e75b5f.mp3str"
+path="res://.godot/imported/ataque_1.mp3-abc8ddd2fe8bf5d788a57e8218723dc3.mp3str"
 
 [deps]
 
-source_file="res://Assets/Sonidos/ataque_1.mp3"
-dest_files=["res://.godot/imported/ataque_1.mp3-973a3464fa702ce1700a95e243e75b5f.mp3str"]
+source_file="res://assets/sonidos/ataque_1.mp3"
+dest_files=["res://.godot/imported/ataque_1.mp3-abc8ddd2fe8bf5d788a57e8218723dc3.mp3str"]
 
 [params]
 

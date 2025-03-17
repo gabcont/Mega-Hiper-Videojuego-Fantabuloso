@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg20nknlt4gpl"
-path="res://.godot/imported/adowsheet.png-39748f3f2a5c5bc1a998c531bc4ec6ae.ctex"
+path="res://.godot/imported/adowsheet.png-61eeccbe7223c78f68204e27d950a3d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Shadow/adowsheet.png"
-dest_files=["res://.godot/imported/adowsheet.png-39748f3f2a5c5bc1a998c531bc4ec6ae.ctex"]
+source_file="res://assets/spritesheets/Shadow/adowsheet.png"
+dest_files=["res://.godot/imported/adowsheet.png-61eeccbe7223c78f68204e27d950a3d1.ctex"]
 
 [params]
 
