@@ -1,15 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://cge3x123ee57"]
+[gd_scene load_steps=22 format=3 uid="uid://bamnjdr8d0t4a"]
 
 [ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://scripts/personaje.gd" id="1_0kjke"]
-[ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://Escenas/personajes/knuckles.tres" id="2_m4qet"]
-[ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://Assets/Sonidos/ataque_1.mp3" id="3_6y3i8"]
-[ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://Assets/Sonidos/huida.ogg" id="3_hwi8i"]
-[ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://Assets/Sonidos/ataque_especial.wav" id="4_2sir4"]
-[ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://Assets/Sonidos/preparar_ataque.wav" id="4_up0a1"]
-[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://Assets/Sonidos/bloquear.wav" id="6_m4qet"]
-[ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://Assets/Sonidos/herido.wav" id="7_dh6ai"]
+[ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://escenas/personajes/knuckles.tres" id="2_m4qet"]
+[ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://assets/sonidos/ataque_1.mp3" id="3_6y3i8"]
+[ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://assets/sonidos/huida.ogg" id="3_hwi8i"]
+[ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://assets/sonidos/ataque_especial.wav" id="4_2sir4"]
+[ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://assets/sonidos/preparar_ataque.wav" id="4_up0a1"]
+[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://assets/sonidos/bloquear.wav" id="6_m4qet"]
+[ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://assets/sonidos/herido.wav" id="7_dh6ai"]
 [ext_resource type="Shader" uid="uid://mtpiuengeiev" path="res://shaders/burbuja.gdshader" id="8_nik1u"]
-[ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://Assets/cuadrado_blanco.jpg" id="9_jerqr"]
+[ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://assets/cuadrado_blanco.jpg" id="9_jerqr"]
 
 [sub_resource type="Animation" id="Animation_tk1jt"]
 length = 0.001
@@ -736,7 +736,7 @@ tracks/5/path = NodePath("..")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.266667),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [false],
@@ -753,14 +753,11 @@ tracks/6/path = NodePath("..")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.266667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "values": [{
-"args": [false],
-"method": &"set_estado_puede_ser_interrumpido"
-}, {
-"args": [false],
-"method": &"set_estado_puede_ser_interrumpido"
+"args": [&"esquivar"],
+"method": &"set_estado"
 }]
 }
 

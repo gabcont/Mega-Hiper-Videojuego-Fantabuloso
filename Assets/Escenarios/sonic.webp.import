@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h3ycsd25g4b0"
-path="res://.godot/imported/sonic.webp-771f2280f08aa83ecc84d4a388cd1012.ctex"
+path="res://.godot/imported/sonic.webp-d31ab788e3c2e3d983431bff4904bc07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/sonic.webp"
-dest_files=["res://.godot/imported/sonic.webp-771f2280f08aa83ecc84d4a388cd1012.ctex"]
+source_file="res://assets/Escenarios/sonic.webp"
+dest_files=["res://.godot/imported/sonic.webp-d31ab788e3c2e3d983431bff4904bc07.ctex"]
 
 [params]
 

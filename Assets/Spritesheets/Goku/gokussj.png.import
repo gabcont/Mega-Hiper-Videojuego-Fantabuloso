@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvlwsb83b4884"
-path="res://.godot/imported/gokussj.png-78099338b0dc36d565667c81816c4718.ctex"
+path="res://.godot/imported/gokussj.png-fc52020cde197c8ae78a55d8cf175a96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Goku/gokussj.png"
-dest_files=["res://.godot/imported/gokussj.png-78099338b0dc36d565667c81816c4718.ctex"]
+source_file="res://assets/spritesheets/Goku/gokussj.png"
+dest_files=["res://.godot/imported/gokussj.png-fc52020cde197c8ae78a55d8cf175a96.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c00jyq8pgckhv"
-path="res://.godot/imported/Miku.png-743d441c15f3a8aee1b6b004eca0fd0d.ctex"
+path="res://.godot/imported/Miku.png-d6518c7bcb60fe97d0b47ac13591ca49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Miku/Miku.png"
-dest_files=["res://.godot/imported/Miku.png-743d441c15f3a8aee1b6b004eca0fd0d.ctex"]
+source_file="res://assets/spritesheets/Miku/Miku.png"
+dest_files=["res://.godot/imported/Miku.png-d6518c7bcb60fe97d0b47ac13591ca49.ctex"]
 
 [params]
 

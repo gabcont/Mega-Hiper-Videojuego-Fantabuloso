@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://culju1lewfyhi"
-path="res://.godot/imported/ken-sheet-sheet.png-121926e2f6925bb9599f32364417c06b.ctex"
+path="res://.godot/imported/ken-sheet-sheet.png-e20992877a653a13aaa7e067c2ff3ae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheets/Kendrick/ken-sheet-sheet.png"
-dest_files=["res://.godot/imported/ken-sheet-sheet.png-121926e2f6925bb9599f32364417c06b.ctex"]
+source_file="res://assets/spritesheets/Kendrick/ken-sheet-sheet.png"
+dest_files=["res://.godot/imported/ken-sheet-sheet.png-e20992877a653a13aaa7e067c2ff3ae7.ctex"]
 
 [params]
 
