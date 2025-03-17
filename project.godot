@@ -15,6 +15,14 @@ run/main_scene="uid://ldrwgxrqjjg5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Db="*res://scripts/db.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
+
 [input]
 
 A_p1={
