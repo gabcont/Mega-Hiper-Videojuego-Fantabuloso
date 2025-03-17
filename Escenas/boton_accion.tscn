@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cot4x8kisp8el" path="res://scripts/boton.gd" id="1_7ddb3"]
 
 [node name="BotonAtaque1" type="Button"]
-offset_left = -87.0
-offset_top = -65.0
-offset_right = 79.0
-offset_bottom = 67.0
+offset_left = -47.0
+offset_top = -33.0
+offset_right = 39.0
+offset_bottom = 35.0
 text = "ataque_1"
 script = ExtResource("1_7ddb3")
 

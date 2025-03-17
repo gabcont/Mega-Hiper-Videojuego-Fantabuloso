@@ -5,25 +5,25 @@
 [node name="Botones-personaje" type="Node2D"]
 
 [node name="BotonA" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = -186.0
-offset_top = -137.0
-offset_right = -20.0
+offset_left = -44.0
+offset_top = -95.0
+offset_right = 69.0
 offset_bottom = -5.0
 text = "ataque_debil"
 input_key = "B_p1"
 
 [node name="BotonB" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = 15.0
-offset_top = -138.0
-offset_right = 181.0
-offset_bottom = -6.0
+offset_left = -176.0
+offset_top = -94.0
+offset_right = -59.0
+offset_bottom = -7.0
 text = "ataque_fuerte"
 input_key = "A_p1"
 
 [node name="BotonH" parent="." instance=ExtResource("1_0lfcx")]
-offset_left = -81.0
-offset_top = 27.0
-offset_right = 85.0
-offset_bottom = 159.0
+offset_left = 81.0
+offset_top = -93.0
+offset_right = 196.0
+offset_bottom = -2.0
 text = "esquivar"
 input_key = "H_p1"

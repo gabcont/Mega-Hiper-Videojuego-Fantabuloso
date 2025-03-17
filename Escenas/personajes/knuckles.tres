@@ -46,13 +46,13 @@ region = Rect2(1024, 0, 64, 64)
 atlas = ExtResource("1_p3rcy")
 region = Rect2(1088, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_npymj"]
-atlas = ExtResource("1_p3rcy")
-region = Rect2(1152, 0, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_83n1x"]
 atlas = ExtResource("1_p3rcy")
 region = Rect2(1216, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npymj"]
+atlas = ExtResource("1_p3rcy")
+region = Rect2(1152, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7yk2"]
 atlas = ExtResource("1_p3rcy")
@@ -151,10 +151,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_ndm2x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_npymj")
+"texture": SubResource("AtlasTexture_83n1x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_83n1x")
+"texture": SubResource("AtlasTexture_npymj")
 }],
 "loop": false,
 "name": &"ataque_especial",
@@ -201,5 +201,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }]
