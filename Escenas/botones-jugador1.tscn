@@ -26,4 +26,12 @@ offset_top = -93.0
 offset_right = 196.0
 offset_bottom = -2.0
 text = "esquivar"
-input_key = "H_p1"
+input_key = &"X_p1"
+
+[node name="BotonH2" parent="." instance=ExtResource("1_0lfcx")]
+offset_left = 209.0
+offset_top = -92.0
+offset_right = 324.0
+offset_bottom = -1.0
+text = "bloquear"
+input_key = &"Y_p1"
