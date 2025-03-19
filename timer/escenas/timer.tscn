@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://uhkfrl02c26l"]
+
+[ext_resource type="Texture2D" uid="uid://767fhdt1ywxt" path="res://timer/assets/circulo.png" id="1_agrx6"]
+[ext_resource type="Script" uid="uid://h38h0ngvth6" path="res://timer/scripts/time.gd" id="2_emgkp"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_da1ia"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8826o"]
+font = ExtResource("3_da1ia")
+font_size = 21
+shadow_size = 15
+shadow_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_left = 288.0
+offset_top = 34.0
+offset_right = 388.0
+offset_bottom = 134.0
+max_value = 30.0
+value = 30.0
+fill_mode = 5
+texture_under = ExtResource("1_agrx6")
+texture_progress = ExtResource("1_agrx6")
+tint_under = Color(0.344076, 0.344076, 0.344076, 1)
+tint_over = Color(0.277528, 0.277528, 0.277528, 1)
+tint_progress = Color(1, 1, 0.180392, 1)
+script = ExtResource("2_emgkp")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 75.0
+offset_bottom = 70.0
+text = "30"
+label_settings = SubResource("LabelSettings_8826o")
+horizontal_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
