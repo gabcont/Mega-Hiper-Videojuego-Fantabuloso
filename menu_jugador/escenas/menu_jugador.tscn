@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvsnrfsl70wnc"]
+
+[ext_resource type="Script" uid="uid://7yc7oo2pkl2k" path="res://scripts/menu_jugador.gd" id="1_nt4qj"]
+[ext_resource type="Texture2D" uid="uid://cuu5ewg5pyirw" path="res://fondo_inicio.png" id="2_idqv4"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="3_6reh4"]
+[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://fuentes/Starborn.ttf" id="4_53idq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj1uy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.31802, 0.31802, 0.318019, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 1
+expand_margin_top = 9.0
+expand_margin_bottom = 9.0
+shadow_color = Color(0.215686, 0.215686, 0.215686, 0.956863)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = 47.0
+offset_right = 48.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nt4qj")
+
+[node name="FondoInicio" type="Sprite2D" parent="."]
+position = Vector2(505, 277)
+scale = Vector2(1.13735, 1.13845)
+texture = ExtResource("2_idqv4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -148.5
+offset_right = 319.0
+offset_bottom = 148.5
+grow_vertical = 2
+theme_override_constants/separation = 33
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.714343, 0.679067, 0.115084, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("3_6reh4")
+theme_override_font_sizes/font_size = 31
+text = "JUGADOR"
+horizontal_alignment = 1
+
+[node name="usuario_existente" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.945098, 0.027451, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("4_53idq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "USUARIO EXISTENTE"
+
+[node name="crear_usuario" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.945098, 0.027451, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("4_53idq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "CREAR USUARIO"
+
+[node name="atras" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.945098, 0.027451, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("4_53idq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+action_mode = 0
+button_mask = 2
+text = "ATRAS"
+
+[connection signal="pressed" from="VBoxContainer/usuario_existente" to="." method="_on_usuario_existente_pressed"]
+[connection signal="pressed" from="VBoxContainer/crear_usuario" to="." method="_on_crear_usuario_pressed"]
+[connection signal="pressed" from="VBoxContainer/atras" to="." method="_on_atras_pressed"]

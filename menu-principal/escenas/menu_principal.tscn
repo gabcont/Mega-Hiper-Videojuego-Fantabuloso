@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2hdcuiwp76kp"]
+
+[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://fuentes/Starborn.ttf" id="1_bj1uy"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="1_gmcsc"]
+[ext_resource type="Script" uid="uid://k4ibcx5xylnl" path="res://scripts/menu_principal.gd" id="1_ns3he"]
+[ext_resource type="Texture2D" uid="uid://cuu5ewg5pyirw" path="res://fondo_inicio.png" id="1_ul6ys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj1uy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.31802, 0.31802, 0.318019, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 1
+expand_margin_top = 9.0
+expand_margin_bottom = 9.0
+shadow_color = Color(0.215686, 0.215686, 0.215686, 0.956863)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = 47.0
+offset_right = 48.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ns3he")
+
+[node name="FondoInicio" type="Sprite2D" parent="."]
+position = Vector2(505, 277)
+scale = Vector2(1.14317, 1.15096)
+texture = ExtResource("1_ul6ys")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -148.5
+offset_right = 319.0
+offset_bottom = 148.5
+grow_vertical = 2
+theme_override_constants/separation = 33
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.714343, 0.679067, 0.115084, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("1_gmcsc")
+theme_override_font_sizes/font_size = 31
+text = "MENU 
+PRINCIPAL"
+horizontal_alignment = 1
+
+[node name="jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.427451, 0.917647, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("1_bj1uy")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "JUGAR"
+
+[node name="configuracion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.156863, 0.521569, 0.921569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("1_bj1uy")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "CONFIGURACION"
+
+[node name="instrucciones" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.835294, 1, 0.172549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("1_bj1uy")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "INSTRUCCIONES"
+
+[node name="creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.631373, 0.0313726, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("1_bj1uy")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+button_mask = 2
+text = "CREDITOS"
+
+[node name="salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
+theme_override_colors/font_hover_color = Color(0.92549, 0, 0.0117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("1_bj1uy")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+action_mode = 0
+button_mask = 2
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/configuracion" to="." method="_on_configuracion_pressed"]
+[connection signal="pressed" from="VBoxContainer/instrucciones" to="." method="_on_instrucciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]
