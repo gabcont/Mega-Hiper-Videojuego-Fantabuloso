@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhpj6gyt6l36v"
-path="res://.godot/imported/kirby.png-73b450e6963fcb235e6dad77a29fccd4.ctex"
+path="res://.godot/imported/kirby.png-0d56e60b0eb05a5b92b7886e793713f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barradevida/kirby.png"
-dest_files=["res://.godot/imported/kirby.png-73b450e6963fcb235e6dad77a29fccd4.ctex"]
+source_file="res://barra_vida/assets/kirby.png"
+dest_files=["res://.godot/imported/kirby.png-0d56e60b0eb05a5b92b7886e793713f3.ctex"]
 
 [params]
 

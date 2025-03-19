@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dd36j1c11e0cl"]
 
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="1_78upf"]
-[ext_resource type="Texture2D" uid="uid://dhpj6gyt6l36v" path="res://barradevida/kirby.png" id="1_n1t4l"]
-[ext_resource type="Texture2D" uid="uid://cuypq4mps5fg4" path="res://barradevida/Health bar0_[empty].png" id="2_78upf"]
-[ext_resource type="Texture2D" uid="uid://dgskmwdnyhgms" path="res://barradevida/Health bar15_[full].png" id="3_t5vmd"]
-[ext_resource type="Script" uid="uid://cdpbpbmg5vnn3" path="res://scripts/vida.gd" id="4_u40n3"]
-[ext_resource type="Texture2D" uid="uid://bchlu3b5q4y6a" path="res://barradevida/barraneon.png" id="6_t5vmd"]
-[ext_resource type="Script" uid="uid://cijrp8pfidsi6" path="res://scripts/poder.gd" id="7_u40n3"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="1_78upf"]
+[ext_resource type="Texture2D" uid="uid://dhpj6gyt6l36v" path="res://barra_vida/assets/kirby.png" id="1_n1t4l"]
+[ext_resource type="Texture2D" uid="uid://cuypq4mps5fg4" path="res://barra_vida/assets/Health bar0_[empty].png" id="2_78upf"]
+[ext_resource type="Texture2D" uid="uid://dgskmwdnyhgms" path="res://barra_vida/assets/Health bar15_[full].png" id="3_t5vmd"]
+[ext_resource type="Script" uid="uid://cdpbpbmg5vnn3" path="res://barra_vida/scripts/vida.gd" id="4_u40n3"]
+[ext_resource type="Texture2D" uid="uid://bchlu3b5q4y6a" path="res://barra_vida/assets/barraneon.png" id="6_t5vmd"]
+[ext_resource type="Script" uid="uid://cijrp8pfidsi6" path="res://barra_vida/scripts/poder.gd" id="7_u40n3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5vmd"]
 font = ExtResource("1_78upf")

@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2wly748datvl"]
+[gd_scene load_steps=5 format=3 uid="uid://b2wly748datvl"]
 
-[ext_resource type="Script" uid="uid://c0hkm7au0tj4s" path="res://scripts/menu_configuracion.gd" id="1_cbsp8"]
-[ext_resource type="Texture2D" uid="uid://cuu5ewg5pyirw" path="res://fondo_inicio.png" id="2_bf767"]
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="3_ni7al"]
-[ext_resource type="AudioStream" uid="uid://dkg635xeuhxqo" path="res://sonidos/stranger-things-124008.mp3" id="4_bf767"]
-[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://fuentes/Starborn.ttf" id="4_n13qb"]
+[ext_resource type="Script" uid="uid://c0hkm7au0tj4s" path="res://menu_configuracion/scripts/menu_configuracion.gd" id="1_cbsp8"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_ni7al"]
+[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_n13qb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bf767"]
 bg_color = Color(1, 1, 1, 1)
@@ -38,7 +36,6 @@ script = ExtResource("1_cbsp8")
 [node name="FondoInicio" type="Sprite2D" parent="."]
 position = Vector2(505, 277)
 scale = Vector2(1.13735, 1.13845)
-texture = ExtResource("2_bf767")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -80,10 +77,7 @@ step = 5.0
 value = 100.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Label/VBoxContainer/musica"]
-stream = ExtResource("4_bf767")
 autoplay = true
-bus = &"Musica_fondo"
-parameters/looping = false
 
 [node name="efect_sonido" type="Label" parent="Label/VBoxContainer"]
 layout_mode = 2

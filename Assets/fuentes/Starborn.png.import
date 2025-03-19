@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cemh1ttuoj5bw"
-path="res://.godot/imported/Starborn.png-4a55fe346ad94e2acd67bf065dc23cec.ctex"
+path="res://.godot/imported/Starborn.png-df2f7be2b5b0bf889f2319e35f76bd79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fuentes/Starborn.png"
-dest_files=["res://.godot/imported/Starborn.png-4a55fe346ad94e2acd67bf065dc23cec.ctex"]
+source_file="res://Assets/fuentes/Starborn.png"
+dest_files=["res://.godot/imported/Starborn.png-df2f7be2b5b0bf889f2319e35f76bd79.ctex"]
 
 [params]
 

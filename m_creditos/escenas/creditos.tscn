@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cheghrv8bx3hm"]
+[gd_scene load_steps=5 format=3 uid="uid://cheghrv8bx3hm"]
 
-[ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://scripts/creditos.gd" id="1_5v1o1"]
-[ext_resource type="Texture2D" uid="uid://cuu5ewg5pyirw" path="res://fondo_inicio.png" id="2_pyrin"]
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="3_re66e"]
-[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://fuentes/Starborn.ttf" id="4_tdcx2"]
+[ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_5v1o1"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_re66e"]
+[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_tdcx2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj1uy"]
 bg_color = Color(1, 1, 1, 1)
@@ -37,7 +36,6 @@ script = ExtResource("1_5v1o1")
 [node name="FondoInicio" type="Sprite2D" parent="."]
 position = Vector2(505, 277)
 scale = Vector2(1.13735, 1.13845)
-texture = ExtResource("2_pyrin")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

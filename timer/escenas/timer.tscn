@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://uhkfrl02c26l"]
 
-[ext_resource type="Texture2D" uid="uid://767fhdt1ywxt" path="res://circulo.png" id="1_agrx6"]
-[ext_resource type="Script" uid="uid://h38h0ngvth6" path="res://scripts/time.gd" id="2_emgkp"]
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://fuentes/Starborn.otf" id="3_da1ia"]
+[ext_resource type="Texture2D" uid="uid://767fhdt1ywxt" path="res://timer/assets/circulo.png" id="1_agrx6"]
+[ext_resource type="Script" uid="uid://h38h0ngvth6" path="res://timer/scripts/time.gd" id="2_emgkp"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_da1ia"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8826o"]
 font = ExtResource("3_da1ia")
