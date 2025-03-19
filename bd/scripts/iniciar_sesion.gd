@@ -15,23 +15,17 @@ func on_button_pressed():
 	if usuario.length()==0 or contrasena.length()==0:
 		statusLabel.text = "Llene todos los campos"
 		return
-	if usuario.length()<2:
-		statusLabel.text = "El username debe ser al menos de 2 caracteres"
-	
-	if contrasena.length() >= 8:
-		registrar(usuario,contrasena)
-	else:
-		statusLabel.text = "La contraseña debe ser al menos de 8 caracteres"
+	iniciar_sesion(usuario,contrasena)
 	
 	
 
 	
-func registrar(usuario,contrasena):
+func iniciar_sesion(usuario,contrasena):
 	var db = Db.conectar_base()
-	var registrado = db.select_rows("Usuario","username='"+usuario+"'",["username"])
-	if registrado.size()>0:
-		statusLabel.text = "Usuario ya registrado"
+	var registrado = db.select_rows("Usuario","username='"+usuario+"'",["username","hashed_password"])
+	if registrado.size()==0:
+		statusLabel.text = "Usuario o contraseña incorrectos"
 	else:
-		var res = db.insert_row("Usuario",{"username":usuario,"hashed_password":contrasena})
-		statusLabel.text =  "Usuario creado con éxito" if res else "Error al crear el usuario"
-	
+		
+		var es_correcto = registrado[0]["hashed_password"] == contrasena
+		statusLabel.text =  "Sesión iniciada con éxito" if es_correcto else "Usuario o contraseña incorrectos"
