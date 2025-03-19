@@ -949,6 +949,7 @@ libraries = {
 }
 
 [node name="Debug" type="BoxContainer" parent="."]
+visible = false
 offset_left = -7.0
 offset_top = -180.0
 offset_right = 308.0

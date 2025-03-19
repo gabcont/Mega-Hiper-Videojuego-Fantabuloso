@@ -2,7 +2,7 @@ class_name Personaje extends Node2D
 
 signal ha_atacado(tipo_ataque : StringName)
 
-const SALUD_MAXIMA : int = 200
+const SALUD_MAXIMA : int = 400
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -11,7 +11,7 @@ const SALUD_MAXIMA : int = 200
 @export var spriteframe : SpriteFrames
 
 @export var nombre_personaje : StringName
-var salud : int = 200
+var salud : int = SALUD_MAXIMA
 var frame_actual_de_animacion : int 
 
 var ESTADO_ACTUAL : StringName = "IDLE"
