@@ -2,12 +2,15 @@ class_name Personaje extends Node2D
 
 signal ha_atacado(tipo_ataque : StringName)
 
+const SALUD_MAXIMA : int = 200
+
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @export var nodo_botones : Node2D
 @export var voltear_personaje : bool = false
 @export var spriteframe : SpriteFrames
 
+@export var nombre_personaje : StringName
 var salud : int = 200
 var frame_actual_de_animacion : int 
 
@@ -34,9 +37,10 @@ func _ready() -> void:
 		voltear_sprite()
 	
 	# Conecta los botones con las acciones del personaje
-	var botones := nodo_botones.get_children()
-	for boton in botones:
-		boton.connect("boton_presionado", _on_boton_presionado)
+	if nodo_botones:
+		var botones := nodo_botones.get_children()
+		for boton in botones:
+			boton.connect("boton_presionado", _on_boton_presionado)
 
 func set_estado(estado : StringName) -> void:
 	ESTADO_ACTUAL = estado
@@ -135,7 +139,7 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 			if frame_actual_de_animacion > 7:
 				frame_actual_de_animacion = 1
 
-func _on_animation_player_current_animation_changed() -> void:
+func _on_animation_player_current_animation_changed(_nombre_animacion : String) -> void:
 	frame_actual_de_animacion = 1
 
 func procesar_ataque_enemigo(tipo_ataque : StringName) -> void:

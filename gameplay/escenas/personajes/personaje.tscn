@@ -933,6 +933,7 @@ shader_parameter/noise_deformation = 1.0
 
 [node name="Personaje" type="Node2D"]
 script = ExtResource("1_0kjke")
+spriteframe = ExtResource("2_m4qet")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
