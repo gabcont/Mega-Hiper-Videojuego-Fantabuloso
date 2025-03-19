@@ -1,9 +1,6 @@
 extends Button
 @onready var statusLabel = get_node("../StatusLabel")
 
-
-
-
 func _ready():
 	# Conecta la señal "pressed" del botón a la función "on_button_pressed"
 	pressed.connect(on_button_pressed)
@@ -32,9 +29,6 @@ func on_button_pressed():
 	else:
 		statusLabel.text = "La contraseña debe ser al menos de 8 caracteres"
 	
-	
-
-	
 func registrar(usuario,contrasena):
 	var db = Db.conectar_base()
 	var registrado = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["nombre_usuario"])
@@ -47,7 +41,9 @@ func registrar(usuario,contrasena):
 		
 		Dotenv.load_("res://.env")
 		var key = OS.get_environment("CLAVE_SECRETA").to_utf8_buffer()
-		
+		if not key:
+			statusLabel.text = "Error al registrar usuario"
+			return
 		
 		var aes = AESContext.new()
 		aes.start(AESContext.MODE_ECB_ENCRYPT,key)
