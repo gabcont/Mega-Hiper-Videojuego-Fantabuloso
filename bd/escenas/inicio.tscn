@@ -1,15 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=9 format=3 uid="uid://bjehem8i3hlno"]
 
-[ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
+[ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
 
-[sub_resource type="Gradient" id="Gradient_8fibu"]
+[sub_resource type="Gradient" id="Gradient_p6j3g"]
 offsets = PackedFloat32Array(0, 0.459877, 0.984568)
 colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8fibu"]
-gradient = SubResource("Gradient_8fibu")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_88ils"]
+gradient = SubResource("Gradient_p6j3g")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc4kg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6y1t"]
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -19,7 +19,7 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fibu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7vwx"]
 bg_color = Color(0.688595, 0.688595, 0.688595, 1)
 border_width_left = 2
 border_width_top = 2
@@ -30,14 +30,16 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij8rq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2j7ft"]
 bg_color = Color(5.89602e-07, 0.393117, 0.115416, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v806"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tuii"]
+bg_color = Color(0, 0.392157, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt2sq"]
 bg_color = Color(1.92523e-06, 0.500061, 0.172463, 1)
 
-[node name="Registro" type="Control"]
-show_behind_parent = true
+[node name="Inicio" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,10 +50,9 @@ grow_vertical = 2
 [node name="FondoMenu" type="TextureRect" parent="."]
 offset_right = 1197.0
 offset_bottom = 670.0
-texture = SubResource("GradientTexture2D_8fibu")
+texture = SubResource("GradientTexture2D_88ils")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
 offset_left = 1.0
 offset_top = 19.0
 offset_right = 1144.0
@@ -66,7 +67,7 @@ theme_override_constants/separation = 20
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Crear Usuario"
+text = "Iniciar Sesión"
 horizontal_alignment = 1
 uppercase = true
 
@@ -85,7 +86,7 @@ layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_kc4kg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m6y1t")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -97,7 +98,7 @@ custom_minimum_size = Vector2(225, 35)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_8fibu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m7vwx")
 secret = true
 secret_character = "*"
 
@@ -106,7 +107,9 @@ custom_minimum_size = Vector2(225, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/h_separation = 20
-theme_override_styles/hover = SubResource("StyleBoxFlat_ij8rq")
-theme_override_styles/normal = SubResource("StyleBoxFlat_8v806")
-text = "Registrar"
-script = ExtResource("1_0geqs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2j7ft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tuii")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lt2sq")
+text = "Entrar
+"
+script = ExtResource("1_kb8y8")

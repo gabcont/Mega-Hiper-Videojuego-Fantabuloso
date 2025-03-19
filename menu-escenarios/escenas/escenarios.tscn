@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dycimlqug0f0f" path="res://menu-escenarios/scripts/escenarios.gd" id="1_5y4q0"]
 [ext_resource type="Texture2D" uid="uid://h3ycsd25g4b0" path="res://menu-escenarios/assets/sonic.webp" id="2_dqsbm"]
-[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://assets/tipografia/PixelifySans-VariableFont_wght.ttf" id="2_p6j3g"]
+[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://Assets/Tipografia/PixelifySans-VariableFont_wght.ttf" id="2_p6j3g"]
 [ext_resource type="Script" uid="uid://lokr1k0ovgyr" path="res://menu-escenarios/scripts/botonEscenario.gd" id="3_dqsbm"]
 [ext_resource type="Texture2D" uid="uid://xhbr3lstn00l" path="res://menu-escenarios/assets/kirby.jpeg" id="3_p6j3g"]
 
-[sub_resource type="Gradient" id="Gradient_p6j3g"]
+[sub_resource type="Gradient" id="Gradient_jinj3"]
 offsets = PackedFloat32Array(0, 0.459877, 0.984568)
 colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7a2t2"]
-gradient = SubResource("Gradient_p6j3g")
+gradient = SubResource("Gradient_jinj3")
 
 [sub_resource type="Theme" id="Theme_5ulqh"]
 
