@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=9 format=3 uid="uid://cj7710d2bm8s8"]
 
 [ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
+[ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_kc4kg"]
 
 [sub_resource type="Gradient" id="Gradient_8fibu"]
 offsets = PackedFloat32Array(0, 0.459877, 0.984568)
@@ -46,6 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FondoMenu" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1197.0
 offset_bottom = 670.0
 texture = SubResource("GradientTexture2D_8fibu")
@@ -86,6 +88,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_kc4kg")
+script = ExtResource("1_kc4kg")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -100,6 +103,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_8fibu")
 secret = true
 secret_character = "*"
+script = ExtResource("1_kc4kg")
 
 [node name="Submit" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(225, 40)
@@ -110,3 +114,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ij8rq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8v806")
 text = "Registrar"
 script = ExtResource("1_0geqs")
+
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]
