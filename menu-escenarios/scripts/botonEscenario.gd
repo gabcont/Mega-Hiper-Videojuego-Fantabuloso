@@ -2,7 +2,7 @@ extends TextureButton
 
 var color_original = modulate
 var opacidad_hover = Color(0.7, 0.7, 0.7, 1) # Color blanco con opacidad del 70%
-var sonido_hover = preload("res://Assets/Sonidos/escenario_hover.mp3")
+var sonido_hover = preload("res://menu-escenarios/assets/escenario_hover.mp3")
 var reproductor_sonido = AudioStreamPlayer.new()
 
 func _ready():

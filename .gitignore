@@ -4,3 +4,4 @@
 .godot/
 /android/
 addons/
+.env
