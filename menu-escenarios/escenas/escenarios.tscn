@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dycimlqug0f0f" path="res://menu-escenarios/scripts/escenarios.gd" id="1_5y4q0"]
 [ext_resource type="Texture2D" uid="uid://h3ycsd25g4b0" path="res://menu-escenarios/assets/sonic.webp" id="2_dqsbm"]
-[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://Assets/Tipografia/PixelifySans-VariableFont_wght.ttf" id="2_p6j3g"]
+[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://Assets/fuentes/PixelifySans-VariableFont_wght.ttf" id="2_p6j3g"]
 [ext_resource type="Script" uid="uid://lokr1k0ovgyr" path="res://menu-escenarios/scripts/botonEscenario.gd" id="3_dqsbm"]
 [ext_resource type="Texture2D" uid="uid://xhbr3lstn00l" path="res://menu-escenarios/assets/kirby.jpeg" id="3_p6j3g"]
 

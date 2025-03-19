@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://csenq378na56t"]
 
 [ext_resource type="Texture2D" uid="uid://6snmg2g6psue" path="res://menu-personajes/assets/Boton 1.png" id="1_3t68r"]
-[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://assets/tipografia/PixelifySans-VariableFont_wght.ttf" id="1_117v3"]
+[ext_resource type="FontFile" uid="uid://ccahem8tv6ne" path="res://Assets/fuentes/PixelifySans-VariableFont_wght.ttf" id="1_117v3"]
 [ext_resource type="Texture2D" uid="uid://crt3pgmj4ekxi" path="res://menu-personajes/assets/boton 2.png" id="2_ces61"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_117v3"]

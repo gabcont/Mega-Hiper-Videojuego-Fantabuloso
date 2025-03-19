@@ -2,14 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ccahem8tv6ne"
-
-path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-0bb2c6aaf0ddba6de685d64023ecb340.fontdata"
+uid="uid://defg2r1pxbk3b"
+path="res://.godot/imported/Starborn.ttf-68ef6d5a98c414e0937c3c5631956b4b.fontdata"
 
 [deps]
 
-source_file="res://Assets/fuentes/PixelifySans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-0bb2c6aaf0ddba6de685d64023ecb340.fontdata"]
+source_file="res://Assets/fuentes/Starborn.ttf"
+dest_files=["res://.godot/imported/Starborn.ttf-68ef6d5a98c414e0937c3c5631956b4b.fontdata"]
 
 [params]
 
