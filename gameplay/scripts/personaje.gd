@@ -1,5 +1,6 @@
 class_name Personaje extends Node2D
 
+signal ataque_especial_activado
 signal ha_atacado(tipo_ataque : StringName)
 signal ha_esquivado
 signal ha_bloqueado
@@ -103,7 +104,12 @@ func play_animacion(accion : StringName) -> void:
 			animacion = "esquivar"
 			if voltear_personaje:
 				animacion += "_volteado"
-			
+
+		"ataque_especial":
+			animacion = "ataque_especial"
+			if voltear_personaje:
+				animacion += "_volteado"
+
 		_:
 			# Las demás animaciones tienen el mismo nombre que las acciones
 			animacion = accion
@@ -192,9 +198,10 @@ func procesar_input_buffer() -> void:
 				if input_buffer == "esquivar":
 					# amague
 					pass
-				elif input_buffer == "ataque_debil":
-					# ataque especial
-					pass
+				elif input_buffer == "ataque_debil" and poder == PODER_MAXIMO:
+					_on_poder_recibido(-100)
+					emit_signal("ataque_especial_activado")
+					play_animacion("ataque_especial")
 			_:
 				play_animacion(input_buffer)
 
@@ -225,6 +232,19 @@ func procesar_ataque_buffer() -> void:
 
 			else:
 				_on_salud_recibida(-30)
+				_on_poder_recibido(-20)
+				play_animacion("herido")
+		
+		"ataque_especial":
+			if ESTADO_ACTUAL == "esquivar" and not PUEDE_SER_ATACADO:
+				emit_signal("ha_esquivado")
+			elif ESTADO_ACTUAL == "bloquear":
+				emit_signal("escudo_roto")
+				_on_salud_recibida(-60)
+				_on_poder_recibido(-20)
+				play_animacion("herido")
+			else:
+				_on_salud_recibida(-70)
 				_on_poder_recibido(-20)
 				play_animacion("herido")
 		_:

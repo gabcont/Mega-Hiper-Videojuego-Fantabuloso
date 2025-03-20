@@ -1,27 +1,27 @@
 shader_type canvas_item;
 
-/**
-Color to use for the shock.
-*/
-uniform vec3 shock_color : source_color = vec3(1.0, 0.0, 0.0);
-/**
-Initial amplitude of the shock. This will start at this amplitude and
-gradually attenuate.
-*/
-uniform float amplitude = 10.0;
-/**
-How fast shold it move side to side, more frequency means it'll move more quickly
-side to side.
-*/
-uniform float frequecy = 30.0;
-
-void vertex() {
-	float exponent = mod(TIME, 3.0);
-	VERTEX.x += amplitude * exp(-3.0*exponent) * sin(frequecy*exponent);
-}
+uniform float strength: hint_range(0., 1.) = 0.3;
+uniform float speed: hint_range(0., 10.) = 0.5;
+uniform float angle: hint_range(0., 360.) = 0.;
 
 void fragment() {
-	float exponent = mod(TIME, 3.0);
-	vec3 normal_color = texture(TEXTURE, UV).rgb;
-	COLOR.rgb = normal_color + shock_color * exp(-3.0*exponent);
+    float hue = UV.x * cos(radians(angle)) - UV.y * sin(radians(angle));
+    hue = fract(hue + fract(TIME  * speed));
+    float x = 1. - abs(mod(hue / (1./ 6.), 2.) - 1.);
+    vec3 rainbow;
+    if(hue < 1./6.){
+        rainbow = vec3(1., x, 0.);
+    } else if (hue < 1./3.) {
+        rainbow = vec3(x, 1., 0);
+    } else if (hue < 0.5) {
+        rainbow = vec3(0, 1., x);
+    } else if (hue < 2./3.) {
+        rainbow = vec3(0., x, 1.);
+    } else if (hue < 5./6.) {
+        rainbow = vec3(x, 0., 1.);
+    } else {
+        rainbow = vec3(1., 0., x);
+    }
+    vec4 color = texture(TEXTURE, UV);
+    COLOR = mix(color, color * vec4(rainbow, color.a), strength);
 }

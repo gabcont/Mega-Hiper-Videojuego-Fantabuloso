@@ -69,3 +69,11 @@ func _on_personaje_2_salud_acabada() -> void:
 
 func _on_personaje_1_salud_acabada() -> void:
 	pausar_personajes()
+	$AnimationPlayer.play("ataque_especial_p1")
+
+func _on_personaje_1_ataque_especial_activado() -> void:
+	$AnimationPlayer.play("ataque_especial_p1")
+
+
+func _on_personaje_2_ataque_especial_activado() -> void:
+	$AnimationPlayer.play("ataque_especial_p2")
