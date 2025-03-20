@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dycimlqug0f0f" path="res://menu-escenarios/scripts/escenarios.gd" id="1_5y4q0"]
 [ext_resource type="Texture2D" uid="uid://h3ycsd25g4b0" path="res://menu-escenarios/assets/sonic.webp" id="2_dqsbm"]
-[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_gm0nb"]
+[ext_resource type="FontFile" uid="uid://bvx2kslj6vbbt" path="res://Assets/fuentes/Calamity Regular.otf" id="2_gm0nb"]
 [ext_resource type="Script" uid="uid://lokr1k0ovgyr" path="res://menu-escenarios/scripts/botonEscenario.gd" id="3_dqsbm"]
 [ext_resource type="Texture2D" uid="uid://xhbr3lstn00l" path="res://menu-escenarios/assets/kirby.jpeg" id="3_p6j3g"]
 [ext_resource type="PackedScene" uid="uid://ldrwgxrqjjg5" path="res://gameplay/escenas/partida.tscn" id="5_gm0nb"]
@@ -37,12 +37,9 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_7a2t2")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 641.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
@@ -65,12 +62,10 @@ alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 20
 
 [node name="Button" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
-mouse_default_cursor_shape = 2
 theme = SubResource("Theme_gm0nb")
 texture_normal = ExtResource("2_dqsbm")
 ignore_texture_size = true
@@ -81,18 +76,16 @@ escena_destino = ExtResource("5_gm0nb")
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_gm0nb")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "Green Hill Zone"
 horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
 
 [node name="Button" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
-mouse_default_cursor_shape = 2
 theme = SubResource("Theme_5ulqh")
 texture_normal = ExtResource("3_p6j3g")
 ignore_texture_size = true
@@ -103,7 +96,7 @@ escena_destino = ExtResource("5_gm0nb")
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_gm0nb")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "Green Greens"
 horizontal_alignment = 1
 

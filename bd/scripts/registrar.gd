@@ -1,6 +1,8 @@
 extends Button
 @onready var statusLabel = get_node("../StatusLabel")
 
+@export var escena_destino: PackedScene
+
 func _ready():
 	# Conecta la señal "pressed" del botón a la función "on_button_pressed"
 	pressed.connect(on_button_pressed)
@@ -56,6 +58,12 @@ func registrar(usuario,contrasena):
 				cadena_encriptada+="_"
 
 		var res = db.insert_row("Usuario",{"nombre_usuario":usuario,"contraseña":cadena_encriptada})
-		statusLabel.text =  "Usuario creado con éxito" if res else "Error al crear el usuario"
 		aes.finish()
+		if not res:
+			statusLabel.text = "Error al crear el usuario"
+		else:
+			Transicion.transicion()
+			await Transicion.on_transition_finished
+			get_tree().change_scene_to_packed(escena_destino)
+		
 	

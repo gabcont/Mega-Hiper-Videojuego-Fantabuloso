@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Strit faiter"
-run/main_scene="uid://ldrwgxrqjjg5"
+run/main_scene="uid://bbhkoswnwc7qm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Db="*res://bd/scripts/db.gd"
+Transicion="*res://transicion/transicion.tscn"
 
 [editor_plugins]
 
@@ -73,3 +74,4 @@ Y_p2={
 2d_render/layer_3="Botones"
 2d_render/layer_4="HUD"
 2d_render/layer_5="Fondo"
+
