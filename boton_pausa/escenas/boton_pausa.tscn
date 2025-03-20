@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://brq43cnoy37td"]
+
+[ext_resource type="Script" uid="uid://dd7rca5fytbyu" path="res://boton_pausa/escenas/boton_pausa.gd" id="1_e2y06"]
+[ext_resource type="Texture2D" uid="uid://bj40styyk5aad" path="res://boton_pausa/assets/icono-pausa.png" id="1_oluqk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2y06")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 68.0
+mouse_default_cursor_shape = 2
+button_mask = 7
+texture_normal = ExtResource("1_oluqk")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

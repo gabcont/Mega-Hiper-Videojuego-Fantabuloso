@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ldrwgxrqjjg5"]
+[gd_scene load_steps=10 format=3 uid="uid://ldrwgxrqjjg5"]
 
 [ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://gameplay/escenas/personajes/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://gameplay/scripts/partida.gd" id="1_pfv7k"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://6dkfhud14d5i" path="res://gameplay/escenas/botones-jugador1.tscn" id="2_mo80f"]
 [ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://gameplay/escenas/personajes/knuckles.tres" id="4_s3u3c"]
 [ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://gameplay/escenas/personajes/kirby.tres" id="5_pfv7k"]
+[ext_resource type="PackedScene" uid="uid://brq43cnoy37td" path="res://boton_pausa/escenas/boton_pausa.tscn" id="7_hpts1"]
+[ext_resource type="AudioStream" uid="uid://8mlqo4w6l4" path="res://stranger-things-124008.mp3" id="8_tihru"]
+[ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://timer/escenas/timer.tscn" id="10_kklxi"]
 
 [node name="Partida" type="Node2D"]
 script = ExtResource("1_pfv7k")
@@ -35,6 +38,16 @@ scale = Vector2(1.2, 1.2)
 nodo_botones = NodePath("../../Botones/Botones-personaje2")
 voltear_personaje = true
 spriteframe = ExtResource("5_pfv7k")
+
+[node name="Control" parent="." instance=ExtResource("7_hpts1")]
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("8_tihru")
+autoplay = true
+bus = &"Musica"
+
+[node name="TextureProgressBar" parent="." instance=ExtResource("10_kklxi")]
 
 [connection signal="ha_atacado" from="Personajes/Personaje1" to="." method="_on_personaje_1_ha_atacado"]
 [connection signal="ha_atacado" from="Personajes/Personaje2" to="." method="_on_personaje_2_ha_atacado"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvsnrfsl70wnc"]
+[gd_scene load_steps=5 format=3 uid="uid://bvsnrfsl70wnc"]
 
 [ext_resource type="Script" uid="uid://7yc7oo2pkl2k" path="res://menu_jugador/scripts/menu_jugador.gd" id="1_nt4qj"]
-[ext_resource type="Texture2D" path="res://fondo_inicio.png" id="2_idqv4"]
 [ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_6reh4"]
 [ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_53idq"]
 
@@ -37,7 +36,6 @@ script = ExtResource("1_nt4qj")
 [node name="FondoInicio" type="Sprite2D" parent="."]
 position = Vector2(505, 277)
 scale = Vector2(1.13735, 1.13845)
-texture = ExtResource("2_idqv4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

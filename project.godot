@@ -21,7 +21,7 @@ Db="*res://bd/scripts/db.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
