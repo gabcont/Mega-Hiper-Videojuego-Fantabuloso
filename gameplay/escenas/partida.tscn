@@ -1,15 +1,21 @@
-[gd_scene load_steps=17 format=3 uid="uid://ldrwgxrqjjg5"]
+[gd_scene load_steps=20 format=3 uid="uid://ldrwgxrqjjg5"]
 
 [ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://gameplay/escenas/personajes/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://gameplay/scripts/partida.gd" id="1_pfv7k"]
+[ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://gameplay/escenas/partida.gdshader" id="2_3vs70"]
 [ext_resource type="PackedScene" uid="uid://8jm3q8oym0o1" path="res://gameplay/escenas/botones-jugador2.tscn" id="2_dkiol"]
 [ext_resource type="PackedScene" uid="uid://6dkfhud14d5i" path="res://gameplay/escenas/botones-jugador1.tscn" id="2_mo80f"]
+[ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
 [ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://gameplay/escenas/personajes/kirby.tres" id="5_pfv7k"]
 [ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
 [ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://timer/escenas/timer.tscn" id="7_hpts1"]
 [ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://fondo/auto_scroller.tscn" id="8_tihru"]
 [ext_resource type="Texture2D" uid="uid://kf8t7moxds3q" path="res://gameplay/assets/Arrows.png" id="9_kklxi"]
 [ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="10_s5joy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a0wv1"]
+shader = ExtResource("2_3vs70")
+shader_parameter/fisheye_strength = 0.93
 
 [sub_resource type="Animation" id="Animation_kfnal"]
 length = 0.001
@@ -212,7 +218,17 @@ font_size = 90
 [node name="Partida" type="Node2D"]
 script = ExtResource("1_pfv7k")
 
+[node name="Shader" type="TextureRect" parent="."]
+z_index = 12
+material = SubResource("ShaderMaterial_a0wv1")
+offset_right = 1154.0
+offset_bottom = 646.0
+texture = ExtResource("3_y0x6b")
+
 [node name="Personajes" type="Node" parent="."]
+
+[node name="TimerPoder" type="Timer" parent="Personajes"]
+autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -340,6 +356,7 @@ personaje_2 = NodePath("../../../../Personajesvp/SubViewport/Personaje2")
 metadata/_edit_lock_ = true
 
 [node name="Reloj" parent="HUDvp/SubViewport/HUD" instance=ExtResource("7_hpts1")]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 524.0
 offset_top = 39.0
@@ -358,11 +375,14 @@ position = Vector2(225, 624)
 visibility_layer = 4
 position = Vector2(805, 619)
 
+[connection signal="timeout" from="Personajes/TimerPoder" to="." method="_on_timer_poder_timeout"]
 [connection signal="escudo_roto" from="Personajesvp/SubViewport/Personaje1" to="." method="_on_personaje_1_escudo_roto"]
 [connection signal="ha_atacado" from="Personajesvp/SubViewport/Personaje1" to="." method="_on_personaje_1_ha_atacado"]
 [connection signal="ha_bloqueado" from="Personajesvp/SubViewport/Personaje1" to="." method="_on_personaje_1_ha_bloqueado"]
 [connection signal="ha_esquivado" from="Personajesvp/SubViewport/Personaje1" to="." method="_on_personaje_1_ha_esquivado"]
+[connection signal="salud_acabada" from="Personajesvp/SubViewport/Personaje1" to="." method="_on_personaje_1_salud_acabada"]
 [connection signal="escudo_roto" from="Personajesvp/SubViewport/Personaje2" to="." method="_on_personaje_2_escudo_roto"]
 [connection signal="ha_atacado" from="Personajesvp/SubViewport/Personaje2" to="." method="_on_personaje_2_ha_atacado"]
 [connection signal="ha_bloqueado" from="Personajesvp/SubViewport/Personaje2" to="." method="_on_personaje_2_ha_bloqueado"]
 [connection signal="ha_esquivado" from="Personajesvp/SubViewport/Personaje2" to="." method="_on_personaje_2_ha_esquivado"]
+[connection signal="salud_acabada" from="Personajesvp/SubViewport/Personaje2" to="." method="_on_personaje_2_salud_acabada"]

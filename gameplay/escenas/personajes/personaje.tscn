@@ -915,6 +915,7 @@ libraries = {
 }
 
 [node name="Debug" type="BoxContainer" parent="."]
+visible = false
 offset_left = -7.0
 offset_top = -180.0
 offset_right = 308.0
@@ -965,6 +966,7 @@ position = Vector2(-120, 0)
 
 [node name="Burbuja" parent="PosMitadSprite" instance=ExtResource("9_mhd2b")]
 unique_name_in_owner = true
+visible = false
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_sprite_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_frame_changed"]

@@ -4,9 +4,13 @@ signal ha_atacado(tipo_ataque : StringName)
 signal ha_esquivado
 signal ha_bloqueado
 signal escudo_roto
+signal salud_acabada
 
 const SALUD_MAXIMA : int = 400
 var salud : int = SALUD_MAXIMA
+
+const PODER_MAXIMO : int = 100
+var poder : int = 0
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -160,6 +164,23 @@ func _on_personaje_atacado(tipo_ataque : StringName) -> void:
 func _on_player_animation_changed(_nombre_animacion : String) -> void:
 	frame_actual_de_animacion = 1
 
+func _on_poder_recibido(_poder : int) -> void:
+	if (poder + _poder) > PODER_MAXIMO:
+		poder = PODER_MAXIMO
+	elif (poder + _poder) < 0:
+		poder = 0
+	else:
+		poder += _poder
+
+func _on_salud_recibida(_salud : int) -> void:
+	if (salud + _salud) > SALUD_MAXIMA:
+		poder = SALUD_MAXIMA
+	elif (salud + _salud) < 0:
+		salud = 0
+		emit_signal("salud_acabada")
+	else:
+		salud += _salud
+
 
 #-----------------# Funciones que procesan los buffers #-----------------#
 
@@ -189,7 +210,8 @@ func procesar_ataque_buffer() -> void:
 				emit_signal("ha_esquivado")
 
 			else:
-				salud -= 20
+				_on_salud_recibida(-20)
+				_on_poder_recibido(-10)
 				play_animacion("herido")
 
 		"ataque_fuerte":
@@ -199,10 +221,11 @@ func procesar_ataque_buffer() -> void:
 			elif ESTADO_ACTUAL == "bloquear":
 				emit_signal("escudo_roto")
 				play_animacion("herido")
-				salud -= 10
+				_on_salud_recibida(-10)
 
 			else:
-				salud -= 30
+				_on_salud_recibida(-30)
+				_on_poder_recibido(-20)
 				play_animacion("herido")
 		_:
 			pass
