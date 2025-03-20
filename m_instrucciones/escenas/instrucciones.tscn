@@ -1,34 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://svorbpvgbp1b"]
+[gd_scene load_steps=7 format=3 uid="uid://svorbpvgbp1b"]
 
 [ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_88lh7"]
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_esmie"]
+[ext_resource type="FontFile" uid="uid://dlgytrjphwkdk" path="res://Assets/fuentes/Daydream.ttf" id="2_vf7wc"]
+[ext_resource type="FontFile" uid="uid://yx361q7wr5y" path="res://Assets/fuentes/Calamity Regular.otf" id="3_c2qqc"]
+[ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_c2qqc"]
 [ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_n7jkx"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj1uy"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.31802, 0.31802, 0.318019, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-corner_detail = 1
-expand_margin_top = 9.0
-expand_margin_bottom = 9.0
-shadow_color = Color(0.215686, 0.215686, 0.215686, 0.956863)
+[ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu-principal/escenas/estilo_boton_mprinci.tres" id="5_65ja1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 71.0
-offset_top = 47.0
-offset_right = 48.0
-offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_88lh7")
@@ -39,20 +22,24 @@ scale = Vector2(1.13735, 1.13845)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -148.5
-offset_right = 319.0
-offset_bottom = 148.5
+offset_left = -197.5
+offset_top = -153.0
+offset_right = 197.5
+offset_bottom = 153.0
+grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 33
+theme_override_constants/separation = 101
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0.714343, 0.679067, 0.115084, 1)
+theme_override_colors/font_shadow_color = Color(0.040203, 0.0360111, 0.00140707, 1)
 theme_override_constants/shadow_outline_size = 15
-theme_override_fonts/font = ExtResource("3_esmie")
+theme_override_fonts/font = ExtResource("2_vf7wc")
 theme_override_font_sizes/font_size = 31
 text = "INSTRUCCIONES"
 horizontal_alignment = 1
@@ -60,6 +47,7 @@ horizontal_alignment = 1
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_c2qqc")
 text = "HOLA
 HOLA
 HOLA
@@ -68,16 +56,15 @@ HOLA
 UNIVERSIDAD SANTA MARIA"
 
 [node name="atras" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
-theme_override_colors/font_disabled_color = Color(0.0852526, 8.32113e-05, 0.0429812, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.843137, 0.0431373, 0.843137, 1)
-theme_override_colors/font_hover_color = Color(0.427451, 0.917647, 0.0196078, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0.996622, 0.372495, 0.727727, 1)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.156863, 0.521569, 0.921569, 1)
 theme_override_constants/outline_size = 18
 theme_override_fonts/font = ExtResource("4_n7jkx")
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxFlat_bj1uy")
+theme_override_styles/hover = ExtResource("4_c2qqc")
+theme_override_styles/normal = ExtResource("5_65ja1")
 button_mask = 2
 text = "ATRAS"
 
