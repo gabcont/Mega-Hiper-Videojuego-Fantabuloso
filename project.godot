@@ -22,7 +22,7 @@ Transicion="*res://transicion/transicion.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg")
 
 [input]
 
@@ -74,4 +74,3 @@ Y_p2={
 2d_render/layer_3="Botones"
 2d_render/layer_4="HUD"
 2d_render/layer_5="Fondo"
-

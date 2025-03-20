@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cheghrv8bx3hm"]
 
 [ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_5v1o1"]
-[ext_resource type="FontFile" uid="uid://yx361q7wr5y" path="res://Assets/fuentes/Calamity Regular.otf" id="3_3wgf4"]
+[ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="3_3wgf4"]
 [ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_re66e"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_jj5lf"]
 [ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_tdcx2"]
@@ -66,7 +66,6 @@ theme_override_fonts/font = ExtResource("4_tdcx2")
 theme_override_font_sizes/font_size = 23
 theme_override_styles/hover = ExtResource("4_jj5lf")
 theme_override_styles/normal = ExtResource("5_3wgf4")
-button_mask = 2
 text = "ATRAS"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/atras" to="." method="_on_atras_pressed"]

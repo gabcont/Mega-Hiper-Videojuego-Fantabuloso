@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://breq2e4hdjvx6"
-path="res://.godot/imported/middle.png-1652f50ef81eb46d467aedd14defe2a3.ctex"
+path="res://.godot/imported/middle.png-023baa45dcdf8ff6e00e71fdd6c5b2ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondo/CityLayers/middle.png"
-dest_files=["res://.godot/imported/middle.png-1652f50ef81eb46d467aedd14defe2a3.ctex"]
+source_file="res://Fondo/CityLayers/middle.png"
+dest_files=["res://.godot/imported/middle.png-023baa45dcdf8ff6e00e71fdd6c5b2ef.ctex"]
 
 [params]
 

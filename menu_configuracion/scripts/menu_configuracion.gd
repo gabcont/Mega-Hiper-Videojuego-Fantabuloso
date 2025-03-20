@@ -13,4 +13,4 @@ func _on_Slider_musica_value_changed(value):
 	volumen(0, value)
 
 func _on_atras_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://menu-principal/escenas/menu_principal.tscn")

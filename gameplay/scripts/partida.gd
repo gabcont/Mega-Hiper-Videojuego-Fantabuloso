@@ -5,8 +5,17 @@ extends Node2D
 
 @onready var timer_partida = %Reloj
 
+@export var escena_final : PackedScene
+
 func _ready() -> void:
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
+
+func cambiar_escena():
+	Transicion.transicion_partida()
+	await Transicion.on_transition_finished
+	if get_tree():
+		get_tree().change_scene_to_packed(escena_final)
+		
 
 func pausar_personajes() -> void:
 	personaje_1.pausar()
@@ -53,7 +62,7 @@ func _on_timer_poder_timeout() -> void:
 	personaje_2._on_poder_recibido(5)
 
 func _on_tiempo_partida_acabado() -> void:
-	pausar_personajes()
+	
 
 	if personaje_1.salud > personaje_2.salud:
 		pass
@@ -61,15 +70,17 @@ func _on_tiempo_partida_acabado() -> void:
 		pass
 	else:
 		pass
+	cambiar_escena()
+	
 
 
 func _on_personaje_2_salud_acabada() -> void:
-	pausar_personajes()
+	cambiar_escena()
+	
 
 
 func _on_personaje_1_salud_acabada() -> void:
-	pausar_personajes()
-	$AnimationPlayer.play("ataque_especial_p1")
+	cambiar_escena()
 
 func _on_personaje_1_ataque_especial_activado() -> void:
 	$AnimationPlayer.play("ataque_especial_p1")
