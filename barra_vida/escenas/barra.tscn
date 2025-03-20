@@ -1,15 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd36j1c11e0cl"]
+[gd_scene load_steps=9 format=3 uid="uid://ddsr7e2orwrut"]
 
-[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="1_78upf"]
-[ext_resource type="Texture2D" uid="uid://dhpj6gyt6l36v" path="res://barra_vida/assets/kirby.png" id="1_n1t4l"]
-[ext_resource type="Texture2D" uid="uid://cuypq4mps5fg4" path="res://barra_vida/assets/Health bar0_[empty].png" id="2_78upf"]
-[ext_resource type="Texture2D" uid="uid://dgskmwdnyhgms" path="res://barra_vida/assets/Health bar15_[full].png" id="3_t5vmd"]
-[ext_resource type="Script" uid="uid://cdpbpbmg5vnn3" path="res://barra_vida/scripts/vida.gd" id="4_u40n3"]
-[ext_resource type="Texture2D" uid="uid://bchlu3b5q4y6a" path="res://barra_vida/assets/barraneon.png" id="6_t5vmd"]
-[ext_resource type="Script" uid="uid://cijrp8pfidsi6" path="res://barra_vida/scripts/poder.gd" id="7_u40n3"]
+[ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="1_cnba2"]
+[ext_resource type="Texture2D" uid="uid://dhpj6gyt6l36v" path="res://barra_vida/assets/kirby.png" id="2_3hcir"]
+[ext_resource type="Texture2D" uid="uid://cuypq4mps5fg4" path="res://barra_vida/assets/Health bar0_[empty].png" id="3_4wd52"]
+[ext_resource type="Texture2D" uid="uid://dgskmwdnyhgms" path="res://barra_vida/assets/Health bar15_[full].png" id="4_f8nct"]
+[ext_resource type="Script" uid="uid://cdpbpbmg5vnn3" path="res://barra_vida/scripts/vida.gd" id="5_ndp1o"]
+[ext_resource type="Texture2D" uid="uid://bchlu3b5q4y6a" path="res://barra_vida/assets/barraneon.png" id="6_4tvo5"]
+[ext_resource type="Script" uid="uid://cijrp8pfidsi6" path="res://barra_vida/scripts/poder.gd" id="7_j1p5f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5vmd"]
-font = ExtResource("1_78upf")
+font = ExtResource("1_cnba2")
 font_size = 20
 font_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
 shadow_size = 10
@@ -53,16 +53,16 @@ theme_override_constants/separation = -26
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_n1t4l")
+texture = ExtResource("2_3hcir")
 expand_mode = 3
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 value = 100.0
-texture_under = ExtResource("2_78upf")
-texture_progress = ExtResource("3_t5vmd")
+texture_under = ExtResource("3_4wd52")
+texture_progress = ExtResource("4_f8nct")
 tint_under = Color(0.956863, 1, 1, 0.988235)
-script = ExtResource("4_u40n3")
+script = ExtResource("5_ndp1o")
 
 [node name="TextureProgressBar2" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer/HBoxContainer/TextureProgressBar"]
 layout_mode = 2
@@ -71,10 +71,10 @@ offset_top = 126.0
 offset_right = 779.0
 offset_bottom = 326.0
 scale = Vector2(0.497989, -0.154028)
-texture_under = ExtResource("6_t5vmd")
-texture_progress = ExtResource("6_t5vmd")
+texture_under = ExtResource("6_4tvo5")
+texture_progress = ExtResource("6_4tvo5")
 tint_under = Color(0.321728, 0.321728, 0.321728, 1)
-script = ExtResource("7_u40n3")
+script = ExtResource("7_j1p5f")
 
 [node name="Timer" type="Timer" parent="VBoxContainer/HBoxContainer/HBoxContainer/TextureProgressBar/TextureProgressBar2"]
 wait_time = 1.512
