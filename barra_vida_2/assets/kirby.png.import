@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4f7lq2o7h3an"
-path="res://.godot/imported/banner.png-92c2571a6b789d1b0090225511ef7022.ctex"
+uid="uid://dubh5x6q038yx"
+path="res://.godot/imported/kirby.png-3ab5da521abc19dbcab50611eb4996fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/banner.png"
-dest_files=["res://.godot/imported/banner.png-92c2571a6b789d1b0090225511ef7022.ctex"]
+source_file="res://barra_vida_2/assets/kirby.png"
+dest_files=["res://.godot/imported/kirby.png-3ab5da521abc19dbcab50611eb4996fd.ctex"]
 
 [params]
 
