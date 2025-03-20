@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpnq7p83tnxdd"]
 
 [ext_resource type="Script" uid="uid://m4p7iufqh854" path="res://m_pausa/escenas/menu_pausa.gd" id="1_b1tei"]
-[ext_resource type="FontFile" uid="uid://dlgytrjphwkdk" path="res://Assets/fuentes/Daydream.ttf" id="2_4mler"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_4mler"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="2_8bfom"]
 [ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu-principal/escenas/estilo_boton_mprinci.tres" id="3_4mler"]
 

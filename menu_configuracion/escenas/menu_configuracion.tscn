@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b2wly748datvl"]
 
 [ext_resource type="Script" uid="uid://c0hkm7au0tj4s" path="res://menu_configuracion/scripts/menu_configuracion.gd" id="1_cbsp8"]
-[ext_resource type="FontFile" uid="uid://dlgytrjphwkdk" path="res://Assets/fuentes/Daydream.ttf" id="2_4y57v"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_4y57v"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_gl35j"]
 [ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_n13qb"]
 [ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu-principal/escenas/estilo_boton_mprinci.tres" id="5_e85yu"]
@@ -108,7 +108,6 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = ExtResource("4_gl35j")
 theme_override_styles/normal = ExtResource("5_e85yu")
 action_mode = 0
-button_mask = 2
 text = "ATRAS"
 
 [connection signal="value_changed" from="CenterContainer/VBoxContainer/musica/Slider_musica" to="." method="_on_Slider_musica_value_changed"]

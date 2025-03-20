@@ -34,3 +34,11 @@ func _on_button_der_pressed() -> void:
 
 func _on_button_ok_pressed() -> void:
 	print("texto")
+
+func _input(event):
+	if(event.is_action_pressed("ui_accept")):
+		_on_button_ok_pressed()
+	elif(event.is_action_pressed("ui_right")):
+		_on_button_der_pressed()
+	elif(event.is_action_pressed("ui_left")):
+		_on_button_izq_pressed()

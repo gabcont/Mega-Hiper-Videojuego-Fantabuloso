@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://svorbpvgbp1b"]
 
 [ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_88lh7"]
-[ext_resource type="FontFile" uid="uid://dlgytrjphwkdk" path="res://Assets/fuentes/Daydream.ttf" id="2_vf7wc"]
-[ext_resource type="FontFile" uid="uid://yx361q7wr5y" path="res://Assets/fuentes/Calamity Regular.otf" id="3_c2qqc"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_vf7wc"]
+[ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="3_c2qqc"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_c2qqc"]
 [ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_n7jkx"]
 [ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu-principal/escenas/estilo_boton_mprinci.tres" id="5_65ja1"]
@@ -65,7 +65,6 @@ theme_override_fonts/font = ExtResource("4_n7jkx")
 theme_override_font_sizes/font_size = 23
 theme_override_styles/hover = ExtResource("4_c2qqc")
 theme_override_styles/normal = ExtResource("5_65ja1")
-button_mask = 2
 text = "ATRAS"
 
 [connection signal="pressed" from="VBoxContainer/atras" to="." method="_on_atras_pressed"]
