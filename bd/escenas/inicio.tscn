@@ -1,18 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjehem8i3hlno"]
+[gd_scene load_steps=15 format=3 uid="uid://bjehem8i3hlno"]
 
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
 [ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://fondo.jpeg" id="1_lt2sq"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
 [ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="2_5tuii"]
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_m7vwx"]
 [ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu-principal/escenas/menu_principal.tscn" id="3_m6y1t"]
-
-[sub_resource type="Gradient" id="Gradient_2j7ft"]
-offsets = PackedFloat32Array(0, 0.459877, 0.984568)
-colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_88ils"]
-gradient = SubResource("Gradient_2j7ft")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6y1t"]
 border_width_left = 2
@@ -67,7 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_88ils")
+texture = ExtResource("1_lt2sq")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

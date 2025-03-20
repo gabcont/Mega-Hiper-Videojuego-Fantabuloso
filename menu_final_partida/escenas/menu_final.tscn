@@ -1,17 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://cy71e8ghnbt4h"]
+[gd_scene load_steps=13 format=3 uid="uid://cy71e8ghnbt4h"]
 
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="1_1bvsq"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://fondo.jpeg" id="1_dg2gc"]
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_dg2gc"]
 [ext_resource type="Script" uid="uid://be5pnkp7g7fdc" path="res://menu_final_partida/scripts/menu_final.gd" id="3_1bvsq"]
 [ext_resource type="PackedScene" uid="uid://ldrwgxrqjjg5" path="res://gameplay/escenas/partida.tscn" id="4_h83i8"]
 [ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu-principal/escenas/menu_principal.tscn" id="5_eeg6y"]
-
-[sub_resource type="Gradient" id="Gradient_8fibu"]
-offsets = PackedFloat32Array(0, 0.459877, 0.984568)
-colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jupfq"]
-gradient = SubResource("Gradient_8fibu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21ug2"]
 texture = ExtResource("2_dg2gc")
@@ -52,7 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_jupfq")
+texture = ExtResource("1_dg2gc")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

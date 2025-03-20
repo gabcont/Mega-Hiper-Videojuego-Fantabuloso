@@ -181,7 +181,7 @@ func _on_poder_recibido(_poder : int) -> void:
 func _on_salud_recibida(_salud : int) -> void:
 	if (salud + _salud) > SALUD_MAXIMA:
 		poder = SALUD_MAXIMA
-	elif (salud + _salud) < 0:
+	elif (salud + _salud) <= 0:
 		salud = 0
 		emit_signal("salud_acabada")
 	else:

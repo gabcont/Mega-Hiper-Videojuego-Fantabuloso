@@ -22,7 +22,7 @@ Transicion="*res://transicion/transicion.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg")
 
 [input]
 
