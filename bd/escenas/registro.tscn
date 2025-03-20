@@ -1,14 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=14 format=3 uid="uid://cj7710d2bm8s8"]
 
 [ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_kc4kg"]
+[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_fchot"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_m6man"]
+[ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="2_qxv48"]
+[ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu-principal/escenas/menu_principal.tscn" id="3_ij8rq"]
 
-[sub_resource type="Gradient" id="Gradient_8fibu"]
+[sub_resource type="Gradient" id="Gradient_m6man"]
 offsets = PackedFloat32Array(0, 0.459877, 0.984568)
 colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8fibu"]
-gradient = SubResource("Gradient_8fibu")
+gradient = SubResource("Gradient_m6man")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc4kg"]
 border_width_left = 2
@@ -21,7 +25,6 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fibu"]
-bg_color = Color(0.688595, 0.688595, 0.688595, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -31,11 +34,17 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij8rq"]
-bg_color = Color(5.89602e-07, 0.393117, 0.115416, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxv48"]
+texture = ExtResource("2_fchot")
+region_rect = Rect2(0, 112, 48, 16)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v806"]
-bg_color = Color(1.92523e-06, 0.500061, 0.172463, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkpd7"]
+texture = ExtResource("2_fchot")
+region_rect = Rect2(128, 114, 48, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6man"]
+texture = ExtResource("2_fchot")
+region_rect = Rect2(0, 112, 48, 16)
 
 [node name="Registro" type="Control"]
 show_behind_parent = true
@@ -47,17 +56,21 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FondoMenu" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1197.0
-offset_bottom = 670.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_8fibu")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 19.0
-offset_right = 1144.0
-offset_bottom = 650.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(800, 0)
@@ -67,6 +80,7 @@ theme_override_constants/separation = 20
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m6man")
 theme_override_font_sizes/font_size = 30
 text = "Crear Usuario"
 horizontal_alignment = 1
@@ -78,6 +92,7 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qxv48")
 text = "Username"
 horizontal_alignment = 1
 
@@ -92,6 +107,7 @@ script = ExtResource("1_kc4kg")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qxv48")
 text = "Contraseña"
 horizontal_alignment = 1
 
@@ -106,14 +122,18 @@ secret_character = "*"
 script = ExtResource("1_kc4kg")
 
 [node name="Submit" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(225, 40)
+custom_minimum_size = Vector2(170, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
 theme_override_constants/h_separation = 20
-theme_override_styles/hover = SubResource("StyleBoxFlat_ij8rq")
-theme_override_styles/normal = SubResource("StyleBoxFlat_8v806")
+theme_override_fonts/font = ExtResource("2_m6man")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qxv48")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tkpd7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m6man")
 text = "Registrar"
 script = ExtResource("1_0geqs")
+escena_destino = ExtResource("3_ij8rq")
 
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]

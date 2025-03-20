@@ -1,5 +1,7 @@
 extends TextureProgressBar
 
+signal tiempo_partida_acabado
+
 @onready var timer = $Timer 
 @onready var label = $Label 
 
@@ -20,5 +22,6 @@ func _on_Timer_timeout():
 		self.value = countdown_time  
 		label.text = str(countdown_time) 
 	else:
-		timer.stop()  
+		timer.stop()
+		emit_signal("tiempo_partida_acabado")  
 	   

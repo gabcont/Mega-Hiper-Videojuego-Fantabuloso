@@ -1,8 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbhkoswnwc7qm"]
+[gd_scene load_steps=14 format=3 uid="uid://bbhkoswnwc7qm"]
 
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="1_7cqpg"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="1_wafn3"]
+[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_641w5"]
 [ext_resource type="PackedScene" uid="uid://bjehem8i3hlno" path="res://bd/escenas/inicio.tscn" id="2_ayb6d"]
 [ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://bd/escenas/registro.tscn" id="2_w2q5i"]
+
+[sub_resource type="Gradient" id="Gradient_p6j3g"]
+offsets = PackedFloat32Array(0, 0.459877, 0.984568)
+colors = PackedColorArray(0, 0, 0.137255, 1, 8.37475e-06, 0.0279494, 0.568435, 1, 0, 0, 0.137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ayb6d"]
+gradient = SubResource("Gradient_p6j3g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_641w5"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwqgp"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(128, 50, 48, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykfpq"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kp1h1"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b8jpt"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(128, 50, 48, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgnhk"]
+texture = ExtResource("2_641w5")
+region_rect = Rect2(0, 48, 48, 16)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,10 +45,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="FondoMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ayb6d")
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_right = 1149.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(0, 200)
@@ -23,17 +68,35 @@ layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Inicio" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Iniciar sesión
+theme_override_fonts/font = ExtResource("1_wafn3")
+theme_override_font_sizes/font_size = 40
+text = "FIGHTERS' FIGHT"
+
+[node name="Inicio" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_wafn3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_641w5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fwqgp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ykfpq")
+text = "Iniciar sesion
 "
 script = ExtResource("1_7cqpg")
 escena_destino = ExtResource("2_ayb6d")
 
 [node name="Registro" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_wafn3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kp1h1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b8jpt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hgnhk")
 text = "Registrarse
 "
 script = ExtResource("1_7cqpg")
