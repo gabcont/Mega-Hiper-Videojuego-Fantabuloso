@@ -1,6 +1,8 @@
 extends Button
 @onready var statusLabel = get_node("../StatusLabel")
 
+@export var escena_destino: PackedScene
+
 func _ready():
 	# Conecta la señal "pressed" del botón a la función "on_button_pressed"
 	pressed.connect(on_button_pressed)
@@ -50,5 +52,10 @@ func iniciar_sesion(usuario,contrasena):
 		
 		
 		var es_correcto = registrado[0]["contraseña"] == cadena_encriptada
-		statusLabel.text =  "Sesión iniciada con éxito" if es_correcto else "Usuario o contraseña incorrectos"
 		aes.finish()
+		if not es_correcto:
+			statusLabel.text = "Usuario o contraseña incorrectos"
+		else:
+			Transicion.transicion()
+			await Transicion.on_transition_finished
+			get_tree().change_scene_to_packed(escena_destino)

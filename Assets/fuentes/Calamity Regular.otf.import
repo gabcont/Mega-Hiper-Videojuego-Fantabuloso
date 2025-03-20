@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ccahem8tv6ne"
-path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-0bb2c6aaf0ddba6de685d64023ecb340.fontdata"
+uid="uid://cijdvhdknthnk"
+path="res://.godot/imported/Calamity Regular.otf-464c7b05ea8845c2e2225b51e922d775.fontdata"
 
 [deps]
 
-source_file="res://Assets/fuentes/PixelifySans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-0bb2c6aaf0ddba6de685d64023ecb340.fontdata"]
+source_file="res://Assets/fuentes/Calamity Regular.otf"
+dest_files=["res://.godot/imported/Calamity Regular.otf-464c7b05ea8845c2e2225b51e922d775.fontdata"]
 
 [params]
 

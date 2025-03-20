@@ -9,6 +9,6 @@ func _ready():
 
 func on_button_pressed():
 	# Cambia a la escena de destino
-	Transicion.transicion()
+	Transicion.transicion_partida()
 	await Transicion.on_transition_finished
 	get_tree().change_scene_to_packed(escena_destino)
