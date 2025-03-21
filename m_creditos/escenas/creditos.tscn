@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cheghrv8bx3hm"]
+[gd_scene load_steps=8 format=3 uid="uid://cheghrv8bx3hm"]
 
 [ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_5v1o1"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://fondo.jpeg" id="2_r1xsg"]
 [ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="3_3wgf4"]
 [ext_resource type="FontFile" uid="uid://wie83cyejdxi" path="res://Assets/fuentes/Starborn.otf" id="3_re66e"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_jj5lf"]
@@ -19,6 +20,11 @@ script = ExtResource("1_5v1o1")
 [node name="FondoInicio" type="Sprite2D" parent="."]
 position = Vector2(505, 277)
 scale = Vector2(1.13735, 1.13845)
+
+[node name="FondoInicio" type="Sprite2D" parent="FondoInicio"]
+position = Vector2(18, 2)
+scale = Vector2(0.925026, 0.781638)
+texture = ExtResource("2_r1xsg")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -43,15 +49,22 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_3wgf4")
-text = "VALEN
-DIEGO
-GABRIEL
-C
-E
-20205
-UNIVERSIDAD SANTA MARIA"
+text = "programador
+Gabriel Contreras
+
+programador
+Cristian Cova
+
+programador
+diego gonzalez
+
+programador
+jurgen Ettingshausen
+
+programador
+Valentina Labrador"
 
 [node name="atras" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://svorbpvgbp1b"]
+[gd_scene load_steps=8 format=3 uid="uid://svorbpvgbp1b"]
 
 [ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://m_creditos/scripts/creditos.gd" id="1_88lh7"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://fondo.jpeg" id="2_65ja1"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_vf7wc"]
 [ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="3_c2qqc"]
 [ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu-principal/escenas/estilo_boton_press.tres" id="4_c2qqc"]
@@ -19,6 +20,11 @@ script = ExtResource("1_88lh7")
 [node name="FondoInicio" type="Sprite2D" parent="."]
 position = Vector2(505, 277)
 scale = Vector2(1.13735, 1.13845)
+
+[node name="FondoInicio" type="Sprite2D" parent="FondoInicio"]
+position = Vector2(18, 2)
+scale = Vector2(0.925026, 0.781638)
+texture = ExtResource("2_65ja1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -46,14 +52,19 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_c2qqc")
-text = "HOLA
-HOLA
-HOLA
-HOLA
-20205
-UNIVERSIDAD SANTA MARIA"
+text = "DEBERAS VENCER A TU OPONENTE ASESTANDO GOLPES
+HASTA BAJAR SU BARRA DE VIDA, PERO CUIDADO, TAMBIEN 
+BLOQUEAR O ESQUIVAR LOS GOLPES DEL OPONENTE.
+
+CONTROLES JUGADOR 1:                      CONTROLES JUGADOR 2:
+ATAQUE FUERTE: Q                                 ATAQUE FUERTE: I
+ATAQUE DEBIL: W                                    ATAQUE DEBIL: O
+ESQUIVAR: E                                              ESQUIVAR: P
+BLOQUAR R                                                  BLOQUAR [
+
+"
 
 [node name="atras" type="Button" parent="VBoxContainer"]
 texture_filter = 1
