@@ -8,3 +8,6 @@
 script = ExtResource("2_qxs2v")
 options_packed_scene = ExtResource("3_giry3")
 main_menu_scene = "uid://cibogaqpg6nyk"
+
+[node name="ConfirmRestart" parent="." index="2"]
+size = Vector2i(200, 108)

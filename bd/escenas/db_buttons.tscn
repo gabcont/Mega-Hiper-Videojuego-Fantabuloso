@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="1_7cqpg"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="1_wafn3"]
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://fondo.jpeg" id="1_ykfpq"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_ykfpq"]
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_641w5"]
 [ext_resource type="PackedScene" uid="uid://bjehem8i3hlno" path="res://bd/escenas/inicio.tscn" id="2_ayb6d"]
 [ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://bd/escenas/registro.tscn" id="2_w2q5i"]
