@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
 [ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="2_5tuii"]
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_m7vwx"]
-[ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu-principal/escenas/menu_principal.tscn" id="3_m6y1t"]
+[ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu_viejo/menu-principal/escenas/menu_principal.tscn" id="3_m6y1t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6y1t"]
 border_width_left = 2
@@ -102,6 +102,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_m6y1t")
+max_length = 20
 script = ExtResource("1_88ils")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]

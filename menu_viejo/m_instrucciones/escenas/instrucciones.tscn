@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://svorbpvgbp1b"]
+
+[ext_resource type="Script" uid="uid://dn3qwodfgdvwq" path="res://menu_viejo/m_creditos/scripts/creditos.gd" id="1_88lh7"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_vf7wc"]
+[ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="3_c2qqc"]
+[ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu_viejo/menu-principal/escenas/estilo_boton_press.tres" id="4_c2qqc"]
+[ext_resource type="FontFile" uid="uid://defg2r1pxbk3b" path="res://Assets/fuentes/Starborn.ttf" id="4_n7jkx"]
+[ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu_viejo/menu-principal/escenas/estilo_boton_mprinci.tres" id="5_65ja1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_88lh7")
+
+[node name="FondoInicio" type="Sprite2D" parent="."]
+position = Vector2(505, 277)
+scale = Vector2(1.13735, 1.13845)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.5
+offset_top = -153.0
+offset_right = 197.5
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 101
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.040203, 0.0360111, 0.00140707, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("2_vf7wc")
+theme_override_font_sizes/font_size = 31
+text = "INSTRUCCIONES"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_c2qqc")
+text = "HOLA
+HOLA
+HOLA
+HOLA
+20205
+UNIVERSIDAD SANTA MARIA"
+
+[node name="atras" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.156863, 0.521569, 0.921569, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("4_n7jkx")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = ExtResource("4_c2qqc")
+theme_override_styles/normal = ExtResource("5_65ja1")
+text = "ATRAS"
+
+[connection signal="pressed" from="VBoxContainer/atras" to="." method="_on_atras_pressed"]

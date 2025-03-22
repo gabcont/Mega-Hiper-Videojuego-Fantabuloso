@@ -3,4 +3,5 @@
 .vscode/
 .godot/
 /android/
-addons/
+addons/godot-sqlite
+addons/dotenv
