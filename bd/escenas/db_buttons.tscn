@@ -66,7 +66,9 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_wafn3")
 theme_override_font_sizes/font_size = 40
-text = "FIGHTERS' FIGHT"
+text = "JUEGO DIVERTIDO
+cuyo nombre no se ha
+ decidido aun"
 
 [node name="Inicio" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)

@@ -1,0 +1,120 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpnq7p83tnxdd"]
+
+[ext_resource type="Script" uid="uid://m4p7iufqh854" path="res://menu_viejo/m_pausa/escenas/menu_pausa.gd" id="1_b1tei"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_4mler"]
+[ext_resource type="StyleBox" uid="uid://db04076wbxvtl" path="res://menu_viejo/menu-principal/escenas/estilo_boton_press.tres" id="2_8bfom"]
+[ext_resource type="StyleBox" uid="uid://djwb6658abppd" path="res://menu_viejo/menu-principal/escenas/estilo_boton_mprinci.tres" id="3_4mler"]
+
+[node name="MenuPausa" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1tei")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25098, 0.25098, 0.25098, 0.807843)
+
+[node name="HBoxContainer2" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -29.0
+offset_right = 80.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 83
+
+[node name="Label" type="Label" parent="ColorRect/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("2_4mler")
+theme_override_font_sizes/font_size = 31
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4mler")
+theme_override_font_sizes/font_size = 18
+text = "MUSICA"
+
+[node name="HSlider" type="HSlider" parent="ColorRect/HBoxContainer2/HBoxContainer/Label3"]
+layout_mode = 0
+offset_left = -10.5
+offset_top = 31.5
+offset_right = 163.5
+offset_bottom = 47.5
+scale = Vector2(1.59253, 1.28237)
+min_value = -80.0
+max_value = 0.0
+step = 0.1
+
+[node name="Label2" type="Label" parent="ColorRect/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4mler")
+theme_override_font_sizes/font_size = 18
+text = "SONIDO"
+
+[node name="HSlider" type="HSlider" parent="ColorRect/HBoxContainer2/HBoxContainer/Label2"]
+layout_mode = 0
+offset_left = -13.5
+offset_top = 31.5
+offset_right = 160.5
+offset_bottom = 47.5
+scale = Vector2(1.61193, 1)
+value = 100.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 56
+
+[node name="continuar" type="Button" parent="ColorRect/HBoxContainer2/HBoxContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_4mler")
+theme_override_styles/hover = ExtResource("2_8bfom")
+theme_override_styles/pressed = ExtResource("2_8bfom")
+theme_override_styles/normal = ExtResource("3_4mler")
+button_mask = 7
+text = "CONTINUAR"
+
+[node name="finalizar" type="Button" parent="ColorRect/HBoxContainer2/HBoxContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_4mler")
+theme_override_styles/hover = ExtResource("2_8bfom")
+theme_override_styles/pressed = ExtResource("2_8bfom")
+theme_override_styles/normal = ExtResource("3_4mler")
+button_mask = 7
+text = "FINALIZAR   PARTIDA"
+
+[connection signal="value_changed" from="ColorRect/HBoxContainer2/HBoxContainer/Label3/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer2/HBoxContainer/VBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer2/HBoxContainer/VBoxContainer/finalizar" to="." method="_on_finalizar_pressed"]
