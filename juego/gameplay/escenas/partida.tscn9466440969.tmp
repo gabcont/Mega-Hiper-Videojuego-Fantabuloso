@@ -560,7 +560,7 @@ metadata/_edit_lock_ = true
 [node name="Botones" parent="HUD" instance=ExtResource("7_htvet")]
 layout_mode = 1
 
-[node name="TimerPoder" type="Timer" parent="."]
-autostart = true
+[node name="Personajes" type="Node" parent="."]
 
-[connection signal="timeout" from="TimerPoder" to="." method="_on_timer_poder_timeout"]
+[node name="TimerPoder" type="Timer" parent="Personajes"]
+autostart = true

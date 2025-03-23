@@ -16,3 +16,7 @@ credits_packed_scene = ExtResource("3_7mudv")
 texture = ExtResource("2_p74i5")
 expand_mode = 2
 stretch_mode = 0
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_top = -118.0
+offset_bottom = 118.0
