@@ -1,5 +1,5 @@
 extends Button
-@onready var statusLabel = get_node("../StatusLabel")
+@onready var statusLabel = get_node("../../StatusLabel")
 
 @export var escena_destino: PackedScene
 
@@ -9,8 +9,8 @@ func _ready():
 
 func on_button_pressed():
 	# Obtiene referencias a los nodos LineEdit
-	var line_edit_usuario = get_node("../LineEdit") # Ajusta la ruta si es necesario
-	var line_edit_contrasena = get_node("../LineEdit2") # Ajusta la ruta si es necesario
+	var line_edit_usuario = get_node("../../LineEdit") # Ajusta la ruta si es necesario
+	var line_edit_contrasena = get_node("../../LineEdit2") # Ajusta la ruta si es necesario
 	# Obtiene el texto de los LineEdit
 	var usuario = line_edit_usuario.text
 	var contrasena = line_edit_contrasena.text

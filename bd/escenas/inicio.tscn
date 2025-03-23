@@ -1,58 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjehem8i3hlno"]
+[gd_scene load_steps=7 format=3 uid="uid://bbhkoswnwc7qm"]
 
-[ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
-[ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
+[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_f7n8u"]
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_lt2sq"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
-[ext_resource type="FontFile" uid="uid://cijdvhdknthnk" path="res://Assets/fuentes/Calamity Regular.otf" id="2_5tuii"]
-[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_m7vwx"]
-[ext_resource type="PackedScene" uid="uid://c2hdcuiwp76kp" path="res://menu_viejo/menu-principal/escenas/menu_principal.tscn" id="3_m6y1t"]
+[ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="4_5tuii"]
+[ext_resource type="PackedScene" uid="uid://bjehem8i3hlno" path="res://bd/escenas/inicio_sesion.tscn" id="5_lt2sq"]
+[ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://bd/escenas/registro.tscn" id="6_f7n8u"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6y1t"]
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7n8u"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7vwx"]
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="Theme" id="Theme_m6y1t"]
-default_font = ExtResource("2_2j7ft")
-default_font_size = 12
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7vwx"]
-texture = ExtResource("2_m7vwx")
-region_rect = Rect2(0, 112, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5tuii"]
-texture = ExtResource("2_m7vwx")
-region_rect = Rect2(128, 114, 48, 14)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2j7ft"]
-texture = ExtResource("2_m7vwx")
-region_rect = Rect2(0, 112, 48, 16)
-
-[node name="Inicio" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_f7n8u")
 
 [node name="FondoMenu" type="TextureRect" parent="."]
 layout_mode = 1
@@ -72,70 +34,35 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(800, 0)
-layout_direction = 1
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_2j7ft")
-theme_override_font_sizes/font_size = 30
-text = "Iniciar Sesion"
-horizontal_alignment = 1
-uppercase = true
-
-[node name="StatusLabel" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-horizontal_alignment = 1
+theme_override_constants/separation = 50
+alignment = 1
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_5tuii")
-text = "Username"
-horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("2_2j7ft")
+theme_override_font_sizes/font_size = 40
+text = "Strit Faiter"
 
-[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(225, 35)
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_m6y1t")
-max_length = 20
-script = ExtResource("1_88ils")
-
-[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_5tuii")
-text = "Contraseña"
-horizontal_alignment = 1
-
-[node name="LineEdit2" type="LineEdit" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(225, 35)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_5tuii")
-theme_override_styles/focus = SubResource("StyleBoxFlat_f7n8u")
-theme_override_styles/normal = SubResource("StyleBoxFlat_m7vwx")
-secret = true
-secret_character = "*"
-script = ExtResource("1_88ils")
-
-[node name="Submit" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Inicio" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
-theme = SubResource("Theme_m6y1t")
-theme_override_constants/h_separation = 20
-theme_override_styles/hover = SubResource("StyleBoxTexture_m7vwx")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5tuii")
-theme_override_styles/normal = SubResource("StyleBoxTexture_2j7ft")
-text = "Entrar"
-script = ExtResource("1_kb8y8")
-escena_destino = ExtResource("3_m6y1t")
+theme_override_font_sizes/font_size = 30
+text = "Iniciar sesión
+"
+script = ExtResource("4_5tuii")
+escena_destino = ExtResource("5_lt2sq")
 
-[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
-[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]
+[node name="Registro" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+text = "Registrarse
+"
+script = ExtResource("4_5tuii")
+escena_destino = ExtResource("6_f7n8u")
