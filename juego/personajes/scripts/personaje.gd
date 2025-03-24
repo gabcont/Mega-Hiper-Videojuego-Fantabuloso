@@ -154,7 +154,8 @@ func set_spriteframe(_spriteframe : SpriteFrames) -> void:
 
 # Devuelve al estado inicial cuando se acaba una animación
 func _on_sprite_animation_finished() -> void:
-	reset()
+	if ESTADO_ACTUAL != "bloquear":
+		reset()
 
 # Solo se procesa la logica del juego con cada cambio de frame
 func _on_frame_changed() -> void:
