@@ -1,4 +1,4 @@
-class_name Personaje extends Node2D
+class_name Personaje extends Node
 
 
 signal ha_atacado(es_personaje_1 : bool, tipo_ataque : StringName)
@@ -23,8 +23,7 @@ var poder : int = 10
 
 # voltea graficos y animaciones en caso de ser jugador 2
 @export var es_personaje_1 : bool = false 
-@export var spriteframe : SpriteFrames # Cambia sprites de personaje 
-@export var nodo_botones : Node2D # Conecta los botones
+@export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
 
 @export var nombre_personaje : StringName
 
@@ -54,8 +53,12 @@ func _process(_delta: float) -> void:
 
 # Inicia parametros necesarios para la partida
 func _ready() -> void:
+	animation_player.connect("animation_changed", _on_player_animation_changed)
+	sprite.connect("frame_changed", _on_frame_changed)
+	sprite.connect("animation_finished", _on_sprite_animation_finished)
+
 	# Carga sprites del personaje
-	sprite.sprite_frames = spriteframe
+	sprite.sprite_frames = spriteframe_personaje
 
 	# Cambia al estado inicial
 	reset()
@@ -145,8 +148,10 @@ func voltear_sprite() -> void:
 	%Burbuja.voltear() # Voltea escudo burbuja
 
 	# Ajusta la posicion de la burbuja para quedar más al centro del sprite
-	$PosMitadSprite.position = Vector2(120, 0)
+	$AnimatedSprite2D/PosMitadSprite.position = Vector2(15, 0)
 
+func set_spriteframe(_spriteframe : SpriteFrames) -> void:
+	sprite.sprite_frames = _spriteframe
 
 #-----------------# Funciones que se activan con signals #-----------------#
 

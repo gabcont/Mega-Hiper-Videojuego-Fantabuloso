@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2nyn74xgd2bg"
-path="res://.godot/imported/inthallway2_evening2.webp-f6ef79b895d27e60542a5e0cfbb057aa.ctex"
+uid="uid://breq2e4hdjvx6"
+path="res://.godot/imported/middle.png-e1081f5837130f1b68af826783ee25e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/inthallway2_evening2.webp"
-dest_files=["res://.godot/imported/inthallway2_evening2.webp-f6ef79b895d27e60542a5e0cfbb057aa.ctex"]
+source_file="res://juego/Fondo/assets/imagenes/middle.png"
+dest_files=["res://.godot/imported/middle.png-e1081f5837130f1b68af826783ee25e9.ctex"]
 
 [params]
 

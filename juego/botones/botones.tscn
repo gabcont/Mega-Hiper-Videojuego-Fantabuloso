@@ -19,7 +19,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 512.0
+offset_top = 528.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -31,11 +31,14 @@ size_flags_vertical = 4
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(500, 100)
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 action_mode = 0
@@ -46,7 +49,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"ataque_fuerte_p1"
 input_key = &"A_p1"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "B"
@@ -56,7 +59,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"ataque_debil_p1"
 input_key = &"B_p1"
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "X"
@@ -66,7 +69,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"esquivar_p1"
 input_key = &"X_p1"
 
-[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "Y"
@@ -79,11 +82,14 @@ input_key = &"Y_p1"
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer2"]
-custom_minimum_size = Vector2(500, 100)
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 action_mode = 0
@@ -94,7 +100,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"ataque_fuerte_p2"
 input_key = &"A_p2"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "B"
@@ -104,7 +110,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"ataque_debil_p2"
 input_key = &"B_p2"
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "X"
@@ -114,7 +120,7 @@ script = ExtResource("1_mninl")
 accion_activada = &"esquivar_p2"
 input_key = &"X_p2"
 
-[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
 layout_mode = 2
 toggle_mode = true
 text = "Y"

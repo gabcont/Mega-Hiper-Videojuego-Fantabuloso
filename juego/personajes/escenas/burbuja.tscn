@@ -119,7 +119,7 @@ shader_parameter/attack_radius = 1.023
 shader_parameter/attack_amplitude = 0.0
 shader_parameter/wave_speed = 16.0
 shader_parameter/wave_num = 17.0
-shader_parameter/noise_speed = 1.0
+shader_parameter/noise_speed = 3.0
 shader_parameter/noise_amplitude = 1.0
 shader_parameter/noise_deformation = 1.0
 
@@ -135,7 +135,7 @@ libraries = {
 
 [node name="Burbuja" type="Sprite2D" parent="PosMitadSprite"]
 unique_name_in_owner = true
-texture_filter = 1
+modulate = Color(1, 1, 1, 0.458824)
 material = SubResource("ShaderMaterial_0mytl")
 position = Vector2(0, 50)
 scale = Vector2(5, 5)
