@@ -4,10 +4,11 @@ extends Node
 @onready var personaje_2 : Personaje = %Personaje2
 
 @onready var timer_partida = %Reloj
-
+@onready var menu_pausa = $ColorRect
 @export var escena_final : PackedScene
 
 func _ready() -> void:
+	menu_pausa.hide()
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
 
 	personaje_1.connect("ha_atacado", _on_personaje_ha_atacado)
@@ -24,6 +25,12 @@ func _ready() -> void:
 
 	personaje_1.connect("ataque_especial_activado", _on_ataque_especial_activado)
 	personaje_2.connect("ataque_especial_activado", _on_ataque_especial_activado)
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Pausa"):
+		
+		menu_pausa.show()
+		get_tree().paused = true
 
 func pausar_personajes() -> void:
 	personaje_1.pausar()
