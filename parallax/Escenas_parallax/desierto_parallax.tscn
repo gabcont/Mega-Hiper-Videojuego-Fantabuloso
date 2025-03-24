@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0oi5fwg7jyk8"]
+
+[ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/gameplay/escenas/personajes/personaje.tscn" id="1_m2dcc"]
+[ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="2_pvpxx"]
+[ext_resource type="Texture2D" uid="uid://c0fshhbsdddk7" path="res://parallax/Fondos parallax/Desert/1.Sky.png" id="3_y5pmm"]
+[ext_resource type="Texture2D" uid="uid://dvcjjqbytofgu" path="res://parallax/Fondos parallax/Desert/2.Clouds.png" id="4_r8hha"]
+[ext_resource type="Texture2D" uid="uid://cxl5ghhyj5jb2" path="res://parallax/Fondos parallax/Desert/3.Mountains.png" id="5_k84ua"]
+[ext_resource type="Texture2D" uid="uid://b3xc5fsidspjh" path="res://parallax/Fondos parallax/Desert/4.Dunes.png" id="6_mta50"]
+[ext_resource type="Texture2D" uid="uid://bvy47nmh2t4lj" path="res://parallax/Fondos parallax/Desert/5.Ground.png" id="7_ggvw2"]
+
+[node name="Desierto_parallax" type="Node2D"]
+
+[node name="Personaje1" parent="." instance=ExtResource("1_m2dcc")]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(526, 329)
+nombre_personaje = &"Knuckles"
+
+[node name="Personaje2" parent="." instance=ExtResource("1_m2dcc")]
+unique_name_in_owner = true
+visibility_layer = 2
+z_index = 1
+position = Vector2(650, 341)
+voltear_personaje = true
+spriteframe = ExtResource("2_pvpxx")
+nombre_personaje = &"Kirby"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(578, 323)
+scale = Vector2(3.63883, -3.57459)
+texture = ExtResource("3_y5pmm")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(574, 314)
+scale = Vector2(3.65198, 3.76477)
+texture = ExtResource("4_r8hha")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(577, 311)
+scale = Vector2(3.61459, 3.77055)
+texture = ExtResource("5_k84ua")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.0047, 0.987899)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(574, 311)
+scale = Vector2(3.63917, 3.8067)
+texture = ExtResource("6_mta50")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.08, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(580, 244)
+scale = Vector2(3.63168, 4.52274)
+texture = ExtResource("7_ggvw2")
