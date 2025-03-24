@@ -1,11 +1,12 @@
-[gd_scene load_steps=23 format=3 uid="uid://hn8a810btiqa"]
+[gd_scene load_steps=24 format=3 uid="uid://hn8a810btiqa"]
 
-[ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/gameplay/escenas/personajes/personaje.tscn" id="1_0t4ck"]
+[ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
-[ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="5_pfv7k"]
 [ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
+[ext_resource type="SpriteFrames" uid="uid://p6fmqw4ulnn3" path="res://juego/personajes/assets/animaciones/Knuckles.tres" id="6_htvet"]
+[ext_resource type="SpriteFrames" uid="uid://clvi7w1dcnma7" path="res://juego/personajes/assets/animaciones/Kirby.tres" id="7_glmsc"]
 [ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/timer/escenas/timer.tscn" id="7_hpts1"]
 [ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/botones/botones.tscn" id="7_htvet"]
 [ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://juego/Fondo/auto_scroller.tscn" id="8_tihru"]
@@ -453,6 +454,7 @@ unique_name_in_owner = true
 z_index = 2
 position = Vector2(526, 329)
 es_personaje_1 = true
+spriteframe = ExtResource("6_htvet")
 nombre_personaje = &"Knuckles"
 
 [node name="Personaje2" parent="Personajes2" instance=ExtResource("1_0t4ck")]
@@ -460,7 +462,7 @@ unique_name_in_owner = true
 visibility_layer = 2
 z_index = 1
 position = Vector2(650, 341)
-spriteframe = ExtResource("5_pfv7k")
+spriteframe = ExtResource("7_glmsc")
 nombre_personaje = &"Kirby"
 
 [node name="Mensajes" type="Marker2D" parent="."]

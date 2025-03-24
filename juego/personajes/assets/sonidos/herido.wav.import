@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bj4mbs5fr8s3a"
-path="res://.godot/imported/herido.wav-4d4a18f45709329c6454ae3cf780076a.sample"
+path="res://.godot/imported/herido.wav-98c96e6a4e39ac5b26bc1758a63c80d6.sample"
 
 [deps]
 
-source_file="res://juego/gameplay/assets/sonidos/herido.wav"
-dest_files=["res://.godot/imported/herido.wav-4d4a18f45709329c6454ae3cf780076a.sample"]
+source_file="res://juego/personajes/assets/sonidos/herido.wav"
+dest_files=["res://.godot/imported/herido.wav-98c96e6a4e39ac5b26bc1758a63c80d6.sample"]
 
 [params]
 
