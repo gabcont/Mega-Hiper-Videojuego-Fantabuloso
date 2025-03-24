@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://b5wqwx4kssvs3"]
+[gd_scene load_steps=23 format=3 uid="uid://bamnjdr8d0t4a"]
 
-[ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://juego/personajes/scripts/personaje.gd" id="1_w5hus"]
+[ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://juego/personajes/scripts/personaje.gd" id="1_0kjke"]
 [ext_resource type="SpriteFrames" uid="uid://1pgfwsf2ida5" path="res://juego/personajes/assets/animaciones/Miku.tres" id="2_w5hus"]
 [ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://juego/personajes/assets/sonidos/ataque_1.mp3" id="3_6y3i8"]
 [ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://juego/personajes/assets/sonidos/huida.ogg" id="3_hwi8i"]
@@ -97,7 +97,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5, 5)]
+"values": [Vector2(7, 7)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -798,7 +798,7 @@ tracks/6/keys = {
 tracks/7/type = "method"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("PosMitadSprite/Burbuja")
+tracks/7/path = NodePath("%Burbuja")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1155,7 +1155,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0, 0.0333333, 0.100003),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(5, 5), Vector2(3, 3), Vector2(5, 5)]
+"values": [Vector2(7, 7), Vector2(5, 5), Vector2(7, 7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj443"]
@@ -1174,31 +1174,15 @@ _data = {
 
 [sub_resource type="LabelSettings" id="LabelSettings_6y3i8"]
 
-[node name="Personaje" type="Control"]
-layout_mode = 3
-anchor_right = 0.401
-anchor_bottom = 0.69
-offset_right = -141.952
-offset_bottom = -127.12
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_w5hus")
+[node name="Personaje" type="Node2D"]
+script = ExtResource("1_0kjke")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(5, 5)
+scale = Vector2(7, 7)
 sprite_frames = ExtResource("2_w5hus")
 animation = &"idle"
 autoplay = "idle"
-
-[node name="PosMitadSprite" type="Marker2D" parent="AnimatedSprite2D"]
-position = Vector2(-17.1429, 0)
-scale = Vector2(0.142857, 0.142857)
-
-[node name="Burbuja" parent="AnimatedSprite2D/PosMitadSprite" instance=ExtResource("9_mhd2b")]
-unique_name_in_owner = true
-position = Vector2(11, -57)
-scale = Vector2(1.05, 1.395)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -1208,7 +1192,6 @@ libraries = {
 
 [node name="Debug" type="BoxContainer" parent="."]
 visible = false
-layout_mode = 0
 offset_left = -7.0
 offset_top = -180.0
 offset_right = 308.0
@@ -1254,3 +1237,14 @@ label_settings = SubResource("LabelSettings_6y3i8")
 
 [node name="SFX" type="AudioStreamPlayer" parent="Sonido"]
 bus = &"SFX"
+
+[node name="PosMitadSprite" type="Marker2D" parent="."]
+position = Vector2(-120, 0)
+
+[node name="Burbuja" parent="PosMitadSprite" instance=ExtResource("9_mhd2b")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_sprite_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_frame_changed"]
+[connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_player_animation_changed"]

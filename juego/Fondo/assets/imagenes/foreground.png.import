@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://breq2e4hdjvx6"
-path="res://.godot/imported/middle.png-ef2faa037176358b290c1e8ffc6ee69f.ctex"
+uid="uid://c0hp7gt6l6kaf"
+path="res://.godot/imported/foreground.png-c65db13d9a3a97a1df0c56f72abc856e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/CityLayers/middle.png"
-dest_files=["res://.godot/imported/middle.png-ef2faa037176358b290c1e8ffc6ee69f.ctex"]
+source_file="res://juego/Fondo/assets/imagenes/foreground.png"
+dest_files=["res://.godot/imported/foreground.png-c65db13d9a3a97a1df0c56f72abc856e.ctex"]
 
 [params]
 

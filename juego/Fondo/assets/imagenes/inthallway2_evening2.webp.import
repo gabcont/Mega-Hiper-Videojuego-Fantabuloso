@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0hp7gt6l6kaf"
-path="res://.godot/imported/foreground.png-1198c4a86cda8e025d81d748db764ce8.ctex"
+uid="uid://d2nyn74xgd2bg"
+path="res://.godot/imported/inthallway2_evening2.webp-11c827b1aa9c562a5c3dc96b6b6dc910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/CityLayers/foreground.png"
-dest_files=["res://.godot/imported/foreground.png-1198c4a86cda8e025d81d748db764ce8.ctex"]
+source_file="res://juego/Fondo/assets/imagenes/inthallway2_evening2.webp"
+dest_files=["res://.godot/imported/inthallway2_evening2.webp-11c827b1aa9c562a5c3dc96b6b6dc910.ctex"]
 
 [params]
 

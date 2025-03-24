@@ -25,6 +25,10 @@ func _ready() -> void:
 	personaje_1.connect("ataque_especial_activado", _on_ataque_especial_activado)
 	personaje_2.connect("ataque_especial_activado", _on_ataque_especial_activado)
 
+func set_personajes(spriteframe_p1 : SpriteFrames, spriteframe_p2 : SpriteFrames) -> void:
+	personaje_1.set_spriteframe(spriteframe_p1)
+	personaje_2.set_spriteframe(spriteframe_p2)
+
 func pausar_personajes() -> void:
 	personaje_1.pausar()
 	personaje_2.pausar()
