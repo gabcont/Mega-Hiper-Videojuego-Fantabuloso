@@ -1,36 +1,40 @@
-[gd_scene load_steps=13 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=14 format=3 uid="uid://bjehem8i3hlno"]
 
-[ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
-[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_7ttgg"]
-[ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_kc4kg"]
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_tkpd7"]
-[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_fchot"]
-[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_m6man"]
-[ext_resource type="PackedScene" uid="uid://drqkjp4c10l5u" path="res://menu/escenas/menus/menu_principal/menu_principal.tscn" id="7_tkpd7"]
-[ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="8_x6ka1"]
-[ext_resource type="PackedScene" uid="uid://bbhkoswnwc7qm" path="res://bd/escenas/inicio.tscn" id="9_077q6"]
+[ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
+[ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_lt2sq"]
+[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_v18tg"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
+[ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="6_gdhcy"]
+[ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="6_v18tg"]
+[ext_resource type="PackedScene" uid="uid://drqkjp4c10l5u" path="res://menu/escenas/menus/menu_principal/menu_principal.tscn" id="7_huqs2"]
+[ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="9_6bne6"]
+[ext_resource type="PackedScene" uid="uid://bbhkoswnwc7qm" path="res://bd/escenas/inicio.tscn" id="10_bjtmo"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxv48"]
-texture = ExtResource("2_fchot")
+[sub_resource type="Theme" id="Theme_m6y1t"]
+default_font = ExtResource("2_2j7ft")
+default_font_size = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdhcy"]
+texture = ExtResource("6_v18tg")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
 region_rect = Rect2(0, 112, 48, 16)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkpd7"]
-texture = ExtResource("2_fchot")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v18tg"]
+texture = ExtResource("6_v18tg")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
 region_rect = Rect2(128, 114, 48, 14)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6man"]
-texture = ExtResource("2_fchot")
-region_rect = Rect2(0, 112, 48, 16)
-
-[node name="Registro" type="Control"]
-show_behind_parent = true
+[node name="Inicio" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_7ttgg")
+theme = ExtResource("1_v18tg")
 
 [node name="FondoMenu" type="TextureRect" parent="."]
 layout_mode = 1
@@ -39,7 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_tkpd7")
+texture = ExtResource("1_lt2sq")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -57,9 +61,9 @@ theme_override_constants/separation = 20
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_m6man")
+theme_override_fonts/font = ExtResource("2_2j7ft")
 theme_override_font_sizes/font_size = 30
-text = "Crear Usuario"
+text = "Iniciar Sesion"
 horizontal_alignment = 1
 uppercase = true
 
@@ -78,7 +82,7 @@ layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 4
 max_length = 20
-script = ExtResource("1_kc4kg")
+script = ExtResource("1_88ils")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -92,25 +96,29 @@ size_flags_horizontal = 4
 max_length = 64
 secret = true
 secret_character = "*"
-script = ExtResource("1_kc4kg")
+script = ExtResource("1_88ils")
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="Submit" type="Button" parent="CenterContainer/VBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(170, 50)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
+theme = SubResource("Theme_m6y1t")
 theme_override_constants/h_separation = 20
-theme_override_styles/hover = SubResource("StyleBoxTexture_qxv48")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_tkpd7")
-theme_override_styles/normal = SubResource("StyleBoxTexture_m6man")
-text = "Registrar"
-script = ExtResource("1_0geqs")
-escena_destino = ExtResource("7_tkpd7")
+theme_override_fonts/font = ExtResource("6_gdhcy")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_gdhcy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v18tg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gdhcy")
+text = "Entrar"
+script = ExtResource("1_kb8y8")
+escena_destino = ExtResource("7_huqs2")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -125,8 +133,8 @@ grow_vertical = 0
 mouse_default_cursor_shape = 2
 theme_override_constants/align_to_largest_stylebox = 1
 text = "Atrás"
-script = ExtResource("8_x6ka1")
-escena_destino = ExtResource("9_077q6")
+script = ExtResource("9_6bne6")
+escena_destino = ExtResource("10_bjtmo")
 
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]
