@@ -9,7 +9,7 @@
 
 [node name="MainMenu" instance=ExtResource("1_5uhmk")]
 script = ExtResource("2_q4jhy")
-game_scene_path = "uid://ldrwgxrqjjg5"
+game_scene_path = "uid://hn8a810btiqa"
 options_packed_scene = ExtResource("2_1q5bq")
 credits_packed_scene = ExtResource("3_7mudv")
 
@@ -37,4 +37,3 @@ text = "Créditos"
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
 mouse_default_cursor_shape = 2
 text = "Salir"
-

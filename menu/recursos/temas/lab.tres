@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=18 format=3 uid="uid://cne03ynn2oh0a"]
 
 [ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="1_hnqk8"]
-[ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://menu/assets/tipografia/GrapeSoda.ttf" id="1_mapdu"]
+[ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="1_mapdu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mapdu"]
 texture = ExtResource("1_hnqk8")
