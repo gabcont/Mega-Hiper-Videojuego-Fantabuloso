@@ -371,7 +371,7 @@ shader_parameter/resolution = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n78ns"]
 shader = ExtResource("2_3vs70")
-shader_parameter/fisheye_strength = 0.93
+shader_parameter/fisheye_strength = 1.015
 
 [sub_resource type="GDScript" id="GDScript_glmsc"]
 script/source = "extends Node
@@ -501,7 +501,7 @@ grow_vertical = 2
 [node name="CRT" type="TextureRect" parent="Efectos"]
 material = SubResource("ShaderMaterial_n78ns")
 layout_mode = 0
-offset_right = 1154.0
+offset_right = 1150.0
 offset_bottom = 646.0
 texture = ExtResource("3_y0x6b")
 
