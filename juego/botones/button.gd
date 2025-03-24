@@ -3,10 +3,17 @@ extends Button
 @export var accion_activada : StringName
 @export var input_key : StringName	
 
+@export var icono : Texture2D
+@export var icono_presionado : Texture2D
+
 var en_cooldown : bool = false
 
 func _ready():
 	connect("pressed", presionar_boton)
+	var stylebox_boton = StyleBoxTexture.new()
+	stylebox_boton.texture = icono
+	add_theme_stylebox_override("normal", stylebox_boton)
+	icon = icono
 
 func presionar_boton(_activado : bool = true) -> void:
 	if en_cooldown:
@@ -22,6 +29,7 @@ func presionar_boton(_activado : bool = true) -> void:
 
 	# Cambia estado de boton
 	set_pressed_no_signal(true)
+	icon = icono_presionado
 
 	# Activa accion del boton
 	var input_event = InputEventAction.new()
@@ -33,6 +41,7 @@ func presionar_boton(_activado : bool = true) -> void:
 
 	# Devuelve a estado inicial
 	set_pressed_no_signal(false)
+	icon = icono
 	en_cooldown = false
 
 func _unhandled_input(event: InputEvent) -> void:

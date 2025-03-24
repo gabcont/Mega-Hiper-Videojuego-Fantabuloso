@@ -485,6 +485,7 @@ offset_bottom = 646.0
 texture = ExtResource("3_y0x6b")
 
 [node name="Efectos" type="Control" parent="."]
+visible = false
 z_index = 4
 layout_mode = 1
 anchors_preset = 15
@@ -559,7 +560,6 @@ unique_name_in_owner = true
 layout_mode = 2
 es_personaje_1 = true
 spriteframe_personaje = ExtResource("12_htvet")
-nombre_personaje = &"s"
 
 [node name="CenterContainer2" type="CenterContainer" parent="Personajes/BoxContainer"]
 custom_minimum_size = Vector2(80, 320)
@@ -570,6 +570,5 @@ unique_name_in_owner = true
 z_index = 1
 layout_mode = 2
 spriteframe_personaje = ExtResource("13_glmsc")
-nombre_personaje = &"s"
 
 [connection signal="timeout" from="TimerPoder" to="." method="_on_timer_poder_timeout"]

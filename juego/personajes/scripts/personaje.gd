@@ -22,7 +22,7 @@ var poder : int = 10
 @export var es_personaje_1 : bool = false 
 @export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
 
-@export var nombre_personaje : StringName
+var nombre_personaje : String
 
 var frame_actual_de_animacion : int # Información debug
 
@@ -56,6 +56,7 @@ func _ready() -> void:
 
 	# Carga sprites del personaje
 	sprite.sprite_frames = spriteframe_personaje
+	nombre_personaje = spriteframe_personaje.resource_name
 
 	# Cambia al estado inicial
 	reset()
