@@ -1,15 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://bamnjdr8d0t4a"]
+[gd_scene load_steps=24 format=3 uid="uid://bamnjdr8d0t4a"]
 
 [ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://juego/gameplay/scripts/personaje.gd" id="1_0kjke"]
 [ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://juego/gameplay/escenas/personajes/knuckles.tres" id="2_m4qet"]
-[ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://juego/gameplay/assets/sonidos/ataque_1.mp3" id="3_6y3i8"]
-[ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://juego/gameplay/assets/sonidos/huida.ogg" id="3_hwi8i"]
-[ext_resource type="Material" uid="uid://csc7q1f2llg2o" path="res://juego/gameplay/escenas/personajes/rainbowmaterial.tres" id="3_q3q4w"]
-[ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://juego/gameplay/assets/sonidos/ataque_especial.wav" id="4_2sir4"]
-[ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://juego/gameplay/assets/sonidos/preparar_ataque.wav" id="4_up0a1"]
-[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://juego/gameplay/assets/sonidos/bloquear.wav" id="6_m4qet"]
-[ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://juego/gameplay/assets/sonidos/herido.wav" id="7_dh6ai"]
-[ext_resource type="PackedScene" uid="uid://cefm4dpmtuv64" path="res://juego/gameplay/escenas/burbuja.tscn" id="9_mhd2b"]
+[ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://juego/personajes/assets/sonidos/ataque_1.mp3" id="3_6y3i8"]
+[ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://juego/personajes/assets/sonidos/huida.ogg" id="3_hwi8i"]
+[ext_resource type="SpriteFrames" uid="uid://p6fmqw4ulnn3" path="res://juego/personajes/assets/animaciones/Knuckles.tres" id="3_i8i7p"]
+[ext_resource type="Material" uid="uid://csc7q1f2llg2o" path="res://juego/personajes/shaders/rainbowmaterial.tres" id="3_q3q4w"]
+[ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://juego/personajes/assets/sonidos/ataque_especial.wav" id="4_2sir4"]
+[ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://juego/personajes/assets/sonidos/preparar_ataque.wav" id="4_up0a1"]
+[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://juego/personajes/assets/sonidos/bloquear.wav" id="6_m4qet"]
+[ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://juego/personajes/assets/sonidos/herido.wav" id="7_dh6ai"]
+[ext_resource type="PackedScene" uid="uid://cefm4dpmtuv64" path="res://juego/personajes/escenas/burbuja.tscn" id="9_mhd2b"]
 
 [sub_resource type="Animation" id="Animation_tk1jt"]
 length = 0.001
@@ -1181,7 +1182,7 @@ spriteframe = ExtResource("2_m4qet")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(7, 7)
-sprite_frames = ExtResource("2_m4qet")
+sprite_frames = ExtResource("3_i8i7p")
 animation = &"idle"
 autoplay = "idle"
 

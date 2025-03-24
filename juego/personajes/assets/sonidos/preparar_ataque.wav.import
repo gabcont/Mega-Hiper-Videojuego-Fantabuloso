@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cii65574uqxfp"
-path="res://.godot/imported/preparar_ataque.wav-658ad896dd5515400217ef1a35260b4c.sample"
+path="res://.godot/imported/preparar_ataque.wav-36bbe3588371bcb92b1472307e50058b.sample"
 
 [deps]
 
-source_file="res://juego/gameplay/assets/sonidos/preparar_ataque.wav"
-dest_files=["res://.godot/imported/preparar_ataque.wav-658ad896dd5515400217ef1a35260b4c.sample"]
+source_file="res://juego/personajes/assets/sonidos/preparar_ataque.wav"
+dest_files=["res://.godot/imported/preparar_ataque.wav-36bbe3588371bcb92b1472307e50058b.sample"]
 
 [params]
 

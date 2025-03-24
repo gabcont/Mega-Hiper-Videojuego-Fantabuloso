@@ -37,3 +37,4 @@ text = "Créditos"
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
 mouse_default_cursor_shape = 2
 text = "Salir"
+

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dodlrk5xfkkom"
-path="res://.godot/imported/bloquear.wav-062ae95b5b95b81fe35862c40df49860.sample"
+path="res://.godot/imported/bloquear.wav-81cae29272bf9f2d57a477a34328c805.sample"
 
 [deps]
 
-source_file="res://juego/gameplay/assets/sonidos/bloquear.wav"
-dest_files=["res://.godot/imported/bloquear.wav-062ae95b5b95b81fe35862c40df49860.sample"]
+source_file="res://juego/personajes/assets/sonidos/bloquear.wav"
+dest_files=["res://.godot/imported/bloquear.wav-81cae29272bf9f2d57a477a34328c805.sample"]
 
 [params]
 
