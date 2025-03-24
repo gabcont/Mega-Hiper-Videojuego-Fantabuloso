@@ -10,7 +10,6 @@ offset_top = -82.0
 offset_right = 60.0
 offset_bottom = -10.0
 text = "ataque_debil"
-input_key = &"B_p1"
 metadata/_edit_use_anchors_ = true
 
 [node name="BotonB" parent="." instance=ExtResource("1_0lfcx")]
@@ -19,7 +18,6 @@ offset_top = -83.0
 offset_right = -55.0
 offset_bottom = -12.0
 text = "ataque_fuerte"
-input_key = &"A_p1"
 metadata/_edit_use_anchors_ = true
 
 [node name="BotonH" parent="." instance=ExtResource("1_0lfcx")]
@@ -28,7 +26,6 @@ offset_top = -83.0
 offset_right = 168.0
 offset_bottom = -8.0
 text = "esquivar"
-input_key = &"X_p1"
 metadata/_edit_use_anchors_ = true
 
 [node name="BotonH2" parent="." instance=ExtResource("1_0lfcx")]
@@ -37,5 +34,4 @@ offset_top = -82.0
 offset_right = 277.0
 offset_bottom = -7.0
 text = "bloquear"
-input_key = &"Y_p1"
 metadata/_edit_use_anchors_ = true

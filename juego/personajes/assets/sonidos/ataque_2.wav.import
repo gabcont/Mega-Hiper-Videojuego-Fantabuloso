@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cb5tymhe1plbe"
-path="res://.godot/imported/ataque_2.wav-3a45943ec4d6a6646dbcd39a293b36fe.sample"
+path="res://.godot/imported/ataque_2.wav-6bed46d19d6cc995260dfea6da0ee9a4.sample"
 
 [deps]
 
-source_file="res://juego/gameplay/assets/sonidos/ataque_2.wav"
-dest_files=["res://.godot/imported/ataque_2.wav-3a45943ec4d6a6646dbcd39a293b36fe.sample"]
+source_file="res://juego/personajes/assets/sonidos/ataque_2.wav"
+dest_files=["res://.godot/imported/ataque_2.wav-6bed46d19d6cc995260dfea6da0ee9a4.sample"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://csc7q1f2llg2o"]
 
-[ext_resource type="Shader" uid="uid://bt8k4s05v1uvd" path="res://juego/gameplay/escenas/personajes/personaje.gdshader" id="1_lm16d"]
+[ext_resource type="Shader" uid="uid://bt8k4s05v1uvd" path="res://juego/personajes/shaders/ataque_especial.gdshader" id="1_lm16d"]
 
 [resource]
 shader = ExtResource("1_lm16d")

@@ -1,23 +1,25 @@
 class_name Personaje extends Node2D
 
-signal ataque_especial_activado
-signal ha_atacado(tipo_ataque : StringName)
-signal ha_esquivado
-signal ha_bloqueado
-signal escudo_roto
-signal salud_acabada
+
+signal ha_atacado(es_personaje_1 : bool, tipo_ataque : StringName)
+signal ha_esquivado(es_personaje_1 : bool)
+signal ha_bloqueado(es_personaje_1 : bool)
+signal escudo_roto(es_personaje_1 : bool)
+
+signal ataque_especial_activado(es_personaje_1 : bool)
+signal salud_acabada(es_personaje_1 : bool)
 
 const SALUD_MAXIMA : int = 400
 var salud : int = SALUD_MAXIMA
 
 const PODER_MAXIMO : int = 100
-var poder : int = 0
+var poder : int = 10
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
 # voltea graficos y animaciones en caso de ser jugador 2
-@export var voltear_personaje : bool = false 
+@export var es_personaje_1 : bool = false 
 @export var spriteframe : SpriteFrames # Cambia sprites de personaje 
 @export var nodo_botones : Node2D # Conecta los botones
 
@@ -37,6 +39,12 @@ var PUEDE_RECIBIR_INPUT : bool = true
 var input_buffer : StringName = "vacio"
 var ataque_buffer : StringName = "vacio"
 
+var input_action_ataque_debil = "ataque_debil"
+var input_action_ataque_fuerte = "ataque_fuerte"
+var input_action_esquivar = "esquivar"
+var input_action_bloquear = "bloquear"
+var sufijo_personaje : String = "_p1"
+
 # Debuggin 
 func _process(_delta: float) -> void:
 	actualizar_debug_info()
@@ -50,14 +58,25 @@ func _ready() -> void:
 	reset()
 
 	# Voltea sprite del personaje si esta en la parte derecha de la pantalla
-	if voltear_personaje:
+	if not es_personaje_1:
+		sufijo_personaje = "_p2"
 		voltear_sprite()
 	
-	# Conecta los botones con las acciones del personaje
-	if nodo_botones:
-		var botones := nodo_botones.get_children()
-		for boton in botones:
-			boton.connect("boton_presionado", _on_boton_presionado)
+	input_action_ataque_debil += sufijo_personaje
+	input_action_ataque_fuerte += sufijo_personaje
+	input_action_esquivar += sufijo_personaje
+	input_action_bloquear += sufijo_personaje
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action(input_action_ataque_debil):
+		input_buffer = "ataque_debil"
+	elif event.is_action(input_action_ataque_fuerte):
+		input_buffer = "ataque_fuerte"
+	elif event.is_action(input_action_esquivar):
+		input_buffer = "esquivar"
+	elif event.is_action(input_action_bloquear):
+		input_buffer = "bloquear"
+
 
 #-----------------# Funciones que cambian el estado del personaje #-----------------#
 
@@ -102,12 +121,12 @@ func play_animacion(accion : StringName) -> void:
 		# Hay dos animaciones de esquivo según la posicion del personaje en pantalla
 		"esquivar": 
 			animacion = "esquivar"
-			if voltear_personaje:
+			if not es_personaje_1:
 				animacion += "_volteado"
 
 		"ataque_especial":
 			animacion = "ataque_especial"
-			if voltear_personaje:
+			if not es_personaje_1:
 				animacion += "_volteado"
 
 		_:
@@ -127,10 +146,6 @@ func voltear_sprite() -> void:
 
 
 #-----------------# Funciones que se activan con signals #-----------------#
-
-# Se activa cuando un boton es presionado, recibe texto del boton
-func _on_boton_presionado(nombre_accion : StringName) -> void:
-	input_buffer = nombre_accion
 
 # Devuelve al estado inicial cuando se acaba una animación
 func _on_sprite_animation_finished() -> void:
@@ -162,15 +177,11 @@ func _on_frame_changed() -> void:
 			if frame_actual_de_animacion > 7:
 				frame_actual_de_animacion = 1
 
-# Al ser atacado un personaje guarda el ataque recibido en el buffer
-func _on_personaje_atacado(tipo_ataque : StringName) -> void:
-	ataque_buffer = tipo_ataque
-
 # Reinicia conteo de frames - Debugging
 func _on_player_animation_changed(_nombre_animacion : String) -> void:
 	frame_actual_de_animacion = 1
 
-func _on_poder_recibido(_poder : int) -> void:
+func cargar_poder(_poder : int) -> void:
 	if (poder + _poder) > PODER_MAXIMO:
 		poder = PODER_MAXIMO
 	elif (poder + _poder) < 0:
@@ -178,15 +189,18 @@ func _on_poder_recibido(_poder : int) -> void:
 	else:
 		poder += _poder
 
-func _on_salud_recibida(_salud : int) -> void:
+func cargar_salud(_salud : int) -> void:
 	if (salud + _salud) > SALUD_MAXIMA:
 		poder = SALUD_MAXIMA
 	elif (salud + _salud) <= 0:
 		salud = 0
-		emit_signal("salud_acabada")
+		emit_signal("salud_acabada", es_personaje_1)
 	else:
 		salud += _salud
 
+# Al ser atacado un personaje guarda el ataque recibido en el buffer
+func ataque_a_buffer(tipo_ataque : StringName) -> void:
+	ataque_buffer = tipo_ataque
 
 #-----------------# Funciones que procesan los buffers #-----------------#
 
@@ -199,8 +213,8 @@ func procesar_input_buffer() -> void:
 					# amague
 					pass
 				elif input_buffer == "ataque_debil" and poder == PODER_MAXIMO:
-					_on_poder_recibido(-100)
-					emit_signal("ataque_especial_activado")
+					cargar_poder(-100)
+					emit_signal("ataque_especial_activado", es_personaje_1)
 					play_animacion("ataque_especial")
 			_:
 				play_animacion(input_buffer)
@@ -211,41 +225,41 @@ func procesar_ataque_buffer() -> void:
 
 		"ataque_debil":
 			if ESTADO_ACTUAL == "bloquear":
-				emit_signal("ha_bloqueado")
+				emit_signal("ha_bloqueado", es_personaje_1)
 
 			elif ESTADO_ACTUAL == "esquivar" and not PUEDE_SER_ATACADO:
-				emit_signal("ha_esquivado")
+				emit_signal("ha_esquivado", es_personaje_1)
 
 			else:
-				_on_salud_recibida(-20)
-				_on_poder_recibido(-10)
+				cargar_salud(-20)
+				cargar_poder(-10)
 				play_animacion("herido")
 
 		"ataque_fuerte":
 			if ESTADO_ACTUAL == "esquivar" and not PUEDE_SER_ATACADO:
-				emit_signal("ha_esquivado")
+				emit_signal("ha_esquivado", es_personaje_1)
 
 			elif ESTADO_ACTUAL == "bloquear":
-				emit_signal("escudo_roto")
+				emit_signal("escudo_roto", es_personaje_1)
 				play_animacion("herido")
-				_on_salud_recibida(-10)
+				cargar_salud(-10)
 
 			else:
-				_on_salud_recibida(-30)
-				_on_poder_recibido(-20)
+				cargar_salud(-30)
+				cargar_poder(-20)
 				play_animacion("herido")
 		
 		"ataque_especial":
 			if ESTADO_ACTUAL == "esquivar" and not PUEDE_SER_ATACADO:
-				emit_signal("ha_esquivado")
+				emit_signal("ha_esquivado", es_personaje_1)
 			elif ESTADO_ACTUAL == "bloquear":
-				emit_signal("escudo_roto")
-				_on_salud_recibida(-60)
-				_on_poder_recibido(-20)
+				emit_signal("escudo_roto", es_personaje_1)
+				cargar_salud(-60)
+				cargar_poder(-20)
 				play_animacion("herido")
 			else:
-				_on_salud_recibida(-70)
-				_on_poder_recibido(-20)
+				cargar_salud(-70)
+				cargar_poder(-20)
 				play_animacion("herido")
 		_:
 			pass
@@ -270,7 +284,7 @@ func reanudar() -> void:
 
 # Emite señal de ataque
 func atacar() -> void:
-	ha_atacado.emit(ESTADO_ACTUAL)
+	ha_atacado.emit(es_personaje_1, ESTADO_ACTUAL)
 
 # Inicia animación de escudo roto, no he podido abstraer esta función
 # fuera del personaje ya que funciona de forma muy específica.
