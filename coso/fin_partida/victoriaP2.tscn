@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://du654cp33j4x1"]
+
+[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_w3qxi"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_hif2p"]
+[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="3_nujjx"]
+[ext_resource type="Script" uid="uid://dkn0mh1fanfj6" path="res://menu/escenas/menus/fin_partida/victoriap2.gd" id="4_cih8x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cih8x"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jubu"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(128, 50, 48, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3iqe"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5o62l"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(0, 48, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pswoh"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(128, 50, 48, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6gbj"]
+texture = ExtResource("3_nujjx")
+region_rect = Rect2(0, 48, 48, 16)
+
+[node name="VictoriaP2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w3qxi")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hif2p")
+theme_override_font_sizes/font_size = 40
+text = "gano el jugador 2"
+
+[node name="Volver" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_hif2p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cih8x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0jubu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x3iqe")
+text = "VOLVER A JUGAR"
+script = ExtResource("4_cih8x")
+
+[node name="Menu" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_hif2p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5o62l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pswoh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b6gbj")
+text = "VOLVER A MENU
+"
+script = ExtResource("4_cih8x")
