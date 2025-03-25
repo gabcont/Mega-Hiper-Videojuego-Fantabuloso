@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://d07l85r3exlen"]
+[gd_scene load_steps=18 format=3 uid="uid://d07l85r3exlen"]
 
 [ext_resource type="Script" uid="uid://c8ukhm7g0531i" path="res://juego/botones/button.gd" id="1_mninl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bjkrx"]
-size = Vector2(80, 100)
+[ext_resource type="Texture2D" uid="uid://bk2uob4qrp620" path="res://juego/botones/assets/botones/button_xbox_digital_a_1.png" id="2_1f54a"]
+[ext_resource type="Texture2D" uid="uid://bgh21a3uj6umm" path="res://juego/botones/assets/botones/button_xbox_digital_a_3.png" id="3_xykjr"]
+[ext_resource type="Texture2D" uid="uid://bln82n7dxpswp" path="res://juego/botones/assets/botones/button_xbox_digital_b_1.png" id="4_1eax2"]
+[ext_resource type="Texture2D" uid="uid://bnlwyb2w1yngh" path="res://juego/botones/assets/botones/button_xbox_digital_b_3.png" id="5_17cpu"]
+[ext_resource type="Texture2D" uid="uid://bgptykryyj227" path="res://juego/botones/assets/botones/button_xbox_digital_x_1.png" id="6_neygt"]
+[ext_resource type="Texture2D" uid="uid://btmwjc4706wpy" path="res://juego/botones/assets/botones/button_xbox_digital_x_3.png" id="7_0bxbw"]
+[ext_resource type="Texture2D" uid="uid://cnfi2xja5axf5" path="res://juego/botones/assets/botones/button_xbox_digital_y_1.png" id="8_hqeo3"]
+[ext_resource type="Texture2D" uid="uid://btecmon54ibw2" path="res://juego/botones/assets/botones/button_xbox_digital_y_3.png" id="9_c87to"]
+[ext_resource type="Texture2D" uid="uid://bou4cfefksj6b" path="res://juego/botones/assets/botones/button_xbox_digital_a_4.png" id="10_6frh8"]
+[ext_resource type="Texture2D" uid="uid://ds84k7ec2m2kx" path="res://juego/botones/assets/botones/button_xbox_digital_a_6.png" id="11_u8y2o"]
+[ext_resource type="Texture2D" uid="uid://w407ehweuwid" path="res://juego/botones/assets/botones/button_xbox_digital_b_4.png" id="12_xbv2q"]
+[ext_resource type="Texture2D" uid="uid://ddmnu8q1cr08f" path="res://juego/botones/assets/botones/button_xbox_digital_b_6.png" id="13_ljjs7"]
+[ext_resource type="Texture2D" uid="uid://eeaddr0b6j3c" path="res://juego/botones/assets/botones/button_xbox_digital_x_4.png" id="14_lsoym"]
+[ext_resource type="Texture2D" uid="uid://b2hcnyrbr7hhq" path="res://juego/botones/assets/botones/button_xbox_digital_x_6.png" id="15_bg6nf"]
+[ext_resource type="Texture2D" uid="uid://brij1rsyfxl4g" path="res://juego/botones/assets/botones/button_xbox_digital_y_4.png" id="16_q8jpt"]
+[ext_resource type="Texture2D" uid="uid://b5mbsibyaqe4c" path="res://juego/botones/assets/botones/button_xbox_digital_y_6.png" id="17_5fp0l"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,7 +32,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 512.0
+offset_top = 528.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -31,95 +44,131 @@ size_flags_vertical = 4
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(500, 100)
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer"]
 layout_mode = 2
-toggle_mode = true
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 action_mode = 0
-text = "A"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+icon = ExtResource("2_1f54a")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"ataque_fuerte_p1"
 input_key = &"A_p1"
+icono = ExtResource("2_1f54a")
+icono_presionado = ExtResource("3_xykjr")
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "B"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("4_1eax2")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"ataque_debil_p1"
 input_key = &"B_p1"
+icono = ExtResource("4_1eax2")
+icono_presionado = ExtResource("5_17cpu")
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "X"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("6_neygt")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"esquivar_p1"
 input_key = &"X_p1"
+icono = ExtResource("6_neygt")
+icono_presionado = ExtResource("7_0bxbw")
 
-[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/BoxContainer2"]
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "Y"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("8_hqeo3")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"bloquear_p1"
 input_key = &"Y_p1"
+icono = ExtResource("8_hqeo3")
+icono_presionado = ExtResource("9_c87to")
 
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer2"]
-custom_minimum_size = Vector2(500, 100)
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="BoxContainer2" type="BoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer"]
 layout_mode = 2
-toggle_mode = true
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 action_mode = 0
-text = "A"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+icon = ExtResource("10_6frh8")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"ataque_fuerte_p2"
 input_key = &"A_p2"
+icono = ExtResource("10_6frh8")
+icono_presionado = ExtResource("11_u8y2o")
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "B"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("12_xbv2q")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"ataque_debil_p2"
 input_key = &"B_p2"
+icono = ExtResource("12_xbv2q")
+icono_presionado = ExtResource("13_ljjs7")
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "X"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("14_lsoym")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"esquivar_p2"
 input_key = &"X_p2"
+icono = ExtResource("14_lsoym")
+icono_presionado = ExtResource("15_bg6nf")
 
-[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/BoxContainer2"]
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/CenterContainer2/CenterContainer/BoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-toggle_mode = true
-text = "Y"
-icon = SubResource("PlaceholderTexture2D_bjkrx")
+action_mode = 0
+icon = ExtResource("16_q8jpt")
+flat = true
 icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_mninl")
 accion_activada = &"bloquear_p2"
 input_key = &"Y_p2"
+icono = ExtResource("16_q8jpt")
+icono_presionado = ExtResource("17_5fp0l")

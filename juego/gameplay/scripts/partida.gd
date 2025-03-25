@@ -32,6 +32,10 @@ func _process(delta: float) -> void:
 		menu_pausa.show()
 		get_tree().paused = true
 
+func set_personajes(spriteframe_p1 : SpriteFrames, spriteframe_p2 : SpriteFrames) -> void:
+	personaje_1.set_spriteframe(spriteframe_p1)
+	personaje_2.set_spriteframe(spriteframe_p2)
+
 func pausar_personajes() -> void:
 	personaje_1.pausar()
 	personaje_2.pausar()
