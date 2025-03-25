@@ -1,0 +1,415 @@
+[gd_scene load_steps=18 format=3 uid="uid://ba0yv6tkquhxq"]
+
+[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="1_8ahge"]
+[ext_resource type="Script" uid="uid://biavpmbdw4y2" path="res://menu/escenas/menus/menu_personajes/menu_personajes.gd" id="1_rly7i"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="2_3sswb"]
+[ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="3_pd6w3"]
+[ext_resource type="Texture2D" uid="uid://7agw310ppghe" path="res://menu/escenas/menus/menu_personajes/personaje_kirby.png" id="5_5vg0r"]
+[ext_resource type="Texture2D" uid="uid://dbj3unn1nkauk" path="res://menu/escenas/menus/menu_personajes/klipartz.com.png" id="7_5v1p8"]
+[ext_resource type="Texture2D" uid="uid://cwq07bovu3fxc" path="res://menu/escenas/menus/menu_personajes/personaj_gojo.png" id="8_h32dq"]
+[ext_resource type="Texture2D" uid="uid://k8oxlbroh4dw" path="res://menu/escenas/menus/menu_personajes/personaje_knuckles.png" id="8_sccdv"]
+[ext_resource type="Texture2D" uid="uid://0swm42dcnepa" path="res://menu/escenas/menus/menu_personajes/personaje_sonic.png" id="9_4g5s1"]
+[ext_resource type="Texture2D" uid="uid://c8obe40vt24rs" path="res://menu/escenas/menus/menu_personajes/personaje_luffy.png" id="10_h32dq"]
+[ext_resource type="Texture2D" uid="uid://b5r4ra0q1mv42" path="res://menu/escenas/menus/menu_personajes/personaje_miku.png" id="11_sccdv"]
+[ext_resource type="Texture2D" uid="uid://tfp450bku25m" path="res://menu/escenas/menus/menu_personajes/personaje_naruto.png" id="12_5dvxa"]
+[ext_resource type="Texture2D" uid="uid://cmv80o3trypd0" path="res://menu/escenas/menus/menu_personajes/personaje_sans.png" id="13_q1op2"]
+[ext_resource type="Texture2D" uid="uid://c57a5lbjr3jaj" path="res://menu/escenas/menus/menu_personajes/personaje_sukuna.png" id="14_oilfb"]
+[ext_resource type="Texture2D" uid="uid://y6kas74v357w" path="res://menu/escenas/menus/menu_personajes/personaje_vegeta.png" id="15_q1op2"]
+[ext_resource type="Texture2D" uid="uid://3ltmsr0l74o7" path="res://menu/escenas/menus/menu_personajes/personaje_matt.png" id="16_oilfb"]
+[ext_resource type="SpriteFrames" uid="uid://sgbpt7g6l32p" path="res://juego/gameplay/escenas/personajes/knuckles.tres" id="18_bliu8"]
+
+[node name="MenuPersonajes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rly7i")
+
+[node name="UISoundController" type="Node" parent="."]
+script = ExtResource("1_8ahge")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("2_3sswb")]
+bus = &"Master"
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="VersionMargin" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VersionContainer" type="Control" parent="VersionMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VersionLabel" type="Label" parent="VersionMargin/VersionContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.0.0"
+horizontal_alignment = 2
+script = ExtResource("3_pd6w3")
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "ESCOGE EL PERSONAJE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 92
+
+[node name="SubTitleContainer" type="Control" parent="MenuContainer/SubTitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/SubTitleMargin/SubTitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = 21.0
+offset_right = 2.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_constants/separation = 700
+
+[node name="personaje1" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "          JUGADOR  1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="personaje2" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "      JUGADOR 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuButtonsContainer" type="Control" parent="MenuContainer/MenuButtonsMargin"]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="jugador1_sprite" type="AnimatedSprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+position = Vector2(268, 189)
+scale = Vector2(7.29688, 7.26563)
+sprite_frames = ExtResource("18_bliu8")
+animation = &"idle"
+
+[node name="GridContainer" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 31
+columns = 4
+
+[node name="ColorRect12" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Matt" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect12"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16_oilfb")
+
+[node name="ColorRect11" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Vegeta" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect11"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_right = 32.0
+offset_bottom = 103.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_q1op2")
+
+[node name="ColorRect10" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Sukuna" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect10"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 115.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_oilfb")
+
+[node name="ColorRect9" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Sans" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect9"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 120.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("13_q1op2")
+
+[node name="ColorRect8" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Naruto" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect8"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 120.0
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_5dvxa")
+
+[node name="ColorRect7" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Miku" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect7"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 98.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_sccdv")
+
+[node name="ColorRect6" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Luffy" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect6"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 6.5
+offset_top = -5.0
+offset_right = 106.5
+offset_bottom = 109.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_h32dq")
+
+[node name="ColorRect5" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Sonic" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect5"]
+texture_filter = 1
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 114.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_4g5s1")
+
+[node name="ColorRect4" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Knuckles" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect4"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_sccdv")
+
+[node name="ColorRect3" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Goku" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect3"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 0.5
+offset_top = -56.0
+offset_right = 100.5
+offset_bottom = 49.0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_5v1p8")
+
+[node name="ColorRect" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Kirby" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -35.0
+offset_right = 119.5
+offset_bottom = 43.0
+grow_vertical = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_5vg0r")
+
+[node name="ColorRect2" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="Gojo" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 55.0
+offset_bottom = 105.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_h32dq")
+
+[node name="jugador2_sprite" type="AnimatedSprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+position = Vector2(905, 192)
+scale = Vector2(7.29688, 7.26563)
+sprite_frames = ExtResource("18_bliu8")
+animation = &"idle"
+offset = Vector2(-1, 0)
+flip_h = true
+
+[node name="VBoxContainer" type="CanvasLayer" parent="."]
+offset = Vector2(100, 570)
+transform = Transform2D(1, 0, 0, 1, 100, 570)
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+offset_top = 6.0
+offset_right = 82.0
+offset_bottom = 41.0
+size_flags_horizontal = 8
+text = "KNUCKLES"
+uppercase = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+offset_left = 397.0
+offset_right = 528.0
+offset_bottom = 47.0
+text = "SELECCIONAR"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+offset_left = 843.0
+offset_top = 6.0
+offset_right = 925.0
+offset_bottom = 41.0
+text = "KNUCKLES"
+uppercase = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="seleccionar_jugador"]

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6xsu5p0qmfyr" path="res://menu/escenas/menus/menu_estadisticas/Estadisticas.tscn" id="4_dw8xd"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="6_vuaux"]
 
+
 [node name="MainMenu" instance=ExtResource("1_5uhmk")]
 script = ExtResource("2_q4jhy")
 escena_estadisticas = ExtResource("4_dw8xd")
