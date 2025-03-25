@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y6kas74v357w"
-path="res://.godot/imported/personaje_vegeta.png-c25b3a5d52ea0875e164a550c642b539.ctex"
+uid="uid://cooyi36oblxyj"
+path="res://.godot/imported/fondo3.png-0eea9c8bee1c5846d97f22f20a25a3d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_vegeta.png"
-dest_files=["res://.godot/imported/personaje_vegeta.png-c25b3a5d52ea0875e164a550c642b539.ctex"]
+source_file="res://menu/escenas/menus/menu_escenarios/assets/fondo3.png"
+dest_files=["res://.godot/imported/fondo3.png-0eea9c8bee1c5846d97f22f20a25a3d0.ctex"]
 
 [params]
 

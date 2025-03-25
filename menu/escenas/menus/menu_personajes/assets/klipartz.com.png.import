@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5r4ra0q1mv42"
-path="res://.godot/imported/personaje_miku.png-8d7cc72f9b78573105079ec2a5ebe637.ctex"
+uid="uid://dbj3unn1nkauk"
+path="res://.godot/imported/klipartz.com.png-3dee9f484e2f40a90b5a25764df6c791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_miku.png"
-dest_files=["res://.godot/imported/personaje_miku.png-8d7cc72f9b78573105079ec2a5ebe637.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/klipartz.com.png"
+dest_files=["res://.godot/imported/klipartz.com.png-3dee9f484e2f40a90b5a25764df6c791.ctex"]
 
 [params]
 

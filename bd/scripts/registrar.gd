@@ -1,7 +1,7 @@
 extends Button
 @onready var statusLabel = get_node("../../StatusLabel")
 
-@export var escena_destino: PackedScene
+@export var path_escena_destino: String
 
 func _ready():
 	# Conecta la señal "pressed" del botón a la función "on_button_pressed"
@@ -64,6 +64,6 @@ func registrar(usuario,contrasena):
 		else:
 			Transicion.transicion()
 			await Transicion.on_transition_finished
-			get_tree().change_scene_to_packed(escena_destino)
+			get_tree().change_scene_to_file(path_escena_destino)
 		
 	

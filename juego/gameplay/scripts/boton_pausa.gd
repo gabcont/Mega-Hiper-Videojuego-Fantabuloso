@@ -4,7 +4,6 @@ extends Button
 
 func restablecer_valores():
 	menu_pausa.hide()
-	
 	get_tree().paused = false
 
 func _on_pressed() -> void:

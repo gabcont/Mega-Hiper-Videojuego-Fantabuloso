@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbhkoswnwc7qm"]
+[gd_scene load_steps=5 format=3 uid="uid://bbhkoswnwc7qm"]
 
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_f7n8u"]
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_lt2sq"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="4_5tuii"]
-[ext_resource type="PackedScene" uid="uid://bjehem8i3hlno" path="res://bd/escenas/inicio_sesion.tscn" id="5_lt2sq"]
-[ext_resource type="PackedScene" uid="uid://cj7710d2bm8s8" path="res://bd/escenas/registro.tscn" id="6_f7n8u"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -54,7 +52,7 @@ theme_override_font_sizes/font_size = 30
 text = "Iniciar sesión
 "
 script = ExtResource("4_5tuii")
-escena_destino = ExtResource("5_lt2sq")
+path_escena_destino = "res://bd/escenas/inicio_sesion.tscn"
 
 [node name="Registro" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
@@ -65,4 +63,4 @@ theme_override_font_sizes/font_size = 30
 text = "Registrarse
 "
 script = ExtResource("4_5tuii")
-escena_destino = ExtResource("6_f7n8u")
+path_escena_destino = "res://bd/escenas/registro.tscn"

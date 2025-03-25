@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmv80o3trypd0"
-path="res://.godot/imported/personaje_sans.png-ec4fce8141a209035c11997358841810.ctex"
+uid="uid://tfp450bku25m"
+path="res://.godot/imported/personaje_naruto.png-6adc4445c9aa1f9d068dc642877a3ad8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_sans.png"
-dest_files=["res://.godot/imported/personaje_sans.png-ec4fce8141a209035c11997358841810.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/personaje_naruto.png"
+dest_files=["res://.godot/imported/personaje_naruto.png-6adc4445c9aa1f9d068dc642877a3ad8.ctex"]
 
 [params]
 

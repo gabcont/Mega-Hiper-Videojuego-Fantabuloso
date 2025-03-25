@@ -1,0 +1,242 @@
+[gd_scene load_steps=12 format=3 uid="uid://bx2t3hbacw3gw"]
+
+[ext_resource type="Script" uid="uid://84logh0eusip" path="res://menu/escenas/menus/menu_escenarios/scripts/menu_escenarios.gd" id="1_611dw"]
+[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_u1d3s"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_8xrmw"]
+[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/fondo.tscn" id="4_l3cxt"]
+[ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="4_xcvi7"]
+[ext_resource type="Texture2D" uid="uid://e5ilcntoomb" path="res://menu/escenas/menus/menu_escenarios/assets/fondo1.png" id="5_vvew0"]
+[ext_resource type="Texture2D" uid="uid://3ltmsr0l74o7" path="res://menu/escenas/menus/menu_personajes/assets/personaje_matt.png" id="6_inrwb"]
+[ext_resource type="Texture2D" uid="uid://bpn0ps1x814p2" path="res://menu/escenas/menus/menu_escenarios/assets/fondo2.png" id="6_qxkr8"]
+[ext_resource type="Texture2D" uid="uid://cooyi36oblxyj" path="res://menu/escenas/menus/menu_escenarios/assets/fondo3.png" id="7_l3cxt"]
+[ext_resource type="Texture2D" uid="uid://4e1g4oo88q15" path="res://menu/escenas/menus/menu_escenarios/assets/fondo4.png" id="8_sc663"]
+[ext_resource type="Texture2D" uid="uid://b30th00eas5dh" path="res://menu/escenas/menus/menu_escenarios/assets/fondo5.png" id="9_aph36"]
+
+[node name="MenuEscenarios" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_611dw")
+
+[node name="UISoundController" type="Node" parent="."]
+script = ExtResource("2_u1d3s")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_8xrmw")]
+bus = &"SFX"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContenedorFondo" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0214347, 0.0214346, 0.0214346, 0.494118)
+
+[node name="Fondo" parent="Control/ContenedorFondo" instance=ExtResource("4_l3cxt")]
+z_index = -1
+layout_mode = 1
+
+[node name="VersionMargin" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VersionContainer" type="Control" parent="VersionMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VersionLabel" type="Label" parent="VersionMargin/VersionContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.0.0"
+horizontal_alignment = 2
+script = ExtResource("4_xcvi7")
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "ESCOGE EL ESCENARIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 92
+
+[node name="SubTitleContainer" type="Control" parent="MenuContainer/SubTitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="subtitulo" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 26.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "NOMBRE DE ESCENARIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuButtonsContainer" type="Control" parent="MenuContainer/MenuButtonsMargin"]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+layout_mode = 1
+offset_left = 187.0
+offset_top = 70.0
+offset_right = 227.0
+offset_bottom = 110.0
+scale = Vector2(19.5163, 9.08513)
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -165.5
+offset_right = 305.0
+offset_bottom = 165.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 15
+columns = 3
+
+[node name="Lugar1" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_vvew0")
+
+[node name="Lugar2" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_qxkr8")
+
+[node name="Callejon" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_l3cxt")
+
+[node name="Lugar4" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_sc663")
+
+[node name="Lugar5" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_aph36")
+
+[node name="Universidad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_inrwb")
+
+[node name="VBoxContainer" type="CanvasLayer" parent="."]
+offset = Vector2(100, 570)
+transform = Transform2D(1, 0, 0, 1, 100, 570)
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+offset_left = 398.0
+offset_top = 9.0
+offset_right = 529.0
+offset_bottom = 56.0
+text = "SELECCIONAR"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_seleccionar_pressed"]

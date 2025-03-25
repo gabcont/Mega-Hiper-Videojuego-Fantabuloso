@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbj3unn1nkauk"
-path="res://.godot/imported/klipartz.com.png-6b90d413f807ac034c6256ad1fd8ae59.ctex"
+uid="uid://b30th00eas5dh"
+path="res://.godot/imported/fondo5.png-1b384eaeaea095ab20f1ad7413068848.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/klipartz.com.png"
-dest_files=["res://.godot/imported/klipartz.com.png-6b90d413f807ac034c6256ad1fd8ae59.ctex"]
+source_file="res://menu/escenas/menus/menu_escenarios/assets/fondo5.png"
+dest_files=["res://.godot/imported/fondo5.png-1b384eaeaea095ab20f1ad7413068848.ctex"]
 
 [params]
 
