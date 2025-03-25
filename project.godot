@@ -26,7 +26,7 @@ ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/autol
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg")
+enabled=PackedStringArray("res://addons/maaacks_menus_template/plugin.cfg")
 
 [gui]
 
