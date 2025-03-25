@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
-[ext_resource type="PackedScene" uid="uid://cy71e8ghnbt4h" path="res://menu_viejo/menu_final_partida/escenas/menu_final.tscn" id="2_a0wv1"]
+[ext_resource type="PackedScene" uid="uid://cy71e8ghnbt4h" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="2_a0wv1"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
 [ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="5_pfv7k"]
 [ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]

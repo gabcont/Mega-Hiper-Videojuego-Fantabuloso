@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_w3qxi"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_hif2p"]
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="3_nujjx"]
-[ext_resource type="Script" uid="uid://dkn0mh1fanfj6" path="res://menu/escenas/menus/fin_partida/victoriap2.gd" id="4_cih8x"]
+[ext_resource type="Script" uid="uid://dkn0mh1fanfj6" path="res://coso/fin_partida/victoriap2.gd" id="4_cih8x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cih8x"]
 texture = ExtResource("3_nujjx")
