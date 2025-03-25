@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7agw310ppghe"
-path="res://.godot/imported/personaje_kirby.png-5711716038718c6938e6007d2153ae69.ctex"
+uid="uid://e5ilcntoomb"
+path="res://.godot/imported/fondo1.png-cf83dfc3bfe9db367155ee67ae4d9617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_kirby.png"
-dest_files=["res://.godot/imported/personaje_kirby.png-5711716038718c6938e6007d2153ae69.ctex"]
+source_file="res://menu/escenas/menus/menu_escenarios/assets/fondo1.png"
+dest_files=["res://.godot/imported/fondo1.png-cf83dfc3bfe9db367155ee67ae4d9617.ctex"]
 
 [params]
 

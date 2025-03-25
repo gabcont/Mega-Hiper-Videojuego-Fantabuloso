@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://84logh0eusip" path="res://menu/escenas/menus/menu_escenarios/menu_escenarios.gd" id="1_611dw"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_u1d3s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_8xrmw"]
-[ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://juego/Fondo/auto_scroller.tscn" id="4_l3cxt"]
+[ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://juego/Fondo/escenas/auto_scroller.tscn" id="4_l3cxt"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="4_xcvi7"]
 [ext_resource type="Texture2D" uid="uid://e5ilcntoomb" path="res://menu/escenas/menus/menu_escenarios/fondo1.png" id="5_vvew0"]
 [ext_resource type="Texture2D" uid="uid://3ltmsr0l74o7" path="res://menu/escenas/menus/menu_personajes/personaje_matt.png" id="6_inrwb"]
@@ -25,7 +25,7 @@ script = ExtResource("1_611dw")
 script = ExtResource("2_u1d3s")
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_8xrmw")]
-bus = &"Master"
+bus = &"SFX"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1

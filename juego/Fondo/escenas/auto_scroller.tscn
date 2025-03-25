@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3idsj77kmk8h"]
+[gd_scene load_steps=8 format=3 uid="uid://c3idsj77kmk8h"]
 
 [ext_resource type="Texture2D" uid="uid://mnxlwlmag0u1" path="res://juego/Fondo/assets/imagenes/back.png" id="1_vv4bs"]
 [ext_resource type="Shader" uid="uid://csokapbvyhxls" path="res://juego/Fondo/shaders/auto_scroller.gdshader" id="2_s8vwb"]
 [ext_resource type="Texture2D" uid="uid://breq2e4hdjvx6" path="res://juego/Fondo/assets/imagenes/middle.png" id="3_duehl"]
 [ext_resource type="Texture2D" uid="uid://c0hp7gt6l6kaf" path="res://juego/Fondo/assets/imagenes/foreground.png" id="4_0l70d"]
 [ext_resource type="AudioStream" uid="uid://dlj20q6oi3gh1" path="res://juego/Fondo/assets/musica/cyberpunk-street.ogg" id="8_qb2oq"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qy2c8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jv7m2"]
 shader = ExtResource("2_s8vwb")
@@ -23,8 +21,14 @@ layout_mode = 3
 anchors_preset = 0
 scale = Vector2(1.68776, 2.49464)
 
-[node name="BackFixedTexture" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_qy2c8")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackFixedTexture" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 687.0
 offset_bottom = 272.0
 texture = ExtResource("1_vv4bs")
@@ -32,6 +36,7 @@ stretch_mode = 1
 
 [node name="TextureRectMiddle" type="TextureRect" parent="Control"]
 material = SubResource("ShaderMaterial_jv7m2")
+layout_mode = 0
 offset_right = 692.0
 offset_bottom = 272.0
 texture = ExtResource("3_duehl")
@@ -39,6 +44,7 @@ stretch_mode = 1
 
 [node name="TextureRectForeground" type="TextureRect" parent="Control"]
 material = SubResource("ShaderMaterial_qattk")
+layout_mode = 0
 offset_right = 688.0
 offset_bottom = 272.0
 texture = ExtResource("4_0l70d")

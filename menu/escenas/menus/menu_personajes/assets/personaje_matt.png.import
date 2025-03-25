@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpn0ps1x814p2"
-path="res://.godot/imported/fondo2.png-f07799377fc21554909de0c6939a4bba.ctex"
+uid="uid://3ltmsr0l74o7"
+path="res://.godot/imported/personaje_matt.png-bcaf363488b7f69496f0de688c68d779.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_escenarios/fondo2.png"
-dest_files=["res://.godot/imported/fondo2.png-f07799377fc21554909de0c6939a4bba.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/personaje_matt.png"
+dest_files=["res://.godot/imported/personaje_matt.png-bcaf363488b7f69496f0de688c68d779.ctex"]
 
 [params]
 

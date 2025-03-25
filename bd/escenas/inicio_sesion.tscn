@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0cq6pr0ya4u0"]
+[gd_scene load_steps=12 format=3 uid="uid://c0cq6pr0ya4u0"]
 
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
 [ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
@@ -7,9 +7,7 @@
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
 [ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="6_gdhcy"]
 [ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="6_v18tg"]
-[ext_resource type="PackedScene" uid="uid://drqkjp4c10l5u" path="res://menu/escenas/menus/menu_principal/menu_principal.tscn" id="7_huqs2"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="9_6bne6"]
-[ext_resource type="PackedScene" uid="uid://bbhkoswnwc7qm" path="res://bd/escenas/inicio.tscn" id="10_bjtmo"]
 
 [sub_resource type="Theme" id="Theme_m6y1t"]
 default_font = ExtResource("2_2j7ft")
@@ -118,7 +116,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_v18tg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_gdhcy")
 text = "Entrar"
 script = ExtResource("1_kb8y8")
-escena_destino = ExtResource("7_huqs2")
+path_escena_destino = "res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -134,7 +132,7 @@ mouse_default_cursor_shape = 2
 theme_override_constants/align_to_largest_stylebox = 1
 text = "Atrás"
 script = ExtResource("9_6bne6")
-escena_destino = ExtResource("10_bjtmo")
+path_escena_destino = "res://bd/escenas/inicio.tscn"
 
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]

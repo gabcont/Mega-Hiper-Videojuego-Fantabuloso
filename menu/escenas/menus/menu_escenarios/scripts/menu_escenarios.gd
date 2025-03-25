@@ -2,12 +2,12 @@ extends Control
 
 # Diccionario único que mapea los botones a las rutas de las escenas de fondo parallax
 var boton_a_escena = {
-	"Lugar1": preload("res://juego/Fondo/auto_scroller.tscn"), 
+	"Lugar1": preload("res://juego/Fondo/escenas/fondo.tscn"), 
 }
 
 # Referencias a los nodos del árbol
 @onready var ContenedorFondo = $Control/ContenedorFondo
-@onready var label_estado = $Control/MenuContainer/SubTitleMargin/SubTitleContainer/subtitulo
+@onready var label_estado = $MenuContainer/SubTitleMargin/SubTitleContainer/subtitulo
 
 
 func _ready():

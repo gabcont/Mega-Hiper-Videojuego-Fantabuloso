@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c57a5lbjr3jaj"
-path="res://.godot/imported/personaje_sukuna.png-55dba40fa4a52dbb85856c71d1fe0cb6.ctex"
+uid="uid://4e1g4oo88q15"
+path="res://.godot/imported/fondo4.png-5e5d2473d5266c528ab0224666f1e90d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_sukuna.png"
-dest_files=["res://.godot/imported/personaje_sukuna.png-55dba40fa4a52dbb85856c71d1fe0cb6.ctex"]
+source_file="res://menu/escenas/menus/menu_escenarios/assets/fondo4.png"
+dest_files=["res://.godot/imported/fondo4.png-5e5d2473d5266c528ab0224666f1e90d.ctex"]
 
 [params]
 

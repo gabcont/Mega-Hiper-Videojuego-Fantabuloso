@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k8oxlbroh4dw"
-path="res://.godot/imported/personaje_knuckles.png-c978b6655bfa6ecffee4638632b8a6c6.ctex"
+uid="uid://cmv80o3trypd0"
+path="res://.godot/imported/personaje_sans.png-10493659cfead843577bd1910c85cebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_knuckles.png"
-dest_files=["res://.godot/imported/personaje_knuckles.png-c978b6655bfa6ecffee4638632b8a6c6.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/personaje_sans.png"
+dest_files=["res://.godot/imported/personaje_sans.png-10493659cfead843577bd1910c85cebb.ctex"]
 
 [params]
 

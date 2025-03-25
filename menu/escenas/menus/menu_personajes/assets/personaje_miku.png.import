@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cooyi36oblxyj"
-path="res://.godot/imported/fondo3.png-99b1626c588799d7e6db7c5dc74d1440.ctex"
+uid="uid://b5r4ra0q1mv42"
+path="res://.godot/imported/personaje_miku.png-66d2947ed77fac4388862671efa25bd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_escenarios/fondo3.png"
-dest_files=["res://.godot/imported/fondo3.png-99b1626c588799d7e6db7c5dc74d1440.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/personaje_miku.png"
+dest_files=["res://.godot/imported/personaje_miku.png-66d2947ed77fac4388862671efa25bd6.ctex"]
 
 [params]
 

@@ -5,7 +5,6 @@
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
 [ext_resource type="PackedScene" uid="uid://cy71e8ghnbt4h" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="2_a0wv1"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
-[ext_resource type="SpriteFrames" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="5_pfv7k"]
 [ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
 [ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/timer/escenas/timer.tscn" id="7_hpts1"]
 [ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/botones/botones.tscn" id="7_htvet"]
@@ -405,6 +404,9 @@ shader = ExtResource("12_y0x6b")
 shader_parameter/animate_speed = 0.5
 shader_parameter/resolution = 1.0
 
+[sub_resource type="Resource" id="Resource_u5r26"]
+metadata/__load_path__ = "res://juego/gameplay/escenas/personajes/kirby.tres"
+
 [sub_resource type="LabelSettings" id="LabelSettings_3vs70"]
 font = ExtResource("10_s5joy")
 font_size = 90
@@ -536,7 +538,7 @@ unique_name_in_owner = true
 visibility_layer = 2
 z_index = 1
 position = Vector2(1053, 195)
-spriteframe = ExtResource("5_pfv7k")
+spriteframe = SubResource("Resource_u5r26")
 nombre_personaje = &"Kirby"
 
 [node name="Camera2D" type="Camera2D" parent="Pantalla/Personajesvp/SubViewport/Node2D"]

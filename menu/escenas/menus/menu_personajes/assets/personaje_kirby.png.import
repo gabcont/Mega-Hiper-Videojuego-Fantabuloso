@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8obe40vt24rs"
-path="res://.godot/imported/personaje_luffy.png-59bb14f0b77d19113c177d6ec9b9e159.ctex"
+uid="uid://7agw310ppghe"
+path="res://.godot/imported/personaje_kirby.png-22765d136af84b998bc4877bb5b77991.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/menus/menu_personajes/personaje_luffy.png"
-dest_files=["res://.godot/imported/personaje_luffy.png-59bb14f0b77d19113c177d6ec9b9e159.ctex"]
+source_file="res://menu/escenas/menus/menu_personajes/assets/personaje_kirby.png"
+dest_files=["res://.godot/imported/personaje_kirby.png-22765d136af84b998bc4877bb5b77991.ctex"]
 
 [params]
 
