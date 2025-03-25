@@ -51,7 +51,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Simple"]
-visible = false
 material = SubResource("ShaderMaterial_ga6v1")
 layout_mode = 1
 anchors_preset = 15
