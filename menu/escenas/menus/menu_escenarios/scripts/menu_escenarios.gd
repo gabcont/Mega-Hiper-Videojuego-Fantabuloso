@@ -1,8 +1,10 @@
 extends Control
 
+@export var path_siguiente_escena : String
+
 # Diccionario único que mapea los botones a las rutas de las escenas de fondo parallax
 var boton_a_escena = {
-	"Lugar1": preload("res://juego/Fondo/escenas/fondo.tscn"), 
+	"Lugar1": preload("res://juego/Fondo/escenas/Caricuao.tscn"), 
 }
 
 # Referencias a los nodos del árbol
@@ -59,5 +61,7 @@ func cargar_fondo(ruta_escena):
 
 
 func _on_seleccionar_pressed() -> void:
-	#guardar la escena de fondo y pasarla a la escena partida
-	pass # Replace with function body.
+	ConfigPartida.escenario_seleccionado = label_estado.text
+	Transicion.transicion()
+	await Transicion.on_transition_finished
+	get_tree().change_scene_to_file(path_siguiente_escena)

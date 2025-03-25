@@ -350,7 +350,7 @@ graph_offset = Vector2(-86.277, 24)
 
 [node name="MainMenu" instance=ExtResource("1_8rxls")]
 script = ExtResource("2_8e8ho")
-game_scene_path = "uid://hn8a810btiqa"
+game_scene_path = "uid://dm4k3lbges647"
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
