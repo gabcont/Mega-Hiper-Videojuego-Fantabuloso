@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://txkdjn8lckvd"]
+
+[ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/gameplay/escenas/personajes/personaje.tscn" id="1_i7boe"]
+[ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="2_6n4ni"]
+[ext_resource type="Texture2D" uid="uid://mnxlwlmag0u1" path="res://parallax/Fondos parallax/CityLayers/back.png" id="3_fll6u"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://parallax/Escenas_parallax/parallax_background.gd" id="3_i7boe"]
+[ext_resource type="Texture2D" uid="uid://c0hp7gt6l6kaf" path="res://parallax/Fondos parallax/CityLayers/foreground.png" id="5_gxvii"]
+[ext_resource type="Texture2D" uid="uid://breq2e4hdjvx6" path="res://parallax/Fondos parallax/CityLayers/middle.png" id="6_2f0wc"]
+
+[node name="Layers_parallax" type="Node2D"]
+
+[node name="Personaje1" parent="." instance=ExtResource("1_i7boe")]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(526, 329)
+nombre_personaje = &"Knuckles"
+
+[node name="Personaje2" parent="." instance=ExtResource("1_i7boe")]
+unique_name_in_owner = true
+visibility_layer = 2
+z_index = 1
+position = Vector2(650, 341)
+voltear_personaje = true
+spriteframe = ExtResource("2_6n4ni")
+nombre_personaje = &"Kirby"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_i7boe")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(585, 543)
+rotation = 3.13776
+scale = Vector2(10.4134, -4.04198)
+texture = ExtResource("3_fll6u")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(587, 358)
+scale = Vector2(4.50424, 2.19811)
+texture = ExtResource("6_2f0wc")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(580, 314)
+scale = Vector2(1.68597, 2.49099)
+texture = ExtResource("5_gxvii")

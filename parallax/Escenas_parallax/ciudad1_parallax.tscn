@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1fpq3igvhkuw"]
+[gd_scene load_steps=8 format=3 uid="uid://30ofa7m0654v"]
 
 [ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/gameplay/escenas/personajes/personaje.tscn" id="1_32ke0"]
 [ext_resource type="SpriteFrames" uid="uid://0dwdqstovsfh" path="res://juego/gameplay/escenas/personajes/kirby.tres" id="2_y5fu3"]
 [ext_resource type="Texture2D" uid="uid://gpj766htdnhl" path="res://parallax/Fondos parallax/City_Dirty/1.Sky.png" id="3_leo3l"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://parallax/Escenas_parallax/parallax_background.gd" id="3_y5fu3"]
 [ext_resource type="Texture2D" uid="uid://dfx3kktscbqkt" path="res://parallax/Fondos parallax/City_Dirty/2.Buildings.png" id="4_m6lno"]
 [ext_resource type="Texture2D" uid="uid://dgwlxxubl0qa7" path="res://parallax/Fondos parallax/City_Dirty/3.Wall.png" id="5_1bimo"]
 [ext_resource type="Texture2D" uid="uid://c7ss756aunavp" path="res://parallax/Fondos parallax/City_Dirty/4.Sidewalk.png" id="6_gavmg"]
@@ -25,6 +26,7 @@ spriteframe = ExtResource("2_y5fu3")
 nombre_personaje = &"Kirby"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_y5fu3")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1100, 0)
@@ -35,7 +37,7 @@ scale = Vector2(3.63883, -3.57459)
 texture = ExtResource("3_leo3l")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.4, 1)
+motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(1100, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
@@ -44,7 +46,7 @@ scale = Vector2(3.65198, 3.76477)
 texture = ExtResource("4_m6lno")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.6, 1)
+motion_scale = Vector2(0, 1)
 motion_mirroring = Vector2(1100, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
@@ -54,7 +56,7 @@ texture = ExtResource("5_1bimo")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 scale = Vector2(1.0047, 0.987899)
-motion_scale = Vector2(0.8, 1)
+motion_scale = Vector2(0, 1)
 motion_mirroring = Vector2(1100, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
