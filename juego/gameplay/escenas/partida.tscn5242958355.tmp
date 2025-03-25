@@ -1,17 +1,20 @@
-[gd_scene load_steps=24 format=3 uid="uid://hn8a810btiqa"]
+[gd_scene load_steps=27 format=3 uid="uid://hn8a810btiqa"]
 
-[ext_resource type="PackedScene" uid="uid://b5wqwx4kssvs3" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
+[ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
-[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/fondo.tscn" id="3_glmsc"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
 [ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
+[ext_resource type="SpriteFrames" uid="uid://p6fmqw4ulnn3" path="res://juego/personajes/assets/animaciones/Knuckles.tres" id="6_htvet"]
+[ext_resource type="SpriteFrames" uid="uid://clvi7w1dcnma7" path="res://juego/personajes/assets/animaciones/Kirby.tres" id="7_glmsc"]
 [ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/timer/escenas/timer.tscn" id="7_hpts1"]
 [ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/botones/botones.tscn" id="7_htvet"]
+[ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://juego/Fondo/auto_scroller.tscn" id="8_tihru"]
 [ext_resource type="Texture2D" uid="uid://kf8t7moxds3q" path="res://juego/gameplay/assets/Arrows.png" id="9_kklxi"]
 [ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="10_s5joy"]
 [ext_resource type="Shader" uid="uid://cptu6m8orjgbg" path="res://juego/gameplay/shaders/kaleido.gdshader" id="12_y0x6b"]
-[ext_resource type="Script" uid="uid://cftutyhmlqltk" path="res://juego/gameplay/scripts/boton_pausa.gd" id="15_62slp"]
+[ext_resource type="Script" uid="uid://bcxqncy4q2dqm" path="res://juego/gameplay/scripts/pausa.gd" id="14_glmsc"]
+[ext_resource type="Script" uid="uid://cftutyhmlqltk" path="res://juego/gameplay/scripts/salir.gd" id="15_62slp"]
 
 [sub_resource type="Animation" id="Animation_kfnal"]
 length = 0.001
@@ -156,6 +159,18 @@ tracks/3/keys = {
 "method": &"reanudar_personajes"
 }]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fondo/Escenario:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_a0wv1"]
 resource_name = "ataque_especial_p2"
@@ -212,6 +227,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fondo/Escenario:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_tihru"]
@@ -359,18 +386,20 @@ _data = {
 &"esquivar": SubResource("Animation_s5joy")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_glmsc"]
-font = ExtResource("10_s5joy")
-font_size = 90
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_htvet"]
 shader = ExtResource("12_y0x6b")
 shader_parameter/animate_speed = 0.5
 shader_parameter/resolution = 1.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_glmsc"]
+font = ExtResource("10_s5joy")
+font_size = 90
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n78ns"]
 shader = ExtResource("2_3vs70")
 shader_parameter/fisheye_strength = 0.93
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_glmsc"]
 
 [node name="Partida" type="Control"]
 layout_mode = 3
@@ -388,6 +417,57 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 328)
+
+[node name="Fondo" type="ColorRect" parent="."]
+visibility_layer = 16
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.52549)
+
+[node name="Escenario" parent="Fondo" instance=ExtResource("8_tihru")]
+position = Vector2(-169, 2)
+scale = Vector2(2.4, 2.4)
+
+[node name="KaleidoRojo" type="TextureRect" parent="Fondo"]
+visible = false
+modulate = Color(0.641733, 0, 0.203657, 1)
+material = SubResource("ShaderMaterial_htvet")
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 646.0
+texture = ExtResource("3_y0x6b")
+
+[node name="KaleidoRosa" type="TextureRect" parent="Fondo"]
+visible = false
+modulate = Color(0.925117, 0.0909313, 0.887361, 1)
+material = SubResource("ShaderMaterial_htvet")
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 646.0
+texture = ExtResource("3_y0x6b")
+
+[node name="Personajes2" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Personaje1" parent="Personajes2" instance=ExtResource("1_0t4ck")]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(526, 329)
+es_personaje_1 = true
+spriteframe = ExtResource("6_htvet")
+nombre_personaje = &"Knuckles"
+
+[node name="Personaje2" parent="Personajes2" instance=ExtResource("1_0t4ck")]
+unique_name_in_owner = true
+visibility_layer = 2
+z_index = 1
+position = Vector2(650, 341)
+spriteframe = ExtResource("7_glmsc")
+nombre_personaje = &"Kirby"
 
 [node name="Mensajes" type="Marker2D" parent="."]
 z_index = 2
@@ -441,48 +521,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_kklxi")
 metadata/_edit_lock_ = true
 
-[node name="Fondo" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Oscurecer" type="ColorRect" parent="Fondo"]
-visibility_layer = 16
-z_index = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.08, 0.08, 0.08, 0.576471)
-
-[node name="Fondo" parent="Fondo" instance=ExtResource("3_glmsc")]
-layout_mode = 1
-
-[node name="KaleidoRojo" type="TextureRect" parent="Fondo"]
-visible = false
-modulate = Color(0.641733, 0, 0.203657, 1)
-material = SubResource("ShaderMaterial_htvet")
-layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 646.0
-texture = ExtResource("3_y0x6b")
-
-[node name="KaleidoRosa" type="TextureRect" parent="Fondo"]
-visible = false
-modulate = Color(0.925117, 0.0909313, 0.887361, 1)
-material = SubResource("ShaderMaterial_htvet")
-layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 646.0
-texture = ExtResource("3_y0x6b")
-
 [node name="Efectos" type="Control" parent="."]
-visible = false
 z_index = 4
 layout_mode = 1
 anchors_preset = 15
@@ -495,7 +534,7 @@ grow_vertical = 2
 visible = false
 material = SubResource("ShaderMaterial_n78ns")
 layout_mode = 0
-offset_right = 1150.0
+offset_right = 1154.0
 offset_bottom = 646.0
 texture = ExtResource("3_y0x6b")
 
@@ -510,8 +549,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BarrasVida" parent="HUD" node_paths=PackedStringArray("personaje_1", "personaje_2") instance=ExtResource("6_1eyvx")]
-personaje_1 = NodePath("../../Personajes/BoxContainer/CenterContainer/Personaje1")
-personaje_2 = NodePath("../../Personajes/BoxContainer/CenterContainer2/Personaje2")
+personaje_1 = NodePath("../../Personajes2/Personaje1")
+personaje_2 = NodePath("../../Personajes2/Personaje2")
 metadata/_edit_lock_ = true
 
 [node name="Reloj" parent="HUD" instance=ExtResource("7_hpts1")]
@@ -530,6 +569,51 @@ layout_mode = 1
 [node name="TimerPoder" type="Timer" parent="."]
 autostart = true
 
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 10
+material = SubResource("ShaderMaterial_glmsc")
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 655.0
+color = Color(0.235294, 0.235294, 0.235294, 0.580392)
+
+[node name="MenuPausa" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_glmsc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MenuPausa"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -25.5
+offset_right = 60.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/MenuPausa/VBoxContainer"]
+layout_mode = 2
+text = "Pausa"
+horizontal_alignment = 1
+
+[node name="Continuar" type="Button" parent="ColorRect/MenuPausa/VBoxContainer"]
+layout_mode = 2
+text = "Continuar
+"
+
+[node name="Sallir" type="Button" parent="ColorRect/MenuPausa/VBoxContainer"]
+layout_mode = 2
+text = "Salir"
+script = ExtResource("15_62slp")
+
 [connection signal="timeout" from="TimerPoder" to="." method="_on_timer_poder_timeout"]
-[connection signal="pressed" from="ColorRect/MenuPausa/VBoxContainer/Continuar" to="ColorRect/MenuPausa/VBoxContainer/Continuar" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/MenuPausa/VBoxContainer/Sallir" to="ColorRect/MenuPausa/VBoxContainer/Sallir" method="_on_pressed"]
