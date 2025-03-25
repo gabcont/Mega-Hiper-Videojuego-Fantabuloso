@@ -1,14 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://drqkjp4c10l5u"]
+[gd_scene load_steps=8 format=3 uid="uid://drqkjp4c10l5u"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_5uhmk"]
 [ext_resource type="PackedScene" uid="uid://b4whs7216ji33" path="res://menu/escenas/menus/menu_de_opciones/master_options_menu_with_tabs.tscn" id="2_1q5bq"]
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="2_p74i5"]
-[ext_resource type="Script" path="res://menu/escenas/menus/menu_principal/menu_principal.gd" id="2_q4jhy"]
-[ext_resource type="PackedScene" uid="uid://d3a41irydyqfq" path="res://menu/escenas/creditos/creditos.tscn" id="3_7mudv"]
+[ext_resource type="Script" uid="uid://bxvj2bpr8ksj4" path="res://menu/escenas/menus/menu_principal/menu_principal.gd" id="2_q4jhy"]
+[ext_resource type="PackedScene" uid="uid://d3a41irydyqfq" path="res://menu/escenas/menus/menu_de_opciones/creditos/creditos.tscn" id="3_7mudv"]
+[ext_resource type="PackedScene" uid="uid://6xsu5p0qmfyr" path="res://menu/escenas/menus/menu_estadisticas/Estadisticas.tscn" id="4_dw8xd"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="6_vuaux"]
 
 
 [node name="MainMenu" instance=ExtResource("1_5uhmk")]
 script = ExtResource("2_q4jhy")
+escena_estadisticas = ExtResource("4_dw8xd")
 game_scene_path = "uid://hn8a810btiqa"
 options_packed_scene = ExtResource("2_1q5bq")
 credits_packed_scene = ExtResource("3_7mudv")
@@ -22,6 +25,9 @@ stretch_mode = 0
 theme_override_fonts/font = ExtResource("6_vuaux")
 theme_override_font_sizes/font_size = 40
 
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+custom_minimum_size = Vector2(175, 0)
+
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
 mouse_default_cursor_shape = 2
 text = "Jugar"
@@ -30,10 +36,16 @@ text = "Jugar"
 mouse_default_cursor_shape = 2
 text = "Opciones"
 
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+[node name="Estadisticas" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+layout_mode = 2
+text = "Estadísticas"
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
 mouse_default_cursor_shape = 2
 text = "Créditos"
 
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="4"]
 mouse_default_cursor_shape = 2
 text = "Salir"
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/Estadisticas" to="." method="_on_estadisticas_pressed"]

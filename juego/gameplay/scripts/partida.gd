@@ -5,10 +5,15 @@ extends Node
 
 @onready var timer_partida = %Reloj
 @onready var menu_pausa = $ColorRect
+@onready var menu_final = $ReferenceRect
+
+@onready var statusLabel = $ReferenceRect/Menu_final/CenterContainer/VBoxContainer/Label
+
 @export var escena_final : PackedScene
 
 func _ready() -> void:
 	menu_pausa.hide()
+	menu_final.hide()
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
 
 	personaje_1.connect("ha_atacado", _on_personaje_ha_atacado)
@@ -25,6 +30,10 @@ func _ready() -> void:
 
 	personaje_1.connect("ataque_especial_activado", _on_ataque_especial_activado)
 	personaje_2.connect("ataque_especial_activado", _on_ataque_especial_activado)
+	
+	
+	personaje_1.connect("salud_acabada", _on_personaje_1_salud_acabada)
+	personaje_2.connect("salud_acabada", _on_personaje_2_salud_acabada)
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Pausa"):
@@ -82,15 +91,28 @@ func _on_timer_poder_timeout() -> void:
 	personaje_2.cargar_poder(5)
 
 func _on_tiempo_partida_acabado() -> void:
+	menu_final.show()
+	get_tree().paused = true
+	var db = Db.conectar_base()
+	
 	if personaje_1.salud > personaje_2.salud:
-		pass
+		statusLabel.text = "Jugador 1 gano"
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+		
 	elif personaje_1.salud > personaje_2.salud:
-		pass
+		statusLabel.text = "Jugador 2 gano"
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+		
 	else:
-		pass
+		var numero_ganador =  randi_range(1, 2)
+		statusLabel.text = "Jugador 1 gano" if numero_ganador==1 else "Jugador 2 gano"
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":numero_ganador==1,"duracion_en_sg":99})
+		
+		
 
 func _on_personaje_2_salud_acabada() -> void:
 	pass
+	
 
 func _on_personaje_1_salud_acabada() -> void:
 	pass

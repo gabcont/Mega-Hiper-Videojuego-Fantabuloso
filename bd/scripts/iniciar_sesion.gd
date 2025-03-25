@@ -26,7 +26,7 @@ func on_button_pressed():
 	
 func iniciar_sesion(usuario,contrasena):
 	var db = Db.conectar_base()
-	var registrado = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["nombre_usuario","contraseña"])
+	var registrado = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["id","nombre_usuario","contraseña"])
 	if registrado.size()==0:
 		statusLabel.text = "Usuario o contraseña incorrectos"
 	else:
@@ -56,6 +56,7 @@ func iniciar_sesion(usuario,contrasena):
 		if not es_correcto:
 			statusLabel.text = "Usuario o contraseña incorrectos"
 		else:
+			Db.set_usuario_id(registrado[0]["id"])
 			Transicion.transicion()
 			await Transicion.on_transition_finished
 			get_tree().change_scene_to_packed(escena_destino)

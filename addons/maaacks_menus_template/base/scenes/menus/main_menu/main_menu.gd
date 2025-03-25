@@ -18,9 +18,10 @@ func new_game():
 
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
-	sub_menu.show()
-	%BackButton.show()
-	%MenuContainer.hide()
+	if sub_menu:
+		sub_menu.show()
+		%BackButton.show()
+		%MenuContainer.hide()
 
 func _close_sub_menu():
 	if sub_menu == null:
@@ -51,6 +52,14 @@ func _setup_game_buttons():
 		%NewGameButton.hide()
 
 func _setup_options():
+	if options_packed_scene == null:
+		%OptionsButton.hide()
+	else:
+		options_scene = options_packed_scene.instantiate()
+		options_scene.hide()
+		%OptionsContainer.call_deferred("add_child", options_scene)
+		
+func _setup_estadisticas():
 	if options_packed_scene == null:
 		%OptionsButton.hide()
 	else:

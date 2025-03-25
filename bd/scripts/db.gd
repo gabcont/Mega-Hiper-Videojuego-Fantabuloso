@@ -1,6 +1,7 @@
 extends Node
 
 var db
+var usuario_id
 
 func _ready():
 	db = SQLite.new()
@@ -12,3 +13,6 @@ func _ready():
 	
 func conectar_base():
 	return db
+	
+func set_usuario_id(id):
+	usuario_id = id

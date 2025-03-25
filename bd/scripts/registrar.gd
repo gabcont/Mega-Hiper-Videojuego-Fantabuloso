@@ -57,13 +57,17 @@ func registrar(usuario,contrasena):
 			if i<data_encriptada.size()-1:
 				cadena_encriptada+="_"
 
-		var res = db.insert_row("Usuario",{"nombre_usuario":usuario,"contraseña":cadena_encriptada})
+		var res = db.insert_row("usuario",{"nombre_usuario":usuario,"contraseña":cadena_encriptada})
 		aes.finish()
 		if not res:
 			statusLabel.text = "Error al crear el usuario"
 		else:
+			var usuario_id = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["id"])[0]["id"]
+			Db.set_usuario_id(usuario_id)
+			
 			Transicion.transicion()
 			await Transicion.on_transition_finished
+			
 			get_tree().change_scene_to_packed(escena_destino)
 		
 	
