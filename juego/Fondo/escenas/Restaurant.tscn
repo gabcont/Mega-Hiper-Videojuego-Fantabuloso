@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbw6gw6h0o5th"]
+
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/Fondo/scripts/parallax_background.gd" id="1_w67da"]
+[ext_resource type="Texture2D" uid="uid://btki3i4a1j8ia" path="res://juego/Fondo/assets/Fondos parallax/layers/far-buildings.png" id="2_q6xtl"]
+[ext_resource type="Texture2D" uid="uid://iksr3t7tqamm" path="res://juego/Fondo/assets/Fondos parallax/layers/back-buildings.png" id="3_lutlf"]
+[ext_resource type="Texture2D" uid="uid://qdtsbhflemxq" path="res://juego/Fondo/assets/Fondos parallax/layers/foreground.png" id="4_figp5"]
+
+[node name="Layers2_parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_w67da")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(568, 320)
+rotation = 3.13776
+scale = Vector2(4.39651, -3.386)
+texture = ExtResource("2_q6xtl")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(587, 325)
+scale = Vector2(4.5355, 3.38846)
+texture = ExtResource("3_lutlf")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(580, 314)
+scale = Vector2(3.28196, 3.47402)
+texture = ExtResource("4_figp5")

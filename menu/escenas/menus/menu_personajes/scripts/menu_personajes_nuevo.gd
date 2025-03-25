@@ -1,5 +1,7 @@
 extends Control
 
+@export var path_siguiente_escena : String
+
 # Diccionario que mapea los botones a los recursos SpriteFrames (agreguen aca las rutas a los sprites)
 var nombre_a_spriteframe : Dictionary
 
@@ -81,5 +83,12 @@ func cambiar_sprite(sprite_node, spriteframe, voltear):
 
 # Método para alternar el jugador activo
 func seleccionar_jugador():
+	if personaje_jugador1 != "" and personaje_jugador2 != "" :
+		ConfigPartida.nombre_personaje_1 = personaje_jugador1
+		ConfigPartida.nombre_personaje_2 = personaje_jugador2
+		Transicion.transicion()
+		await Transicion.on_transition_finished
+		get_tree().change_scene_to_file(path_siguiente_escena)
+
 	jugador_activo = 1 if jugador_activo == 2 else 2
 	#cuando se seleccione por segunda vez, guardar sprite y pasarlo a la escena partida

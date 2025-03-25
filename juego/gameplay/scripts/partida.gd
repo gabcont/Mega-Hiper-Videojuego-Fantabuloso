@@ -9,8 +9,13 @@ extends Node
 @export var escena_final : PackedScene
 @export var escena_pausa : PackedScene
 
+var path_carpeta_fondos = "res://juego/Fondo/escenas/"
+
 func _ready() -> void:
 	# menu_pausa.hide()
+	set_personajes(ConfigPartida.nombre_personaje_1, ConfigPartida.nombre_personaje_2)
+	set_fondo(ConfigPartida.escenario_seleccionado)
+
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
 
 	personaje_1.connect("ha_atacado", _on_personaje_ha_atacado)
@@ -34,9 +39,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		pausa.z_index = 5
 		add_child(pausa)
 
-func set_personajes(spriteframe_p1 : SpriteFrames, spriteframe_p2 : SpriteFrames) -> void:
-	personaje_1.set_spriteframe(spriteframe_p1)
-	personaje_2.set_spriteframe(spriteframe_p2)
+func set_personajes(nombre_personaje_1 : String, nombre_personaje_2 : String) -> void:
+	personaje_1.set_personaje(nombre_personaje_1)
+	personaje_2.set_personaje(nombre_personaje_2)
+
+func set_fondo(_nombre_fondo : String) -> void:
+	var escena_fondo : PackedScene= load(path_carpeta_fondos + _nombre_fondo + ".tscn")
+	$Fondo.add_child(escena_fondo.instantiate())
 
 func pausar_personajes() -> void:
 	personaje_1.pausar()

@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://7i8gxnv1lx3l"]
+[gd_scene load_steps=11 format=3 uid="uid://7i8gxnv1lx3l"]
 
 [ext_resource type="Script" uid="uid://dua5tnresat0h" path="res://juego/Fondo/scripts/fondo.gd" id="1_ga6v1"]
 [ext_resource type="Shader" uid="uid://cib3kjdmmgxdj" path="res://juego/Fondo/shaders/fondo.gdshader" id="1_rurq4"]
-[ext_resource type="AudioStream" uid="uid://dlj20q6oi3gh1" path="res://juego/Fondo/assets/musica/cyberpunk-street.ogg" id="2_7ie1x"]
-[ext_resource type="Texture2D" uid="uid://d2nyn74xgd2bg" path="res://juego/Fondo/assets/imagenes/inthallway2_evening2.webp" id="2_rurq4"]
+[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/Fondo/assets/imagenes/Untitled.jpg" id="4_s5be1"]
 [ext_resource type="Texture2D" uid="uid://mnxlwlmag0u1" path="res://juego/Fondo/assets/imagenes/back.png" id="5_s5be1"]
 [ext_resource type="Shader" uid="uid://csokapbvyhxls" path="res://juego/Fondo/shaders/auto_scroller.gdshader" id="6_t5jrg"]
 [ext_resource type="Texture2D" uid="uid://breq2e4hdjvx6" path="res://juego/Fondo/assets/imagenes/middle.png" id="7_upti0"]
@@ -36,13 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ga6v1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_7ie1x")
-autoplay = true
-bus = &"Musica"
-
 [node name="Simple" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,10 +51,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rurq4")
+texture = ExtResource("4_s5be1")
 expand_mode = 1
 
 [node name="Parallax" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

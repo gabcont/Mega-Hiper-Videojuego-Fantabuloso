@@ -20,7 +20,7 @@ var poder : int = 10
 # voltea graficos y animaciones en caso de ser jugador 2
 @export var es_personaje_1 : bool = false 
 # @export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
-@export var nombre_personaje : String
+var nombre_personaje : String = "Kirby"
 
 var frame_actual_de_animacion : int # Información debug
 
@@ -53,7 +53,7 @@ func _ready() -> void:
 	sprite.connect("animation_finished", _on_sprite_animation_finished)
 
 	# Carga sprites del personaje
-	sprite.sprite_frames = load("res://juego/personajes/assets/animaciones/" + nombre_personaje + ".tres")
+	#set_personaje(nombre_personaje)
 
 	# Cambia al estado inicial
 	reset()
@@ -78,6 +78,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action(input_action_bloquear):
 		input_buffer = "bloquear"
 
+func set_personaje(_nombre_personaje : String) -> void:
+	sprite.sprite_frames = load("res://juego/personajes/assets/animaciones/" + _nombre_personaje + ".tres")
+	sprite.play()
 
 #-----------------# Funciones que cambian el estado del personaje #-----------------#
 
