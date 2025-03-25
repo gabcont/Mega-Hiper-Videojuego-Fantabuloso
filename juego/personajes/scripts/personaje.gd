@@ -1,6 +1,5 @@
 class_name Personaje extends Node
 
-
 signal ha_atacado(es_personaje_1 : bool, tipo_ataque : StringName)
 signal ha_esquivado(es_personaje_1 : bool)
 signal ha_bloqueado(es_personaje_1 : bool)
@@ -20,9 +19,8 @@ var poder : int = 10
 
 # voltea graficos y animaciones en caso de ser jugador 2
 @export var es_personaje_1 : bool = false 
-@export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
-
-var nombre_personaje : String
+# @export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
+@export var nombre_personaje : String
 
 var frame_actual_de_animacion : int # Información debug
 
@@ -55,8 +53,7 @@ func _ready() -> void:
 	sprite.connect("animation_finished", _on_sprite_animation_finished)
 
 	# Carga sprites del personaje
-	sprite.sprite_frames = spriteframe_personaje
-	nombre_personaje = spriteframe_personaje.resource_name
+	sprite.sprite_frames = load("res://juego/personajes/assets/animaciones/" + nombre_personaje + ".tres")
 
 	# Cambia al estado inicial
 	reset()
