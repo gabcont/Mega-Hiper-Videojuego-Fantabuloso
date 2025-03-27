@@ -5,7 +5,7 @@ signal tiempo_partida_acabado
 @onready var timer = $Timer 
 @onready var label = $Label 
 
-var countdown_time = 99
+var countdown_time = 60
 
 func _ready():
 	# Configuramos la barra de progreso y el Label al inicio

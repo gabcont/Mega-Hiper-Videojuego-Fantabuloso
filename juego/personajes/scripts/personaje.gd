@@ -16,14 +16,11 @@ var poder : int = 10
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
-@onready var menu_final = $"../../ReferenceRect"
-@onready var statusLabel = $"../../ReferenceRect/Menu_final/CenterContainer/VBoxContainer/Label"
-
 
 # voltea graficos y animaciones en caso de ser jugador 2
 @export var es_personaje_1 : bool = false 
 # @export var spriteframe_personaje : SpriteFrames # Cambia sprites de personaje 
-var nombre_personaje : String = "Kirby"
+var nombre_personaje : String
 
 var frame_actual_de_animacion : int # Información debug
 
@@ -205,15 +202,6 @@ func cargar_salud(_salud : int) -> void:
 	elif (salud + _salud) <= 0:
 		salud = 0
 		emit_signal("salud_acabada", es_personaje_1)
-		menu_final.show()
-		get_tree().paused = true
-		statusLabel.text = "Jugador 2 gano" if es_personaje_1 else "Jugador 1 gano"
-		var db = Db.conectar_base()
-		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":not es_personaje_1,"duracion_en_sg":99-%Reloj.countdown_time})
-		
-		
-			
-		
 	else:
 		salud += _salud
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://hn8a810btiqa"]
+[gd_scene load_steps=24 format=3 uid="uid://hn8a810btiqa"]
 
 [ext_resource type="PackedScene" uid="uid://b5wqwx4kssvs3" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://kf8t7moxds3q" path="res://juego/gameplay/assets/Arrows.png" id="9_kklxi"]
 [ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="10_s5joy"]
 [ext_resource type="Shader" uid="uid://cptu6m8orjgbg" path="res://juego/gameplay/shaders/kaleido.gdshader" id="12_y0x6b"]
-[ext_resource type="PackedScene" uid="uid://c3gm08djsemxe" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="13_htvet"]
 
 [sub_resource type="Animation" id="Animation_kfnal"]
 length = 0.001
@@ -492,6 +491,7 @@ offset_bottom = 646.0
 texture = ExtResource("3_y0x6b")
 
 [node name="Efectos" type="Control" parent="."]
+visible = false
 z_index = 4
 layout_mode = 1
 anchors_preset = 15
@@ -501,6 +501,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CRT" type="TextureRect" parent="Efectos"]
+visible = false
 material = SubResource("ShaderMaterial_n78ns")
 layout_mode = 0
 offset_right = 1150.0
@@ -580,18 +581,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Final" type="Control" parent="."]
-visible = false
-z_index = 6
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Menu_final" parent="Final" instance=ExtResource("13_htvet")]
-layout_mode = 1
 
 [connection signal="timeout" from="TimerPoder" to="." method="_on_timer_poder_timeout"]

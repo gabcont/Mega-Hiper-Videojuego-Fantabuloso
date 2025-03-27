@@ -3,11 +3,14 @@ extends Node
 @onready var personaje_1 : Personaje = %Personaje1
 @onready var personaje_2 : Personaje = %Personaje2
 
+@onready var menu_final = $Final
+@onready var statusLabel = $Final/Menu_final/CenterContainer/VBoxContainer/Label
 @onready var timer_partida = %Reloj
 # @onready var menu_pausa = $ColorRect
 
 @export var escena_final : PackedScene
 @export var escena_pausa : PackedScene
+
 
 var path_carpeta_fondos = "res://juego/Fondo/escenas/"
 
@@ -15,6 +18,7 @@ func _ready() -> void:
 	# menu_pausa.hide()
 	set_personajes(ConfigPartida.nombre_personaje_1, ConfigPartida.nombre_personaje_2)
 	set_fondo(ConfigPartida.escenario_seleccionado)
+	$HUD/BarrasVida.actualizar_nombres()
 
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
 
@@ -32,6 +36,9 @@ func _ready() -> void:
 
 	personaje_1.connect("ataque_especial_activado", _on_ataque_especial_activado)
 	personaje_2.connect("ataque_especial_activado", _on_ataque_especial_activado)
+
+	personaje_1.connect("salud_acabada", _on_personaje_1_salud_acabada)
+	personaje_2.connect("salud_acabada", _on_personaje_2_salud_acabada)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pausa"):
@@ -95,10 +102,11 @@ func _on_ataque_especial_activado(es_p1: bool) -> void:
 func _on_timer_poder_timeout() -> void:
 	personaje_1.cargar_poder(5)
 	personaje_2.cargar_poder(5)
+		
 
 func _on_tiempo_partida_acabado() -> void:
 	menu_final.show()
-	get_tree().paused = true
+	#get_tree().paused = true
 	var db = Db.conectar_base()
 	
 	if personaje_1.salud > personaje_2.salud:
@@ -114,11 +122,23 @@ func _on_tiempo_partida_acabado() -> void:
 		statusLabel.text = "Jugador 1 gano" if numero_ganador==1 else "Jugador 2 gano"
 		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":numero_ganador==1,"duracion_en_sg":99})
 		
-		
 
-func _on_personaje_2_salud_acabada() -> void:
-	pass
+func _on_personaje_2_salud_acabada(_ignorar) -> void:
+	menu_final.show()
+	#get_tree().paused = true
+	var db = Db.conectar_base()
+
+	statusLabel.text = "Jugador 1 gano"
+	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+		
+	
 	
 
-func _on_personaje_1_salud_acabada() -> void:
-	pass
+func _on_personaje_1_salud_acabada(_ignorar) -> void:
+	menu_final.show()
+	#get_tree().paused = true
+	var db = Db.conectar_base()
+
+	statusLabel.text = "Jugador 2 gano"
+	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+	
