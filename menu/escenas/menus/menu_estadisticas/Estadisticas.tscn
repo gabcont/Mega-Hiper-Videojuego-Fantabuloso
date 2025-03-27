@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://6xsu5p0qmfyr"]
+[gd_scene load_steps=3 format=3 uid="uid://6xsu5p0qmfyr"]
 
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_4xr0g"]
 [ext_resource type="Script" uid="uid://bddvvv3ihwgsq" path="res://menu/escenas/menus/menu_estadisticas/scripts/estadisticas.gd" id="1_s7ers"]
-[ext_resource type="PackedScene" uid="uid://drqkjp4c10l5u" path="res://menu/escenas/menus/menu_principal/menu_principal.tscn" id="2_45vxg"]
 
 [node name="Estadisticas" type="Control"]
 layout_mode = 3
@@ -12,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s7ers")
-menu_principal = ExtResource("2_45vxg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

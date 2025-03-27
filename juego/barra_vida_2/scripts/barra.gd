@@ -22,6 +22,11 @@ func _ready() -> void:
 	etiqueta_nombre_p1.text = personaje_1.nombre_personaje
 	etiqueta_nombre_p2.text = personaje_2.nombre_personaje
 
+func actualizar_nombres() -> void:
+	etiqueta_nombre_p1.text = personaje_1.nombre_personaje
+	etiqueta_nombre_p2.text = personaje_2.nombre_personaje
+
+
 func _process(_delta: float) -> void:
 	barra_vida_p1.value = personaje_1.salud
 	barra_vida_p2.value = personaje_2.salud

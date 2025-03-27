@@ -43,6 +43,7 @@ func _ready() -> void:
 		$VBoxContainer/Enfrentado.text = "Personaje mas enfrentado: Kirby"
 		$VBoxContainer/Tiempo.text = "Tiempo de juego: "+ segundos_a_hms_string(contador_sg)
 		$VBoxContainer/Historial.text = "Victorias - Derrotas : %d - %d" % [contador_victorias,partidas.size()-contador_victorias]
+
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_packed(menu_principal)
+	SceneLoader.load_scene("res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn")
 	

@@ -1,8 +1,8 @@
 extends Button
 
 # Ruta a la escena que quieres cargar
-var escena_juego = load("res://juego/gameplay/escenas/partida.tscn")
-var escena_menu = load("res://menu/escenas/menus/menu_principal/menu_principal.tscn")
+var escena_juego = load("res://menu/escenas/menus/menu_personajes/escenas/menu_personajes_nuevo.tscn")
+var escena_menu = load("res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn")
 
 func _ready():
 	# Conecta la señal "pressed" a la función "on_button_pressed"
