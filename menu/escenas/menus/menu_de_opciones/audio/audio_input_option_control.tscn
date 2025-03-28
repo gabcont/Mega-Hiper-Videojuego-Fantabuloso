@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://0urqkyc3ct51" path="res://menu/escenas/menus/menu_de_opciones/audio/audio_input_option_control.gd" id="2_kpptq"]
 
 [node name="AudioInputOptionControl" instance=ExtResource("1_jtanc")]
+visible = false
 script = ExtResource("2_kpptq")
 option_name = "Input Device"
 option_section = 2

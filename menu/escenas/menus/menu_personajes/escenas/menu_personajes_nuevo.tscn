@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm4k3lbges647"]
+[gd_scene load_steps=6 format=3 uid="uid://dm4k3lbges647"]
 
 [ext_resource type="Script" uid="uid://dl0rk4upm70jn" path="res://menu/escenas/menus/menu_personajes/scripts/menu_personajes_nuevo.gd" id="1_j3jjq"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_o6r0s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_wymkx"]
 [ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/Universidad.tscn" id="4_o6r0s"]
+[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="5_jht0r"]
 
 [node name="MenuPersonajes" type="Control"]
 layout_mode = 3
@@ -83,6 +84,7 @@ theme_override_constants/separation = 700
 
 [node name="personaje1" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_jht0r")
 theme_override_font_sizes/font_size = 24
 text = "          JUGADOR  1"
 horizontal_alignment = 1
@@ -90,6 +92,7 @@ vertical_alignment = 1
 
 [node name="personaje2" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_jht0r")
 theme_override_font_sizes/font_size = 24
 text = "      JUGADOR 2"
 horizontal_alignment = 1
@@ -149,13 +152,15 @@ offset_top = 6.0
 offset_right = 82.0
 offset_bottom = 41.0
 size_flags_horizontal = 8
-text = "KNUCKLES"
+theme = ExtResource("5_jht0r")
 uppercase = true
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-offset_left = 397.0
-offset_right = 528.0
+custom_minimum_size = Vector2(200, 0)
+offset_left = 374.0
+offset_right = 574.0
 offset_bottom = 47.0
+mouse_default_cursor_shape = 2
 text = "SELECCIONAR"
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -163,7 +168,7 @@ offset_left = 843.0
 offset_top = 6.0
 offset_right = 925.0
 offset_bottom = 41.0
-text = "KNUCKLES"
+theme = ExtResource("5_jht0r")
 uppercase = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="seleccionar_jugador"]

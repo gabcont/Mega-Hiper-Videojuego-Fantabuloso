@@ -22,6 +22,7 @@ grow_vertical = 2
 texture = ExtResource("1_4xr0g")
 
 [node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(90, 0)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -59,22 +60,54 @@ offset_right = 20.0
 offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 30
 
-[node name="Usado" type="Label" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Usado" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 40
+text = "dfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf"
 
-[node name="Enfrentado" type="Label" parent="VBoxContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer"]
+position = Vector2(30, 15)
+animation = &"idle"
+offset = Vector2(400, 0)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Enfrentado" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
+text = "erwerwerwerwerwerwe"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2"]
+position = Vector2(-5, 21)
+animation = &"idle"
+offset = Vector2(400, 0)
 
 [node name="Tiempo" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 
+[node name="Tiempo_promedio" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
 [node name="Historial" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="Porcentaje" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="Escenario" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
 
 [node name="Vacio" type="Label" parent="."]
 layout_mode = 1

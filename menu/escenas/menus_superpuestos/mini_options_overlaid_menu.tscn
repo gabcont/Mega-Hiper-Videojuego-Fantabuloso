@@ -1,7 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://tjh64h13guyt"]
 
 [ext_resource type="PackedScene" uid="uid://cikf3o5omnunl" path="res://addons/maaacks_menus_template/base/scenes/overlaid_menu/menus/mini_options_overlaid_menu.tscn" id="1_eigmd"]
-[ext_resource type="PackedScene" uid="uid://b2vdg2prva4rd" path="res://menu/escenas/menus/menu_de_opciones/mini_options_menu.tscn" id="2_e715s"]
+[ext_resource type="PackedScene" uid="uid://b2vdg2prva4rd" path="res://menu/escenas/mini_options_menu.tscn" id="2_e715s"]
 
 [node name="MiniOptionsOverlaidMenu" instance=ExtResource("1_eigmd")]
 menu_scene = ExtResource("2_e715s")
+
+[node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
+text = "Opciones"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+custom_minimum_size = Vector2(100, 0)

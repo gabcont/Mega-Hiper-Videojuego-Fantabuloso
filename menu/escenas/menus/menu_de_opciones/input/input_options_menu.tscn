@@ -5,3 +5,10 @@
 
 [node name="Controls" instance=ExtResource("1_r6xv3")]
 script = ExtResource("2_n0kqo")
+
+[node name="Label" parent="VBoxContainer/InputMappingContainer" index="0"]
+text = "Acciones y Entradas"
+
+[node name="ResetButton" parent="VBoxContainer/InputMappingContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(175, 0)
+text = "Reiniciar"
