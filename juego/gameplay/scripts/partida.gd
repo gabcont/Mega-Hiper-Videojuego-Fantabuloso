@@ -106,39 +106,44 @@ func _on_timer_poder_timeout() -> void:
 
 func _on_tiempo_partida_acabado() -> void:
 	menu_final.show()
-	#get_tree().paused = true
 	var db = Db.conectar_base()
+	
+	var p1_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_1)
+	var p2_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_2)
+	var escenario_id = Db.conseguir_id("escenario",ConfigPartida.escenario_seleccionado)
 	
 	if personaje_1.salud > personaje_2.salud:
 		statusLabel.text = "Jugador 1 gano"
-		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":true,"duracion_en_sg":60,"id_escenario":escenario_id})
 		
-	elif personaje_1.salud > personaje_2.salud:
+	elif personaje_1.salud < personaje_2.salud:
 		statusLabel.text = "Jugador 2 gano"
-		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":false,"duracion_en_sg":60,"id_escenario":escenario_id})
 		
 	else:
 		var numero_ganador =  randi_range(1, 2)
 		statusLabel.text = "Jugador 1 gano" if numero_ganador==1 else "Jugador 2 gano"
-		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":numero_ganador==1,"duracion_en_sg":99})
+		var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":numero_ganador==1,"duracion_en_sg":60,"id_escenario":escenario_id})
 		
 
 func _on_personaje_2_salud_acabada(_ignorar) -> void:
 	menu_final.show()
-	#get_tree().paused = true
+	
 	var db = Db.conectar_base()
-
+	var p1_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_1)
+	var p2_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_2)
+	var escenario_id = Db.conseguir_id("escenario",ConfigPartida.escenario_seleccionado)
 	statusLabel.text = "Jugador 1 gano"
-	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
-		
-	
-	
+	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":true,"duracion_en_sg":60-ConfigPartida.tiempo,"id_escenario":escenario_id})
 
 func _on_personaje_1_salud_acabada(_ignorar) -> void:
-	menu_final.show()
-	#get_tree().paused = true
+	menu_final.show()	
+	
 	var db = Db.conectar_base()
-
+	var p1_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_1)
+	var p2_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_2)
+	var escenario_id = Db.conseguir_id("escenario",ConfigPartida.escenario_seleccionado)
 	statusLabel.text = "Jugador 2 gano"
-	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":1,"id_personaje_enfrentado":2,"victoria":true,"duracion_en_sg":99})
+	var res = db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":false,"duracion_en_sg":60-ConfigPartida.tiempo,"id_escenario":escenario_id})
+
 	

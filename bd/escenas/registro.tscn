@@ -111,6 +111,7 @@ script = ExtResource("1_0geqs")
 path_escena_destino = "res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn"
 
 [node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(90, 0)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0

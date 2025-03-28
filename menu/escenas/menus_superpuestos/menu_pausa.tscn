@@ -9,5 +9,31 @@ script = ExtResource("2_qxs2v")
 options_packed_scene = ExtResource("3_giry3")
 main_menu_scene = "uid://cibogaqpg6nyk"
 
+[node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
+text = "Pausa"
+
+[node name="MenuButtons" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin" index="0"]
+custom_minimum_size = Vector2(200, 0)
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+mouse_default_cursor_shape = 2
+text = "Continuar"
+
+[node name="RestartButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
+mouse_default_cursor_shape = 2
+text = "Reiniciar"
+
+[node name="OptionsButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+mouse_default_cursor_shape = 2
+text = "Opciones"
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+mouse_default_cursor_shape = 2
+text = "Menu Principal"
+
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
+mouse_default_cursor_shape = 2
+text = "Cerrar Juego"
+
 [node name="ConfirmRestart" parent="." index="2"]
 size = Vector2i(200, 108)

@@ -5,3 +5,6 @@
 
 [node name="OverlaidMenu" instance=ExtResource("1_kpwcy")]
 script = ExtResource("2_645vr")
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+text = "Salir"

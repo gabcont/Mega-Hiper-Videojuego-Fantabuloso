@@ -39,7 +39,7 @@ key = "MouseSensitivity"
 section = "InputSettings"
 
 [node name="OptionLabel" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl" index="0"]
-text = "Mouse Sensitivity :"
+text = "Snesibilidad de mouse :"
 
 [node name="HSlider" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl" index="1"]
 min_value = 0.25
@@ -54,7 +54,7 @@ key = "JoypadSensitivity"
 section = "InputSettings"
 
 [node name="OptionLabel" parent="VBoxContainer/MarginContainer/VBoxContainer/JoypadSensitivityControl" index="0"]
-text = "Joypad Sensitivity :"
+text = "Snesibilidad de joypad :"
 
 [node name="HSlider" parent="VBoxContainer/MarginContainer/VBoxContainer/JoypadSensitivityControl" index="1"]
 min_value = 0.25
