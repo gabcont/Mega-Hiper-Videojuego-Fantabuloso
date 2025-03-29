@@ -7,7 +7,7 @@
 [node name="Controls" instance=ExtResource("1_2rdb3")]
 script = ExtResource("2_y8jf4")
 
-[node name="VBoxContainer" parent="." index="0"]
+[node name="VBoxContainer" parent="." index="1"]
 theme_override_constants/separation = 16
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" index="0"]
@@ -28,7 +28,7 @@ key = "MouseSensitivity"
 section = "InputSettings"
 
 [node name="OptionLabel" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl" index="0"]
-text = "Mouse Sensitivity :"
+text = "Snesibilidad de mouse :"
 
 [node name="HSlider" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl" index="1"]
 min_value = 0.25
@@ -37,5 +37,12 @@ tick_count = 8
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer" index="1"]
 layout_mode = 2
+
+[node name="Label" parent="VBoxContainer/InputMappingContainer" index="0"]
+text = "Acciones y Entradsss"
+
+[node name="ResetButton" parent="VBoxContainer/InputMappingContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(175, 0)
+text = "Reiniciar"
 
 [editable path="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl"]

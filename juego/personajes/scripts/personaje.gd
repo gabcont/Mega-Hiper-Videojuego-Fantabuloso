@@ -201,7 +201,7 @@ func cargar_salud(_salud : int) -> void:
 		poder = SALUD_MAXIMA
 	elif (salud + _salud) <= 0:
 		salud = 0
-		emit_signal("salud_acabada", es_personaje_1)
+		emit_signal("salud_acabada",es_personaje_1)
 	else:
 		salud += _salud
 

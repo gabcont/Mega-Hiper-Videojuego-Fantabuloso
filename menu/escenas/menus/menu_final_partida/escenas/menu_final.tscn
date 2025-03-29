@@ -1,33 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3gm08djsemxe"]
+[gd_scene load_steps=4 format=3 uid="uid://c3gm08djsemxe"]
 
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="1_1bvsq"]
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_dg2gc"]
-[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_dg2gc"]
 [ext_resource type="Script" uid="uid://be5pnkp7g7fdc" path="res://menu/escenas/menus/menu_final_partida/scripts/menu_final.gd" id="3_1bvsq"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21ug2"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(0, 48, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20km8"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(128, 50, 48, 14)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k7ed"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(0, 48, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_suuom"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(0, 48, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6laun"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(128, 50, 48, 14)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkwyg"]
-texture = ExtResource("2_dg2gc")
-region_rect = Rect2(0, 48, 48, 16)
 
 [node name="Menu_final" type="Control"]
 z_index = 10
@@ -65,17 +40,12 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_1bvsq")
 theme_override_font_sizes/font_size = 40
-text = "GANASTE/PERDISTE"
 
 [node name="Rejugar" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("1_1bvsq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_21ug2")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_20km8")
-theme_override_styles/normal = SubResource("StyleBoxTexture_0k7ed")
 text = "VOLVER A JUGAR"
 script = ExtResource("3_1bvsq")
 
@@ -84,10 +54,6 @@ custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("1_1bvsq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_suuom")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_6laun")
-theme_override_styles/normal = SubResource("StyleBoxTexture_xkwyg")
 text = "VOLVER A MENU
 "
 script = ExtResource("3_1bvsq")

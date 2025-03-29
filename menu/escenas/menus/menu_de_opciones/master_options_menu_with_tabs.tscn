@@ -13,11 +13,11 @@ script = ExtResource("2_v1rcr")
 [node name="TabContainer" parent="." index="0"]
 current_tab = 0
 
-[node name="Controls" parent="TabContainer" index="1" instance=ExtResource("3_xtp12")]
+[node name="Controles" parent="TabContainer" index="1" instance=ExtResource("3_xtp12")]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Inputs" parent="TabContainer" index="2" instance=ExtResource("4_c3rh2")]
+[node name="Entradas" parent="TabContainer" index="2" instance=ExtResource("4_c3rh2")]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
