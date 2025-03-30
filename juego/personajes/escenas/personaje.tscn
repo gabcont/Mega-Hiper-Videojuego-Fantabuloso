@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://b5wqwx4kssvs3"]
 
-[ext_resource type="Script" uid="uid://b8a74k7dnipg6" path="res://juego/personajes/scripts/personaje.gd" id="1_w5hus"]
+[ext_resource type="Script" uid="uid://bxaimsl31g1es" path="res://juego/personajes/scripts/personaje_con_ia.gd" id="1_w5hus"]
 [ext_resource type="SpriteFrames" uid="uid://1pgfwsf2ida5" path="res://juego/personajes/assets/animaciones/Miku.tres" id="2_w5hus"]
 [ext_resource type="AudioStream" uid="uid://bdd8ytswu53k4" path="res://juego/personajes/assets/sonidos/ataque_1.mp3" id="3_6y3i8"]
 [ext_resource type="AudioStream" uid="uid://b28ohwquhh522" path="res://juego/personajes/assets/sonidos/huida.ogg" id="3_hwi8i"]
