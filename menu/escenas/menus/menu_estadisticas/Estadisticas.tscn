@@ -73,7 +73,7 @@ text = "dfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer"]
 position = Vector2(30, 15)
-animation = &"idle"
+animation = &""
 offset = Vector2(400, 0)
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
@@ -86,7 +86,7 @@ text = "erwerwerwerwerwerwe"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2"]
 position = Vector2(-5, 21)
-animation = &"idle"
+animation = &""
 offset = Vector2(400, 0)
 
 [node name="Tiempo" type="Label" parent="VBoxContainer"]
