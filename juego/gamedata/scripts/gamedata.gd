@@ -9,6 +9,7 @@ var tiempo = 60 # para guadar el tiempo de partida en la bd correctamente
 var input_p1 : String = "vacio"
 var puede_recibir_input : bool
 var salud_p1 : int
+var dificultad_torre : String = "dificil"
 
 func _ready():
 	print("Singleton GameData inicializado")

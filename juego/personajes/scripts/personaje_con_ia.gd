@@ -8,7 +8,7 @@ signal escudo_roto(es_personaje_1 : bool)
 signal ataque_especial_activado(es_personaje_1 : bool)
 signal salud_acabada(es_personaje_1 : bool)
 
-const SALUD_MAXIMA : int = 400
+const SALUD_MAXIMA : int = 800
 var salud : int = SALUD_MAXIMA
 
 const PODER_MAXIMO : int = 100
@@ -44,10 +44,13 @@ var sufijo_personaje : String = "_p1"
 
 var delay_esquivar = 0
 
+var dificultad_partida = ConfigPartida.dificultad_torre
+
 # Debuggin 
 func _process(_delta: float) -> void:
 	actualizar_debug_info()
-	comportamiento_ia()
+	if not es_personaje_1:
+		comportamiento_ia()
 	if es_personaje_1:
 		ConfigPartida.salud_p1 = salud
 		
@@ -75,34 +78,52 @@ func _ready() -> void:
 	input_action_bloquear += sufijo_personaje
 
 func comportamiento_ia():
+	#se encarga de aumentar la dificultad en el ultimo tramo de la partida
+	if ConfigPartida.tiempo==15:
+		if dificultad_partida=="facil":
+			dificultad_partida="medio"
+		if dificultad_partida=="medio":
+			dificultad_partida="dificil"
+		
 	if delay_esquivar>0:
 		delay_esquivar-=1
 		if delay_esquivar==0:
 			input_buffer = "esquivar"
 	else:
-		if PUEDE_RECIBIR_INPUT and not es_personaje_1:
+		if PUEDE_RECIBIR_INPUT:
 			if Input.is_action_just_pressed("A_p1"):
-				accion_ia(10,10,55,10)
+				asignar_probabilidad([10,10,25,25],[25,15,40,15],[55,10,35,5])
+				
 			elif Input.is_action_just_pressed("B_p1"):
-				accion_ia(10,10,35,35)
+				asignar_probabilidad([10,25,25,25],[20,10,30,30],[10,5,40,40])
 			elif Input.is_action_just_pressed("X_p1"):
-				accion_ia(5,30,20,20)	
+				asignar_probabilidad([25,20,20,20],[15,35,20,20],[5,60,15,15])
 			elif Input.is_action_just_pressed("Y_p1"):
-				if ConfigPartida.salud_p1-salud>=50:
-					accion_ia(10,60,10,10)
-				else:
-					accion_ia(10,40,20,20)
+				asignar_probabilidad([25,20,20,20],[15,35,20,20],[5,60,15,15])
 					
 					
 			else:
-				if randi_range(1, 30) == 1: 
-					if ConfigPartida.salud_p1-salud>=50:
-						accion_ia(45,35,10,10)
-					elif salud-ConfigPartida.salud_p1>=50:
-						accion_ia(10,10,40,40)
+				var rango_accion
+				match ConfigPartida.dificultad_torre:
+					"facil":
+						rango_accion = 100
+					"medio":
+						rango_accion = 30
+					"dificil":
+						rango_accion = 15
 						
-					else:
-						accion_ia(40,40,10,10)
+				if randi_range(1, rango_accion) == 1: 
+					
+					accion_ia(40,40,10,10)
+						
+func asignar_probabilidad(p_facil,p_medio,p_dificil):
+	match ConfigPartida.dificultad_torre:
+		"facil":
+			accion_ia(p_facil[0],p_facil[1],p_facil[2],p_facil[3])
+		"medio":
+			accion_ia(p_medio[0],p_medio[1],p_medio[2],p_medio[3])
+		"dificil":
+			accion_ia(p_dificil[0],p_dificil[1],p_dificil[2],p_dificil[3])
 
 #recibe la probabilidad de las 4 acciones del personaje
 func accion_ia(p_a,p_b,p_x,p_y):
@@ -126,6 +147,8 @@ func accion_ia(p_a,p_b,p_x,p_y):
 		input_buffer = "bloquear"
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not es_personaje_1:
+		return
 	if event.is_action(input_action_ataque_debil):
 		input_buffer = "ataque_debil"
 	elif event.is_action(input_action_ataque_fuerte):
