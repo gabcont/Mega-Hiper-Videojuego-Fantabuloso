@@ -8,9 +8,9 @@ var otra_variable: int = 0 # Si tienes alguna otra variable
 var tiempo = 60
 
 enum ModoJuego {
-	VS_JUGADOR,
-	VS_IA,
-	ARCADE
+	VS_JUGADOR, # 0
+	VS_IA, # 1
+	ARCADE # 2
 }
 
 var modo_juego_actual: ModoJuego 
@@ -20,7 +20,6 @@ var escenarios_torre: Dictionary = {}
 
 func _ready():
 	print("Singleton GameData inicializado")
-	# Configurar datos de las torres
 	configurar_datos_torres()
 
 func configurar_datos_torres() -> void:
@@ -40,8 +39,20 @@ func configurar_datos_torres() -> void:
 	personajes_torre[3] = ["sans", "knuckles", "metal sonic"]
 	escenarios_torre[3] = ["sans.tscn", "sonic.tscn", "sonic.tscn"]
 
+func seleccionar_modo_arcade(id_torre: int) -> void:
+	torre_arcade_seleccionada = id_torre
+	print("Torre seleccionada: ", id_torre)
+	print("Personajes disponibles: ", personajes_torre[id_torre])
+	print("Escenarios disponibles: ", escenarios_torre[id_torre])
+
 func obtener_personaje_actual(nivel: int) -> String:
-	return personajes_torre[torre_arcade_seleccionada][nivel]
-	
+	if torre_arcade_seleccionada != -1:
+		return personajes_torre[torre_arcade_seleccionada][nivel]
+	else:
+		return ""
+
 func obtener_escenario_actual(nivel: int) -> String:
-	return escenarios_torre[torre_arcade_seleccionada][nivel]
+	if torre_arcade_seleccionada != -1:
+		return escenarios_torre[torre_arcade_seleccionada][nivel]
+	else:
+		return ""
