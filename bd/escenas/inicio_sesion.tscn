@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0cq6pr0ya4u0"]
+[gd_scene load_steps=13 format=3 uid="uid://c0cq6pr0ya4u0"]
 
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
 [ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
@@ -8,6 +8,10 @@
 [ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="6_gdhcy"]
 [ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="6_v18tg"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="9_6bne6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v18tg"]
+bg_color = Color(0.0352941, 0.0352941, 0.0352941, 0.34902)
+shadow_size = 22
 
 [sub_resource type="Theme" id="Theme_m6y1t"]
 default_font = ExtResource("2_2j7ft")
@@ -42,6 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lt2sq")
+expand_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -51,6 +56,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(350, 230)
+layout_mode = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(800, 0)
 layout_direction = 1
@@ -59,8 +68,15 @@ theme_override_constants/separation = 20
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.164706, 0.309804, 0.701961, 1)
+theme_override_colors/font_outline_color = Color(0.439216, 0.615686, 0.996078, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("2_2j7ft")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_v18tg")
 text = "Iniciar Sesion"
 horizontal_alignment = 1
 uppercase = true

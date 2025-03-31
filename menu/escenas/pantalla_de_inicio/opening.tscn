@@ -6,6 +6,3 @@
 [node name="Opening" instance=ExtResource("1_f5ov5")]
 script = ExtResource("2_rpbu5")
 next_scene = "uid://cibogaqpg6nyk"
-
-[node name="BackgroundMusicPlayer" parent="." index="0"]
-bus = &"Master"

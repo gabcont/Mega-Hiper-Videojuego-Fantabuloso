@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=20 format=3 uid="uid://cne03ynn2oh0a"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://cne03ynn2oh0a"]
 
 [ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="1_hnqk8"]
 [ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="1_mapdu"]
+[ext_resource type="FontFile" uid="uid://tu76soubqjt1" path="res://super-pixel-font/SuperPixel-m2L8j.ttf" id="3_qpfap"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpfap"]
 content_margin_left = 4.0
@@ -38,13 +39,13 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mapdu"]
 texture = ExtResource("1_hnqk8")
-region_rect = Rect2(64, 112, 48, 16)
+region_rect = Rect2(127.51, 49.4546, 47.3167, 16.4732)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qpfap"]
 content_margin_top = 10.0
 content_margin_bottom = 10.0
 texture = ExtResource("1_hnqk8")
-region_rect = Rect2(64, 112, 48, 16)
+region_rect = Rect2(0.310356, 46.6506, 46.2652, 16.8237)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grwyg"]
 texture = ExtResource("1_hnqk8")
@@ -68,7 +69,7 @@ corner_radius_top_left = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mapdu"]
-bg_color = Color(0.118581, 0.118581, 0.118581, 1)
+bg_color = Color(0.278431, 0.278431, 0.278431, 0.788235)
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 5
@@ -76,21 +77,22 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulcur"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 8.0
-bg_color = Color(0.0784314, 0.121569, 0.145098, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvhya"]
+bg_color = Color(0.092397, 0.0923971, 0.092397, 0.772549)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.0431373, 0.0627451, 0.0862745, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+border_color = Color(0.140447, 0.140447, 0.140447, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.713726)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxcku"]
+bg_color = Color(0.894574, 0.353857, 0.794209, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aliwb"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -201,14 +203,15 @@ Button/styles/pressed = SubResource("StyleBoxTexture_grwyg")
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/shadow_offset_x = 5
 Label/constants/shadow_offset_y = 5
-Label/font_sizes/font_size = 30
-Label/fonts/font = ExtResource("1_mapdu")
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("3_qpfap")
+Label/styles/normal = null
 LeftStaminaBar/base_type = &"ProgressBar"
 LeftStaminaBar/styles/background = SubResource("StyleBoxFlat_ywrjj")
 LeftStaminaBar/styles/fill = SubResource("StyleBoxFlat_tyerd")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_mapdu")
-Panel/styles/panel = SubResource("StyleBoxFlat_ulcur")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_ulcur")
+Panel/styles/panel = SubResource("StyleBoxFlat_lvhya")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_fxcku")
 RightStaminaBar/base_type = &"ProgressBar"
 RightStaminaBar/styles/background = SubResource("StyleBoxFlat_aliwb")
 RightStaminaBar/styles/fill = SubResource("StyleBoxFlat_tnl2j")

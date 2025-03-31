@@ -86,7 +86,7 @@ theme_override_constants/separation = 700
 layout_mode = 2
 theme = ExtResource("5_jht0r")
 theme_override_font_sizes/font_size = 24
-text = "          JUGADOR  1"
+text = " JUGADOR  1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
