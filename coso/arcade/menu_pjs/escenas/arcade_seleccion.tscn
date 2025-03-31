@@ -1,0 +1,158 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1ulopn6lqlvh"]
+
+[ext_resource type="Script" uid="uid://dmfpl8p77c5y6" path="res://menu/escenas/arcade/menu_pjs/scripts/arcade_seleccion.gd" id="1_f50wk"]
+[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_olh3a"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_fwus7"]
+[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/Universidad.tscn" id="4_t8kmt"]
+[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="5_38lxv"]
+
+[node name="MenuPersonajes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f50wk")
+
+[node name="UISoundController" type="Node" parent="."]
+script = ExtResource("2_olh3a")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_fwus7")]
+bus = &"Master"
+
+[node name="FondoRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11, 0.11, 0.11, 0.611765)
+
+[node name="Fondo" parent="FondoRect" instance=ExtResource("4_t8kmt")]
+z_index = -1
+layout_mode = 1
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "ESCOGE EL PERSONAJE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 92
+
+[node name="SubTitleContainer" type="Control" parent="MenuContainer/SubTitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/SubTitleMargin/SubTitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 437.0
+offset_right = 16.0
+offset_bottom = 483.0
+grow_horizontal = 2
+theme_override_constants/separation = 700
+
+[node name="personaje1" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_38lxv")
+theme_override_font_sizes/font_size = 24
+text = "          JUGADOR  1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuButtonsContainer" type="Control" parent="MenuContainer/MenuButtonsMargin"]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -53.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="jugador1_sprite" type="AnimatedSprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+position = Vector2(268, 189)
+scale = Vector2(7.29688, 7.26563)
+animation = &""
+
+[node name="GridPersonajes" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 31
+columns = 4
+
+[node name="VBoxContainer" type="CanvasLayer" parent="."]
+offset = Vector2(100, 570)
+transform = Transform2D(1, 0, 0, 1, 100, 570)
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+offset_top = 6.0
+offset_right = 82.0
+offset_bottom = 41.0
+size_flags_horizontal = 8
+theme = ExtResource("5_38lxv")
+uppercase = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 374.0
+offset_right = 574.0
+offset_bottom = 47.0
+mouse_default_cursor_shape = 2
+text = "SELECCIONAR"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+offset_left = 843.0
+offset_top = 6.0
+offset_right = 925.0
+offset_bottom = 41.0
+theme = ExtResource("5_38lxv")
+uppercase = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="seleccionar_jugador"]
