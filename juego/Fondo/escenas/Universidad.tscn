@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://7i8gxnv1lx3l"]
+[gd_scene load_steps=10 format=3 uid="uid://7i8gxnv1lx3l"]
 
-[ext_resource type="Script" uid="uid://dua5tnresat0h" path="res://juego/Fondo/scripts/fondo.gd" id="1_ga6v1"]
 [ext_resource type="Shader" uid="uid://cib3kjdmmgxdj" path="res://juego/Fondo/shaders/fondo.gdshader" id="1_rurq4"]
 [ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/Fondo/assets/imagenes/Untitled.jpg" id="4_s5be1"]
 [ext_resource type="Texture2D" uid="uid://mnxlwlmag0u1" path="res://juego/Fondo/assets/imagenes/back.png" id="5_s5be1"]
@@ -33,7 +32,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ga6v1")
 
 [node name="Simple" type="Control" parent="."]
 layout_mode = 1

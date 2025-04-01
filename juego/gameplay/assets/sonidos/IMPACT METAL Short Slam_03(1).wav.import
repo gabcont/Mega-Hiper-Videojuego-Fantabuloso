@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bkt4qut06lw54"
+path="res://.godot/imported/IMPACT METAL Short Slam_03(1).wav-d38579887a9a85c13ed36f1104ff416d.sample"
+
+[deps]
+
+source_file="res://juego/gameplay/assets/sonidos/IMPACT METAL Short Slam_03(1).wav"
+dest_files=["res://.godot/imported/IMPACT METAL Short Slam_03(1).wav-d38579887a9a85c13ed36f1104ff416d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

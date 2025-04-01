@@ -56,7 +56,4 @@ func iniciar_sesion(usuario,contrasena):
 		if not es_correcto:
 			statusLabel.text = "Usuario o contraseña incorrectos"
 		else:
-			Db.set_usuario_id(registrado[0]["id"])
-			Transicion.transicion()
-			await Transicion.on_transition_finished
-			get_tree().change_scene_to_file(path_escena_destino)
+			SceneLoader.load_scene(path_escena_destino)

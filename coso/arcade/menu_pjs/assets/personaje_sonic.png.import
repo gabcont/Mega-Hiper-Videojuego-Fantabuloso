@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn2w83s7bq2xe"
-path="res://.godot/imported/personaje_sonic.png-bc8507c83ae91b5f319330eea58c6c3b.ctex"
+path="res://.godot/imported/personaje_sonic.png-2eb10b11221ca768d98b1fd1d2af49df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/personaje_sonic.png"
-dest_files=["res://.godot/imported/personaje_sonic.png-bc8507c83ae91b5f319330eea58c6c3b.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/personaje_sonic.png"
+dest_files=["res://.godot/imported/personaje_sonic.png-2eb10b11221ca768d98b1fd1d2af49df.ctex"]
 
 [params]
 

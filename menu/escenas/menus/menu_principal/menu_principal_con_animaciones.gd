@@ -39,7 +39,5 @@ func _ready():
 func _on_continue_game_button_pressed():
 	load_game_scene()
 
-
-
 func _on_estadisticas_pressed() -> void:
 	SceneLoader.load_scene("res://menu/escenas/menus/menu_estadisticas/Estadisticas.tscn")

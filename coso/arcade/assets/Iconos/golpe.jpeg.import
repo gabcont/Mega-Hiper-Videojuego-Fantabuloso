@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcsuepc4gd2bp"
-path="res://.godot/imported/golpe.jpeg-d026795135a65e35de986c7395ad45f4.ctex"
+path="res://.godot/imported/golpe.jpeg-7e35ab7acc6368a5f04e6476ebd15e78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/golpe.jpeg"
-dest_files=["res://.godot/imported/golpe.jpeg-d026795135a65e35de986c7395ad45f4.ctex"]
+source_file="res://coso/arcade/assets/Iconos/golpe.jpeg"
+dest_files=["res://.godot/imported/golpe.jpeg-7e35ab7acc6368a5f04e6476ebd15e78.ctex"]
 
 [params]
 

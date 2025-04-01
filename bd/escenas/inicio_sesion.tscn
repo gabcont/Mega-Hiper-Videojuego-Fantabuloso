@@ -1,29 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0cq6pr0ya4u0"]
+[gd_scene load_steps=9 format=3 uid="uid://c0cq6pr0ya4u0"]
 
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_88ils"]
 [ext_resource type="Script" uid="uid://deyxf4dbaw7lg" path="res://bd/scripts/iniciar_sesion.gd" id="1_kb8y8"]
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_lt2sq"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_v18tg"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
+[ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="2_huqs2"]
 [ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="6_gdhcy"]
-[ext_resource type="Texture2D" uid="uid://u41gmage3lj0" path="res://Full Sprite Sheet.png" id="6_v18tg"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="9_6bne6"]
 
 [sub_resource type="Theme" id="Theme_m6y1t"]
 default_font = ExtResource("2_2j7ft")
 default_font_size = 12
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdhcy"]
-texture = ExtResource("6_v18tg")
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
-region_rect = Rect2(0, 112, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v18tg"]
-texture = ExtResource("6_v18tg")
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
-region_rect = Rect2(128, 114, 48, 14)
 
 [node name="Inicio" type="Control"]
 layout_mode = 3
@@ -34,14 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_v18tg")
 
-[node name="FondoMenu" type="TextureRect" parent="."]
+[node name="FondoMenu" parent="." instance=ExtResource("2_huqs2")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_lt2sq")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -111,9 +92,6 @@ theme = SubResource("Theme_m6y1t")
 theme_override_constants/h_separation = 20
 theme_override_fonts/font = ExtResource("6_gdhcy")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/hover = SubResource("StyleBoxTexture_gdhcy")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_v18tg")
-theme_override_styles/normal = SubResource("StyleBoxTexture_gdhcy")
 text = "Entrar"
 script = ExtResource("1_kb8y8")
 path_escena_destino = "res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn"

@@ -65,8 +65,6 @@ func registrar(usuario,contrasena):
 			var usuario_id = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["id"])[0]["id"]
 			Db.set_usuario_id(usuario_id)
 			
-			Transicion.transicion()
-			await Transicion.on_transition_finished
-			get_tree().change_scene_to_file(path_escena_destino)
+			SceneLoader.load_scene(path_escena_destino)
 		
 	

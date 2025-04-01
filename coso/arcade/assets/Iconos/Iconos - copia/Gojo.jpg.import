@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yk5kryxc652w"
-path="res://.godot/imported/Gojo.jpg-252cbdec4180eca00f374e207205f968.ctex"
+path="res://.godot/imported/Gojo.jpg-b802f5a93b7fe5d2252b2707e9935e62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Gojo.jpg"
-dest_files=["res://.godot/imported/Gojo.jpg-252cbdec4180eca00f374e207205f968.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Gojo.jpg"
+dest_files=["res://.godot/imported/Gojo.jpg-b802f5a93b7fe5d2252b2707e9935e62.ctex"]
 
 [params]
 

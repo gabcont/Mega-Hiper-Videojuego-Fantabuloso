@@ -62,6 +62,4 @@ func cargar_fondo(ruta_escena):
 
 func _on_seleccionar_pressed() -> void:
 	ConfigPartida.escenario_seleccionado = label_estado.text
-	Transicion.transicion()
-	await Transicion.on_transition_finished
-	get_tree().change_scene_to_file(path_siguiente_escena)
+	SceneLoader.load_scene(path_siguiente_escena)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp77v74gg42qq"
-path="res://.godot/imported/klipartz.com.png-959c06406cffc72a2adde9e4b8af200c.ctex"
+path="res://.godot/imported/klipartz.com.png-e954995b750a8374ea638191350e8c05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/klipartz.com.png"
-dest_files=["res://.godot/imported/klipartz.com.png-959c06406cffc72a2adde9e4b8af200c.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/klipartz.com.png"
+dest_files=["res://.godot/imported/klipartz.com.png-e954995b750a8374ea638191350e8c05.ctex"]
 
 [params]
 

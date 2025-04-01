@@ -1,24 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=7 format=3 uid="uid://cj7710d2bm8s8"]
 
 [ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_7ttgg"]
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_kc4kg"]
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_tkpd7"]
-[ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_fchot"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_m6man"]
+[ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="2_qxv48"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="8_x6ka1"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxv48"]
-texture = ExtResource("2_fchot")
-region_rect = Rect2(0, 112, 48, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkpd7"]
-texture = ExtResource("2_fchot")
-region_rect = Rect2(128, 114, 48, 14)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6man"]
-texture = ExtResource("2_fchot")
-region_rect = Rect2(0, 112, 48, 16)
 
 [node name="Registro" type="Control"]
 show_behind_parent = true
@@ -30,14 +17,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_7ttgg")
 
-[node name="FondoMenu" type="TextureRect" parent="."]
+[node name="FondoMenu" parent="." instance=ExtResource("2_qxv48")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_tkpd7")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -103,9 +84,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 theme_override_constants/h_separation = 20
-theme_override_styles/hover = SubResource("StyleBoxTexture_qxv48")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_tkpd7")
-theme_override_styles/normal = SubResource("StyleBoxTexture_m6man")
 text = "Registrar"
 script = ExtResource("1_0geqs")
 path_escena_destino = "res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn"

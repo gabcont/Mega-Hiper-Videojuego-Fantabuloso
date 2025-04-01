@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddq74780lf3ev"
-path="res://.godot/imported/50 Cent.jpg-b5fd712af8a6e29af66373fa72c3bafd.ctex"
+path="res://.godot/imported/50 Cent.jpg-bfb6621d9fe94d7559594aa6fb903603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/50 Cent.jpg"
-dest_files=["res://.godot/imported/50 Cent.jpg-b5fd712af8a6e29af66373fa72c3bafd.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/50 Cent.jpg"
+dest_files=["res://.godot/imported/50 Cent.jpg-bfb6621d9fe94d7559594aa6fb903603.ctex"]
 
 [params]
 

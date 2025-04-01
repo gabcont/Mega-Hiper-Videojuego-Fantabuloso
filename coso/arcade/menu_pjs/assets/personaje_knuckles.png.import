@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ldglmxsuux6e"
-path="res://.godot/imported/personaje_knuckles.png-6c4e6f9413c44cde92b2af9357c6750f.ctex"
+path="res://.godot/imported/personaje_knuckles.png-dd35cbe815c5ccb18d45149ffa0e41e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/personaje_knuckles.png"
-dest_files=["res://.godot/imported/personaje_knuckles.png-6c4e6f9413c44cde92b2af9357c6750f.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/personaje_knuckles.png"
+dest_files=["res://.godot/imported/personaje_knuckles.png-dd35cbe815c5ccb18d45149ffa0e41e0.ctex"]
 
 [params]
 

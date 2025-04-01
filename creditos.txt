@@ -1,0 +1,49 @@
+SONIDO:
+
+DODGE, BLOCK
+https://gamesounds.xyz/?dir=Sonniss.com%20-%20GDC%202020%20-%20Game%20Audio%20Bundle/SmartSoundFX%20-%20Impacts%2C%20Hits%20%26%20Whooshes
+
+ARE YOU READY
+https://gamesounds.xyz/?dir=Sonniss.com%20-%20GDC%202020%20-%20Game%20Audio%20Bundle/Articulated%20Sounds%20-%20Voice%20of%20God%20-%20Game%20Phrases
+
+BREAK
+https://gamesounds.xyz/?dir=Sonniss.com%20-%20GDC%202019%20-%20Game%20Audio%20Bundle/Impact%20Soundworks%20-%20Super%20FX%208%20and%2016-bit%20Video%20Game%20SFX
+
+esquivar
+https://freesound.org/people/ihitokage/sounds/395357/
+
+golpe 1
+https://freesound.org/people/Jofae/sounds/361636/
+
+golpe 2
+https://freesound.org/people/OwlStorm/sounds/404766/
+
+golpe fuerte
+https://freesound.org/people/Mrthenoronha/sounds/506586/
+
+preparar ataque fuerte
+https://freesound.org/people/IndyTheCringeMaster/sounds/777567/
+
+herido
+https://freesound.org/people/LittleRobotSoundFactory/sounds/270332/
+
+MENU:
+
+Template
+https://github.com/Maaack/Godot-Menus-Template/blob/main/README.md#usage 
+
+HUD:
+
+Barra vida, Reloj, Mensajes
+https://wenrexa.itch.io/ui-different02
+
+botones partida
+https://arks.itch.io/xbox-buttons?download
+
+Personajes:
+
+sprites
+https://www.patreon.com/posts/wop-pixel-art-1-113746732
+
+burbuja
+https://cassala.itch.io/bubble-sprites

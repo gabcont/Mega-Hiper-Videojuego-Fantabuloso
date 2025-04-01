@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccgls6enwl13u"
-path="res://.godot/imported/personaje_miku.png-efb55e0bdc6afc6e9da90bcde3bb13e7.ctex"
+path="res://.godot/imported/personaje_miku.png-55140ab61f6f4a1fabc5e0e9fd2a923d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/personaje_miku.png"
-dest_files=["res://.godot/imported/personaje_miku.png-efb55e0bdc6afc6e9da90bcde3bb13e7.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/personaje_miku.png"
+dest_files=["res://.godot/imported/personaje_miku.png-55140ab61f6f4a1fabc5e0e9fd2a923d.ctex"]
 
 [params]
 

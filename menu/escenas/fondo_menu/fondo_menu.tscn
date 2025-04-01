@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://btjrxukjg0x11"]
+
+[ext_resource type="Script" uid="uid://dy2aro5dhf3yh" path="res://menu/escenas/fondo_menu/fondo_menu.gd" id="1_mbx56"]
+[ext_resource type="Texture2D" uid="uid://c5g6ib1hubvmc" path="res://menu/assets/fondo_menu/monumento.jpg" id="2_jm1oa"]
+
+[node name="FondoMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mbx56")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jm1oa")
+expand_mode = 1

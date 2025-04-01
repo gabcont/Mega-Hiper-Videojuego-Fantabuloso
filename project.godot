@@ -13,12 +13,10 @@ config_version=5
 config/name="Strit faiter"
 run/main_scene="uid://bbhkoswnwc7qm"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
 Db="*res://bd/scripts/db.gd"
-Transicion="*res://menu_viejo/transicion/transicion.tscn"
 AppConfig="*res://addons/maaacks_menus_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
@@ -35,7 +33,7 @@ enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-
 
 [gui]
 
-theme/custom="res://menu/recursos/temas/lab.tres"
+theme/custom="uid://b3spbcp7hnumq"
 
 [input]
 

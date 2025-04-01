@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b5wqwx4kssvs3"]
+[gd_scene load_steps=22 format=3 uid="uid://b5wqwx4kssvs3"]
 
 [ext_resource type="Script" uid="uid://bxaimsl31g1es" path="res://juego/personajes/scripts/personaje_con_ia.gd" id="1_w5hus"]
 [ext_resource type="SpriteFrames" uid="uid://1pgfwsf2ida5" path="res://juego/personajes/assets/animaciones/Miku.tres" id="2_w5hus"]
@@ -7,7 +7,6 @@
 [ext_resource type="Material" uid="uid://csc7q1f2llg2o" path="res://juego/personajes/shaders/rainbowmaterial.tres" id="3_q3q4w"]
 [ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://juego/personajes/assets/sonidos/ataque_especial.wav" id="4_2sir4"]
 [ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://juego/personajes/assets/sonidos/preparar_ataque.wav" id="4_up0a1"]
-[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://juego/personajes/assets/sonidos/bloquear.wav" id="6_m4qet"]
 [ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://juego/personajes/assets/sonidos/herido.wav" id="7_dh6ai"]
 [ext_resource type="PackedScene" uid="uid://cefm4dpmtuv64" path="res://juego/personajes/escenas/burbuja.tscn" id="9_mhd2b"]
 
@@ -737,12 +736,8 @@ tracks/2/path = NodePath("../Sonido/SFX")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("6_m4qet")
-}],
-"times": PackedFloat32Array(0)
+"clips": [],
+"times": PackedFloat32Array()
 }
 tracks/2/use_blend = true
 tracks/3/type = "method"

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct254ucvfimqb"
-path="res://.godot/imported/Metal Sonic.jpg-04f6c3071edb748ac4058caa0de29778.ctex"
+path="res://.godot/imported/Metal Sonic.jpg-622427fa940091859ec4f8d31858ab7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Metal Sonic.jpg"
-dest_files=["res://.godot/imported/Metal Sonic.jpg-04f6c3071edb748ac4058caa0de29778.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Metal Sonic.jpg"
+dest_files=["res://.godot/imported/Metal Sonic.jpg-622427fa940091859ec4f8d31858ab7c.ctex"]
 
 [params]
 

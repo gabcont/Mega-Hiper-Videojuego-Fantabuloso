@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da02rwt2yr4sl"
-path="res://.godot/imported/Naruto.jpg-54199ca544b6e3abed425f4bfc6c6ec4.ctex"
+path="res://.godot/imported/Naruto.jpg-ea4c56564c5ca98532c8bcdfdba5f987.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Naruto.jpg"
-dest_files=["res://.godot/imported/Naruto.jpg-54199ca544b6e3abed425f4bfc6c6ec4.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Naruto.jpg"
+dest_files=["res://.godot/imported/Naruto.jpg-ea4c56564c5ca98532c8bcdfdba5f987.ctex"]
 
 [params]
 

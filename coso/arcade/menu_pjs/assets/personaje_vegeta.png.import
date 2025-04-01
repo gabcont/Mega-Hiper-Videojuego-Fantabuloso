@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bri1tqdfsinhk"
-path="res://.godot/imported/personaje_vegeta.png-36ab3beb3d74c3f15f84cfe00c794b55.ctex"
+path="res://.godot/imported/personaje_vegeta.png-174c3b1fe1423a27922c51ee778ca8f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/personaje_vegeta.png"
-dest_files=["res://.godot/imported/personaje_vegeta.png-36ab3beb3d74c3f15f84cfe00c794b55.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/personaje_vegeta.png"
+dest_files=["res://.godot/imported/personaje_vegeta.png-174c3b1fe1423a27922c51ee778ca8f2.ctex"]
 
 [params]
 

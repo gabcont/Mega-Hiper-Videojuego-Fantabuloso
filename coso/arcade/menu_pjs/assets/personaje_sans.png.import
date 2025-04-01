@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o77go8c5po86"
-path="res://.godot/imported/personaje_sans.png-f69b75bf3062356644ae4a5f99d5d080.ctex"
+path="res://.godot/imported/personaje_sans.png-6d6e4c8f48356cfc629488df0528831b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/menu_pjs/assets/personaje_sans.png"
-dest_files=["res://.godot/imported/personaje_sans.png-f69b75bf3062356644ae4a5f99d5d080.ctex"]
+source_file="res://coso/arcade/menu_pjs/assets/personaje_sans.png"
+dest_files=["res://.godot/imported/personaje_sans.png-6d6e4c8f48356cfc629488df0528831b.ctex"]
 
 [params]
 
