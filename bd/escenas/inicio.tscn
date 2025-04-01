@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbhkoswnwc7qm"]
+[gd_scene load_steps=7 format=3 uid="uid://bbhkoswnwc7qm"]
 
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_f7n8u"]
 [ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_lt2sq"]
-[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_2j7ft"]
+[ext_resource type="FontFile" uid="uid://tu76soubqjt1" path="res://super-pixel-font/SuperPixel-m2L8j.ttf" id="3_2j7ft"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="4_5tuii"]
+[ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_name_label.gd" id="4_lt2sq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7n8u"]
+bg_color = Color(0.982343, 0.982342, 0.982342, 1)
+border_width_left = 10
+border_width_right = 10
+border_width_bottom = 10
+shadow_size = 15
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,48 +27,94 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -161.5
+offset_right = 64.0
+offset_bottom = 161.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lt2sq")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="TitleMargin" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_top = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="TitleContainer" type="Control" parent="TitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 149.0
+offset_right = -170.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.166299, 0.310397, 0.703517, 1)
+theme_override_colors/font_outline_color = Color(0.440552, 0.616947, 0.995171, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("3_2j7ft")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_f7n8u")
+text = "Strit faiter"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_lt2sq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -136.5
+offset_right = 250.0
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_2j7ft")
-theme_override_font_sizes/font_size = 40
-text = "Strit Faiter"
-
-[node name="Inicio" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Inicio" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 30
-text = "Iniciar sesión
+text = "INICIAR SESION
 "
 script = ExtResource("4_5tuii")
 path_escena_destino = "res://bd/escenas/inicio_sesion.tscn"
 
-[node name="Registro" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Registro" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 30
-text = "Registrarse
+text = "REGISTRARSE
 "
 script = ExtResource("4_5tuii")
 path_escena_destino = "res://bd/escenas/registro.tscn"

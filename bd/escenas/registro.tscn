@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=12 format=3 uid="uid://cj7710d2bm8s8"]
 
 [ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_7ttgg"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://8a2775qyltvu" path="res://Assets/botones.png" id="2_fchot"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_m6man"]
 [ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="8_x6ka1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkpd7"]
+bg_color = Color(0.0352941, 0.0352941, 0.0352941, 0.34902)
+shadow_size = 22
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxv48"]
 texture = ExtResource("2_fchot")
@@ -38,6 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tkpd7")
+expand_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -47,17 +52,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(350, 230)
+layout_mode = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(800, 0)
 layout_direction = 1
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Titulo2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.164706, 0.309804, 0.701961, 1)
+theme_override_colors/font_outline_color = Color(0.439216, 0.615686, 0.996078, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("2_m6man")
 theme_override_font_sizes/font_size = 30
-text = "Crear Usuario"
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkpd7")
+text = "CREAR USUARIO"
 horizontal_alignment = 1
 uppercase = true
 

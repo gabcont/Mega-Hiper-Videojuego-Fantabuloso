@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx2t3hbacw3gw"]
+[gd_scene load_steps=18 format=3 uid="uid://bx2t3hbacw3gw"]
 
 [ext_resource type="Script" uid="uid://84logh0eusip" path="res://menu/escenas/menus/menu_escenarios/scripts/menu_escenarios.gd" id="1_611dw"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_u1d3s"]
@@ -8,10 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://e5ilcntoomb" path="res://menu/escenas/menus/menu_escenarios/assets/fondo1.png" id="5_vvew0"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="6_khkyr"]
 [ext_resource type="Texture2D" uid="uid://bpn0ps1x814p2" path="res://menu/escenas/menus/menu_escenarios/assets/fondo2.png" id="6_qxkr8"]
+[ext_resource type="Shader" uid="uid://ywlosojlpc4i" path="res://menu/escenas/menus/menu_escenarios/escenas/MenuEscenarios.gdshader" id="7_hw5x1"]
 [ext_resource type="Texture2D" uid="uid://cooyi36oblxyj" path="res://menu/escenas/menus/menu_escenarios/assets/fondo3.png" id="7_l3cxt"]
 [ext_resource type="Texture2D" uid="uid://4e1g4oo88q15" path="res://menu/escenas/menus/menu_escenarios/assets/fondo4.png" id="8_sc663"]
 [ext_resource type="Texture2D" uid="uid://b30th00eas5dh" path="res://menu/escenas/menus/menu_escenarios/assets/fondo5.png" id="9_aph36"]
-[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/Fondo/assets/imagenes/Untitled.jpg" id="11_qvmo2"]
+[ext_resource type="Texture2D" uid="uid://djgb2oidi52mk" path="res://menu/escenas/menus/menu_escenarios/assets/estatua.png" id="13_6vk66"]
+[ext_resource type="Texture2D" uid="uid://bcdcolxkndoiu" path="res://menu/escenas/menus/menu_escenarios/assets/plaza.png" id="14_dhpwh"]
+[ext_resource type="Texture2D" uid="uid://duqyysrpscx1y" path="res://menu/escenas/menus/menu_escenarios/assets/pizarra.png" id="15_prnag"]
+[ext_resource type="Texture2D" uid="uid://c3t6hqbb6ys80" path="res://menu/escenas/menus/menu_escenarios/assets/cancha.png" id="16_yk3ja"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hw5x1"]
+shader = ExtResource("7_hw5x1")
+shader_parameter/overlay_color = Color(1, 0, 0, 0.541176)
 
 [node name="MenuEscenarios" type="Control"]
 layout_mode = 3
@@ -104,7 +112,7 @@ mouse_filter = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 67.0
+offset_bottom = 49.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
 text = "ESCOGE EL ESCENARIO"
@@ -121,10 +129,13 @@ mouse_filter = 2
 
 [node name="subtitulo" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 26.0
-offset_bottom = 72.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -181.0
+offset_top = -6.0
+offset_right = 182.0
+offset_bottom = 40.0
 grow_horizontal = 2
 theme = ExtResource("6_khkyr")
 theme_override_font_sizes/font_size = 24
@@ -145,10 +156,10 @@ mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 layout_mode = 1
-offset_left = 187.0
-offset_top = 70.0
-offset_right = 227.0
-offset_bottom = 110.0
+offset_left = 253.0
+offset_top = 12.0
+offset_right = 286.0
+offset_bottom = 61.0
 scale = Vector2(19.5163, 9.08513)
 color = Color(0, 0, 0, 1)
 
@@ -159,27 +170,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -305.0
-offset_top = -165.5
-offset_right = 305.0
-offset_bottom = 165.5
+offset_left = -309.0
+offset_top = -234.0
+offset_right = 313.0
+offset_bottom = 201.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(90, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/h_separation = 5
+theme_override_constants/h_separation = 11
 theme_override_constants/v_separation = 15
 columns = 3
 
 [node name="Caricuao" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 150)
+material = SubResource("ShaderMaterial_hw5x1")
+custom_minimum_size = Vector2(200, 130)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -188,7 +200,7 @@ texture_normal = ExtResource("5_vvew0")
 
 [node name="Helado" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 150)
+custom_minimum_size = Vector2(200, 135)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -197,16 +209,16 @@ texture_normal = ExtResource("6_qxkr8")
 
 [node name="Callejon" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 150)
+custom_minimum_size = Vector2(200, 130)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_l3cxt")
 
 [node name="Ciudad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 150)
+custom_minimum_size = Vector2(200, 130)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -215,21 +227,48 @@ texture_normal = ExtResource("8_sc663")
 
 [node name="Restaurant" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 130)
+custom_minimum_size = Vector2(200, 130)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_aph36")
 
-[node name="Universidad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Estatua" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 150)
+custom_minimum_size = Vector2(200, 130)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("11_qvmo2")
+texture_normal = ExtResource("13_6vk66")
+
+[node name="Plaza" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_dhpwh")
+
+[node name="Pizarra" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_prnag")
+
+[node name="Cancha" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16_yk3ja")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -239,10 +278,14 @@ transform = Transform2D(1, 0, 0, 1, 100, 570)
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
-offset_left = 370.0
-offset_top = 9.0
-offset_right = 570.0
-offset_bottom = 56.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.0
+offset_top = 23.0
+offset_right = 2.0
+offset_bottom = 74.0
+grow_horizontal = 2
 mouse_default_cursor_shape = 2
 text = "SELECCIONAR"
 

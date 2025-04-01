@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://e8wh21hs5whq"]
+
+[ext_resource type="Script" uid="uid://dua5tnresat0h" path="res://juego/Fondo/scripts/fondo.gd" id="1_gb3da"]
+[ext_resource type="Shader" uid="uid://cib3kjdmmgxdj" path="res://juego/Fondo/shaders/fondo.gdshader" id="2_sbqle"]
+[ext_resource type="Texture2D" uid="uid://c574trbqx65pb" path="res://juego/Fondo/assets/imagenes/plaza1.png" id="3_gb3da"]
+[ext_resource type="Texture2D" uid="uid://mnxlwlmag0u1" path="res://juego/Fondo/assets/imagenes/back.png" id="4_timdg"]
+[ext_resource type="Shader" uid="uid://csokapbvyhxls" path="res://juego/Fondo/shaders/auto_scroller.gdshader" id="5_l6l1m"]
+[ext_resource type="Texture2D" uid="uid://breq2e4hdjvx6" path="res://juego/Fondo/assets/imagenes/middle.png" id="6_jua1d"]
+[ext_resource type="Texture2D" uid="uid://c0hp7gt6l6kaf" path="res://juego/Fondo/assets/imagenes/foreground.png" id="7_4j2y8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ga6v1"]
+shader = ExtResource("2_sbqle")
+shader_parameter/move_speed = 0.5
+shader_parameter/move_amount = 0.1
+shader_parameter/zoom_speed = 0.632
+shader_parameter/zoom_min = 1.15
+shader_parameter/zoom_max = 1.3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32djt"]
+shader = ExtResource("5_l6l1m")
+shader_parameter/direction = Vector2(1, 0)
+shader_parameter/speed_scale = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_va856"]
+shader = ExtResource("5_l6l1m")
+shader_parameter/direction = Vector2(1, 0)
+shader_parameter/speed_scale = 0.02
+
+[node name="Fondo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gb3da")
+
+[node name="Simple" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Simple"]
+material = SubResource("ShaderMaterial_ga6v1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_gb3da")
+expand_mode = 1
+
+[node name="Parallax" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackFixedTexture" type="TextureRect" parent="Parallax"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_timdg")
+
+[node name="TextureRectMiddle" type="TextureRect" parent="Parallax"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_32djt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jua1d")
+
+[node name="TextureRectForeground" type="TextureRect" parent="Parallax"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_va856")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4j2y8")

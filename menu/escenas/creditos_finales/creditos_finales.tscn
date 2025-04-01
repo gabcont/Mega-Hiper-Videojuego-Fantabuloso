@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chxh24p6vokpc"]
 
 [ext_resource type="PackedScene" uid="uid://d3a41irydyqfq" path="res://menu/escenas/menus/menu_de_opciones/creditos/creditos.tscn" id="1_la0dc"]
-[ext_resource type="Script" uid="uid://pxo5p264v1iq" path="res://menu/escenas/creditos_finales/creditos_finales.gd" id="2_8ojc8"]
+[ext_resource type="Script" uid="uid://pxo5p264v1iq" path="res://menu/creditos_finales.gd" id="2_8ojc8"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_npspc"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="4_w4fgu"]
 
