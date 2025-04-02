@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3a41irydyqfq"]
+[gd_scene load_steps=3 format=3 uid="uid://d3a41irydyqfq"]
 
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_menus_template/base/scenes/credits/credits.tscn" id="1_2cyut"]
 [ext_resource type="Script" uid="uid://o6odpwsmxdvw" path="res://menu/escenas/menus/menu_de_opciones/creditos/creditos.gd" id="2_cesgp"]
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="3_iklt1"]
 
 [node name="Credits" instance=ExtResource("1_2cyut")]
 script = ExtResource("2_cesgp")
@@ -15,7 +14,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="BackgroundColor" index="0"]
 layout_mode = 1
@@ -24,7 +22,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_iklt1")
 expand_mode = 1
 stretch_mode = 5
 

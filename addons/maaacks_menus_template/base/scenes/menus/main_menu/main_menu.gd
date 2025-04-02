@@ -58,14 +58,6 @@ func _setup_options():
 		options_scene = options_packed_scene.instantiate()
 		options_scene.hide()
 		%OptionsContainer.call_deferred("add_child", options_scene)
-		
-func _setup_estadisticas():
-	if options_packed_scene == null:
-		%OptionsButton.hide()
-	else:
-		options_scene = options_packed_scene.instantiate()
-		options_scene.hide()
-		%OptionsContainer.call_deferred("add_child", options_scene)
 
 func _setup_credits():
 	if credits_packed_scene == null:

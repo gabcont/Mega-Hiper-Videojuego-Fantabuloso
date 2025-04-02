@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://b35p7sdtivuom"]
+
+[ext_resource type="Texture2D" uid="uid://dwox2p3i2c3oj" path="res://coso/arcade/assets/assets_arcade/DBZ.png" id="2_8w7n5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj4o3"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(3140, 0, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp803"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(0, 307, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0p5v"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(785, 307, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2da2"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(1570, 307, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq58b"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(2355, 307, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smduk"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(3140, 307, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eas7g"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(0, 614, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhbcj"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(785, 614, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsdnw"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(1570, 614, 785, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6clii"]
+atlas = ExtResource("2_8w7n5")
+region = Rect2(2355, 614, 785, 307)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxohw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj4o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp803")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0p5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2da2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq58b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smduk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eas7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhbcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsdnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6clii")
+}],
+"loop": true,
+"name": &"fondo",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(577.999, 340.71)
+scale = Vector2(1.47516, 2.20658)
+sprite_frames = SubResource("SpriteFrames_vxohw")
+animation = &"fondo"
+autoplay = "fondo"
+frame_progress = 0.0925163
+speed_scale = 2.0

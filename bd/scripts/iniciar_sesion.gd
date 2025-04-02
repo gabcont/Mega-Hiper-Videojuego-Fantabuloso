@@ -1,16 +1,17 @@
-extends Button
-@onready var statusLabel = get_node("../../StatusLabel")
+extends Control
 
-@export var path_escena_destino: String
+signal sesion_iniciada
+
+@onready var statusLabel = %StatusLabel
 
 func _ready():
 	# Conecta la señal "pressed" del botón a la función "on_button_pressed"
-	pressed.connect(on_button_pressed)
+	%IniciarSesionButton.pressed.connect(on_button_pressed)
 
 func on_button_pressed():
 	# Obtiene referencias a los nodos LineEdit
-	var line_edit_usuario = get_node("../../LineEdit") # Ajusta la ruta si es necesario
-	var line_edit_contrasena = get_node("../../LineEdit2") # Ajusta la ruta si es necesario
+	var line_edit_usuario = %CajaTextoUsuario # Ajusta la ruta si es necesario
+	var line_edit_contrasena = %CajaTextoContrasena # Ajusta la ruta si es necesario
 	# Obtiene el texto de los LineEdit
 	var usuario = line_edit_usuario.text
 	var contrasena = line_edit_contrasena.text
@@ -20,9 +21,6 @@ func on_button_pressed():
 		statusLabel.text = "Llene todos los campos"
 		return
 	iniciar_sesion(usuario,contrasena)
-	
-	
-
 	
 func iniciar_sesion(usuario,contrasena):
 	var db = Db.conectar_base()
@@ -56,4 +54,7 @@ func iniciar_sesion(usuario,contrasena):
 		if not es_correcto:
 			statusLabel.text = "Usuario o contraseña incorrectos"
 		else:
-			SceneLoader.load_scene(path_escena_destino)
+			var usuario_id = db.select_rows("usuario","nombre_usuario='"+usuario+"'",["id"])[0]["id"]
+			Db.set_usuario_id(usuario_id)
+
+			sesion_iniciada.emit()

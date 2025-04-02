@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://7b0emvdsdt76"]
+
+[sub_resource type="GDScript" id="GDScript_u1ydw"]
+script/source = "extends Node2D
+
+@onready var animated_sprite = $AnimatedSprite2D
+
+func _ready():
+	# Iniciar la animación automáticamente
+	animated_sprite.play(\"fondo\")
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_u1ydw")

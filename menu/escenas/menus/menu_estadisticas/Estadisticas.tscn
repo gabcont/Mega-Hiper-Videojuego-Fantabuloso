@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://6xsu5p0qmfyr"]
+[gd_scene load_steps=4 format=3 uid="uid://6xsu5p0qmfyr"]
 
-[ext_resource type="Texture2D" uid="uid://1rq5omb7fhw8" path="res://menu/assets/fondo_menu/fondo.jpeg" id="1_4xr0g"]
 [ext_resource type="Script" uid="uid://bddvvv3ihwgsq" path="res://menu/escenas/menus/menu_estadisticas/scripts/estadisticas.gd" id="1_s7ers"]
+[ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="2_6juxf"]
+[ext_resource type="SpriteFrames" uid="uid://giopy0o8ms6m" path="res://juego/personajes/assets/animaciones/Gojo.tres" id="3_45vxg"]
 
 [node name="Estadisticas" type="Control"]
 layout_mode = 3
@@ -12,37 +13,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s7ers")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4xr0g")
 
-[node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(90, 0)
+[node name="FondoMenu" parent="." instance=ExtResource("2_6juxf")]
+visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 19.0
-offset_top = -72.0
-offset_right = 90.0
-offset_bottom = -21.0
-grow_vertical = 0
-text = "Atras
-"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -74.0
-offset_right = 74.0
-offset_bottom = 31.0
+offset_left = -140.0
+offset_top = 3.0
+offset_right = 142.0
+offset_bottom = 72.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Estadisticas"
@@ -54,13 +45,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -50.5
-offset_right = 20.0
-offset_bottom = 50.5
+offset_left = -310.0
+offset_top = -211.0
+offset_right = 384.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 25
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -68,46 +59,65 @@ layout_mode = 2
 [node name="Usado" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 40
-text = "dfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf"
+theme_override_font_sizes/font_size = 35
+text = "Personaje favorito: Skibidi"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer"]
-position = Vector2(30, 15)
-animation = &""
-offset = Vector2(400, 0)
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Sprite1" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/ColorRect"]
+unique_name_in_owner = true
+sprite_frames = ExtResource("3_45vxg")
+animation = &"ataque_1"
+offset = Vector2(25, 10)
+flip_h = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Enfrentado" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "erwerwerwerwerwerwe"
+theme_override_font_sizes/font_size = 35
+text = "Personaje mas enfrentado: Toilet"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2"]
-position = Vector2(-5, 21)
-animation = &""
-offset = Vector2(400, 0)
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Sprite2" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2/ColorRect"]
+unique_name_in_owner = true
+sprite_frames = ExtResource("3_45vxg")
+animation = &"ataque_1"
+offset = Vector2(25, 10)
+flip_h = true
 
 [node name="Tiempo" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
+text = "Tiempo de juego: 88:99"
 
 [node name="Tiempo_promedio" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
+text = "Tiempo promedio de partida: 99:11"
 
 [node name="Historial" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
+text = "Victorias - Derrotas : 99-99"
 
 [node name="Porcentaje" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
+text = "Porcentaje de victorias: 69%"
 
 [node name="Escenario" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
+text = "Escenario favorito: Mi baño"
 
 [node name="Vacio" type="Label" parent="."]
 layout_mode = 1
@@ -117,10 +127,8 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -15.5
+offset_top = -11.5
 offset_right = 20.0
-offset_bottom = 15.5
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

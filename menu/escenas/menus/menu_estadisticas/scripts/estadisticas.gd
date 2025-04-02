@@ -1,7 +1,5 @@
 extends Control
 
-@export var menu_principal : PackedScene
-
 func segundos_a_hms_string(total_segundos):
 	"""
 	Convierte segundos a cadena, mostrando solo segundos si < 60,
@@ -68,24 +66,19 @@ func _ready() -> void:
 		
 		$VBoxContainer/HBoxContainer/Usado.text = "Personaje favorito: " + Db.conseguir_nombre("personaje",p1_id)
 		var sprites_p1 : SpriteFrames = load("res://juego/personajes/assets/animaciones/"+Db.conseguir_nombre("personaje",p1_id)+".tres")
-		$VBoxContainer/HBoxContainer/AnimatedSprite2D.sprite_frames = sprites_p1
-		$VBoxContainer/HBoxContainer/AnimatedSprite2D.scale = Vector2(1.5,1.5)
-		$VBoxContainer/HBoxContainer/AnimatedSprite2D.play("idle") 
+		%Sprite1.sprite_frames = sprites_p1
+		%Sprite1.scale = Vector2(1.5,1.5)
+		%Sprite1.play("idle") 
 		$VBoxContainer/HBoxContainer2/Enfrentado.text = "Personaje mas enfrentado: " + Db.conseguir_nombre("personaje",p2_id)
 		var sprites_p2 : SpriteFrames = load("res://juego/personajes/assets/animaciones/"+Db.conseguir_nombre("personaje",p2_id)+".tres")
 		
-		$VBoxContainer/HBoxContainer2/AnimatedSprite2D.sprite_frames = sprites_p2
-		$VBoxContainer/HBoxContainer2/AnimatedSprite2D.scale = Vector2(1.5,1.5)
-		
-		$VBoxContainer/HBoxContainer2/AnimatedSprite2D.play("idle") 
+		%Sprite2.sprite_frames = sprites_p2
+		%Sprite2.scale = Vector2(1.5,1.5)
+		%Sprite2.play("idle") 
 		
 		$VBoxContainer/Escenario.text = "Escenario favorito: " + Db.conseguir_nombre("escenario",escenario_id)
 		$VBoxContainer/Tiempo.text = "Tiempo de juego: "+ segundos_a_hms_string(contador_sg)
 		$VBoxContainer/Tiempo_promedio.text = "Tiempo promedio de partida: " + segundos_a_hms_string(int(contador_sg/partidas.size()))
 		$VBoxContainer/Historial.text = "Victorias - Derrotas : %d - %d" % [contador_victorias,partidas.size()-contador_victorias]
 		$VBoxContainer/Porcentaje.text = "Porcentaje de victorias: %d" % [porcentaje] + "%"
-		
-		
-func _on_button_pressed() -> void:
-	SceneLoader.load_scene("res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn")
 	

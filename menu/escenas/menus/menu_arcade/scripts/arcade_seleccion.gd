@@ -9,19 +9,19 @@ var path_carpeta_personajes : String = "res://juego/personajes/assets/animacione
 
 # Referencias a los AnimatedSprite2D de los jugadores
 @onready var jugador1_sprite = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/jugador1_sprite
-@onready var jugador2_sprite = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/jugador2_sprite
 
 # Referencias a los Labels de los jugadores
 @onready var jugador1_label = $VBoxContainer/Label2
-@onready var jugador2_label = $VBoxContainer/Label
 
 var personaje_jugador1 : String = ""
-var personaje_jugador2 : String = ""
 
 # Variable para identificar al jugador activo
 var jugador_activo = 1  # Comienza con el Jugador 1
 
 func _ready():
+	# Accede al GridContainer
+	jugador1_sprite.play()
+
 	var grid_container = %GridPersonajes
 	var carpeta_personajes : DirAccess = DirAccess.open(path_carpeta_personajes)
 	carpeta_personajes.list_dir_begin()
@@ -56,9 +56,7 @@ func _on_boton_presionado(button_name):
 	# Cambiar el texto del Label dependiendo del jugador activo
 	if jugador_activo == 1:
 		jugador1_label.text = button_name
-	elif jugador_activo == 2:
-		jugador2_label.text = button_name
-	
+
 	# Verifica si el botón tiene un sprite asociado en el diccionario
 	if nombre_a_spriteframe.has(button_name):
 		var spriteframe = nombre_a_spriteframe[button_name]
@@ -67,10 +65,6 @@ func _on_boton_presionado(button_name):
 		if jugador_activo == 1:
 			cambiar_sprite(jugador1_sprite, spriteframe, false)
 			personaje_jugador1 = button_name  
-		elif jugador_activo == 2:
-			cambiar_sprite(jugador2_sprite, spriteframe, true)
-			personaje_jugador2 = button_name  
-
 
 func cambiar_sprite(sprite_node, spriteframe, voltear):
 	sprite_node.frames = spriteframe
@@ -79,10 +73,9 @@ func cambiar_sprite(sprite_node, spriteframe, voltear):
 
 # Método para alternar el jugador activo
 func seleccionar_jugador():
-	if personaje_jugador1 != "" and personaje_jugador2 != "" :
+	if personaje_jugador1 != "" :
 		ConfigPartida.nombre_personaje_1 = personaje_jugador1
-		ConfigPartida.nombre_personaje_2 = personaje_jugador2
 		SceneLoader.load_scene(path_siguiente_escena)
 
-	jugador_activo = 1 if jugador_activo == 2 else 2
+	jugador_activo = 1 
 	#cuando se seleccione por segunda vez, guardar sprite y pasarlo a la escena partida

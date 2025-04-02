@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_8rxls"]
 [ext_resource type="Script" uid="uid://cuvltkb0l8o5j" path="res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.gd" id="2_8e8ho"]
-[ext_resource type="Theme" uid="uid://4xg48oltpe7a" path="res://menu/recursos/temas/lore.tres" id="2_btdfg"]
 [ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="3_8e8ho"]
+[ext_resource type="PackedScene" uid="uid://6xsu5p0qmfyr" path="res://menu/escenas/menus/menu_estadisticas/Estadisticas.tscn" id="4_0s5ww"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -350,9 +350,8 @@ transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "Open
 graph_offset = Vector2(-86.277, 24)
 
 [node name="MainMenu" instance=ExtResource("1_8rxls")]
-theme = ExtResource("2_btdfg")
 script = ExtResource("2_8e8ho")
-game_scene_path = "uid://dm4k3lbges647"
+estadisticas_packed_scene = ExtResource("4_0s5ww")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
@@ -385,7 +384,19 @@ text = "Menu principal"
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
-[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+[node name="Panel" type="Panel" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 443.0
+offset_top = 81.0
+offset_right = -438.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="1"]
 custom_minimum_size = Vector2(175, 0)
 lock = true
 
@@ -409,7 +420,7 @@ text = "Continue"
 mouse_default_cursor_shape = 2
 text = "Opciones"
 
-[node name="Estadisticas" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+[node name="EstadisticasButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "Estadísticas"
@@ -422,10 +433,22 @@ text = "Créditos"
 mouse_default_cursor_shape = 2
 text = "Salir"
 
+[node name="EstadisticasContainer" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
 custom_minimum_size = Vector2(90, 0)
 text = "Atras"
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/Estadisticas" to="." method="_on_estadisticas_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EstadisticasButton" to="." method="_on_estadisticas_button_pressed"]

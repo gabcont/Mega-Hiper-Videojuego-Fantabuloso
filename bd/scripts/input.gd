@@ -1,6 +1,6 @@
 extends LineEdit
 
-@onready var statusLabel = get_node("../StatusLabel")
+@onready var statusLabel = %StatusLabel
 
 func _on_text_changed(new_text : String):
 	var regex = RegEx.new()

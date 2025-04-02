@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj7710d2bm8s8"]
+[gd_scene load_steps=6 format=3 uid="uid://cj7710d2bm8s8"]
 
 [ext_resource type="Script" uid="uid://dw3w1b5xnewuu" path="res://bd/scripts/registrar.gd" id="1_0geqs"]
-[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="1_7ttgg"]
 [ext_resource type="Script" uid="uid://br4q1ac7iikcx" path="res://bd/scripts/input.gd" id="1_kc4kg"]
 [ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="2_m6man"]
-[ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="2_qxv48"]
-[ext_resource type="Script" uid="uid://c80a4i2g2rwx8" path="res://bd/scripts/db_button.gd" id="8_x6ka1"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="3_m6man"]
+[ext_resource type="FontFile" uid="uid://bfpjladqtm41o" path="res://Assets/fuentes/GrapeSoda.ttf" id="4_fchot"]
 
 [node name="Registro" type="Control"]
 show_behind_parent = true
@@ -15,43 +14,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_7ttgg")
+script = ExtResource("1_0geqs")
 
-[node name="FondoMenu" parent="." instance=ExtResource("2_qxv48")]
-layout_mode = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(800, 0)
-layout_direction = 1
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Titulo" type="Label" parent="."]
+offset_left = 178.0
+offset_top = 61.0
+offset_right = 978.0
+offset_bottom = 102.0
 theme_override_fonts/font = ExtResource("2_m6man")
 theme_override_font_sizes/font_size = 30
 text = "Crear Usuario"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="StatusLabel" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="StatusLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 180.0
+offset_top = 110.0
+offset_right = 980.0
+offset_bottom = 177.0
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Control"]
+custom_minimum_size = Vector2(800, 0)
+layout_direction = 1
+layout_mode = 2
+offset_left = -400.0
+offset_top = -146.0
+offset_right = 400.0
+offset_bottom = 200.0
+theme_override_constants/separation = 20
+script = ExtResource("3_m6man")
+
+[node name="Label" type="Label" parent="CenterContainer/Control/VBoxContainer"]
 layout_mode = 2
 text = "Username"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+[node name="CajaTextoUsuario" type="LineEdit" parent="CenterContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(225, 35)
 layout_direction = 2
 layout_mode = 2
@@ -59,12 +77,13 @@ size_flags_horizontal = 4
 max_length = 20
 script = ExtResource("1_kc4kg")
 
-[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CenterContainer/Control/VBoxContainer"]
 layout_mode = 2
 text = "Contraseña"
 horizontal_alignment = 1
 
-[node name="LineEdit2" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+[node name="CajaTextoContrasena" type="LineEdit" parent="CenterContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(225, 35)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -73,37 +92,22 @@ secret = true
 secret_character = "*"
 script = ExtResource("1_kc4kg")
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Control/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_vertical = 4
 
-[node name="Submit" type="Button" parent="CenterContainer/VBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(170, 50)
+[node name="RegistrarButton" type="Button" parent="CenterContainer/Control/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 theme_override_constants/h_separation = 20
+theme_override_fonts/font = ExtResource("4_fchot")
+theme_override_font_sizes/font_size = 30
 text = "Registrar"
-script = ExtResource("1_0geqs")
-path_escena_destino = "res://menu/escenas/menus/menu_principal/menu_principal_con_animaciones.tscn"
 
-[node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(90, 0)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -67.0
-offset_right = 92.0
-offset_bottom = -16.0
-grow_vertical = 0
-mouse_default_cursor_shape = 2
-theme_override_constants/align_to_largest_stylebox = 1
-text = "Atrás"
-script = ExtResource("8_x6ka1")
-path_escena_destino = "res://bd/escenas/inicio.tscn"
-
-[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit" to="CenterContainer/VBoxContainer/LineEdit" method="_on_text_changed"]
-[connection signal="text_changed" from="CenterContainer/VBoxContainer/LineEdit2" to="CenterContainer/VBoxContainer/LineEdit2" method="_on_text_changed"]
+[connection signal="text_changed" from="CenterContainer/Control/VBoxContainer/CajaTextoUsuario" to="CenterContainer/Control/VBoxContainer/CajaTextoUsuario" method="_on_text_changed"]
+[connection signal="text_changed" from="CenterContainer/Control/VBoxContainer/CajaTextoContrasena" to="CenterContainer/Control/VBoxContainer/CajaTextoContrasena" method="_on_text_changed"]

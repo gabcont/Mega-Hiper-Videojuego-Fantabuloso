@@ -21,8 +21,8 @@ func presionar_boton(_activado : bool = true) -> void:
 		return
 
 	# Debug
-	print("presionado %s ; " % input_key)
-	print("emitido %s" % accion_activada)
+	#print("presionado %s ; " % input_key)
+	#print("emitido %s" % accion_activada)
 
 	# Impide tomar input en cooldown
 	en_cooldown = true

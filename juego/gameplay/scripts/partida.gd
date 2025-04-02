@@ -6,6 +6,7 @@ extends Node
 @onready var menu_final = $Final
 @onready var statusLabel = $Final/Menu_final/CenterContainer/VBoxContainer/Label
 @onready var timer_partida = %Reloj
+@onready var animation_player = $AnimationPlayer
 # @onready var menu_pausa = $ColorRect
 
 @export var escena_final : PackedScene
@@ -21,7 +22,11 @@ func _ready() -> void:
 	set_fondo(ConfigPartida.escenario_seleccionado)
 	$HUD/BarrasVida.actualizar_nombres()
 
+	if ConfigPartida.modo_juego_actual != ConfigPartida.ModoJuego.VS_JUGADOR:
+		personaje_2.set_es_ia(true)
+
 	timer_partida.connect("tiempo_partida_acabado", _on_tiempo_partida_acabado)
+	animation_player.connect("current_animation_changed", _on_animation_changed)
 
 	personaje_1.connect("ha_atacado", _on_personaje_ha_atacado)
 	personaje_2.connect("ha_atacado", _on_personaje_ha_atacado)
@@ -41,18 +46,23 @@ func _ready() -> void:
 	personaje_1.connect("salud_acabada", _on_personaje_1_salud_acabada)
 	personaje_2.connect("salud_acabada", _on_personaje_2_salud_acabada)
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pausa"):
 		var pausa : Control = escena_pausa.instantiate()
 		pausa.z_index = 5
 		add_child(pausa)
 
+func _on_animation_changed(animation : String) -> void:
+	if animation.begins_with("ataque_especial"):
+		pass #animation_player.play("RESET")
+
 func set_personajes(nombre_personaje_1 : String, nombre_personaje_2 : String) -> void:
 	personaje_1.set_personaje(nombre_personaje_1)
 	personaje_2.set_personaje(nombre_personaje_2)
 
 func set_fondo(_nombre_fondo : String) -> void:
-	var escena_fondo : PackedScene= load(path_carpeta_fondos + _nombre_fondo + ".tscn")
+	var escena_fondo : PackedScene = load(path_carpeta_fondos + _nombre_fondo + ".tscn")
 	$Fondo.add_child(escena_fondo.instantiate())
 
 func pausar_personajes() -> void:
@@ -105,6 +115,7 @@ func _on_timer_poder_timeout() -> void:
 	personaje_2.cargar_poder(5)
 
 func _on_tiempo_partida_acabado() -> void:
+	finalizar_partida()
 	if personaje_1.salud > personaje_2.salud:
 		statusLabel.text = "Jugador 1 gano"
 		Db.registrar_partida(1, tiempo_partida - ConfigPartida.tiempo)
@@ -120,14 +131,16 @@ func _on_tiempo_partida_acabado() -> void:
 
 
 func _on_personaje_2_salud_acabada(_ignorar) -> void:
+	finalizar_partida()
 	statusLabel.text = "Jugador 1 gano"
 	Db.registrar_partida(1, tiempo_partida - ConfigPartida.tiempo)
 
 func _on_personaje_1_salud_acabada(_ignorar) -> void:
+	finalizar_partida()
 	statusLabel.text = "Jugador 2 gano"
 	Db.registrar_partida(2, tiempo_partida - ConfigPartida.tiempo)
 
 func finalizar_partida() -> void:
-	pausar_personajes()
+	#pausar_personajes()
 	$HUD.hide()
 	menu_final.show()

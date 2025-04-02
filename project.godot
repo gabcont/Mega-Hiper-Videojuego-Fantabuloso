@@ -33,7 +33,7 @@ enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-
 
 [gui]
 
-theme/custom="uid://b3spbcp7hnumq"
+theme/custom="uid://4xg48oltpe7a"
 
 [input]
 

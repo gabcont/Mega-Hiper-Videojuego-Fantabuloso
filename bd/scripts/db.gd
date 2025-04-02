@@ -1,7 +1,7 @@
 extends Node
 
 var db
-var usuario_id
+var usuario_id = 5 # Por defecto (para facilidad de desarrollo) abre con mi cuenta
 
 func _ready():
 	db = SQLite.new()
@@ -16,6 +16,7 @@ func conectar_base():
 	
 func set_usuario_id(id):
 	usuario_id = id
+	print("Sesion iniciada con usuarioID: %d" % usuario_id)
 	
 func conseguir_id(tabla,nombre):
 	var registrado = db.select_rows(tabla,"nombre='"+nombre+"'",["id"])
