@@ -3,12 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bamnjdr8d0t4a" path="res://juego/personajes/escenas/personaje_viejo.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
-[ext_resource type="PackedScene" uid="uid://cy71e8ghnbt4h" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="2_a0wv1"]
+[ext_resource type="PackedScene" uid="uid://c3gm08djsemxe" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="2_a0wv1"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
-[ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
-[ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/timer/escenas/timer.tscn" id="7_hpts1"]
-[ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/botones/botones.tscn" id="7_htvet"]
-[ext_resource type="PackedScene" uid="uid://c3idsj77kmk8h" path="res://juego/Fondo/escenas/auto_scroller.tscn" id="8_tihru"]
+[ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/hud/barra_personaje/escenas/barra.tscn" id="6_1eyvx"]
+[ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/hud/timer/escenas/timer.tscn" id="7_hpts1"]
+[ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/hud/botones/botones.tscn" id="7_htvet"]
 [ext_resource type="Texture2D" uid="uid://kf8t7moxds3q" path="res://juego/gameplay/assets/Arrows.png" id="9_kklxi"]
 [ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="10_s5joy"]
 [ext_resource type="Shader" uid="uid://cptu6m8orjgbg" path="res://juego/gameplay/shaders/kaleido.gdshader" id="12_y0x6b"]
@@ -411,6 +410,9 @@ metadata/__load_path__ = "res://juego/gameplay/escenas/personajes/kirby.tres"
 font = ExtResource("10_s5joy")
 font_size = 90
 
+[sub_resource type="Resource" id="Resource_fwpt0"]
+metadata/__load_path__ = "res://juego/Fondo/escenas/auto_scroller.tscn"
+
 [node name="Partida" type="Node2D"]
 script = ExtResource("1_pfv7k")
 escena_final = ExtResource("2_a0wv1")
@@ -603,7 +605,7 @@ offset_right = 1659.0
 offset_bottom = 645.0
 color = Color(0, 0, 0, 0.52549)
 
-[node name="AutoScroller" parent="Pantalla/Personajesvp/SubViewport/Fondo" instance=ExtResource("8_tihru")]
+[node name="AutoScroller" parent="Pantalla/Personajesvp/SubViewport/Fondo"]
 show_behind_parent = true
 position = Vector2(-169, 2)
 scale = Vector2(2.4, 2.4)

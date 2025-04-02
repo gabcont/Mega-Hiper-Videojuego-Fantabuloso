@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbotj68k7ffx5"
-path="res://.godot/imported/foreground-empty.png-fce370e4dcdf70317c2bfd2ba238c139.ctex"
+path="res://.godot/imported/foreground-empty.png-f2974296bb4a653269a2b3f69eca709b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/imagenes/foreground-empty.png"
-dest_files=["res://.godot/imported/foreground-empty.png-fce370e4dcdf70317c2bfd2ba238c139.ctex"]
+source_file="res://juego/fondo/assets/imagenes/foreground-empty.png"
+dest_files=["res://.godot/imported/foreground-empty.png-f2974296bb4a653269a2b3f69eca709b.ctex"]
 
 [params]
 

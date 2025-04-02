@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gpj766htdnhl"
-path="res://.godot/imported/1.Sky.png-877938ac841f53745c550172b4245437.ctex"
+path="res://.godot/imported/1.Sky.png-790a6674c56d023a8295080fda443b5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/City_Dirty/1.Sky.png"
-dest_files=["res://.godot/imported/1.Sky.png-877938ac841f53745c550172b4245437.ctex"]
+source_file="res://juego/fondo/assets/Fondos parallax/City_Dirty/1.Sky.png"
+dest_files=["res://.godot/imported/1.Sky.png-790a6674c56d023a8295080fda443b5d.ctex"]
 
 [params]
 

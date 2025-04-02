@@ -62,4 +62,5 @@ func cargar_fondo(ruta_escena):
 
 func _on_seleccionar_pressed() -> void:
 	ConfigPartida.escenario_seleccionado = label_estado.text
-	SceneLoader.load_scene(path_siguiente_escena)
+	ConfigPartida.agregar_a_partida_queue(ConfigPartida.nombre_personaje_1, ConfigPartida.nombre_personaje_2, ConfigPartida.escenario_seleccionado)
+	SceneLoader.load_scene(ConfigPartida.path_partida)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://uhkfrl02c26l"]
+
+[ext_resource type="Texture2D" uid="uid://ddilm2b5jpvth" path="res://juego/hud/timer/assets/Circle01.png" id="1_2frq1"]
+[ext_resource type="Texture2D" uid="uid://cmxi2xbky855c" path="res://juego/hud/timer/assets/Circle02.png" id="2_6q6pn"]
+[ext_resource type="Script" uid="uid://h38h0ngvth6" path="res://juego/hud/timer/scripts/time.gd" id="2_emgkp"]
+[ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="4_2frq1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8826o"]
+font = ExtResource("4_2frq1")
+font_size = 40
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_right = 130.0
+offset_bottom = 130.0
+max_value = 30.0
+value = 30.0
+fill_mode = 5
+texture_under = ExtResource("1_2frq1")
+texture_progress = ExtResource("2_6q6pn")
+tint_under = Color(0.344076, 0.344076, 0.344076, 1)
+tint_over = Color(0.277528, 0.277528, 0.277528, 1)
+script = ExtResource("2_emgkp")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.223
+anchor_top = -0.269
+anchor_right = -2.223
+anchor_bottom = -0.269
+offset_left = 310.99
+offset_top = 52.97
+offset_right = 355.99
+offset_bottom = 101.97
+scale = Vector2(2, 2)
+text = "99"
+label_settings = SubResource("LabelSettings_8826o")
+horizontal_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://84logh0eusip" path="res://menu/escenas/menus/menu_escenarios/scripts/menu_escenarios.gd" id="1_611dw"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_u1d3s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_8xrmw"]
-[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/Universidad.tscn" id="4_l3cxt"]
+[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/fondo/escenas/Universidad.tscn" id="4_l3cxt"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="4_xcvi7"]
 [ext_resource type="Texture2D" uid="uid://e5ilcntoomb" path="res://menu/escenas/menus/menu_escenarios/assets/fondo1.png" id="5_vvew0"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="6_khkyr"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cooyi36oblxyj" path="res://menu/escenas/menus/menu_escenarios/assets/fondo3.png" id="7_l3cxt"]
 [ext_resource type="Texture2D" uid="uid://4e1g4oo88q15" path="res://menu/escenas/menus/menu_escenarios/assets/fondo4.png" id="8_sc663"]
 [ext_resource type="Texture2D" uid="uid://b30th00eas5dh" path="res://menu/escenas/menus/menu_escenarios/assets/fondo5.png" id="9_aph36"]
-[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/Fondo/assets/imagenes/Untitled.jpg" id="11_qvmo2"]
+[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/fondo/assets/imagenes/Untitled.jpg" id="11_qvmo2"]
 
 [node name="MenuEscenarios" type="Control"]
 layout_mode = 3

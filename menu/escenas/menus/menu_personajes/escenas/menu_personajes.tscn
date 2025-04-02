@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dl0rk4upm70jn" path="res://menu/escenas/menus/menu_personajes/scripts/menu_personajes.gd" id="1_j3jjq"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_o6r0s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_wymkx"]
-[ext_resource type="PackedScene" uid="uid://b7lx7mvilbv1d" path="res://juego/Fondo/escenas/Callejon.tscn" id="4_jht0r"]
+[ext_resource type="PackedScene" uid="uid://b7lx7mvilbv1d" path="res://juego/fondo/escenas/Callejon.tscn" id="4_jht0r"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="5_jht0r"]
 
 [node name="MenuPersonajes" type="Control"]

@@ -31,6 +31,14 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/dotenv/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://bd/": "red",
+"res://juego/": "blue",
+"res://menu/": "green"
+}
+
 [gui]
 
 theme/custom="uid://4xg48oltpe7a"

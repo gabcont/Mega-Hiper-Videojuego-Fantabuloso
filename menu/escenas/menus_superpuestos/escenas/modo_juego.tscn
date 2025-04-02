@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccm6husqv66y7"]
+
+[ext_resource type="Script" uid="uid://dmf1ymm5vckri" path="res://menu/escenas/menus_superpuestos/escenas/modo_juego.gd" id="1_7qb4g"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="1_117c4"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="3_so2bb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7qb4g")
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 114.0
+offset_right = 978.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("1_117c4")
+theme_override_font_sizes/font_size = 30
+text = "Modos de juego"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+script = ExtResource("3_so2bb")
+
+[node name="PVP" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Jugador VS Jugador"
+
+[node name="PVCPU" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "VS IA"
+
+[node name="ARCADE" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "ARCADE"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PVP" to="." method="_on_pvp_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PVCPU" to="." method="_on_pvcpu_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ARCADE" to="." method="_on_arcade_pressed"]

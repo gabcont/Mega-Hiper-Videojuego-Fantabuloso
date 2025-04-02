@@ -1,21 +1,22 @@
-[gd_scene load_steps=28 format=3 uid="uid://hn8a810btiqa"]
+[gd_scene load_steps=29 format=3 uid="uid://hn8a810btiqa"]
 
 [ext_resource type="PackedScene" uid="uid://b5wqwx4kssvs3" path="res://juego/personajes/escenas/personaje.tscn" id="1_0t4ck"]
 [ext_resource type="Script" uid="uid://dsctlvcrmcgdt" path="res://juego/gameplay/scripts/partida.gd" id="1_pfv7k"]
 [ext_resource type="Shader" uid="uid://bwadeem3p20ga" path="res://juego/gameplay/shaders/partida.gdshader" id="2_3vs70"]
 [ext_resource type="PackedScene" uid="uid://brhjyc538y1fr" path="res://menu/escenas/menus_superpuestos/menu_pausa.tscn" id="2_n78ns"]
-[ext_resource type="AudioStream" uid="uid://dlj20q6oi3gh1" path="res://juego/Fondo/assets/musica/cyberpunk-street.ogg" id="3_htvet"]
+[ext_resource type="AudioStream" uid="uid://dlj20q6oi3gh1" path="res://juego/fondo/assets/musica/cyberpunk-street.ogg" id="3_htvet"]
 [ext_resource type="Texture2D" uid="uid://dyhf76xqm1put" path="res://juego/gameplay/assets/cuadrado_blanco.jpg" id="3_y0x6b"]
 [ext_resource type="AudioStream" uid="uid://bkt4qut06lw54" path="res://juego/gameplay/assets/sonidos/IMPACT METAL Short Slam_03(1).wav" id="4_62slp"]
 [ext_resource type="AudioStream" uid="uid://csw1785mkew5f" path="res://juego/gameplay/assets/sonidos/Misc_Glass_Crystal_Shatter.wav" id="5_vv4sp"]
-[ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/barra_vida_2/escenas/barra.tscn" id="6_1eyvx"]
+[ext_resource type="PackedScene" uid="uid://dd36j1c11e0cl" path="res://juego/hud/barra_personaje/escenas/barra.tscn" id="6_1eyvx"]
 [ext_resource type="AudioStream" uid="uid://injih58332iy" path="res://juego/gameplay/assets/sonidos/WHOOSH AIR Steady Smooth_02.wav" id="6_vv4sp"]
-[ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/timer/escenas/timer.tscn" id="7_hpts1"]
-[ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/botones/botones.tscn" id="7_htvet"]
+[ext_resource type="PackedScene" uid="uid://uhkfrl02c26l" path="res://juego/hud/timer/escenas/timer.tscn" id="7_hpts1"]
+[ext_resource type="PackedScene" uid="uid://d07l85r3exlen" path="res://juego/hud/botones/botones.tscn" id="7_htvet"]
 [ext_resource type="Texture2D" uid="uid://kf8t7moxds3q" path="res://juego/gameplay/assets/Arrows.png" id="9_kklxi"]
 [ext_resource type="FontFile" uid="uid://bokj4j165xofw" path="res://Assets/fuentes/Lambda-Regular.otf" id="10_s5joy"]
 [ext_resource type="Shader" uid="uid://cptu6m8orjgbg" path="res://juego/gameplay/shaders/kaleido.gdshader" id="12_y0x6b"]
 [ext_resource type="PackedScene" uid="uid://c3gm08djsemxe" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_final.tscn" id="13_htvet"]
+[ext_resource type="PackedScene" uid="uid://bflc0m33mw01y" path="res://menu/escenas/menus/menu_final_partida/escenas/menu_continuar.tscn" id="17_uhubh"]
 
 [sub_resource type="Animation" id="Animation_kfnal"]
 length = 0.001
@@ -626,6 +627,7 @@ z_index = 1
 layout_mode = 2
 
 [node name="Pausa" type="Control" parent="."]
+visible = false
 z_index = 5
 layout_mode = 1
 anchors_preset = 15
@@ -635,6 +637,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Final" type="Control" parent="."]
+unique_name_in_owner = true
 visible = false
 z_index = 6
 layout_mode = 1
@@ -644,7 +647,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu_final" parent="Final" instance=ExtResource("13_htvet")]
+[node name="MenuFinal" parent="Final" instance=ExtResource("13_htvet")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="MenuContinuar" parent="Final" instance=ExtResource("17_uhubh")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [connection signal="timeout" from="TimerPoder" to="." method="_on_timer_poder_timeout"]

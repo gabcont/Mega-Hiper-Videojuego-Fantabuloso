@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxd2bp645vpf8"]
 
-[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/Fondo/scripts/parallax_background.gd" id="1_iw183"]
-[ext_resource type="Texture2D" uid="uid://cvrj7vdlnk57d" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/sky.png" id="2_otgyp"]
-[ext_resource type="Texture2D" uid="uid://d1p821gxkf86q" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/houses3.png" id="3_xrix0"]
-[ext_resource type="Texture2D" uid="uid://c1s8ued06saon" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/houded2.png" id="4_ofiv5"]
-[ext_resource type="Texture2D" uid="uid://byl73sf8rwyrf" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/houses1.png" id="5_gixu7"]
-[ext_resource type="Texture2D" uid="uid://ctsx2k4isdaw5" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/road.png" id="6_2y38i"]
-[ext_resource type="Texture2D" uid="uid://b1koj5wmbn0e1" path="res://juego/Fondo/assets/Fondos parallax/TimeSquare/crosswalk.png" id="7_seo6g"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/fondo/scripts/parallax_background.gd" id="1_iw183"]
+[ext_resource type="Texture2D" uid="uid://cvrj7vdlnk57d" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/sky.png" id="2_otgyp"]
+[ext_resource type="Texture2D" uid="uid://d1p821gxkf86q" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/houses3.png" id="3_xrix0"]
+[ext_resource type="Texture2D" uid="uid://c1s8ued06saon" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/houded2.png" id="4_ofiv5"]
+[ext_resource type="Texture2D" uid="uid://byl73sf8rwyrf" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/houses1.png" id="5_gixu7"]
+[ext_resource type="Texture2D" uid="uid://ctsx2k4isdaw5" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/road.png" id="6_2y38i"]
+[ext_resource type="Texture2D" uid="uid://b1koj5wmbn0e1" path="res://juego/fondo/assets/Fondos parallax/TimeSquare/crosswalk.png" id="7_seo6g"]
 
 [node name="Layers_parallax" type="Node2D"]
 

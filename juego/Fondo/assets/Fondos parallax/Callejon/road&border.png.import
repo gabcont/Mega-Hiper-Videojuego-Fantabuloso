@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s47jdnf677f6"
-path="res://.godot/imported/road&border.png-bfa4cb348bc85fb42b3bb5134541113a.ctex"
+path="res://.godot/imported/road&border.png-851a1e12e63372676b1d0b818456ff6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/Callejon/road&border.png"
-dest_files=["res://.godot/imported/road&border.png-bfa4cb348bc85fb42b3bb5134541113a.ctex"]
+source_file="res://juego/fondo/assets/Fondos parallax/Callejon/road&border.png"
+dest_files=["res://.godot/imported/road&border.png-851a1e12e63372676b1d0b818456ff6d.ctex"]
 
 [params]
 

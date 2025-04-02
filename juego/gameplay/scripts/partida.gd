@@ -3,8 +3,7 @@ extends Node
 @onready var personaje_1 : Personaje = %Personaje1
 @onready var personaje_2 : Personaje = %Personaje2
 
-@onready var menu_final = $Final
-@onready var statusLabel = $Final/Menu_final/CenterContainer/VBoxContainer/Label
+@onready var statusLabel = %Final.get_node("MenuFinal/CenterContainer/VBoxContainer/Label")
 @onready var timer_partida = %Reloj
 @onready var animation_player = $AnimationPlayer
 # @onready var menu_pausa = $ColorRect
@@ -17,9 +16,14 @@ var tiempo_partida : int = 60;
 var path_carpeta_fondos = "res://juego/Fondo/escenas/"
 
 func _ready() -> void:
-	# menu_pausa.hide()
-	set_personajes(ConfigPartida.nombre_personaje_1, ConfigPartida.nombre_personaje_2)
-	set_fondo(ConfigPartida.escenario_seleccionado)
+	var _datos_partida = ConfigPartida.obtener_partida_actual()
+	var nombre_personaje_1 = _datos_partida.pop_front()
+	var nombre_personaje_2 = _datos_partida.pop_front()
+	var nombre_escenario = _datos_partida.pop_front()
+
+	set_personajes(nombre_personaje_1, nombre_personaje_2)
+	set_fondo(nombre_escenario)
+	
 	$HUD/BarrasVida.actualizar_nombres()
 
 	if ConfigPartida.modo_juego_actual != ConfigPartida.ModoJuego.VS_JUGADOR:
@@ -45,7 +49,6 @@ func _ready() -> void:
 
 	personaje_1.connect("salud_acabada", _on_personaje_1_salud_acabada)
 	personaje_2.connect("salud_acabada", _on_personaje_2_salud_acabada)
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pausa"):
@@ -129,7 +132,6 @@ func _on_tiempo_partida_acabado() -> void:
 		statusLabel.text = "Jugador 1 gano" if numero_ganador==1 else "Jugador 2 gano"
 		Db.registrar_partida(numero_ganador, tiempo_partida - ConfigPartida.tiempo)
 
-
 func _on_personaje_2_salud_acabada(_ignorar) -> void:
 	finalizar_partida()
 	statusLabel.text = "Jugador 1 gano"
@@ -143,4 +145,10 @@ func _on_personaje_1_salud_acabada(_ignorar) -> void:
 func finalizar_partida() -> void:
 	#pausar_personajes()
 	$HUD.hide()
-	menu_final.show()
+	%Final.show()
+	ConfigPartida.siguiente_partida()
+	if ConfigPartida.queue_partida_vacio():
+		%MenuFinal.show()
+	else:
+		%MenuContinuar.show()
+	

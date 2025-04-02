@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://btjrxukjg0x11"]
 
 [ext_resource type="Script" uid="uid://dy2aro5dhf3yh" path="res://menu/escenas/fondo_menu/fondo_menu.gd" id="1_mbx56"]
-[ext_resource type="Shader" uid="uid://cib3kjdmmgxdj" path="res://juego/Fondo/shaders/fondo.gdshader" id="2_6wrq2"]
+[ext_resource type="Shader" uid="uid://cib3kjdmmgxdj" path="res://juego/fondo/shaders/fondo.gdshader" id="2_6wrq2"]
 [ext_resource type="Texture2D" uid="uid://c5g6ib1hubvmc" path="res://menu/assets/fondo_menu/monumento.jpg" id="2_jm1oa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1g2oe"]
@@ -36,4 +36,3 @@ expand_mode = 1
 points = PackedVector2Array(1122, 30, 30, 30, 30, 618, 1122, 618)
 closed = true
 width = 5.0
-default_color = Color(0.493545, 0.493546, 0.493546, 1)

@@ -1,14 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://7b0emvdsdt76"]
+[gd_scene load_steps=11 format=3 uid="uid://7b0emvdsdt76"]
 
-[sub_resource type="GDScript" id="GDScript_u1ydw"]
-script/source = "extends Node2D
+[ext_resource type="Texture2D" uid="uid://df4na76kbnyxc" path="res://coso/arcade/assets/assets_arcade/sonic.png" id="1_pvk08"]
 
-@onready var animated_sprite = $AnimatedSprite2D
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ah1h"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(0, 0, 1200, 672)
 
-func _ready():
-	# Iniciar la animación automáticamente
-	animated_sprite.play(\"fondo\")
-"
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ksx"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(1200, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8c60"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(2400, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4necd"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(3600, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gsoj"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(4800, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu11o"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(6000, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vppmo"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(7200, 0, 1200, 672)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sruxh"]
+atlas = ExtResource("1_pvk08")
+region = Rect2(8400, 0, 1200, 672)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd82d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ah1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ksx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8c60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4necd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gsoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu11o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vppmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sruxh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_u1ydw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 249)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_sd82d")
+autoplay = "default"
+frame_progress = 0.968304

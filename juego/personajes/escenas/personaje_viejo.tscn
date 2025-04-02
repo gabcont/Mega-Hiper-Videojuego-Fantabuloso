@@ -7,7 +7,6 @@
 [ext_resource type="Material" uid="uid://csc7q1f2llg2o" path="res://juego/personajes/shaders/rainbowmaterial.tres" id="3_q3q4w"]
 [ext_resource type="AudioStream" uid="uid://ck4gtvvriu5ji" path="res://juego/personajes/assets/sonidos/ataque_especial.wav" id="4_2sir4"]
 [ext_resource type="AudioStream" uid="uid://cii65574uqxfp" path="res://juego/personajes/assets/sonidos/preparar_ataque.wav" id="4_up0a1"]
-[ext_resource type="AudioStream" uid="uid://dodlrk5xfkkom" path="res://juego/personajes/assets/sonidos/bloquear.wav" id="6_m4qet"]
 [ext_resource type="AudioStream" uid="uid://bj4mbs5fr8s3a" path="res://juego/personajes/assets/sonidos/herido.wav" id="7_dh6ai"]
 [ext_resource type="PackedScene" uid="uid://cefm4dpmtuv64" path="res://juego/personajes/escenas/burbuja.tscn" id="9_mhd2b"]
 
@@ -690,6 +689,9 @@ tracks/6/keys = {
 }]
 }
 
+[sub_resource type="Resource" id="Resource_qew84"]
+metadata/__load_path__ = "res://juego/personajes/assets/sonidos/bloquear.wav"
+
 [sub_resource type="Animation" id="Animation_jerqr"]
 resource_name = "bloquear"
 length = 0.5
@@ -728,7 +730,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_m4qet")
+"stream": SubResource("Resource_qew84")
 }],
 "times": PackedFloat32Array(0)
 }

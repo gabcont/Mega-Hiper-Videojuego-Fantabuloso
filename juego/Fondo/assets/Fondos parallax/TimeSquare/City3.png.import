@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oiyvpa1c0ctr"
-path="res://.godot/imported/City3.png-59feb57ba764223cb845aab390758bf7.ctex"
+path="res://.godot/imported/City3.png-099eeae09133677dddd526a5b6a0bc9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/TimeSquare/City3.png"
-dest_files=["res://.godot/imported/City3.png-59feb57ba764223cb845aab390758bf7.ctex"]
+source_file="res://juego/fondo/assets/Fondos parallax/TimeSquare/City3.png"
+dest_files=["res://.godot/imported/City3.png-099eeae09133677dddd526a5b6a0bc9a.ctex"]
 
 [params]
 

@@ -10,10 +10,6 @@ func _ready():
 
 func on_button_pressed():
 	get_tree().paused = false
-	if text == "VOLVER A JUGAR":
-		# Cambia a la escena de destino
-		get_tree().change_scene_to_file(escena_juego)
-	else:
-		get_tree().change_scene_to_file(escena_menu)
+	SceneLoader.load_scene(escena_menu)
 	
 	

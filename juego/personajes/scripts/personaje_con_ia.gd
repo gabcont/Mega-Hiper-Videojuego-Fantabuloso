@@ -8,7 +8,8 @@ signal escudo_roto(es_personaje_1 : bool)
 signal ataque_especial_activado(es_personaje_1 : bool)
 signal salud_acabada(es_personaje_1 : bool)
 
-const SALUD_MAXIMA : int = 500
+const SALUD_MAXIMA : int = 100
+
 var salud : int = SALUD_MAXIMA
 
 const PODER_MAXIMO : int = 100
@@ -163,9 +164,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		input_buffer = "bloquear"
 	
 func set_personaje(_nombre_personaje : String) -> void:
-	sprite.sprite_frames = load("res://juego/personajes/assets/animaciones/" + _nombre_personaje + ".tres")
+	nombre_personaje = _nombre_personaje
+	sprite.sprite_frames = load("res://juego/personajes/assets/animaciones/" + nombre_personaje + ".tres")
 	sprite.play()
-	print("Sprites cambiados a: %s" % _nombre_personaje)
+	print("Sprites cambiados a: %s" % nombre_personaje)
 
 func set_es_ia(_es_ia : bool) -> void:
 	es_ia = _es_ia

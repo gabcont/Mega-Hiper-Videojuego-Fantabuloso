@@ -39,9 +39,12 @@ func _input(event):
 		if sub_menu:
 			_close_sub_menu()
 		else:
-			get_tree().quit()
+			quit_game()
 	if event.is_action_released("ui_accept") and get_viewport().gui_get_focus_owner() == null:
 		%MenuButtonsBoxContainer.focus_first()
+
+func quit_game() -> void:
+	get_tree().quit()
 
 func _setup_for_web():
 	if OS.has_feature("web"):

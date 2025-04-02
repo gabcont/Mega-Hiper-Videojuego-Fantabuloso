@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_0geqs")
 
 [node name="Titulo" type="Label" parent="."]
+layout_mode = 0
 offset_left = 178.0
 offset_top = 61.0
 offset_right = 978.0
@@ -29,6 +30,7 @@ uppercase = true
 
 [node name="StatusLabel" type="Label" parent="."]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 180.0
 offset_top = 110.0
 offset_right = 980.0
