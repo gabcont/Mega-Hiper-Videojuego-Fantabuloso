@@ -11,12 +11,14 @@ var otra_variable: int = 0 # Si tienes alguna otra variable
 var tiempo = 60 # para guadar el tiempo de partida en la bd correctamente
 
 var input_p1 : String = "vacio"
-var salud_p1 : int
+var salud_p1 : int = 200
+
 
 var dificultad_ia : String = "facil"
 
 var modo_juego_actual: ModoJuego = ModoJuego.VS_JUGADOR
 var partida_queue : Array[Array] = [["Goku", "Gojo", "dbz"]]
+
 # Partida = {"Sonic", "Gojo", "Caricuao"}  
 # siguiendo formato {"nombrePersonaje1", "nombrePersonaje2", "nombreEscenario"}
 

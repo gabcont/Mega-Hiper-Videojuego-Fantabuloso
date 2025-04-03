@@ -47,6 +47,7 @@ var input_action_bloquear = "bloquear"
 var sufijo_personaje : String = "_p1"
 
 var delay_esquivar = 0
+var delay_final = 0
 
 var dificultad_partida = ConfigPartida.dificultad_ia
 
@@ -56,8 +57,20 @@ func _process(_delta: float) -> void:
 	actualizar_debug_info()
 	if es_personaje_1:
 		ConfigPartida.salud_p1 = salud
-	elif es_ia and ConfigPartida.tiempo>0 and ConfigPartida.salud_p1>0 and salud>0:
+
+	if es_ia and ConfigPartida.tiempo>0 and ConfigPartida.salud_p1>0 and salud>0:
 		comportamiento_ia()
+
+	if ConfigPartida.salud_p1<=0 or salud<=0 or ConfigPartida.tiempo<=0:
+		
+		delay_final = 15
+		
+	if delay_final>0:
+		delay_final-=1
+		if delay_final==0:
+	
+			pausar()
+	
 		
 
 # Inicia parametros necesarios para la partida

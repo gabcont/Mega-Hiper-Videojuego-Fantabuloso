@@ -16,6 +16,7 @@ var tiempo_partida : int = 60;
 var path_carpeta_fondos = "res://juego/Fondo/escenas/"
 
 func _ready() -> void:
+	
 	var _datos_partida = ConfigPartida.obtener_partida_actual()
 	
 	var nombre_personaje_1 = _datos_partida.pop_front()
@@ -155,7 +156,7 @@ func finalizar_partida() -> void:
 	$HUD.hide()
 	%Final.show()
 	personaje_1.pausar()
-	personaje_2.pausar()
+	
 	
 	
 	ConfigPartida.siguiente_partida()
