@@ -137,13 +137,16 @@ func _on_tiempo_partida_acabado() -> void:
 		statusLabel.text = "Jugador 1 gano" if numero_ganador==1 else "Jugador 2 gano"
 		Db.registrar_partida(numero_ganador, tiempo_partida - ConfigPartida.tiempo)
 
+
 func _on_personaje_2_salud_acabada(_ignorar) -> void:
 	finalizar_partida()
 	statusLabel.text = "Jugador 1 gano"
 	Db.registrar_partida(1, tiempo_partida - ConfigPartida.tiempo)
 
 func _on_personaje_1_salud_acabada(_ignorar) -> void:
-	finalizar_partida()
+	$HUD.hide()
+	%Final.show()
+	%MenuFinal.show()
 	statusLabel.text = "Jugador 2 gano"
 	Db.registrar_partida(2, tiempo_partida - ConfigPartida.tiempo)
 
@@ -151,6 +154,7 @@ func finalizar_partida() -> void:
 	# pausar_personajes() # Esto bugea la partida por alguna razon
 	$HUD.hide()
 	%Final.show()
+	personaje_1.pausar()
 	
 	ConfigPartida.siguiente_partida()
 

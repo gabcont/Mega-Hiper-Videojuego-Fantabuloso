@@ -13,7 +13,7 @@ var tiempo = 60 # para guadar el tiempo de partida en la bd correctamente
 var input_p1 : String = "vacio"
 var salud_p1 : int
 
-var dificultad_ia : String = "dificil"
+var dificultad_ia : String = "facil"
 
 var modo_juego_actual: ModoJuego = ModoJuego.VS_JUGADOR
 var partida_queue : Array[Array] = [["Goku", "Gojo", "dbz"]]
@@ -30,7 +30,10 @@ func _ready():
 	print("Singleton GameData inicializado")
 
 func set_modo_juego(modo : ModoJuego) -> void:
+	dificultad_ia='dificil'
 	modo_juego_actual = modo
+	if modo_juego_actual==2:
+		dificultad_ia='facil'
 
 func agregar_a_partida_queue(personaje_1 : String, personaje_2 : String, escenario : String) -> void:
 	partida_queue.push_back([personaje_1, personaje_2, escenario])
@@ -46,6 +49,12 @@ func obtener_partida_actual() -> Array:
 
 func siguiente_partida() -> void:
 	partida_queue.pop_front()
+	if dificultad_ia=='facil':
+		dificultad_ia='medio'
+	if dificultad_ia=='medio':
+		dificultad_ia=='dificil'
+		
+	
 
 func queue_partida_vacio() -> bool:
 	return partida_queue.is_empty()

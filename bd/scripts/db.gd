@@ -30,4 +30,4 @@ func registrar_partida(ganador : int, duracion : int):
 	var p1_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_1)
 	var p2_id = Db.conseguir_id("personaje",ConfigPartida.nombre_personaje_2)
 	var escenario_id = Db.conseguir_id("escenario",ConfigPartida.escenario_seleccionado)
-	db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":ganador==1,"duracion_en_sg":duracion-ConfigPartida.tiempo,"id_escenario":escenario_id})
+	db.insert_row("partida",{"id_usuario":Db.usuario_id,"id_personaje_usado":p1_id,"id_personaje_enfrentado":p2_id,"victoria":ganador==1,"duracion_en_sg":duracion,"id_escenario":escenario_id})
