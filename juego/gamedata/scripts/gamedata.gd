@@ -39,6 +39,9 @@ func limpiar_queue() -> void:
 	partida_queue.clear()
 
 func obtener_partida_actual() -> Array:
+	nombre_personaje_1 = partida_queue.front()[0]
+	nombre_personaje_2 = partida_queue.front()[1]
+	escenario_seleccionado = partida_queue.front()[2]
 	return partida_queue.front().duplicate()
 
 func siguiente_partida() -> void:
