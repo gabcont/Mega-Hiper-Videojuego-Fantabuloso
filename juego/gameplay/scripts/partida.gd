@@ -155,6 +155,8 @@ func finalizar_partida() -> void:
 	$HUD.hide()
 	%Final.show()
 	personaje_1.pausar()
+	personaje_2.pausar()
+	
 	
 	ConfigPartida.siguiente_partida()
 
