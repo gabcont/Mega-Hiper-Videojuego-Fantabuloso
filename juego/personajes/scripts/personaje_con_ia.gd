@@ -56,7 +56,7 @@ func _process(_delta: float) -> void:
 	actualizar_debug_info()
 	if es_personaje_1:
 		ConfigPartida.salud_p1 = salud
-	elif es_ia:
+	elif es_ia and ConfigPartida.tiempo>0 and ConfigPartida.salud_p1>0 and salud>0:
 		comportamiento_ia()
 		
 

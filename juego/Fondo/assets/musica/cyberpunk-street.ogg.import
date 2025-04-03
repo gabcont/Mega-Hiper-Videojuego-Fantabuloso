@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dlj20q6oi3gh1"
-path="res://.godot/imported/cyberpunk-street.ogg-89540914fdb8f7991ba32d7c4e3ca923.oggvorbisstr"
+path="res://.godot/imported/cyberpunk-street.ogg-5c0a518b02a4aba3b63ef36c86008778.oggvorbisstr"
 
 [deps]
 
-source_file="res://juego/fondo/assets/musica/cyberpunk-street.ogg"
-dest_files=["res://.godot/imported/cyberpunk-street.ogg-89540914fdb8f7991ba32d7c4e3ca923.oggvorbisstr"]
+source_file="res://juego/Fondo/assets/musica/cyberpunk-street.ogg"
+dest_files=["res://.godot/imported/cyberpunk-street.ogg-5c0a518b02a4aba3b63ef36c86008778.oggvorbisstr"]
 
 [params]
 

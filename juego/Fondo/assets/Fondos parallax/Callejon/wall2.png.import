@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bysh0v1uojhq2"
-path="res://.godot/imported/wall2.png-9a690a04d21742ba6b71384b384db1f6.ctex"
+path="res://.godot/imported/wall2.png-d7fa6726dfaadbd5709567748d3f24c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/fondo/assets/Fondos parallax/Callejon/wall2.png"
-dest_files=["res://.godot/imported/wall2.png-9a690a04d21742ba6b71384b384db1f6.ctex"]
+source_file="res://juego/Fondo/assets/Fondos parallax/Callejon/wall2.png"
+dest_files=["res://.godot/imported/wall2.png-d7fa6726dfaadbd5709567748d3f24c5.ctex"]
 
 [params]
 

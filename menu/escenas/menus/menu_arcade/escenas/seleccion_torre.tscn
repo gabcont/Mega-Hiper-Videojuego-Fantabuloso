@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dhp3ahp0givi0"]
 
 [ext_resource type="Script" uid="uid://bmcovg7aial0q" path="res://menu/escenas/menus/menu_arcade/scripts/menu_arcade.gd" id="1_o2v20"]
-[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/fondo/scripts/parallax_background.gd" id="2_muew8"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/Fondo/scripts/parallax_background.gd" id="2_muew8"]
 [ext_resource type="Texture2D" uid="uid://ba15fau0iij3v" path="res://coso/arcade/assets/Iconos/Ciudad.jpeg" id="3_g22i5"]
 [ext_resource type="Texture2D" uid="uid://bnyqwf0fs4yvl" path="res://coso/arcade/assets/Iconos/Iconos - copia/Goku.jpg" id="4_lbyq4"]
 [ext_resource type="Texture2D" uid="uid://bc4klpdpslm58" path="res://coso/arcade/assets/Iconos/Iconos - copia/Vegeta.jpg" id="5_flxmk"]
