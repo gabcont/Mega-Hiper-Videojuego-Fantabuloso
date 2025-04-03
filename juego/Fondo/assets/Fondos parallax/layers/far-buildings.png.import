@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btki3i4a1j8ia"
-path="res://.godot/imported/far-buildings.png-b28590118df5741bb220a4907690fd18.ctex"
+path="res://.godot/imported/far-buildings.png-cdfdc571d032b5ca241e13d6d0bb1f7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/fondo/assets/Fondos parallax/layers/far-buildings.png"
-dest_files=["res://.godot/imported/far-buildings.png-b28590118df5741bb220a4907690fd18.ctex"]
+source_file="res://juego/Fondo/assets/Fondos parallax/layers/far-buildings.png"
+dest_files=["res://.godot/imported/far-buildings.png-cdfdc571d032b5ca241e13d6d0bb1f7e.ctex"]
 
 [params]
 

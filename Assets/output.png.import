@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ss756aunavp"
-path="res://.godot/imported/4.Sidewalk.png-9c2a3fdae17c8fd38735fad38216cd79.ctex"
+uid="uid://b6utbll0vk1ic"
+path="res://.godot/imported/output.png-60c35428e3f2b9c3cf0e1a69aed568df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/City_Dirty/4.Sidewalk.png"
-dest_files=["res://.godot/imported/4.Sidewalk.png-9c2a3fdae17c8fd38735fad38216cd79.ctex"]
+source_file="res://Assets/output.png"
+dest_files=["res://.godot/imported/output.png-60c35428e3f2b9c3cf0e1a69aed568df.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1s8ued06saon"
-path="res://.godot/imported/houded2.png-bd51452f50f1f207ece5c8f21687dbc6.ctex"
+path="res://.godot/imported/houded2.png-bdf47a6b79028d7f3c0c23a0350932c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/fondo/assets/Fondos parallax/TimeSquare/houded2.png"
-dest_files=["res://.godot/imported/houded2.png-bd51452f50f1f207ece5c8f21687dbc6.ctex"]
+source_file="res://juego/Fondo/assets/Fondos parallax/TimeSquare/houded2.png"
+dest_files=["res://.godot/imported/houded2.png-bdf47a6b79028d7f3c0c23a0350932c1.ctex"]
 
 [params]
 

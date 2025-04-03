@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1p821gxkf86q"
-path="res://.godot/imported/houses3.png-54aef908a7880aca3af4966036ab24a2.ctex"
+path="res://.godot/imported/houses3.png-0efae84141ed5aec1ba7f9bae781a808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/fondo/assets/Fondos parallax/TimeSquare/houses3.png"
-dest_files=["res://.godot/imported/houses3.png-54aef908a7880aca3af4966036ab24a2.ctex"]
+source_file="res://juego/Fondo/assets/Fondos parallax/TimeSquare/houses3.png"
+dest_files=["res://.godot/imported/houses3.png-0efae84141ed5aec1ba7f9bae781a808.ctex"]
 
 [params]
 

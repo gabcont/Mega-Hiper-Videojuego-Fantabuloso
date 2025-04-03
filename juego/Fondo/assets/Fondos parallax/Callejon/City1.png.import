@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr358r6ogugr4"
-path="res://.godot/imported/City1.png-a040c4dff0324a21d9fae3158b50869f.ctex"
+path="res://.godot/imported/City1.png-7f14dbc2cee0fc25730632c5a2db8229.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/fondo/assets/Fondos parallax/Callejon/City1.png"
-dest_files=["res://.godot/imported/City1.png-a040c4dff0324a21d9fae3158b50869f.ctex"]
+source_file="res://juego/Fondo/assets/Fondos parallax/Callejon/City1.png"
+dest_files=["res://.godot/imported/City1.png-7f14dbc2cee0fc25730632c5a2db8229.ctex"]
 
 [params]
 
