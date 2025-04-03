@@ -1,20 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://ba0yv6tkquhxq"]
+[gd_scene load_steps=7 format=3 uid="uid://dm4k3lbges647"]
 
-[ext_resource type="Script" uid="uid://biavpmbdw4y2" path="res://menu/escenas/menus/menu_personajes/scripts/menu_personajes.gd" id="1_1ljep"]
-[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_8nrhp"]
-[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_juckn"]
-[ext_resource type="Texture2D" uid="uid://3ltmsr0l74o7" path="res://menu/escenas/menus/menu_personajes/assets/personaje_matt.png" id="4_bm0a7"]
-[ext_resource type="Texture2D" uid="uid://y6kas74v357w" path="res://menu/escenas/menus/menu_personajes/assets/personaje_vegeta.png" id="5_kgvef"]
-[ext_resource type="Texture2D" uid="uid://c57a5lbjr3jaj" path="res://menu/escenas/menus/menu_personajes/assets/personaje_sukuna.png" id="6_35ep1"]
-[ext_resource type="Texture2D" uid="uid://cmv80o3trypd0" path="res://menu/escenas/menus/menu_personajes/assets/personaje_sans.png" id="7_3cq76"]
-[ext_resource type="Texture2D" uid="uid://tfp450bku25m" path="res://menu/escenas/menus/menu_personajes/assets/personaje_naruto.png" id="8_c53e2"]
-[ext_resource type="Texture2D" uid="uid://b5r4ra0q1mv42" path="res://menu/escenas/menus/menu_personajes/assets/personaje_miku.png" id="9_43usg"]
-[ext_resource type="Texture2D" uid="uid://c8obe40vt24rs" path="res://menu/escenas/menus/menu_personajes/assets/personaje_luffy.png" id="10_idnw4"]
-[ext_resource type="Texture2D" uid="uid://0swm42dcnepa" path="res://menu/escenas/menus/menu_personajes/assets/personaje_sonic.png" id="11_s1bjw"]
-[ext_resource type="Texture2D" uid="uid://k8oxlbroh4dw" path="res://menu/escenas/menus/menu_personajes/assets/personaje_knuckles.png" id="12_q8w16"]
-[ext_resource type="Texture2D" uid="uid://dbj3unn1nkauk" path="res://menu/escenas/menus/menu_personajes/assets/klipartz.com.png" id="13_6xd6o"]
-[ext_resource type="Texture2D" uid="uid://7agw310ppghe" path="res://menu/escenas/menus/menu_personajes/assets/personaje_kirby.png" id="14_w0rsk"]
-[ext_resource type="Texture2D" uid="uid://cwq07bovu3fxc" path="res://menu/escenas/menus/menu_personajes/assets/personaj_gojo.png" id="15_gtqyf"]
+[ext_resource type="Script" uid="uid://dl0rk4upm70jn" path="res://menu/escenas/menus/menu_personajes/scripts/menu_personajes.gd" id="1_j3jjq"]
+[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_o6r0s"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_wymkx"]
+[ext_resource type="PackedScene" uid="uid://b7lx7mvilbv1d" path="res://juego/fondo/escenas/Callejon.tscn" id="4_jht0r"]
+[ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="5_jht0r"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="6_m5dji"]
 
 [node name="MenuPersonajes" type="Control"]
 layout_mode = 3
@@ -23,22 +14,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1ljep")
+script = ExtResource("1_j3jjq")
+path_siguiente_escena = "res://menu/escenas/menus/menu_escenarios/escenas/MenuEscenarios.tscn"
 
 [node name="UISoundController" type="Node" parent="."]
-script = ExtResource("2_8nrhp")
+script = ExtResource("2_o6r0s")
 
-[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_juckn")]
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_wymkx")]
 bus = &"Master"
 
-[node name="BackgroundTextureRect" type="TextureRect" parent="."]
+[node name="FondoRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 2
+color = Color(0.11, 0.11, 0.11, 0.611765)
+
+[node name="Callejon_parallax" parent="FondoRect" instance=ExtResource("4_jht0r")]
 
 [node name="MenuContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -80,15 +74,16 @@ mouse_filter = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 2.0
-offset_top = 21.0
-offset_right = 2.0
-offset_bottom = 67.0
+offset_left = 16.0
+offset_top = 437.0
+offset_right = 16.0
+offset_bottom = 483.0
 grow_horizontal = 2
 theme_override_constants/separation = 700
 
 [node name="personaje1" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_jht0r")
 theme_override_font_sizes/font_size = 24
 text = "          JUGADOR  1"
 horizontal_alignment = 1
@@ -96,6 +91,7 @@ vertical_alignment = 1
 
 [node name="personaje2" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_jht0r")
 theme_override_font_sizes/font_size = 24
 text = "      JUGADOR 2"
 horizontal_alignment = 1
@@ -111,12 +107,15 @@ theme_override_constants/margin_bottom = 8
 texture_filter = 1
 layout_mode = 2
 mouse_filter = 2
+script = ExtResource("6_m5dji")
+search_depth = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -53.0
 offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -126,9 +125,9 @@ alignment = 1
 [node name="jugador1_sprite" type="AnimatedSprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
 position = Vector2(268, 189)
 scale = Vector2(7.29688, 7.26563)
-animation = &""
 
-[node name="GridContainer" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+[node name="GridPersonajes" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -137,217 +136,20 @@ theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 31
 columns = 4
 
-[node name="ColorRect12" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Matt" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect12"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 100.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("4_bm0a7")
-
-[node name="ColorRect11" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Vegeta" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect11"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -32.0
-offset_right = 32.0
-offset_bottom = 103.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("5_kgvef")
-
-[node name="ColorRect10" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Sukuna" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect10"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 115.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("6_35ep1")
-
-[node name="ColorRect9" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Sans" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect9"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 120.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_3cq76")
-
-[node name="ColorRect8" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Naruto" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect8"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 120.0
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("8_c53e2")
-
-[node name="ColorRect7" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Miku" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect7"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 98.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("9_43usg")
-
-[node name="ColorRect6" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Luffy" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect6"]
-texture_filter = 1
-layout_mode = 1
-offset_left = 6.5
-offset_top = -5.0
-offset_right = 106.5
-offset_bottom = 109.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("10_idnw4")
-
-[node name="ColorRect5" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Sonic" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect5"]
-texture_filter = 1
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 114.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("11_s1bjw")
-
-[node name="ColorRect4" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Knuckles" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect4"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("12_q8w16")
-
-[node name="ColorRect3" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_horizontal = 0
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Goku" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect3"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 0.5
-offset_top = -56.0
-offset_right = 100.5
-offset_bottom = 49.0
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("13_6xd6o")
-
-[node name="ColorRect" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-layout_mode = 2
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Kirby" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -20.5
-offset_top = -35.0
-offset_right = 119.5
-offset_bottom = 43.0
-grow_vertical = 2
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("14_w0rsk")
-
-[node name="ColorRect2" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
-layout_mode = 2
-color = Color(0.548963, 0.548963, 0.548963, 1)
-
-[node name="Gojo" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer/ColorRect2"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -55.0
-offset_right = 55.0
-offset_bottom = 105.0
-grow_horizontal = 2
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("15_gtqyf")
-
 [node name="jugador2_sprite" type="AnimatedSprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
 position = Vector2(905, 192)
 scale = Vector2(7.29688, 7.26563)
-animation = &""
 offset = Vector2(-1, 0)
 flip_h = true
+
+[node name="Button" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 461.0
+offset_top = 444.0
+offset_right = 661.0
+offset_bottom = 491.0
+mouse_default_cursor_shape = 2
+text = "SELECCIONAR"
 
 [node name="VBoxContainer" type="CanvasLayer" parent="."]
 offset = Vector2(100, 570)
@@ -358,21 +160,15 @@ offset_top = 6.0
 offset_right = 82.0
 offset_bottom = 41.0
 size_flags_horizontal = 8
-text = "KNUCKLES"
+theme = ExtResource("5_jht0r")
 uppercase = true
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-offset_left = 397.0
-offset_right = 528.0
-offset_bottom = 47.0
-text = "SELECCIONAR"
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 offset_left = 843.0
 offset_top = 6.0
 offset_right = 925.0
 offset_bottom = 41.0
-text = "KNUCKLES"
+theme = ExtResource("5_jht0r")
 uppercase = true
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="seleccionar_jugador"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/Button" to="." method="seleccionar_jugador"]

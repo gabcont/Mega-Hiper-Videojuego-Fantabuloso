@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnyqwf0fs4yvl"
-path="res://.godot/imported/Goku.jpg-253b0a4525a273bdeaa85970f2915543.ctex"
+path="res://.godot/imported/Goku.jpg-333f45245c89e5c7bc057922461460fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Goku.jpg"
-dest_files=["res://.godot/imported/Goku.jpg-253b0a4525a273bdeaa85970f2915543.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Goku.jpg"
+dest_files=["res://.godot/imported/Goku.jpg-333f45245c89e5c7bc057922461460fe.ctex"]
 
 [params]
 

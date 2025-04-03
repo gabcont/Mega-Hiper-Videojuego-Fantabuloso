@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7lx7mvilbv1d"]
 
-[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/Fondo/scripts/parallax_background.gd" id="1_nfr1k"]
-[ext_resource type="Texture2D" uid="uid://l4vvn33ne300" path="res://juego/Fondo/assets/Fondos parallax/Callejon/Sky.png" id="2_nb58q"]
-[ext_resource type="Texture2D" uid="uid://7u2kptncwksb" path="res://juego/Fondo/assets/Fondos parallax/Callejon/buildings.png" id="3_6jmic"]
-[ext_resource type="Texture2D" uid="uid://bysh0v1uojhq2" path="res://juego/Fondo/assets/Fondos parallax/Callejon/wall2.png" id="4_50tjb"]
-[ext_resource type="Texture2D" uid="uid://d3elu4br1g32s" path="res://juego/Fondo/assets/Fondos parallax/Callejon/wall1.png" id="5_cac5a"]
-[ext_resource type="Texture2D" uid="uid://bk62vleucl7rf" path="res://juego/Fondo/assets/Fondos parallax/Callejon/boxes&container.png" id="6_pglhw"]
-[ext_resource type="Texture2D" uid="uid://s47jdnf677f6" path="res://juego/Fondo/assets/Fondos parallax/Callejon/road&border.png" id="7_gcqr3"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/fondo/scripts/parallax_background.gd" id="1_nfr1k"]
+[ext_resource type="Texture2D" uid="uid://l4vvn33ne300" path="res://juego/fondo/assets/Fondos parallax/Callejon/Sky.png" id="2_nb58q"]
+[ext_resource type="Texture2D" uid="uid://7u2kptncwksb" path="res://juego/fondo/assets/Fondos parallax/Callejon/buildings.png" id="3_6jmic"]
+[ext_resource type="Texture2D" uid="uid://bysh0v1uojhq2" path="res://juego/fondo/assets/Fondos parallax/Callejon/wall2.png" id="4_50tjb"]
+[ext_resource type="Texture2D" uid="uid://d3elu4br1g32s" path="res://juego/fondo/assets/Fondos parallax/Callejon/wall1.png" id="5_cac5a"]
+[ext_resource type="Texture2D" uid="uid://bk62vleucl7rf" path="res://juego/fondo/assets/Fondos parallax/Callejon/boxes&container.png" id="6_pglhw"]
+[ext_resource type="Texture2D" uid="uid://s47jdnf677f6" path="res://juego/fondo/assets/Fondos parallax/Callejon/road&border.png" id="7_gcqr3"]
 
 [node name="Callejon_parallax" type="Node2D"]
 

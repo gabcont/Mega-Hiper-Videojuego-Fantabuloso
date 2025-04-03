@@ -174,4 +174,5 @@ func spritesheet_a_spriteframe_personaje(textura_spritesheet : Texture) -> Sprit
 	return animaciones
 
 func _run() -> void:
+	print("Iniciado script generador de spriteframes")
 	crear_spriteframes_en_carpetas(input_folder_path)

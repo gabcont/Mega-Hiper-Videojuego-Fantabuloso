@@ -1,10 +1,11 @@
 extends Control
 
+@export var path_siguiente_escena : String
+
 # Diccionario que mapea los botones a los recursos SpriteFrames (agreguen aca las rutas a los sprites)
-var boton_a_sprite = {
-	"Knuckles": preload("res://juego/personajes/assets/animaciones/Knuckles.tres"),
-	"Kirby": preload("res://juego/personajes/assets/animaciones/Kirby.tres"),
-}
+var nombre_a_spriteframe : Dictionary
+
+var path_carpeta_personajes : String = "res://juego/personajes/assets/animaciones/"
 
 # Referencias a los AnimatedSprite2D de los jugadores
 @onready var jugador1_sprite = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/jugador1_sprite
@@ -14,29 +15,43 @@ var boton_a_sprite = {
 @onready var jugador1_label = $VBoxContainer/Label2
 @onready var jugador2_label = $VBoxContainer/Label
 
+var personaje_jugador1 : String = ""
+var personaje_jugador2 : String = ""
+
 # Variable para identificar al jugador activo
 var jugador_activo = 1  # Comienza con el Jugador 1
 
 func _ready():
-	# Accede al GridContainer
-	jugador1_sprite.play()
-	jugador2_sprite.play()
-	var grid_container = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer
+	var grid_container = %GridPersonajes
+	var carpeta_personajes : DirAccess = DirAccess.open(path_carpeta_personajes)
+	carpeta_personajes.list_dir_begin()
 
-	# Verifica que el GridContainer existe
-	if grid_container:
-		# Recorre todos los hijos de GridContainer (en este caso, los ColorRect)
-		for color_rect in grid_container.get_children():
-			# Asegúrate de que sean nodos tipo ColorRect
-			if color_rect is ColorRect:
-				# Recorre los hijos de cada ColorRect buscando botones
-				for boton in color_rect.get_children():
-					if boton is TextureButton:  
-						# Crea un Callable y conecta la señal "pressed" pasando el nombre como parámetro
-						boton.connect("pressed", Callable(self, "_on_boton_presionado").bind(boton.name))
-	else:
-		print("Error: No se encontró el nodo GridContainer.")
+	var personaje_actual = carpeta_personajes.get_next()
+	while personaje_actual != "":
+		var cuadro_color = ColorRect.new()
+		cuadro_color.color = Color(randf(), randf(), randf(), 0.5)
+		cuadro_color.custom_minimum_size = Vector2(100.0, 90.0)
 
+		
+		var boton_de_textura = TextureButton.new()
+		boton_de_textura.ignore_texture_size = true
+		boton_de_textura.stretch_mode = 0
+		boton_de_textura.custom_minimum_size = Vector2(100.0, 90.0)
+		boton_de_textura.position = Vector2(20.0, 0.0)
+		boton_de_textura.mouse_default_cursor_shape = 2
+		boton_de_textura.texture_filter = 1
+
+		var spriteframes_personaje : SpriteFrames = load(path_carpeta_personajes + personaje_actual)
+		boton_de_textura.texture_normal = spriteframes_personaje.get_frame_texture("idle", 0)
+		boton_de_textura.texture_focused = make_white_texture(boton_de_textura.texture_normal)
+		boton_de_textura.name = personaje_actual.trim_suffix(".tres")
+
+		nombre_a_spriteframe.set(personaje_actual.trim_suffix(".tres"), spriteframes_personaje)
+		cuadro_color.add_child(boton_de_textura)
+		grid_container.add_child(cuadro_color)
+
+		boton_de_textura.connect("pressed", Callable(self, "_on_boton_presionado").bind(boton_de_textura.name))
+		personaje_actual = carpeta_personajes.get_next()
 
 func _on_boton_presionado(button_name):
 	print("\nSE ACABA DE PRESIONAR> Botón presionado: ", button_name)  
@@ -48,14 +63,16 @@ func _on_boton_presionado(button_name):
 		jugador2_label.text = button_name
 	
 	# Verifica si el botón tiene un sprite asociado en el diccionario
-	if boton_a_sprite.has(button_name):
-		var spriteframe = boton_a_sprite[button_name]
+	if nombre_a_spriteframe.has(button_name):
+		var spriteframe = nombre_a_spriteframe[button_name]
 		
 		# Cambia el sprite según el jugador activo
 		if jugador_activo == 1:
-			cambiar_sprite(jugador1_sprite, spriteframe, false)  
+			cambiar_sprite(jugador1_sprite, spriteframe, false)
+			personaje_jugador1 = button_name  
 		elif jugador_activo == 2:
-			cambiar_sprite(jugador2_sprite, spriteframe, true)  
+			cambiar_sprite(jugador2_sprite, spriteframe, true)
+			personaje_jugador2 = button_name  
 
 
 func cambiar_sprite(sprite_node, spriteframe, voltear):
@@ -65,5 +82,26 @@ func cambiar_sprite(sprite_node, spriteframe, voltear):
 
 # Método para alternar el jugador activo
 func seleccionar_jugador():
+	if personaje_jugador1 != "" and personaje_jugador2 != "" :
+		ConfigPartida.nombre_personaje_1 = personaje_jugador1
+		ConfigPartida.nombre_personaje_2 = personaje_jugador2
+		SceneLoader.load_scene(path_siguiente_escena)
+
 	jugador_activo = 1 if jugador_activo == 2 else 2
 	#cuando se seleccione por segunda vez, guardar sprite y pasarlo a la escena partida
+
+func make_white_texture(original_texture: Texture2D) -> Texture2D:
+	var image := original_texture.get_image()
+	var white_image := Image.create(image.get_width(), image.get_height(), false, Image.FORMAT_RGBA8)
+	
+	# Copiar solo los píxeles visibles (alpha > 0) y hacerlos blancos
+	for x in image.get_width():
+		for y in image.get_height():
+			var pixel = image.get_pixel(x, y)
+			if pixel.a > 0:  # Si el píxel es visible
+				white_image.set_pixel(x, y, Color.WHITE)
+			else:
+				white_image.set_pixel(x, y, Color(0, 0, 0, 0))
+	
+	var white_texture := ImageTexture.create_from_image(white_image)
+	return white_texture

@@ -17,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
+game_scene_path = "uid://dm4k3lbges647"
 options_packed_scene = ExtResource("2_qvrrd")
 credits_packed_scene = ExtResource("3_5dhvp")
 
@@ -180,6 +181,19 @@ unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="EstadisticasContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 1136.0
+offset_bottom = 616.0
 mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 32

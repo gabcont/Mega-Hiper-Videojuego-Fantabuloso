@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq8jxsnpv3524"]
+
+[ext_resource type="Script" uid="uid://kcb71xnyp1fy" path="res://node_2d.gd" id="1_rb5h8"]
+[ext_resource type="PackedScene" uid="uid://b5wqwx4kssvs3" path="res://juego/personajes/escenas/personaje.tscn" id="2_eq4vd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rb5h8")
+
+[node name="Personaje" parent="." instance=ExtResource("2_eq4vd")]
+offset_left = 452.0
+offset_top = 342.0
+offset_right = 452.0
+offset_bottom = 342.0
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_left = 722.0
+offset_top = 202.0
+offset_right = 799.0
+offset_bottom = 268.0
+vertical = true
+
+[node name="Button" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "DEBIL"
+
+[node name="Button2" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "FUERTE"
+
+[connection signal="pressed" from="BoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BoxContainer/Button2" to="." method="_on_button_2_pressed"]

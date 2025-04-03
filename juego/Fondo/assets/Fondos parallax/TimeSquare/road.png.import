@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctsx2k4isdaw5"
-path="res://.godot/imported/road.png-d73733ec0500e38ec2957daa0f5c4c73.ctex"
+path="res://.godot/imported/road.png-0319fe6234230bb9f726d13a36d4e553.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/TimeSquare/road.png"
-dest_files=["res://.godot/imported/road.png-d73733ec0500e38ec2957daa0f5c4c73.ctex"]
+source_file="res://juego/fondo/assets/Fondos parallax/TimeSquare/road.png"
+dest_files=["res://.godot/imported/road.png-0319fe6234230bb9f726d13a36d4e553.ctex"]
 
 [params]
 

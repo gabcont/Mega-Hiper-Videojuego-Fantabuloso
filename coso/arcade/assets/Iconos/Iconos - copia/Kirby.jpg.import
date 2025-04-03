@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pbvbsrsrqqpx"
-path="res://.godot/imported/Kirby.jpg-2e6cb5f215cf278b2bce5aa4e714e25c.ctex"
+path="res://.godot/imported/Kirby.jpg-32ff14e79da4dad495b2c80598b33583.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Kirby.jpg"
-dest_files=["res://.godot/imported/Kirby.jpg-2e6cb5f215cf278b2bce5aa4e714e25c.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Kirby.jpg"
+dest_files=["res://.godot/imported/Kirby.jpg-32ff14e79da4dad495b2c80598b33583.ctex"]
 
 [params]
 

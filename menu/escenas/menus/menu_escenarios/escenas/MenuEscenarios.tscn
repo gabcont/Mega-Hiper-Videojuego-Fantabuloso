@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx2t3hbacw3gw"]
+[gd_scene load_steps=14 format=3 uid="uid://bx2t3hbacw3gw"]
 
 [ext_resource type="Script" uid="uid://84logh0eusip" path="res://menu/escenas/menus/menu_escenarios/scripts/menu_escenarios.gd" id="1_611dw"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_u1d3s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_8xrmw"]
-[ext_resource type="PackedScene" uid="uid://7i8gxnv1lx3l" path="res://juego/Fondo/escenas/Universidad.tscn" id="4_l3cxt"]
+[ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="4_hw5x1"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="4_xcvi7"]
 [ext_resource type="Texture2D" uid="uid://e5ilcntoomb" path="res://menu/escenas/menus/menu_escenarios/assets/fondo1.png" id="5_vvew0"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="6_khkyr"]
 [ext_resource type="Texture2D" uid="uid://bpn0ps1x814p2" path="res://menu/escenas/menus/menu_escenarios/assets/fondo2.png" id="6_qxkr8"]
 [ext_resource type="Texture2D" uid="uid://cooyi36oblxyj" path="res://menu/escenas/menus/menu_escenarios/assets/fondo3.png" id="7_l3cxt"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="7_tcflw"]
 [ext_resource type="Texture2D" uid="uid://4e1g4oo88q15" path="res://menu/escenas/menus/menu_escenarios/assets/fondo4.png" id="8_sc663"]
 [ext_resource type="Texture2D" uid="uid://b30th00eas5dh" path="res://menu/escenas/menus/menu_escenarios/assets/fondo5.png" id="9_aph36"]
-[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/Fondo/assets/imagenes/Untitled.jpg" id="11_qvmo2"]
+[ext_resource type="Texture2D" uid="uid://dxjgtcfcyjpgo" path="res://juego/fondo/assets/imagenes/Untitled.jpg" id="11_qvmo2"]
 
 [node name="MenuEscenarios" type="Control"]
 layout_mode = 3
@@ -46,8 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0214347, 0.0214346, 0.0214346, 0.494118)
 
-[node name="Fondo" parent="Control/ContenedorFondo" instance=ExtResource("4_l3cxt")]
-z_index = -1
+[node name="FondoMenu" parent="Control/ContenedorFondo" instance=ExtResource("4_hw5x1")]
 layout_mode = 1
 
 [node name="VersionMargin" type="MarginContainer" parent="."]
@@ -128,7 +128,7 @@ offset_bottom = 72.0
 grow_horizontal = 2
 theme = ExtResource("6_khkyr")
 theme_override_font_sizes/font_size = 24
-text = "NOMBRE DE ESCENARIO"
+text = "Caricuao"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -142,6 +142,8 @@ theme_override_constants/margin_bottom = 8
 texture_filter = 1
 layout_mode = 2
 mouse_filter = 2
+script = ExtResource("7_tcflw")
+search_depth = 3
 
 [node name="ColorRect" type="ColorRect" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 layout_mode = 1
@@ -168,7 +170,8 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+[node name="EscenariosGrid" type="GridContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -177,7 +180,7 @@ theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 15
 columns = 3
 
-[node name="Caricuao" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Caricuao" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
 custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
@@ -186,7 +189,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_vvew0")
 
-[node name="Helado" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Helado" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
 custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
@@ -195,7 +198,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_qxkr8")
 
-[node name="Callejon" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Callejon" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
 custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
@@ -204,7 +207,7 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_l3cxt")
 
-[node name="Ciudad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Ciudad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
 custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
@@ -213,16 +216,16 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_sc663")
 
-[node name="Restaurant" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Restaurant" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
-custom_minimum_size = Vector2(250, 130)
+custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_aph36")
 
-[node name="Universidad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/GridContainer"]
+[node name="Universidad" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/EscenariosGrid"]
 texture_filter = 1
 custom_minimum_size = Vector2(250, 150)
 layout_mode = 2
@@ -233,17 +236,17 @@ texture_normal = ExtResource("11_qvmo2")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Button" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 490.0
+offset_top = 452.0
+offset_right = 690.0
+offset_bottom = 499.0
+mouse_default_cursor_shape = 2
+text = "SELECCIONAR"
+
 [node name="VBoxContainer" type="CanvasLayer" parent="."]
 offset = Vector2(100, 570)
 transform = Transform2D(1, 0, 0, 1, 100, 570)
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-offset_left = 370.0
-offset_top = 9.0
-offset_right = 570.0
-offset_bottom = 56.0
-mouse_default_cursor_shape = 2
-text = "SELECCIONAR"
-
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_seleccionar_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/Button" to="." method="_on_seleccionar_pressed"]

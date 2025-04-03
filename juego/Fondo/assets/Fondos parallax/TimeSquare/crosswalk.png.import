@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1koj5wmbn0e1"
-path="res://.godot/imported/crosswalk.png-621ec95c410364f78e3fb2b978e9f563.ctex"
+path="res://.godot/imported/crosswalk.png-ba03bd807825a78beeafb02e4f494ab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juego/Fondo/assets/Fondos parallax/TimeSquare/crosswalk.png"
-dest_files=["res://.godot/imported/crosswalk.png-621ec95c410364f78e3fb2b978e9f563.ctex"]
+source_file="res://juego/fondo/assets/Fondos parallax/TimeSquare/crosswalk.png"
+dest_files=["res://.godot/imported/crosswalk.png-ba03bd807825a78beeafb02e4f494ab5.ctex"]
 
 [params]
 

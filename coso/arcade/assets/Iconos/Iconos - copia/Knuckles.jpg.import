@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5w8kp8uckvf7"
-path="res://.godot/imported/Knuckles.jpg-f83f9e328a5ff3869ceb362a77e9a59a.ctex"
+path="res://.godot/imported/Knuckles.jpg-596d9f691da61cd859be5c434905638f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/Iconos/Iconos - copia/Knuckles.jpg"
-dest_files=["res://.godot/imported/Knuckles.jpg-f83f9e328a5ff3869ceb362a77e9a59a.ctex"]
+source_file="res://coso/arcade/assets/Iconos/Iconos - copia/Knuckles.jpg"
+dest_files=["res://.godot/imported/Knuckles.jpg-596d9f691da61cd859be5c434905638f.ctex"]
 
 [params]
 

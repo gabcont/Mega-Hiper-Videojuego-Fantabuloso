@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsvxegigxdi55"
-path="res://.godot/imported/jujutsu.png-28ff4e3e8f92bedbc3001b1a405accea.ctex"
+path="res://.godot/imported/jujutsu.png-60aca3e111b878846c5271778300475e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/escenas/arcade/assets/assets_arcade/jujutsu.png"
-dest_files=["res://.godot/imported/jujutsu.png-28ff4e3e8f92bedbc3001b1a405accea.ctex"]
+source_file="res://coso/arcade/assets/assets_arcade/jujutsu.png"
+dest_files=["res://.godot/imported/jujutsu.png-60aca3e111b878846c5271778300475e.ctex"]
 
 [params]
 

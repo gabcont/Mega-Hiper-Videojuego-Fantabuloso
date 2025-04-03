@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbw6gw6h0o5th"]
 
-[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/Fondo/scripts/parallax_background.gd" id="1_w67da"]
-[ext_resource type="Texture2D" uid="uid://btki3i4a1j8ia" path="res://juego/Fondo/assets/Fondos parallax/layers/far-buildings.png" id="2_q6xtl"]
-[ext_resource type="Texture2D" uid="uid://iksr3t7tqamm" path="res://juego/Fondo/assets/Fondos parallax/layers/back-buildings.png" id="3_lutlf"]
-[ext_resource type="Texture2D" uid="uid://qdtsbhflemxq" path="res://juego/Fondo/assets/Fondos parallax/layers/foreground.png" id="4_figp5"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/fondo/scripts/parallax_background.gd" id="1_w67da"]
+[ext_resource type="Texture2D" uid="uid://btki3i4a1j8ia" path="res://juego/fondo/assets/Fondos parallax/layers/far-buildings.png" id="2_q6xtl"]
+[ext_resource type="Texture2D" uid="uid://iksr3t7tqamm" path="res://juego/fondo/assets/Fondos parallax/layers/back-buildings.png" id="3_lutlf"]
+[ext_resource type="Texture2D" uid="uid://qdtsbhflemxq" path="res://juego/fondo/assets/Fondos parallax/layers/foreground.png" id="4_figp5"]
 
 [node name="Layers2_parallax" type="Node2D"]
 

@@ -1,0 +1,270 @@
+[gd_scene load_steps=20 format=3 uid="uid://dhp3ahp0givi0"]
+
+[ext_resource type="Script" uid="uid://bmcovg7aial0q" path="res://menu/escenas/menus/menu_arcade/scripts/menu_arcade.gd" id="1_o2v20"]
+[ext_resource type="Script" uid="uid://cf3nggcdk1xvc" path="res://juego/fondo/scripts/parallax_background.gd" id="2_muew8"]
+[ext_resource type="Texture2D" uid="uid://ba15fau0iij3v" path="res://coso/arcade/assets/Iconos/Ciudad.jpeg" id="3_g22i5"]
+[ext_resource type="Texture2D" uid="uid://bnyqwf0fs4yvl" path="res://coso/arcade/assets/Iconos/Iconos - copia/Goku.jpg" id="4_lbyq4"]
+[ext_resource type="Texture2D" uid="uid://bc4klpdpslm58" path="res://coso/arcade/assets/Iconos/Iconos - copia/Vegeta.jpg" id="5_flxmk"]
+[ext_resource type="Texture2D" uid="uid://yk5kryxc652w" path="res://coso/arcade/assets/Iconos/Iconos - copia/Gojo.jpg" id="6_85lyj"]
+[ext_resource type="Texture2D" uid="uid://da02rwt2yr4sl" path="res://coso/arcade/assets/Iconos/Iconos - copia/Naruto.jpg" id="7_o7vrg"]
+[ext_resource type="Texture2D" uid="uid://jl7j6ojrb524" path="res://coso/arcade/assets/Iconos/Iconos - copia/Luffy.jpg" id="8_st74w"]
+[ext_resource type="Texture2D" uid="uid://cbceol5clac5q" path="res://coso/arcade/assets/Iconos/Iconos - copia/Itadori.jpg" id="9_7afdk"]
+[ext_resource type="Texture2D" uid="uid://beqmr7r1bi7rm" path="res://coso/arcade/assets/Iconos/Iconos - copia/Sonic.jpg" id="10_tupn8"]
+[ext_resource type="Texture2D" uid="uid://cqeke10ynonhn" path="res://coso/arcade/assets/Iconos/Iconos - copia/Shadow.jpg" id="11_2hfah"]
+[ext_resource type="Texture2D" uid="uid://pbvbsrsrqqpx" path="res://coso/arcade/assets/Iconos/Iconos - copia/Kirby.jpg" id="12_5trrf"]
+[ext_resource type="Texture2D" uid="uid://ct254ucvfimqb" path="res://coso/arcade/assets/Iconos/Iconos - copia/Metal Sonic.jpg" id="13_umfrj"]
+[ext_resource type="Texture2D" uid="uid://b5w8kp8uckvf7" path="res://coso/arcade/assets/Iconos/Iconos - copia/Knuckles.jpg" id="14_igsjy"]
+[ext_resource type="Texture2D" uid="uid://djkvd1kgqlgvd" path="res://coso/arcade/assets/Iconos/Iconos - copia/Bones.jpg" id="15_kk5ox"]
+[ext_resource type="Texture2D" uid="uid://c72rsqv6r0rr6" path="res://coso/arcade/assets/Iconos/Torre.png" id="16_jkrw6"]
+[ext_resource type="FontFile" uid="uid://bmxy13tbq04nx" path="res://Assets/fuentes/Daydream.ttf" id="17_kjmme"]
+[ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_name_label.gd" id="18_757x7"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="19_muew8"]
+
+[node name="Arcade_anime" type="Node2D"]
+script = ExtResource("1_o2v20")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_muew8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 317)
+rotation = 3.13776
+scale = Vector2(1.69413, -1.54073)
+texture = ExtResource("3_g22i5")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(193, 331)
+scale = Vector2(-0.792778, 0.921748)
+texture = ExtResource("4_lbyq4")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(190, 424)
+scale = Vector2(-0.693902, 0.814211)
+texture = ExtResource("5_flxmk")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.0047, 0.987899)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(466.806, 332.018)
+scale = Vector2(-0.639059, 0.753581)
+texture = ExtResource("6_85lyj")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(581, 527)
+scale = Vector2(0.59792, 0.692719)
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(471, 522)
+scale = Vector2(-0.639032, 0.819998)
+texture = ExtResource("7_o7vrg")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2(190, 521)
+scale = Vector2(-0.662538, 0.770683)
+texture = ExtResource("8_st74w")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2(472, 425)
+scale = Vector2(0.73144, 0.711249)
+texture = ExtResource("9_7afdk")
+
+[node name="ParallaxLayer13" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer13"]
+position = Vector2(759, 320)
+scale = Vector2(-0.848766, 0.871176)
+texture = ExtResource("10_tupn8")
+
+[node name="ParallaxLayer14" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer14"]
+position = Vector2(760, 413)
+scale = Vector2(-0.698725, 1)
+texture = ExtResource("11_2hfah")
+
+[node name="ParallaxLayer15" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer15"]
+position = Vector2(763, 510)
+scale = Vector2(-0.753374, 1)
+texture = ExtResource("12_5trrf")
+
+[node name="ParallaxLayer16" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer16"]
+position = Vector2(1042, 320)
+scale = Vector2(-0.837467, 0.875)
+texture = ExtResource("13_umfrj")
+
+[node name="ParallaxLayer17" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer17"]
+position = Vector2(1038, 415)
+scale = Vector2(-0.921416, 0.896986)
+texture = ExtResource("14_igsjy")
+
+[node name="ParallaxLayer18" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer18"]
+position = Vector2(1039, 505)
+scale = Vector2(-0.545455, 1)
+texture = ExtResource("15_kk5ox")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(165, 469)
+texture = ExtResource("16_jkrw6")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
+position = Vector2(446, 468)
+texture = ExtResource("16_jkrw6")
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer11"]
+position = Vector2(738, 461)
+texture = ExtResource("16_jkrw6")
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer12"]
+position = Vector2(1015, 463)
+texture = ExtResource("16_jkrw6")
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 647.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 278.0
+offset_top = 22.0
+offset_right = -451.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("17_kjmme")
+theme_override_font_sizes/font_size = 40
+text = "Strit faiter"
+script = ExtResource("18_757x7")
+
+[node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 92
+
+[node name="SubTitleContainer" type="Control" parent="MenuContainer/SubTitleMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SubTitleLabel" type="Label" parent="MenuContainer/SubTitleMargin/SubTitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 518.0
+offset_top = 31.0
+offset_right = -521.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "ARCADE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 79.0
+offset_top = 206.0
+offset_right = 1117.0
+offset_bottom = 632.0
+theme_override_constants/separation = 190
+alignment = 1
+script = ExtResource("19_muew8")
+search_depth = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Anime 1" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Anime 1"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Anime 2" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Anime 2"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Videojuegos 1" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Videojuegos 1"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Videojuegos 2" type="Button" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Videojuegos 2"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Anime 1" to="." method="_on_anime_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Anime 2" to="." method="_on_anime_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Videojuegos 1" to="." method="_on_videojuegos_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer4/Videojuegos 2" to="." method="_on_videojuegos_2_pressed"]

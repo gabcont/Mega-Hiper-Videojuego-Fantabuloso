@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://injih58332iy"
+path="res://.godot/imported/WHOOSH AIR Steady Smooth_02.wav-e2bdd38af9e3ad1b7fc32f2d9d25e829.sample"
+
+[deps]
+
+source_file="res://juego/gameplay/assets/sonidos/WHOOSH AIR Steady Smooth_02.wav"
+dest_files=["res://.godot/imported/WHOOSH AIR Steady Smooth_02.wav-e2bdd38af9e3ad1b7fc32f2d9d25e829.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
