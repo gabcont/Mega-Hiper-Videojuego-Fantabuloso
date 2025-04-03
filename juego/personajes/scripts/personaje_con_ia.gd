@@ -8,7 +8,7 @@ signal escudo_roto(es_personaje_1 : bool)
 signal ataque_especial_activado(es_personaje_1 : bool)
 signal salud_acabada(es_personaje_1 : bool)
 
-const SALUD_MAXIMA : int = 100
+const SALUD_MAXIMA : int = 200
 
 var salud : int = SALUD_MAXIMA
 

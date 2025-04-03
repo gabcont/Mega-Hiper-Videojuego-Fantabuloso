@@ -29,6 +29,9 @@ enum ModoJuego {
 func _ready():
 	print("Singleton GameData inicializado")
 
+func set_modo_juego(modo : ModoJuego) -> void:
+	modo_juego_actual = modo
+
 func agregar_a_partida_queue(personaje_1 : String, personaje_2 : String, escenario : String) -> void:
 	partida_queue.push_back([personaje_1, personaje_2, escenario])
 
@@ -36,7 +39,7 @@ func limpiar_queue() -> void:
 	partida_queue.clear()
 
 func obtener_partida_actual() -> Array:
-	return partida_queue.front()
+	return partida_queue.front().duplicate()
 
 func siguiente_partida() -> void:
 	partida_queue.pop_front()

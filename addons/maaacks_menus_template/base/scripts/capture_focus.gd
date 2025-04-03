@@ -35,6 +35,7 @@ func _focus_first_search(control_node : Control, levels : int = 1):
 		return false
 	var children = control_node.get_children()
 	for child in children:
+		if child is not Control : continue
 		if _focus_first_search(child, levels - 1):
 			return true
 

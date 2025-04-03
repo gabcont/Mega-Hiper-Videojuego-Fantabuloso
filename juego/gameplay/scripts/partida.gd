@@ -17,12 +17,17 @@ var path_carpeta_fondos = "res://juego/Fondo/escenas/"
 
 func _ready() -> void:
 	var _datos_partida = ConfigPartida.obtener_partida_actual()
+	
 	var nombre_personaje_1 = _datos_partida.pop_front()
 	var nombre_personaje_2 = _datos_partida.pop_front()
 	var nombre_escenario = _datos_partida.pop_front()
 
 	set_personajes(nombre_personaje_1, nombre_personaje_2)
 	set_fondo(nombre_escenario)
+
+	pausar_personajes()
+
+	animation_player.play("presentacion")
 	
 	$HUD/BarrasVida.actualizar_nombres()
 
@@ -143,10 +148,12 @@ func _on_personaje_1_salud_acabada(_ignorar) -> void:
 	Db.registrar_partida(2, tiempo_partida - ConfigPartida.tiempo)
 
 func finalizar_partida() -> void:
-	#pausar_personajes()
+	# pausar_personajes() # Esto bugea la partida por alguna razon
 	$HUD.hide()
 	%Final.show()
+	
 	ConfigPartida.siguiente_partida()
+
 	if ConfigPartida.queue_partida_vacio():
 		%MenuFinal.show()
 	else:

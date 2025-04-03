@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm4k3lbges647"]
+[gd_scene load_steps=7 format=3 uid="uid://dm4k3lbges647"]
 
 [ext_resource type="Script" uid="uid://dl0rk4upm70jn" path="res://menu/escenas/menus/menu_personajes/scripts/menu_personajes.gd" id="1_j3jjq"]
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_menus_template/base/scripts/ui_sound_controller.gd" id="2_o6r0s"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_menus_template/base/scenes/music_players/background_music_player.tscn" id="3_wymkx"]
 [ext_resource type="PackedScene" uid="uid://b7lx7mvilbv1d" path="res://juego/fondo/escenas/Callejon.tscn" id="4_jht0r"]
 [ext_resource type="Theme" uid="uid://cne03ynn2oh0a" path="res://menu/recursos/temas/lab.tres" id="5_jht0r"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_menus_template/base/scripts/capture_focus.gd" id="6_m5dji"]
 
 [node name="MenuPersonajes" type="Control"]
 layout_mode = 3
@@ -106,6 +107,8 @@ theme_override_constants/margin_bottom = 8
 texture_filter = 1
 layout_mode = 2
 mouse_filter = 2
+script = ExtResource("6_m5dji")
+search_depth = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 layout_mode = 1
@@ -139,6 +142,15 @@ scale = Vector2(7.29688, 7.26563)
 offset = Vector2(-1, 0)
 flip_h = true
 
+[node name="Button" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 461.0
+offset_top = 444.0
+offset_right = 661.0
+offset_bottom = 491.0
+mouse_default_cursor_shape = 2
+text = "SELECCIONAR"
+
 [node name="VBoxContainer" type="CanvasLayer" parent="."]
 offset = Vector2(100, 570)
 transform = Transform2D(1, 0, 0, 1, 100, 570)
@@ -151,14 +163,6 @@ size_flags_horizontal = 8
 theme = ExtResource("5_jht0r")
 uppercase = true
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-offset_left = 374.0
-offset_right = 574.0
-offset_bottom = 47.0
-mouse_default_cursor_shape = 2
-text = "SELECCIONAR"
-
 [node name="Label" type="Label" parent="VBoxContainer"]
 offset_left = 843.0
 offset_top = 6.0
@@ -167,4 +171,4 @@ offset_bottom = 41.0
 theme = ExtResource("5_jht0r")
 uppercase = true
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="seleccionar_jugador"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/Button" to="." method="seleccionar_jugador"]

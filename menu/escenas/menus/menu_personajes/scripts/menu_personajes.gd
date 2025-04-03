@@ -40,13 +40,16 @@ func _ready():
 		boton_de_textura.position = Vector2(20.0, 0.0)
 		boton_de_textura.mouse_default_cursor_shape = 2
 		boton_de_textura.texture_filter = 1
+
 		var spriteframes_personaje : SpriteFrames = load(path_carpeta_personajes + personaje_actual)
 		boton_de_textura.texture_normal = spriteframes_personaje.get_frame_texture("idle", 0)
+		boton_de_textura.texture_focused = make_white_texture(boton_de_textura.texture_normal)
 		boton_de_textura.name = personaje_actual.trim_suffix(".tres")
 
 		nombre_a_spriteframe.set(personaje_actual.trim_suffix(".tres"), spriteframes_personaje)
 		cuadro_color.add_child(boton_de_textura)
 		grid_container.add_child(cuadro_color)
+
 		boton_de_textura.connect("pressed", Callable(self, "_on_boton_presionado").bind(boton_de_textura.name))
 		personaje_actual = carpeta_personajes.get_next()
 
@@ -86,3 +89,19 @@ func seleccionar_jugador():
 
 	jugador_activo = 1 if jugador_activo == 2 else 2
 	#cuando se seleccione por segunda vez, guardar sprite y pasarlo a la escena partida
+
+func make_white_texture(original_texture: Texture2D) -> Texture2D:
+	var image := original_texture.get_image()
+	var white_image := Image.create(image.get_width(), image.get_height(), false, Image.FORMAT_RGBA8)
+	
+	# Copiar solo los píxeles visibles (alpha > 0) y hacerlos blancos
+	for x in image.get_width():
+		for y in image.get_height():
+			var pixel = image.get_pixel(x, y)
+			if pixel.a > 0:  # Si el píxel es visible
+				white_image.set_pixel(x, y, Color.WHITE)
+			else:
+				white_image.set_pixel(x, y, Color(0, 0, 0, 0))
+	
+	var white_texture := ImageTexture.create_from_image(white_image)
+	return white_texture
