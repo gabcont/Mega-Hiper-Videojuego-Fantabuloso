@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://6xsu5p0qmfyr"]
+[gd_scene load_steps=3 format=3 uid="uid://6xsu5p0qmfyr"]
 
 [ext_resource type="Script" uid="uid://bddvvv3ihwgsq" path="res://menu/escenas/menus/menu_estadisticas/scripts/estadisticas.gd" id="1_s7ers"]
 [ext_resource type="PackedScene" uid="uid://btjrxukjg0x11" path="res://menu/escenas/fondo_menu/fondo_menu.tscn" id="2_6juxf"]
-[ext_resource type="SpriteFrames" uid="uid://giopy0o8ms6m" path="res://juego/personajes/assets/animaciones/Gojo.tres" id="3_45vxg"]
 
 [node name="Estadisticas" type="Control"]
 layout_mode = 3
@@ -60,7 +59,6 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 35
-text = "Personaje favorito: Skibidi"
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
@@ -69,7 +67,6 @@ color = Color(1, 1, 1, 0)
 
 [node name="Sprite1" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/ColorRect"]
 unique_name_in_owner = true
-sprite_frames = ExtResource("3_45vxg")
 animation = &"ataque_1"
 offset = Vector2(25, 10)
 flip_h = true
@@ -80,7 +77,6 @@ layout_mode = 2
 [node name="Enfrentado" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Personaje mas enfrentado: Toilet"
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
@@ -89,7 +85,6 @@ color = Color(1, 1, 1, 0)
 
 [node name="Sprite2" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2/ColorRect"]
 unique_name_in_owner = true
-sprite_frames = ExtResource("3_45vxg")
 animation = &"ataque_1"
 offset = Vector2(25, 10)
 flip_h = true
@@ -97,27 +92,22 @@ flip_h = true
 [node name="Tiempo" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Tiempo de juego: 88:99"
 
 [node name="Tiempo_promedio" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Tiempo promedio de partida: 99:11"
 
 [node name="Historial" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Victorias - Derrotas : 99-99"
 
 [node name="Porcentaje" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Porcentaje de victorias: 69%"
 
 [node name="Escenario" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Escenario favorito: Mi baño"
 
 [node name="Vacio" type="Label" parent="."]
 layout_mode = 1
